@@ -1,0 +1,30 @@
+// This file overrides the styles applied to the .markdown-body sections
+// for the content inside of .docs-example blocks
+
+.docs-example {
+	@import "../../scss/type";
+	@import "../../scss/buttons";
+
+	input,
+	select,
+	textarea,
+	button,
+	p,
+	li,
+	a {
+	  font: #{$body-font-size}/1.5rem $body-font;
+	}
+
+	h1,
+	h2 {
+		padding-bottom: 0;
+	}
+
+	h6 {
+		color: inherit;
+	}
+
+	p {
+		margin-bottom: 1.5rem;
+	}
+}

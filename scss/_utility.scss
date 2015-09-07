@@ -1,0 +1,60 @@
+// Clear floats
+.clearfix {
+  @include clearfix;
+}
+
+// Floats
+.right { float: right; }
+
+.left { float: left; }
+
+
+// Layout
+
+// Centers content horizontally. Can be used inside or outside the grid.
+.centered {
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+// Text alignment
+.text-right { text-align: right; }
+
+.text-left { text-align: left; }
+
+.text-center { text-align: center; }
+
+
+// Muted link
+//
+// Have a link you need to be gray to start, and blue on hover? Use this.
+.muted-link {
+  color: $helper;
+
+  &:hover {
+    color: $oakland-green;
+    text-decoration: none;
+  }
+}
+
+// Misc
+.hidden {
+  display: none;
+}
+
+.warning {
+  padding: 0.5em;
+  margin-bottom: 0.8em;
+  font-weight: bold;
+  background-color: #fffccc;
+}
+
+.error_box {
+  padding: 1em;
+  font-weight: bold;
+  background-color: #ffebe8;
+  border: 1px solid #dd3c10;
+}

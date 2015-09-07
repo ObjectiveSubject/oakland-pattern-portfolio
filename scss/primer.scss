@@ -1,0 +1,49 @@
+/*
+ * Primer
+ * http://primercss.io
+ *
+ * Released under MIT license. Copyright 2015 GitHub, Inc.
+ */
+
+// Primer master file
+//
+// Imports all Primer files in their intended order for easy mass-inclusion.
+// Should you need specific files, you can easily use separate `@import`s.
+
+// Global variables for Neat
+$max-width: 916px !default;
+// $visual-grid: true; // Turn this on/off to debug the grid
+
+// Bourbon and Neat
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+// Global requirements
+@import "typography";
+@import "variables";
+@import "mixins";
+
+// Basecoat
+@import "normalize";
+@import "base";
+@import "type";
+@import "layout";
+@import "forms";
+@import "utility";
+
+// Components
+@import "header";
+@import "hero";
+@import "footer";
+@import "alerts";
+@import "avatars";
+@import "counter";
+@import "buttons";
+@import "menu";
+@import "tabnav";
+@import "filter-list";
+@import "tooltips";
+
+// Utilities
+@import "flex-table";
+@import "truncate";

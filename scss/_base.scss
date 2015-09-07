@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 19px;
+}
+
+input,
+select,
+textarea,
+button {
+  font: #{$body-font-size}/1.5 $body-font;
+}
+
+body {
+  font: #{$body-font-size}/1.5 $body-font;
+  color: $gray-dark;
+  background-color: #fff;
+}
+
+.docs-example {
+  font-family: $body-font;
+}
+
+a {
+  color: $oakland-green;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+// Horizontal lines
+//
+hr {
+  height: 0;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid #ddd;
+  @include clearfix();
+}

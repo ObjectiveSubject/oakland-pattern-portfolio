@@ -1,0 +1,35 @@
+// Header styles
+.page-header {
+	background: transparent;
+	padding: 30px 15px;
+	position: relative;
+
+	.has-hero & {
+		background: black;
+	}
+
+	.site-logo {
+		max-width: 204px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.header-nav-button {
+		display: inline-block;
+		vertical-align: middle;
+		position: absolute;
+		right: 15px;
+		padding: 15px;
+		cursor: pointer;
+
+		img {
+			max-width: 25px;
+		}
+	}
+}
+
+// Temporary Parking color for demo
+// @todo remove this when we have final colors
+.parking {
+	background: #009691;
+}

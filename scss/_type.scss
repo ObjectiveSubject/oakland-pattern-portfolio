@@ -1,0 +1,154 @@
+// Headings
+// --------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  border: none;
+  font-weight: lighter;
+  margin-bottom: 0.75em;
+
+  a {
+    font-size: inherit;
+  }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  display: block;
+  font-weight: lighter;
+
+  a {
+    font-size: inherit;
+  }
+}
+
+h1,
+.h1 {
+  font-size: 2rem;
+  margin-bottom: 5.125rem;
+}
+
+h2,
+.h2 {
+  font-size: 2rem;
+  margin-bottom: 2.625rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1em;
+}
+
+h4,
+.h4 {
+  font-size: 1.1875rem;
+  margin-bottom: 1em;  
+}
+
+h5,
+.h5 {
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+
+h6,
+.h6 {
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+
+// Body text
+// --------------------------------------------------
+
+small {
+  font-size: 90%;
+}
+
+blockquote {
+  margin: 0;
+}
+
+// Large leading paragraphs
+.lead {
+  margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 300;
+  color: #555;
+}
+
+// Text utilities
+.text-muted { color: $helper; }
+.text-danger { color: $error; }
+
+.text-emphasized {
+  font-weight: bold;
+  color: #333;
+}
+
+// Links
+// --------------------------------------------------
+a {
+  color: $oakland-green;
+  text-decoration: underline;
+
+  &:hover, &:focus {
+    color: #104741;
+  }
+}
+
+
+// Lists
+// --------------------------------------------------
+
+ul,
+ol {
+  padding-left: 2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// No list style
+.list-no-style {
+  list-style: none;
+}
+
+ol ol,
+ul ol {
+  list-style-type: lower-roman;
+}
+
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+dd {
+  margin-left: 0;
+}
+
+
+// Code
+// --------------------------------------------------
+
+tt,
+code {
+  font-family: $mono-font;
+  font-size: 12px;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px $mono-font;
+}

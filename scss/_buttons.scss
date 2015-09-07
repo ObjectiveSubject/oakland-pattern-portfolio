@@ -1,0 +1,49 @@
+// Reset button styles
+button {
+  padding: 0;
+  margin: 0;
+}
+
+// Standard Buttons - these may end up inheriting section colors.
+// Need to implement color variables later
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+  background: #0e633e;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 1rem;
+  border-left: 2px solid #0e633e;
+  transition: all 0.3s ease-out;
+
+  &:hover, &:focus {
+    background: #104741;
+    border-left-color: $oakland-green;
+  }
+
+  &:active {
+    background: $oakland-green;
+    border-left-color: #104741;
+  }
+
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:focus,
+  &[disabled]:active,
+  &.disabled,
+  &.disabled:hover,
+  &.disabled:focus,
+  &.disabled:active {
+    pointer-events: none;
+    background: $fruitvale-mint;
+    border-left-color: $fruitvale-mint;
+    cursor: default;
+  }
+}
+
+a.btn {
+  color: #fff;
+  text-decoration: none;
+}

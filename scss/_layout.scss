@@ -1,0 +1,78 @@
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Fixed-width, centered column for site content.
+// Uses Neat's outer-container. The $max-width variable is set before including Neat in oakland.scss
+.container {
+  @include outer-container();
+  position: relative;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  box-sizing: content-box;
+}
+
+// Grid system
+//
+// Create rows with `.grid-row`
+// Create columns with `.column` and one of the following Column Width classes
+.grid-row {
+  @include row();
+}
+
+.column {
+  .centered {
+    // Override Neat's :last-child rule for centered columns
+    margin-right: auto !important;
+  }
+}
+
+// Column widths
+.one-third {
+  @include fill-parent;
+
+  @include media($bp-md) {
+    @include span-columns(4);
+  }
+}
+
+.two-thirds {
+  @include fill-parent;
+
+  @include media($bp-md) {
+    @include span-columns(8);
+  }
+}
+
+.one-fourth {
+  @include fill-parent;
+
+  @include media($bp-md) {
+    @include span-columns(3);
+  }
+}
+
+.one-half {
+  @include fill-parent;
+
+  @include media($bp-md) {
+    @include span-columns(6);
+  }
+}
+
+.three-fourths {
+  @include fill-parent;
+
+  @include media($bp-md) {
+    @include span-columns(9);
+  }
+}
+
+.column-wide {
+  padding-left: $gutter;
+  padding-right: $gutter;
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+  box-sizing: content-box;
+}

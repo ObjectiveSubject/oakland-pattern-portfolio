@@ -1,0 +1,35 @@
+// Styles for the Home Hero section
+.hero {
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.main-search {
+		padding: 15% 15px 17.5%;
+		text-align: center;
+
+		input {
+			margin-bottom: 1em;
+
+			@include media($bp-md) {
+				display: inline-block;
+				vertical-align: middle;
+				padding: 0 10px;
+			}
+		}
+
+		label {
+			color: #fff;
+		}
+	}
+
+	.hero-tooltip {
+
+	}
+}
+
+// Styles for the .header-wrap contents on internal pages
+.header-wrap {
+	h1 {
+		color: #fff;
+	}
+}

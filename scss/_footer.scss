@@ -1,0 +1,21 @@
+.page-footer {
+	background: #E6E6E6; // @todo update this with var
+
+	.footer-links {
+		@include media($bp-md) {
+			column-count: 4;
+			-webkit-column-count: 4;
+		}
+	}
+
+	.site-logo {
+		width: 100%;
+		max-width: 225px;
+		height: auto;
+		margin-bottom: 1em;
+	}
+
+	input[type="search"] {
+		width: 100%;
+	}
+}

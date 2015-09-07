@@ -1,0 +1,36 @@
+// Brand colors
+$oakland-green: 		#4fbc26 !default;
+$fruitvale-mint: 		#d1e7d5 !default;
+$telegraph-yellow: 	#ffff57 !default;
+$high-cloud: 				#e9eae7 !default;
+$nimitz-steel: 			#757773 !default;
+
+// Grays
+$gray-light:				#e9eae8 !default;
+$gray-dark:					#3f3f3f !default;
+$white:							#ffffff !default;
+
+// Utility Colors
+$error:							#df2f26 !default;
+$helper:						#0f4741 !default;
+$success:	$oakland-green;
+
+// Font stack
+$body-font: Fakt, Helvetica, arial, sans-serif !default;
+
+// The base body size
+$body-font-size: 19px !default;
+
+// Monospace font stack
+$mono-font: Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
+
+// Repository type colors
+$repo-private-text: #a1882b;
+$repo-private-bg:   #fff9ea;
+$repo-private-icon: #e9dba5;
+
+// Responsive Breakpoints
+// using mobile-first, so building up with min-width
+$bp-sm: 480px;
+$bp-md: 768px;
+$bp-lg: 960px;
