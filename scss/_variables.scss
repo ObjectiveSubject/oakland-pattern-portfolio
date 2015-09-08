@@ -7,13 +7,25 @@ $nimitz-steel: 			#757773 !default;
 
 // Grays
 $gray-light:				#e9eae8 !default;
+$gray:							#9fa09e !default;
 $gray-dark:					#3f3f3f !default;
 $white:							#ffffff !default;
+$brown:							#8c7a63 !default;
+
+// Text Colors
+$color-text-body:		$gray-dark;
+$color-text-meta:		$brown;
 
 // Utility Colors
 $error:							#df2f26 !default;
-$helper:						#0f4741 !default;
-$success:	$oakland-green;
+$muted:							$gray !default;
+$success:						$oakland-green !default;
+
+// Theme Colors map
+$themes: (
+	public-works: #253a66,
+	transportation: #0f4741
+) !default;
 
 // Font stack
 $body-font: Fakt, Helvetica, arial, sans-serif !default;

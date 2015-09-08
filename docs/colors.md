@@ -13,6 +13,15 @@ The look and feel of our company and product relies on using a handful of specif
 <div class="swatch swatch-cloud">$high-cloud</div>
 <div class="swatch swatch-steel">$nimitz-steel</div>
 
+### Grays
+
+<div class="swatch swatch-gray-light">$gray-light</div>
+<div class="swatch swatch-gray">$gray</div>
+<div class="swatch swatch-gray-dark">$gray-dark</div>
+<div class="swatch swatch-brown">$brown</div>
+
 ### Text Colors
 
-&hellip;coming soon
+<div class="swatch swatch-gray-dark">$color-text-body</div>
+<div class="swatch swatch-brown">$color-text-meta</div>
+<div class="swatch swatch-gray">$muted</div>

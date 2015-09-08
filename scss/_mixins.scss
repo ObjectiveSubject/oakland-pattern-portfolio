@@ -52,3 +52,58 @@
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
 }
+
+// Color theme mixins
+//
+// Create color rules for specific child elements of site sections
+
+@mixin theme($name, $color) {
+  $primary: $color;
+  $lightened: lighten($color, 20%);
+  $darkened: darken($color, 20%);
+  $hover: darken($color, 40%);
+  $desaturated: desaturate($lightened, 20%);
+
+  .#{$name} {
+    a {
+      color: $primary;
+
+      &:hover {
+        color: $hover;
+      }
+    }
+
+    .btn {
+      background: $darkened;
+      border-left-color: $darkened;
+
+      &:hover, &:focus {
+        background: $hover;
+        border-left-color: $primary;
+      }
+
+      &:active {
+        background: $primary;
+        border-left-color: $hover;
+      }
+
+      &[disabled],
+      &[disabled]:hover,
+      &[disabled]:focus,
+      &[disabled]:active,
+      &.disabled,
+      &.disabled:hover,
+      &.disabled:focus,
+      &.disabled:active {
+        background: $desaturated;
+        border-left-color: $desaturated;
+      }
+    }
+  }
+}
+
+// Iterates thru our $themes color map and creates styles for child elements of our site subsections
+
+@each $theme, $color in $themes {
+  @include theme($theme, $color);
+}

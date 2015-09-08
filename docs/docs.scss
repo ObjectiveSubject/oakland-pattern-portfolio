@@ -265,7 +265,6 @@ a {
     border-radius: 0 0 .25rem .25rem;
   }
 
-  > p:last-child,
   > .menu:last-child,
   > .tabnav:last-child,
   > blockquote:last-child {
@@ -385,7 +384,16 @@ a {
 .swatch-mint { background-color: $fruitvale-mint; }
 .swatch-yellow { background-color: $telegraph-yellow; }
 .swatch-cloud { background-color: $high-cloud; }
-.swatch-steel { background-color: $nimitz-steel; }
+.swatch-steel {
+  background-color: $nimitz-steel;
+  color: $white;
+}
 
 .swatch-gray-light { background-color: $gray-light; }
-.swatch-gray-dark { background-color: $gray-dark; }
+.swatch-gray { background-color: $gray; }
+.swatch-gray-dark {
+  background-color: $gray-dark;
+  color: $white;
+}
+
+.swatch-brown { background-color: $brown; }

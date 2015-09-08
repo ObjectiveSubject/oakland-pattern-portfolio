@@ -32,7 +32,7 @@
 //
 // Have a link you need to be gray to start, and blue on hover? Use this.
 .muted-link {
-  color: $helper;
+  color: $muted;
 
   &:hover {
     color: $oakland-green;
@@ -57,4 +57,14 @@
   font-weight: bold;
   background-color: #ffebe8;
   border: 1px solid #dd3c10;
+}
+
+// Extends
+%mid-aligned-pseudo {
+  &:before {
+    display: inline-block;
+    vertical-align: middle;    
+    content: '';
+    height: 100%;
+  }
 }

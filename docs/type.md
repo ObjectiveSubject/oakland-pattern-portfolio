@@ -109,10 +109,6 @@ Wrap `<blockquote>` around any <abbr title="HyperText Markup Language">HTML</abb
 
 ## Lists
 
-<div class="flash">
-  <strong>Heads up!</strong> The broken display of lists is <strong>intentional</strong> as Primer globally resets these elements for the time being. This will eventually be undone in the next major version.
-</div>
-
 ### Unordered
 
 A list of items in which the order does *not* explicitly matter.
@@ -153,4 +149,20 @@ A list of items in which the order *does* explicitly matter.
   <li>Aenean sit amet erat nunc</li>
   <li>Eget porttitor lorem</li>
 </ol>
+{% endexample %}
+
+## Post data
+
+This element should be added to any single post or post excerpt. It will display a small, muted bit of text for display category or date info.
+
+{% example html %}
+<p class="post-data"><a href="#">Category</a> - <time datetime="">September 9, 2015</time></p>
+{% endexample %}
+
+## Horizontal Rule
+
+Horizontal rules can be added to any layout to separate sections. It has a 3rem bottom margin.
+
+{% example html %}
+<hr>
 {% endexample %}

@@ -13,6 +13,11 @@ h6 {
 
   a {
     font-size: inherit;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -27,6 +32,11 @@ h6 {
 
   a {
     font-size: inherit;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -69,8 +79,8 @@ h6,
 // Body text
 // --------------------------------------------------
 
-small {
-  font-size: 90%;
+small, .text-small {
+  font-size: 0.875rem;
 }
 
 blockquote {
@@ -86,7 +96,7 @@ blockquote {
 }
 
 // Text utilities
-.text-muted { color: $helper; }
+.text-muted { color: $muted; }
 .text-danger { color: $error; }
 
 .text-emphasized {
@@ -98,10 +108,14 @@ blockquote {
 // --------------------------------------------------
 a {
   color: $oakland-green;
-  text-decoration: underline;
+  text-decoration: none;
 
   &:hover, &:focus {
-    color: #104741;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: darken($oakland-green, 20%);
   }
 }
 
