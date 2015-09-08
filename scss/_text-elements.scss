@@ -1,0 +1,19 @@
+// Various simple text elements
+
+// Small, muted text used to show post data like Category and Date
+.post-data {
+	color: $color-text-meta;
+	font-size: 1rem;
+	line-height: 1.1875;
+	margin-bottom: 1.1875em;
+
+	a {
+		color: $color-text-meta;
+		font-size: 1rem;
+		line-height: 1.1875;
+
+		&:active {
+			color: darken($color-text-meta, 20%);
+		}
+	}
+}

@@ -98,7 +98,7 @@ module.exports = function(grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com:primer/primer.git',
+          remote: 'git@github.com:ObjectiveSubject/oakland-pattern-portfolio.git',
           branch: 'gh-pages'
         }
       }
