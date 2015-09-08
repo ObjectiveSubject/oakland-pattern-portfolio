@@ -6,7 +6,7 @@ kramdown:
 
 permalink: pretty
 source: docs
-baseurl: ""
+baseurl: "/oakland-pattern-portfolio"
 
 version: 2.3.3
 
@@ -15,4 +15,4 @@ sass:
   style: compressed
 
 github:
-  repo: https://github.com/primer/primer
+  repo: https://github.com/ObjectiveSubject/oakland-pattern-portfolio
