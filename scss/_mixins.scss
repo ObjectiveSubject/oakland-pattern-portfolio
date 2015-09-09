@@ -59,9 +59,9 @@
 
 @mixin theme($name, $color) {
   $primary: $color;
-  $lightened: lighten($color, 20%);
-  $darkened: darken($color, 20%);
-  $hover: darken($color, 40%);
+  $lightened: lighten($color, 10%);
+  $darkened: darken($color, 10%);
+  $hover: darken($color, 20%);
   $desaturated: desaturate($lightened, 20%);
 
   .#{$name} {
@@ -97,6 +97,52 @@
       &.disabled:active {
         background: $desaturated;
         border-left-color: $desaturated;
+      }
+    }
+
+    .menu-item {
+      color: $primary;
+
+      &:hover, &:focus {
+        color: $primary;
+
+        &:before {
+          background-color: $primary;
+        }
+      }
+
+      &:active {
+        color: $darkened;
+
+        &:before {
+          background-color: $darkened;
+        }
+      }
+    }
+
+    .section-menu {
+      .menu-item {
+        color: $white;
+
+        &:hover, &:focus {
+          background-color: $darkened;
+
+          &:before {
+            background-color: $white;
+          }
+        }
+
+        &:active {
+          &:before {
+            background-color: darken($white, 10%);
+          }
+        }
+
+        &.selected {
+          &:before {
+            background-color: $white;
+          }
+        }
       }
     }
   }

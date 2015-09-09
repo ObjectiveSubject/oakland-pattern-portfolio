@@ -2,9 +2,11 @@
 // for the content inside of .docs-example blocks
 
 .docs-example {
+	@import "../../scss/mixins";
 	@import "../../scss/type";
 	@import "../../scss/buttons";
 	@import "../../scss/text-elements";
+	@import "../../scss/menu";
 
 	input,
 	select,

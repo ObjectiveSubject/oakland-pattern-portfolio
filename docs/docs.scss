@@ -271,11 +271,11 @@ a {
     margin-bottom: 0;
   }
 
-  .menu,
-  .filter-list,
-  .sunken-menu {
-    max-width: 200px;
-  }
+  // .menu,
+  // .filter-list,
+  // .sunken-menu {
+  //   max-width: 200px;
+  // }
 
   // Grid
   // .container {
@@ -397,3 +397,17 @@ a {
 }
 
 .swatch-brown { background-color: $brown; }
+
+.docs-bg {
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 1rem;
+  background: $oakland-green;
+
+  @each $theme, $color in $themes {
+    &.#{$theme} {
+      background: $color;
+    }
+  }
+}

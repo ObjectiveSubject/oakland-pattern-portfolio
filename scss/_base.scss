@@ -41,6 +41,6 @@ hr {
   overflow: hidden;
   background: transparent;
   border: 0;
-  border-bottom: 3px solid #ddd;
+  border-bottom: 3px solid $gray-lighter;
   @include clearfix();
 }
