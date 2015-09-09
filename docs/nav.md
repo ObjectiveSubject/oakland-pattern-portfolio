@@ -12,7 +12,7 @@ Primer comes with several navigation components. Some were designed with singula
 
 ## Menus
 
-A menu is a vertical list of navigational links. **A menu's width and placement must be set by you.** If you like, just use our grid columns as a parent and manually place menus in their own columns. Otherwise, apply a custom `width`.
+<!-- A menu is a vertical list of navigational links. **A menu's width and placement must be set by you.** If you like, just use our grid columns as a parent and manually place menus in their own columns. Otherwise, apply a custom `width`. -->
 
 {% example html %}
 <div class="container">
