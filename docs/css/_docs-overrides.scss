@@ -7,6 +7,7 @@
 	@import "../../scss/buttons";
 	@import "../../scss/text-elements";
 	@import "../../scss/menu";
+	@import "../../scss/links";	
 
 	input,
 	select,
@@ -42,5 +43,10 @@
 
 	hr {
 		margin: 0 0 3rem;
+	}
+
+	// Override for prev/next links container issue in the docs
+	.previous-next-links.container {
+		padding: 0;
 	}
 }

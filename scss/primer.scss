@@ -33,6 +33,7 @@ $gutter: 1.25rem !default;
 @import "forms";
 @import "utility";
 @import "text-elements";
+@import "sections";
 
 // Components
 @import "header";
@@ -43,8 +44,7 @@ $gutter: 1.25rem !default;
 @import "counter";
 @import "buttons";
 @import "menu";
-@import "tabnav";
-@import "filter-list";
+@import "links";
 @import "tooltips";
 
 // Utilities

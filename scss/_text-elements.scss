@@ -1,6 +1,8 @@
 // Various simple text elements
 
+// Post data
 // Small, muted text used to show post data like Category and Date
+// ---------------------------------------------------------------
 .post-data {
 	color: $color-text-meta;
 	font-size: 1rem;
@@ -14,6 +16,40 @@
 
 		&:active {
 			color: darken($color-text-meta, 20%);
+		}
+	}
+}
+
+// Breadcrumbs
+// ----------------------------------------------------
+.breadcrumbs {
+	line-height: 1;
+	padding-top: 1.5rem;
+	padding-left: $gutter;
+	margin-bottom: 1.5rem;
+	border-left: 2px solid $muted;
+
+	a, span {
+		display: inline-block;
+		vertical-align: bottom;
+		font-size: 0.8125rem;
+		line-height: 1;
+	}
+
+	a {
+		color: $muted;
+		padding-right: 20px;
+		position: relative;
+
+		&:active {
+			color: darken($muted, 10%);
+		}
+
+		&:after {
+			content: "\2192";
+			position: absolute;
+			right: 5px;
+			color: $color-text-body;
 		}
 	}
 }

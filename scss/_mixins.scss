@@ -69,7 +69,11 @@
       color: $primary;
 
       &:hover {
-        color: $hover;
+        color: $primary;
+      }
+
+      &:active {
+        color: $darkened;
       }
     }
 
@@ -124,8 +128,12 @@
       .menu-item {
         color: $white;
 
+        &:before {
+          background-color: $primary;
+        }
+
         &:hover, &:focus {
-          background-color: $darkened;
+          background-color: transparent;
 
           &:before {
             background-color: $white;
@@ -133,16 +141,35 @@
         }
 
         &:active {
+          background-color: $darkened;
+
           &:before {
-            background-color: darken($white, 10%);
+            background-color: $oakland-green;
           }
         }
 
         &.selected {
+          background-color: $darkened;
+
           &:before {
             background-color: $white;
           }
         }
+      }
+    }
+
+    .prev-link, .next-link {
+      color: $white;
+      background-color: rgba($darkened, 0.7);
+
+      &:hover, &:focus {
+        color: $white;
+        background-color: rgba($hover, 0.7);
+      }
+
+      &:active {
+        color: $white;
+        background-color: rgba($primary, 0.7);
       }
     }
   }

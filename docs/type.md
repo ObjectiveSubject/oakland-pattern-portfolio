@@ -82,6 +82,19 @@ Sometimes you will want to have a text element that appears like a certain headi
   ###[Heading link](http://example.com/)
 </code></pre>
 
+Links will inherit the color of the site section they are in.
+
+{% example html %}
+<div class="container transportation">
+  <a href="http://example.com/">Body Link</a>
+  <h3><a href="http://example.com/">Heading Link</a></h3>
+</div>
+<div class="container public-works">
+  <a href="http://example.com/">Body Link</a>
+  <h3><a href="http://example.com/">Heading Link</a></h3>
+</div>
+{% endexample %}
+
 ## Inline text elements
 
 Styling for common inline HTML5 elements.

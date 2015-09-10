@@ -21,9 +21,11 @@ $color-text-body:		$gray-dark;
 $color-text-meta:		$brown;
 
 // Utility Colors
-$error:							#df2f26 !default;
+$error:							#e02f27 !default;
+$warning:						#c27a2a !default;
 $muted:							$gray !default;
 $success:						$oakland-green !default;
+$news:							$oakland-green !default;
 
 // Theme Colors map
 $themes: (

@@ -53,8 +53,19 @@
     color: $white;
     font-size: 1rem;
 
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 2px;
+      content: "";
+      background-color: $oakland-green;
+      transition: all 0.2s ease;
+    }
+
     &:hover, &:focus {
-      background-color: darken($oakland-green, 10%);
+      background-color: transparent;
 
       &:before {
         background-color: $white;
@@ -62,12 +73,16 @@
     }
 
     &:active {
+      background-color: darken($oakland-green, 10%);
+
       &:before {
         background-color: darken($white, 10%);
       }
     }
 
     &.selected {
+      background-color: darken($oakland-green, 10%);
+
       &:before {
         background-color: $white;
       }
