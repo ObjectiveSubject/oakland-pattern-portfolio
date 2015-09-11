@@ -15,6 +15,8 @@
 
     <link rel="stylesheet" href="/docs.css">
 
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png">
     <link rel="icon" href="/favicon.ico">
@@ -53,6 +55,9 @@
   </a>
   <a class="menu-item " href="/forms/">
     Forms
+  </a>
+  <a class="menu-item " href="/icons/">
+    Icons
   </a>
   <a class="menu-item " href="/avatars/">
     Avatars
@@ -105,65 +110,29 @@
   <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
   <li><a href="#header" id="markdown-toc-header">Header</a></li>
   <li><a href="#footer" id="markdown-toc-footer">Footer</a></li>
-  <li><a href="#hero" id="markdown-toc-hero">Hero</a></li>
-  <li><a href="#header-wrap" id="markdown-toc-header-wrap">Header wrap</a></li>
 </ul>
 
 <h2 id="header">Header</h2>
 
-<p>The Header for Oakland comes in two flavors. For pages with a hero image section, the header will have a black background. For all other pages, the header will inherit the background color of the page.</p>
-
-<p><strong>Header with hero image</strong></p>
-
-<div class="docs-example clearfix"><div class="header-wrap has-hero">
+<div class="docs-example clearfix"><div class="header-wrap">
 	<div class="container">
 		<header class="page-header" role="banner">
-			<a href="/" class="logo-wrap">
-				<img class="site-logo" src="/img/logo-v1.png" alt="City of Oakland" />
+			<a href="#" class="logo-wrap">
+				<img class="site-logo" src="/img/logo-v2.png" alt="City of Oakland" />
 			</a>
-			<a class="header-nav-button">
-				<img src="/img/hamburger-nav.png" alt="Click to open the menu" />
-			</a>
+			<a class="header-nav-button" href="#"><span class="lnr lnr-menu"></span></a>
+			<a class="header-search-button" href="#"><span class="lnr lnr-magnifier"></span></a>
 		</header>
 	</div>
 </div></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"header-wrap has-hero"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"header-wrap"</span><span class="nt">&gt;</span>
 	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
 		<span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"page-header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">class=</span><span class="s">"logo-wrap"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"site-logo"</span> <span class="na">src=</span><span class="s">"/img/logo-v1.png"</span> <span class="na">alt=</span><span class="s">"City of Oakland"</span> <span class="nt">/&gt;</span>
+			<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"logo-wrap"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"site-logo"</span> <span class="na">src=</span><span class="s">"/img/logo-v2.png"</span> <span class="na">alt=</span><span class="s">"City of Oakland"</span> <span class="nt">/&gt;</span>
 			<span class="nt">&lt;/a&gt;</span>
-			<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"header-nav-button"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/img/hamburger-nav.png"</span> <span class="na">alt=</span><span class="s">"Click to open the menu"</span> <span class="nt">/&gt;</span>
-			<span class="nt">&lt;/a&gt;</span>
-		<span class="nt">&lt;/header&gt;</span>
-	<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<p><strong>Header without hero image</strong><br />
-This header has a transparent background and in this case shows the background color of its parent</p>
-
-<div class="docs-example clearfix"><div class="header-wrap parking">
-	<div class="container">
-		<header class="page-header" role="banner">
-			<a href="/" class="logo-wrap">
-				<img class="site-logo" src="/img/logo-v1.png" alt="City of Oakland" />
-			</a>
-			<a class="header-nav-button">
-				<img src="/img/hamburger-nav.png" alt="Click to open the menu" />
-			</a>
-		</header>
-	</div>
-</div></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"header-wrap parking"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-		<span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"page-header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">class=</span><span class="s">"logo-wrap"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"site-logo"</span> <span class="na">src=</span><span class="s">"/img/logo-v1.png"</span> <span class="na">alt=</span><span class="s">"City of Oakland"</span> <span class="nt">/&gt;</span>
-			<span class="nt">&lt;/a&gt;</span>
-			<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"header-nav-button"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/img/hamburger-nav.png"</span> <span class="na">alt=</span><span class="s">"Click to open the menu"</span> <span class="nt">/&gt;</span>
-			<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"header-nav-button"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-menu"</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+			<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"header-search-button"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-magnifier"</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
 		<span class="nt">&lt;/header&gt;</span>
 	<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
@@ -172,178 +141,114 @@ This header has a transparent background and in this case shows the background c
 
 <p>The Footer is standard across all pages</p>
 
-<div class="docs-example clearfix"><footer class="page-footer" role="contentinfo">
+<div class="docs-example clearfix"><footer class="site-footer" role="contentinfo">
 	<div class="container">
-		<h3>Get In Touch</h3>
-		<div class="columns">
-			<div class="one-third column">
+		<h4>Get In Touch</h4>
+		<div class="grid-row">
+			<div class="one-fourth column-shift">
 				<strong>Call 3-1-1 from within the City</strong><br />
 				TTY service is also available by dialing (212) 504-4115.
 			</div>
-			<div class="one-third column">
+			<div class="one-fourth column-shift">
 				<strong>Contact Mayor Libby Schaaf</strong><br />
 				You may contact Mayor Libby Schaaf by postal mail, phone, or submitting an online message.
 			</div>
-			<div class="one-third column">
+			<div class="one-fourth column-shift">
 				<strong>Provide Feedback</strong><br />
 				OaklandCA.gov invites you to leave your comments about our Web site.
 			</div>
 		</div>
-		<div class="columns">
-			<div class="two-thirds column">
-				<h3>Oakland Government</h3>
-				<ul class="footer-links list-no-style">
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-					<li><a href="">Link</a></li>
-				</ul>
-			</div>
-			<div class="one-third column">
-				<div class="columns">
-					<div class="one-half column">
-						<a href="/" class="logo-wrap">
-							<img class="site-logo" src="/img/logo-dark.png" alt="City of Oakland" />
-						</a>
-						<input type="text" id="footer-search" aria-label="Search" value="" required="required" placeholder="Search site" />
-					</div>
-					<div class="one-half column">
-						<p><small class="text-muted">&copy; 2015 City of Oakland</small></p>
-						<p><a href="#">Privacy Policy</a></p>
-						<p><a href="#">Terms of Use</a></p>
-					</div>
-				</div>
+		<hr />
+		<div class="grid-row">
+			<h4>Oakland Government</h4>
+			<ul class="footer-links list-no-style one-third">
+				<li><a href="">Animal Services</a></li>
+				<li><a href="">City Clerk</a></li>
+				<li><a href="">Community &amp; Economic Development</a></li>
+				<li><a href="">Finance</a></li>
+				<li><a href="">Fire Department</a></li>
+			</ul>
+			<ul class="footer-links list-no-style one-third">
+				<li><a href="">Housing &amp; Community Development</a></li>
+				<li><a href="">Human resources Management</a></li>
+				<li><a href="">Human Services</a></li>
+				<li><a href="">Information Technology</a></li>
+				<li><a href="">Parks &amp; Recreation</a></li>
+			</ul>
+			<ul class="footer-links list-no-style one-third">
+				<li><a href="">Planning &amp; Building</a></li>
+				<li><a href="">Police Department</a></li>
+				<li><a href="">Public Library</a></li>
+				<li><a href="">Public Works</a></li>
+			</ul>
+		</div>
+		<hr />
+		<div class="footer-omega">
+			<a href="#" class="logo-wrap">
+				<img class="site-logo" src="/img/logo-v2.png" alt="City of Oakland" />
+			</a>
+			<div class="one-third right">
+				<small class="text-muted">&copy; 2015 City of Oakland</small><br />
+				<a href="#"><small>Privacy Policy</small></a>
+				<a href="#"><small>Terms of Use</small></a>
 			</div>
 		</div>
 	</div>
 </footer></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"page-footer"</span> <span class="na">role=</span><span class="s">"contentinfo"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"site-footer"</span> <span class="na">role=</span><span class="s">"contentinfo"</span><span class="nt">&gt;</span>
 	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-		<span class="nt">&lt;h3&gt;</span>Get In Touch<span class="nt">&lt;/h3&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"columns"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third column"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;h4&gt;</span>Get In Touch<span class="nt">&lt;/h4&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-fourth column-shift"</span><span class="nt">&gt;</span>
 				<span class="nt">&lt;strong&gt;</span>Call 3-1-1 from within the City<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
 				TTY service is also available by dialing (212) 504-4115.
 			<span class="nt">&lt;/div&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third column"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-fourth column-shift"</span><span class="nt">&gt;</span>
 				<span class="nt">&lt;strong&gt;</span>Contact Mayor Libby Schaaf<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
 				You may contact Mayor Libby Schaaf by postal mail, phone, or submitting an online message.
 			<span class="nt">&lt;/div&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third column"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-fourth column-shift"</span><span class="nt">&gt;</span>
 				<span class="nt">&lt;strong&gt;</span>Provide Feedback<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
 				OaklandCA.gov invites you to leave your comments about our Web site.
 			<span class="nt">&lt;/div&gt;</span>
 		<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"columns"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"two-thirds column"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;h3&gt;</span>Oakland Government<span class="nt">&lt;/h3&gt;</span>
-				<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"footer-links list-no-style"</span><span class="nt">&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-					<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-				<span class="nt">&lt;/ul&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third column"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"columns"</span><span class="nt">&gt;</span>
-					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-half column"</span><span class="nt">&gt;</span>
-						<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">class=</span><span class="s">"logo-wrap"</span><span class="nt">&gt;</span>
-							<span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"site-logo"</span> <span class="na">src=</span><span class="s">"/img/logo-dark.png"</span> <span class="na">alt=</span><span class="s">"City of Oakland"</span> <span class="nt">/&gt;</span>
-						<span class="nt">&lt;/a&gt;</span>
-						<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"footer-search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span> <span class="na">value</span> <span class="na">required=</span><span class="s">"required"</span> <span class="na">placeholder=</span><span class="s">"Search site"</span><span class="nt">&gt;</span>
-					<span class="nt">&lt;/div&gt;</span>
-					<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-half column"</span><span class="nt">&gt;</span>
-						<span class="nt">&lt;p&gt;&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span><span class="ni">&amp;copy;</span> 2015 City of Oakland<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
-						<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Privacy Policy<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-						<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Terms of Use<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-					<span class="nt">&lt;/div&gt;</span>
-				<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;hr&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;h4&gt;</span>Oakland Government<span class="nt">&lt;/h4&gt;</span>
+			<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"footer-links list-no-style one-third"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Animal Services<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>City Clerk<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Community <span class="err">&amp;</span> Economic Development<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Finance<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Fire Department<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+			<span class="nt">&lt;/ul&gt;</span>
+			<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"footer-links list-no-style one-third"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Housing <span class="ni">&amp;amp;</span> Community Development<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Human resources Management<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Human Services<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Information Technology<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Parks <span class="ni">&amp;amp;</span> Recreation<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+			<span class="nt">&lt;/ul&gt;</span>
+			<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"footer-links list-no-style one-third"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Planning <span class="ni">&amp;amp;</span> Building<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Police Department<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Public Library<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Public Works<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+			<span class="nt">&lt;/ul&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;hr&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"footer-omega"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"logo-wrap"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"site-logo"</span> <span class="na">src=</span><span class="s">"/img/logo-v2.png"</span> <span class="na">alt=</span><span class="s">"City of Oakland"</span> <span class="nt">/&gt;</span>
+			<span class="nt">&lt;/a&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third right"</span><span class="nt">&gt;</span>
+				<span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span><span class="ni">&amp;copy;</span> 2015 City of Oakland<span class="nt">&lt;/small&gt;&lt;br&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;small&gt;</span>Privacy Policy<span class="nt">&lt;/small&gt;&lt;/a&gt;</span>
+				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;small&gt;</span>Terms of Use<span class="nt">&lt;/small&gt;&lt;/a&gt;</span>
 			<span class="nt">&lt;/div&gt;</span>
 		<span class="nt">&lt;/div&gt;</span>
 	<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/footer&gt;</span></code></pre></div>
-
-<h2 id="hero">Hero</h2>
-
-<p>The hero section is used on the home page to create a direct point of contact with users</p>
-
-<div class="docs-example clearfix"><div class="hero" style="background-image: url( /img/hero-1.jpg);">
-	<div class="container">
-		<form action="/" id="main-search" class="main-search">
-			<label for="site-search">
-				How can we help?
-				<input type="text" id="site-search" aria-label="Search" value="" required="required" placeholder="Pay parking ticket" />
-			</label>
-			<input type="submit" id="submit-search" value="Search" title="Search" />
-		</form>
-	</div>
-</div></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hero"</span> <span class="na">style=</span><span class="s">"background-image: url( /img/hero-1.jpg);"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-		<span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"/"</span> <span class="na">id=</span><span class="s">"main-search"</span> <span class="na">class=</span><span class="s">"main-search"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"site-search"</span><span class="nt">&gt;</span>
-				How can we help?
-				<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"site-search"</span> <span class="na">aria-label=</span><span class="s">"Search"</span> <span class="na">value</span> <span class="na">required=</span><span class="s">"required"</span> <span class="na">placeholder=</span><span class="s">"Pay parking ticket"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;/label&gt;</span>
-			<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">id=</span><span class="s">"submit-search"</span> <span class="na">value=</span><span class="s">"Search"</span> <span class="na">title=</span><span class="s">"Search"</span><span class="nt">&gt;</span>
-		<span class="nt">&lt;/form&gt;</span>
-	<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
-
-<h2 id="header-wrap">Header wrap</h2>
-
-<p>The alternative to a hero section to include the page title and department class (for color) to the <code>.header-wrap</code> element</p>
-
-<div class="docs-example clearfix"><div class="header-wrap parking">
-	<div class="container">
-		<header class="page-header" role="banner">
-			<a href="/" class="logo-wrap">
-				<img class="site-logo" src="/img/logo-v1.png" alt="City of Oakland" />
-			</a>
-			<a class="header-nav-button">
-				<img src="/img/hamburger-nav.png" alt="Click to open the menu" />
-			</a>
-		</header>
-		<h1>Finding &amp; Paying for Parking</h1>
-	</div>
-</div></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"header-wrap parking"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-		<span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"page-header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="na">class=</span><span class="s">"logo-wrap"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"site-logo"</span> <span class="na">src=</span><span class="s">"/img/logo-v1.png"</span> <span class="na">alt=</span><span class="s">"City of Oakland"</span> <span class="nt">/&gt;</span>
-			<span class="nt">&lt;/a&gt;</span>
-			<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"header-nav-button"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/img/hamburger-nav.png"</span> <span class="na">alt=</span><span class="s">"Click to open the menu"</span> <span class="nt">/&gt;</span>
-			<span class="nt">&lt;/a&gt;</span>
-		<span class="nt">&lt;/header&gt;</span>
-		<span class="nt">&lt;h1&gt;</span>Finding <span class="ni">&amp;amp;</span> Paying for Parking<span class="nt">&lt;/h1&gt;</span>
-	<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
     </div>
   </div>
