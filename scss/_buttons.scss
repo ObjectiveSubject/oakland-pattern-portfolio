@@ -16,7 +16,7 @@ button {
   line-height: 1;
   padding: 1rem;
   border-left: 2px solid #0e633e;
-  transition: all 0.3s ease-out;
+  transition: all 0.15s ease;
 
   &:hover, &:focus {
     background: #104741;
@@ -40,6 +40,19 @@ button {
     background: $fruitvale-mint;
     border-left-color: $fruitvale-mint;
     cursor: default;
+  }
+
+  &.arrow-right {
+    padding-right: 45px;
+    position: relative;
+
+    &:before {
+      content: "\e87a";
+      font-family: Linearicons-Free;
+      font-size: 20px;
+      position: absolute;
+      right: 15px;
+    }
   }
 }
 

@@ -19,6 +19,7 @@ body {
 // Create columns with `.column` and one of the following Column Width classes
 .grid-row {
   @include row();
+  margin-bottom: 2rem;
 }
 
 .column {
@@ -75,4 +76,8 @@ body {
   margin-left: -$gutter;
   margin-right: -$gutter;
   box-sizing: content-box;
+}
+
+.column-shift + .column-shift {
+  @include shift;
 }

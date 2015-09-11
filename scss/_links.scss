@@ -6,7 +6,7 @@
 	width: 100%;
 	height: 84px;
 	position: relative;
-  padding: 0;
+	padding: 0;
 }
 
 .prev-link, .next-link {
@@ -36,6 +36,13 @@
 .prev-link {
   padding-left: 50%;
   margin-left: -50%;
+
+  &:before {
+  	content: "\e879";
+  	font-family: Linearicons-Free;
+  	position: absolute;
+  	left: 46%;
+  }
 }
 
 .next-link {
@@ -43,4 +50,11 @@
   padding-right: 50%;
   margin-right: -50%;
   text-align: right;
+
+  &:before {
+  	content: "\e87a";
+  	font-family: Linearicons-Free;
+  	position: absolute;
+  	right: 46%;
+  }
 }

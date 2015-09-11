@@ -5,10 +5,6 @@ title: Forms
 
 Style individual form controls and utilize common layouts.
 
-<div class="flash">
-  <strong>Heads up!</strong> Forms need some reworking to clean up the specificity and required markup. We'll get to that soon!
-</div>
-
 ## Contents
 
 * Will be replaced with the ToC, excluding the "Contents" header
@@ -27,28 +23,39 @@ Form controls in Primer currently have no basic layout specified (this is by des
 
 {% example html %}
 <form>
-  <label for="name">Name</label>
-  <input type="text" id="name">
+  <label for="first-name">
+    Name<br>
+    Example Text
+    <input type="text" id="first-name">
+  </label>
+  <a href="#" class="form-info">Where can I find more info about this?</a>
 
-  <label for="email">Email address</label>
-  <input type="email" id="email">
-
-  <label>
-    <input type="checkbox"> Remember me
+  <label for="email-address">
+    Email address
+    <input type="email" id="email-address">
   </label>
 
-  <label>
-    <input type="radio" id="herp" name="herpderp" checked> Herp
-  </label>
-  <label>
-    <input type="radio" id="derp" name="herpderp"> Derp
-  </label>
+  <div class="form-group">
+    <p>Do you live in Oakland, CA?</p>
+    <label for="yep" class="form-radio">
+      <input type="radio" id="yep" name="yepnope">Yep
+    </label>
+    <label for="nope" class="form-radio">
+      <input type="radio" id="nope" name="yepnope">Nope
+    </label>
+  </div>
 
-  <button class="btn" type="submit">Submit</button>
+  <div class="form-group">
+    <label for="remember-me" class="form-checkbox">
+      <input type="checkbox" id="remember-me">Remember me
+    </label>
+  </div>
+
+  <button class="btn arrow-right" type="submit">Submit</button>
 </form>
 {% endexample %}
 
-## Form contrast
+<!-- ## Form contrast
 
 Textual form controls have a white background by default. You can change this to a light gray with `.input-contrast`.
 
@@ -56,34 +63,6 @@ Textual form controls have a white background by default. You can change this to
 <form>
   <input type="text" placeholder="Default input">
   <input class="input-contrast" type="text" placeholder="Input with contrast">
-</form>
-{% endexample %}
-
-## Sizing
-
-Make inputs smaller, larger, or full-width with an additional class.
-
-### Mini
-
-{% example html %}
-<form>
-  <input class="input-mini" type="text" placeholder="Mini input">
-</form>
-{% endexample %}
-
-### Large
-
-{% example html %}
-<form>
-  <input class="input-large" type="text" placeholder="Large input">
-</form>
-{% endexample %}
-
-### Block
-
-{% example html %}
-<form>
-  <input class="input-block" type="text" placeholder="Full-width input">
 </form>
 {% endexample %}
 
@@ -252,4 +231,4 @@ Align buttons to the right—via `float: right` on the buttons—in forms with `
   <button type="button" class="btn btn-primary">Save changes</button>
   <button type="button" class="btn">Cancel</button>
 </div>
-{% endexample %}
+{% endexample %} -->

@@ -9,6 +9,10 @@ fieldset {
 }
 
 label {
+  width: auto;
+  display: block;
+  margin-bottom: 1.5rem;
+  font: #{$body-font-size}/1.5 $body-font;
 }
 
 .form-control,
@@ -20,20 +24,25 @@ input[type="tel"],
 input[type="url"],
 select,
 textarea {
-  min-height: 34px;
-  padding: 7px 8px;
-  color: #333;
+  min-height: 38px;
+  padding: 5px 8px;
+  color: $black;
   vertical-align: middle;
-  background-color: #fff;
+  background-color: $white;
   background-repeat: no-repeat; // Repeat and position set for form states (success, error, etc)
   background-position: right 8px center; // For form validation. This keeps images 8px from right and centered vertically.
+  border: 2px solid $gray-light !important;
   outline: none;
   border: none;
+  width: 100%;
+  max-width: 370px;
+  display: block;
+  font: #{$body-font-size}/1.5 $body-font;
 
   &.focus,
   &:focus {
-    border-color: #51a7e8;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5);
+    border: 2px solid $black !important;
+    // box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rgba(81, 167, 232, 0.5);
   }
 }
 
@@ -310,32 +319,45 @@ dl.form {
   }
 }
 
+// Form utility styles
+.form-group {
+  display: block;
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
+
 
 // Checkboxes and Radiobuttons
 //
 // For checkboxes and radio button selections.
-.form-checkbox {
-  padding-left: 20px;
-  margin: 15px 0;
-  vertical-align: middle;
+.form-checkbox, .form-radio {
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+  position: relative;
+  padding: 8px $gutter 8px 0; 
 
-  label {
+  &:hover, &:focus {
+    background-color: $white;
 
-    em.highlight {
-      position: relative;
-      left: -4px;
-      padding: 2px 4px;
-      font-style: normal;
-      background: #fffbdc;
-      border-radius: 3px;
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 2px;
+      content: "";
+      background-color: $oakland-green;
     }
   }
 
   input[type=checkbox],
   input[type=radio] {
-    float: left;
-    margin: 2px 0 0 -20px;
+    display: inline-block;
     vertical-align: middle;
+    margin: 0 $gutter;
   }
 
   .note {
@@ -565,4 +587,38 @@ input::-webkit-inner-spin-button {
   //   right: 0;
   //   top: 0;
   // }
+}
+
+// A specialized link for form element info. Based on the .menu-item found in _menu.scss
+.form-info {
+  position: relative;
+  display: inline-block;
+  color: $oakland-green;
+  padding: 10px 2*$gutter 5px $gutter;
+  margin-top: -1.15rem;
+  margin-bottom: 1.5rem;
+  vertical-align: middle;
+  min-height: 42px;
+
+  &:hover, &:focus {
+    text-decoration: none;
+    background-color: $white;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 2px;
+      content: "";
+      background-color: $oakland-green;
+    }
+  }
+
+  &:active {
+    color: darken($oakland-green, 10%);
+    &:before {
+      background-color: darken($oakland-green, 10%);
+    }
+  }
 }

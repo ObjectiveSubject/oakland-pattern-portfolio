@@ -1,21 +1,61 @@
-.page-footer {
-	background: #E6E6E6; // @todo update this with var
+.site-footer {
+	background: $gray-lighter;
+	padding-top: 2rem;
 
 	.footer-links {
-		@include media($bp-md) {
-			column-count: 4;
-			-webkit-column-count: 4;
+		padding: 0;
+
+		a {
+			font-size: 1rem;
+			line-height: 1.2;
+			color: $gray-dark;
+
+			&:hover, &:focus {
+				text-decoration: underline;
+			}
+
+			&:active {
+				color: $black;
+			}
 		}
 	}
 
 	.site-logo {
 		width: 100%;
-		max-width: 225px;
+		max-width: 173px;
 		height: auto;
-		margin-bottom: 1em;
+		padding-bottom: 2.5rem;
 	}
 
-	input[type="search"] {
-		width: 100%;
+	hr {
+		border-color: $gray;
+	}
+}
+
+// The bottom section of the site footer
+.footer-omega {
+	margin-bottom: 0;
+	position: relative;
+	margin-top: 2.5rem;
+
+	.right {
+		a {
+			font-size: 1rem;
+			color: $muted;
+
+			&:active {
+				color: $gray;
+			}
+		}
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: -$gutter;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background-color: $oakland-green;
 	}
 }

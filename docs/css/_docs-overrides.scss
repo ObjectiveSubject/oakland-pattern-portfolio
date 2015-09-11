@@ -8,6 +8,8 @@
 	@import "../../scss/text-elements";
 	@import "../../scss/menu";
 	@import "../../scss/links";	
+	@import "../../scss/forms";
+	@import "../../scss/footer";
 
 	input,
 	select,
@@ -42,7 +44,7 @@
 	}
 
 	hr {
-		margin: 0 0 3rem;
+		margin: 0 0 2rem;
 	}
 
 	// Override for prev/next links container issue in the docs

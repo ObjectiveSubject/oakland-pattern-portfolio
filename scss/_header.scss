@@ -1,29 +1,47 @@
 // Header styles
-.page-header {
-	background: transparent;
-	padding: 30px 15px;
-	position: relative;
+.header-wrap {
+	background: $gray-lighter;
+}
 
-	.has-hero & {
-		background: black;
+.page-header {
+	position: relative;
+	margin-bottom: 2.5rem;
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: -$gutter;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background-color: $oakland-green;
 	}
 
 	.site-logo {
-		max-width: 204px;
+		max-width: 173px;
 		display: inline-block;
 		vertical-align: middle;
+		padding-top: 2.5rem;
+		position: relative;
+
 	}
 
-	.header-nav-button {
+	.header-nav-button,
+	.header-search-button {
 		display: inline-block;
 		vertical-align: middle;
-		position: absolute;
-		right: 15px;
-		padding: 15px;
 		cursor: pointer;
+		font-size: 20px;
+		float: right;
+		margin-top: 3.25rem;
+		margin-left: 2rem;
 
-		img {
-			max-width: 25px;
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+
+		&:active {
+			text-decoration: none;
 		}
 	}
 }
