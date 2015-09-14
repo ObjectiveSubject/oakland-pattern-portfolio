@@ -3,23 +3,21 @@
 .subnav {
 	// background-color: $oakland-green;
 	overflow: hidden;
+	min-height: 42px;
 
 	&.sticky {
 		background-color: $oakland-green;
+		overflow: visible;
 
 		.grid-row {
 			margin-bottom: 0;
-		}
-		.section-menu {
-			padding-top: 1rem;
-			padding-bottom: 1rem;
 		}
 	}
 }
 
 .subheader {
 	background-color: $oakland-green;
-	min-height: 400px;
+	height: 425px;
 	top: 0;
   left: 0;
   right: 0;
