@@ -79,5 +79,10 @@ body {
 }
 
 .column-shift + .column-shift {
-  @include shift;
+  margin-top: 1rem;
+
+  @include media($bp-md) {
+    margin-top: 0;
+    @include shift;
+  }
 }

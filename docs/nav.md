@@ -3,7 +3,7 @@ layout: page
 title: Navigation
 ---
 
-Primer comes with several navigation components. Some were designed with singular purposes, while others were design to be more flexible and appear quite frequently.
+The Oakland site uses several navigation components. Some were designed with singular purposes, while others were design to be more flexible and appear quite frequently.
 
 ## Contents
 
