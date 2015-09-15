@@ -106,6 +106,7 @@
 
       .sticky & {
         background-color: darken($oakland-green, 10%);
+        display: block !important;
       }
 
       &:before {

@@ -34,12 +34,12 @@
 
 	$(submenu).hover( function() {
 		if( !isOpen ) {
-			$(subnavItem).not('.active').slideDown('fast');
+			$(subnavItem).not('.active').stop().slideDown('fast');
 			isHovered = true;
 		}
 	}, function() {
 		if( !isOpen ) {
-			$(subnavItem).not('.active').slideUp('fast');
+			$(subnavItem).not('.active').stop().slideUp('fast');
 			isHovered = false;
 		}
 	});
@@ -106,6 +106,7 @@
 	var $waypointSections = $('.section');
 
 	$waypointSections.waypoint(function(direction) {
+		console.log(this.element.id);
 		if ( direction === 'down' ) {
 			swapNav(this.element.id);
 		}
