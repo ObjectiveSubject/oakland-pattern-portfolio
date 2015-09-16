@@ -4,26 +4,78 @@
 }
 
 .page-header {
-	position: relative;
-	margin-bottom: 2.5rem;
 
-	&:before {
-		content: "";
-		position: absolute;
-		left: -$gutter;
-		top: 0;
-		bottom: 0;
-		width: 2px;
-		background-color: $oakland-green;
+	.logo-wrap {
+		display: inline-block;
+		margin-bottom: 2.5rem;
+		padding-top: 2.5rem;
+		position: relative;
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: -$gutter;
+			top: 0;
+			bottom: 0;
+			width: 2px;
+			background-color: $oakland-green;
+		}
 	}
 
 	.site-logo {
 		max-width: 173px;
 		display: inline-block;
 		vertical-align: middle;
-		padding-top: 2.5rem;
 		position: relative;
 
+	}
+
+	.header-actions {
+		display: block;
+		width: 115%;
+		float: none;
+		margin-bottom: 1rem;
+		margin-left: -1.25rem;
+		margin-right: -1.25rem;
+
+		@include media($bp-md) {
+			display: inline-block;
+			vertical-align: middle;
+			float: right;
+			width: auto;
+			margin-bottom: 0;
+			padding-top: 2.5rem;
+		}
+	}
+
+	.header-search {
+		position: relative;
+		display: inline-block;
+		background: transparent;
+		width: auto;
+		padding: 0;
+
+		label {
+			margin-bottom: 0;
+		}
+
+		input {
+			border-color: $gray-lighter !important;
+			width: 215px;
+			padding-right: 35px;
+
+			&:focus {
+				border-color: $black !important;
+			}
+		}
+
+		.search-icon {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			color: $oakland-green;
+			font-size: 18px;
+		}
 	}
 
 	.header-nav-button,
@@ -32,8 +84,6 @@
 		vertical-align: middle;
 		cursor: pointer;
 		font-size: 20px;
-		float: right;
-		margin-top: 3.25rem;
 		margin-left: 2rem;
 
 		&:hover, &:focus {

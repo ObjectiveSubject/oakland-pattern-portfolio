@@ -1,3 +1,68 @@
+// Navicon Transformicons via http://codepen.io/bennettfeely/pen/twbyA
+// Change to watch in slow motion
+$duration: .5s;
+
+$size : 100%;
+$toggled-size : .75;
+
+$bg : #449A88;
+$nav-bg  : #2A2A2A;
+$content-bg : $oakland-green;
+
+.navicon-button {
+  position: relative;
+  padding: 8px 0;
+  transition: $duration/2;
+  cursor: pointer;
+  user-select: none;
+
+  .navicon:before, .navicon:after {
+    transition: $duration/2;
+  }
+}
+
+.navicon {
+  position: relative;
+  width: 20px;
+  height: 1px;
+  background: $content-bg;
+  transition: $duration;
+
+  &:before, &:after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 20px;
+    background: $content-bg;
+    position: absolute;
+    // z-index: -1;
+    transition: $duration $duration/2;
+  }
+
+  &:before { top: 6px; }
+  &:after { top: -6px; }
+}
+
+.open:not(.steps) .navicon:before,
+.open:not(.steps) .navicon:after {
+  top: 0 !important;
+}
+
+.open .navicon:before,
+.open .navicon:after {
+  transition: $duration;
+}
+
+/* × button */
+.open.x {
+  .navicon {
+    background: transparent;
+
+    &:before { transform: rotate(-45deg); }
+    &:after { transform: rotate(45deg); }
+  }
+}
+
 // Icon demo
 @font-face {
   font-family: Linearicons-Free;

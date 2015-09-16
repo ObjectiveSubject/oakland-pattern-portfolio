@@ -33,3 +33,18 @@
 	position: relative;
 	overflow: hidden;
 }
+
+// Main content overlay, when global nav is open
+.main-overlay {
+	position: absolute;
+	transition: background 0.3s ease-out;
+
+	.nav-visible & {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba($black, 0.4);
+		z-index: 1000;
+	}
+}

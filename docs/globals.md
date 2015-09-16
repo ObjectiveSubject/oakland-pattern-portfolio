@@ -19,8 +19,17 @@ These components are used on all or most pages of the site.
 			<a href="#" class="logo-wrap">
 				<img class="site-logo" src="{{ site.url }}/img/logo-v2.png" alt="City of Oakland" />
 			</a>
-			<a class="header-nav-button" href="#"><span class="lnr lnr-menu"></span></a>
-			<a class="header-search-button" href="#"><span class="lnr lnr-magnifier"></span></a>
+			<div class="header-actions">
+				<form role="search" class="header-search" method="get" action="">
+					<label>
+						<input type="text" placeholder="How can we help?" title="Search for:">
+					</label>
+					<span class="lnr lnr-magnifier search-icon"></span>
+				</form>
+        <a class="header-nav-button navicon-button x" href="#">
+          <div class="navicon"></div>
+        </a>
+			</div>
 		</header>
 	</div>
 </div>

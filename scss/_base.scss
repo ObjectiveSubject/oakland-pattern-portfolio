@@ -17,6 +17,7 @@ body {
   font: #{$body-font-size}/1.5 $body-font;
   color: $gray-dark;
   background-color: #fff;
+  position: relative;  
 }
 
 .docs-example {

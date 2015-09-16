@@ -11,6 +11,12 @@ body {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   box-sizing: content-box;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+
+  @include media($bp-md) {
+    margin: 0 auto;
+  }
 }
 
 // Grid system

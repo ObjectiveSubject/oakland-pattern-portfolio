@@ -120,6 +120,40 @@
 		}
 	}, {
 		offset: 100
+	});
+
+	// Off-canvas nav
+	var hamburger = document.querySelector('.header-nav-button');
+	var close = document.querySelector('.header-nav-close');
+	var overlay = document.querySelectorAll('.global-navigation-wrap, .global-navigation-wrap .container');
+	var offCanvasNav = document.querySelector('body');
+	var navIsOpen = false;
+
+	$(hamburger).on('click', function(e) {
+		e.preventDefault();
+		if ( !navIsOpen ) {
+			$(offCanvasNav).addClass('nav-visible');
+			$(this).addClass('open');
+			navIsOpen = true;
+		} else {
+			$(offCanvasNav).removeClass('nav-visible');
+			$(this).removeClass('open');
+			navIsOpen = false;
+		}
+	});
+
+	$(overlay).on('click', function(e) {
+		console.log(e.target);
+
+		if ( e.target != this ) {
+			return;
+		}
+
+		if ( navIsOpen ) {
+			$(offCanvasNav).removeClass('nav-visible');
+			$(hamburger).removeClass('open');
+			navIsOpen = false;
+		}
 	})
 
 }( window.jQuery, window, document ));
