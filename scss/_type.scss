@@ -11,6 +11,7 @@ h6 {
   font-weight: lighter;
   margin-bottom: 0.75em;
   margin-top: 0;
+  line-height: 1;
 
   a {
     font-size: inherit;
@@ -31,6 +32,7 @@ h6 {
   display: block;
   font-weight: lighter;
   margin-top: 0;
+  line-height: 1;
 
   a {
     font-size: inherit;
@@ -68,7 +70,7 @@ h4,
 
 h5,
 .h5 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   margin-bottom: 1em;
 }
 
@@ -135,6 +137,7 @@ ol {
 // No list style
 .list-no-style {
   list-style: none;
+  padding-left: 0;
 }
 
 ol ol,
@@ -151,6 +154,10 @@ ol ol ol {
 
 dd {
   margin-left: 0;
+}
+
+li {
+  margin-bottom: 1rem;
 }
 
 

@@ -1,4 +1,7 @@
 img {
+	max-width: 100%;
+	height: auto;
+
 	&.align-left {
 		float: left;
 		display: block;

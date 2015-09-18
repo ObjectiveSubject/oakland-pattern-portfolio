@@ -82,6 +82,31 @@ There is a variant of the menu that is used as the main section navigation that 
 </div>
 {% endexample %}
 
+### Big menu
+
+{% example html %}
+<div class="container">
+  <nav class="big-menu">
+    <a href="" class="menu-item">
+      <h3>Big Item</h3>
+      <p>Info about the big item</p>
+    </a>
+    <a href="" class="menu-item">
+      <h3>Big Item</h3>
+      <p>Info about the big item</p>
+    </a>
+    <a href="" class="menu-item">
+      <h3>Big Item</h3>
+      <p>Info about the big item</p>
+    </a>
+    <a href="" class="menu-item">
+      <h3>Big Item</h3>
+      <p>Info about the big item</p>
+    </a>
+  </nav>
+</div>
+{% endexample %}
+
 ## Breadcrumbs
 
 Place these at the top of interior pages to help orient the user and give them easy access to previous pages.
