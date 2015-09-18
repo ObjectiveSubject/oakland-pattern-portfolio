@@ -35,6 +35,11 @@ Form controls in Primer currently have no basic layout specified (this is by des
     <input type="email" id="email-address">
   </label>
 
+  <label for="user-comment">
+    Enter your comments here
+    <textarea name="user-comment" id="user-comment" cols="30" rows="10"></textarea>
+  </label>
+
   <div class="form-group">
     <p>Do you live in Oakland, CA?</p>
     <label for="yep" class="form-radio">

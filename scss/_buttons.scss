@@ -6,26 +6,45 @@ button {
 
 // Standard Buttons - these may end up inheriting section colors.
 // Need to implement color variables later
-.btn {
+.btn,
+a.btn {
   display: inline-block;
   vertical-align: middle;
-  color: #fff;
-  background: #0e633e;
+  color: $white;
+  background-color: darken($oakland-green, 20%);
   border: none;
   font-size: 1.5rem;
   line-height: 1;
   padding: 1rem;
-  border-left: 2px solid #0e633e;
   transition: all 0.15s ease;
+  text-decoration: none;
+  position: relative;
 
-  &:hover, &:focus {
-    background: #104741;
-    border-left-color: $oakland-green;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: darken($oakland-green, 20%)
+  }
+
+  &:hover,
+  &:focus {
+    background-color: darken($oakland-green, 40%);
+
+    &:before {
+      background-color: $oakland-green;
+    }
   }
 
   &:active {
-    background: $oakland-green;
-    border-left-color: #104741;
+    background-color: $oakland-green;
+
+    &:before {
+      background-color: darken($oakland-green, 40%);      
+    }
   }
 
   &[disabled],
@@ -37,26 +56,71 @@ button {
   &.disabled:focus,
   &.disabled:active {
     pointer-events: none;
-    background: $fruitvale-mint;
-    border-left-color: $fruitvale-mint;
+    background-color: rgba(lighten($oakland-green, 10%), 0.2);
     cursor: default;
-  }
-
-  &.arrow-right {
-    padding-right: 45px;
-    position: relative;
 
     &:before {
-      content: "\e87a";
-      font-family: Linearicons-Free;
-      font-size: 20px;
-      position: absolute;
-      right: 15px;
+      background-color: rgba(lighten($oakland-green, 10%), 0.2);
+    }
+  }
+
+  // &.arrow-right {
+  //   padding-right: 45px;
+  //   position: relative;
+
+  //   &:before {
+  //     content: "\e87a";
+  //     font-family: Linearicons-Free;
+  //     font-size: 20px;
+  //     position: absolute;
+  //     right: 15px;
+  //   }
+  // }
+
+  span {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 20px;
+  }
+}
+
+// These buttons are white with a colored outline by default
+.btn-secondary,
+a.btn-secondary {
+  background-color: $white;
+  color: darken($oakland-green, 20%);
+  border: 1px solid darken($oakland-green, 20%);
+
+  &:before {
+    background-color: transparent;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white;
+    border: 1px solid $white;
+  }
+
+  &:hover,
+  &:focus {
+    &:before {
+      background-color: $oakland-green;
+    }
+  }
+
+  &:active {
+    &:before {
+      background-color: darken($oakland-green, 40%);
     }
   }
 }
 
-a.btn {
-  color: #fff;
-  text-decoration: none;
+// Full width block buttons
+.btn-block,
+a.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1.25rem;
 }

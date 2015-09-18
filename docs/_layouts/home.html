@@ -23,36 +23,94 @@
   </head>
   <body>
 
-  <div class="sticky-menu">
-    <div class="header-wrap">
-      <div class="container">
-        <header class="page-header" role="banner">
-          <a href="#" class="logo-wrap">
-            <img class="site-logo" src="{{ site.url }}/img/logo-v2.png" alt="City of Oakland" />
-          </a>
-          <a class="header-nav-button" href="#"><span class="lnr lnr-menu"></span></a>
-          <a class="header-search-button" href="#"><span class="lnr lnr-magnifier"></span></a>
-        </header>
-      </div>
-    </div>
-    <section class="subnav">
-      <div class="container">
-        <div class="grid-row">
-          <nav class="section-menu">
-            <a class="menu-item" href="#">Account</a>
-            <a class="menu-item selected" href="#">Profile</a>
-            <a class="menu-item" href="#">Emails</a>
-            <a class="menu-item" href="#">Notifications</a>
-          </nav>
+    <div class="sticky-menu has-hero">
+      <div class="header-wrap">
+        <div class="container">
+          <header class="page-header" role="banner">
+            <a href="#" class="logo-wrap">
+              <img class="site-logo" src="{{ site.url }}/img/logo-v2.png" alt="City of Oakland" />
+            </a>
+            <div class="header-actions">
+              <form role="search" class="header-search" method="get" action="">
+                <label>
+                  <input type="text" placeholder="How can we help?" title="Search for:">
+                </label>
+                <span class="lnr lnr-magnifier search-icon"></span>
+              </form>
+              <a class="header-nav-button navicon-button x" href="#">
+                <div class="navicon"></div>
+              </a>
+            </div>
+          </header>
         </div>
       </div>
-    </section>
-  </div>
 
-  <div class="subheader"></div>
+      <div class="global-navigation-wrap clearfix">
+        <div class="container">
+        <nav role="navigation" class="global-navigation">
+          <strong>City of Oakland</strong>
+          <a href="" class="menu-item">Get Involved</a>
+          <a href="" class="menu-item">Departments</a>
+          <a href="" class="menu-item">Announcements</a>
+          <strong>General</strong>
+          <a href="" class="menu-item">Get Involved</a>
+          <a href="" class="menu-item">Departments</a>
+          <a href="" class="menu-item">Announcements</a>
+          <strong>Languages</strong>
+          <a href="" class="menu-item">Get Involvexd</a>
+          <a href="" class="menu-item">Departments</a>
+          <a href="" class="menu-item">Announcements</a>
+        </nav>
+        </div>
+      </div>
 
-    <div style="height: 600px; width: 100%;">
+    <div class="flash flash-alert">
       <div class="container">
+        <span class="flash-type">High Alert</span>
+        Flash message goes here
+        <a href="#">Read more</a>
+      </div>
+    </div>
+
+      <section class="subnav" style="background-image: url(../img/hero-1.jpg);">
+        <div class="container">
+          <div class="grid-row">
+            <nav class="section-menu one-third">
+              <a class="menu-item" href="#section-1">Services</a>
+              <a class="menu-item" href="#section-2">City News</a>
+              <a class="menu-item" href="#section-3">Departments</a>
+              <a class="menu-item" href="#section-4">Mayor</a>
+            </nav>
+            <div class="section-info two-thirds">
+              <h1>Welcome to Oakland, California</h1>
+              <p>The best place to find information and services from the City of Oakland.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="main-overlay"></div>
+
+    <section id="section-1" class="section">
+      <div class="container">
+        <h2>Services</h2>
+        
+        <hr>
+      </div>
+    </section>
+
+    <section id="section-2" class="section">
+      <div class="container">
+        <h2>City News</h2>
+
+        <hr>
+      </div>
+    </section>
+
+    <section id="section-3" class="section">
+      <div class="container">
+        <h2>Departments</h2>
         <div class="grid-row">
           <nav class="menu one-third">
             <a class="menu-item selected" href="#">Account</a>
@@ -73,7 +131,7 @@
             <a class="menu-item" href="#">Notifications</a>
           </nav>
         </div>
-      </div>
+      </section>
 
       <footer class="content-footer" style="background-image: url(../img/repeat-demo.jpg);">
         <div class="previous-next-links container clearfix">

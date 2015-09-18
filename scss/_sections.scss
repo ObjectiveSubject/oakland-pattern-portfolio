@@ -1,32 +1,80 @@
 // Section elements
 
+// .sticky-menu is the wrapper around all the fixed position header stuff
+.sticky-menu {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  max-width: inherit;
+  margin: 0 auto;
+  z-index: 10000;
+}
+
+// .subnav is the wrapper for the department page info and section menu
+// It grows and shrinks on scroll
+// See the .section-menu in _menus.scss
 .subnav {
-	// background-color: $oakland-green;
+	background-color: $oakland-green;
+	background-size: cover;
+	background-position: center;
 	overflow: hidden;
-	min-height: 42px;
+	transition: all 0.3s ease-out;
+	height: auto;
+	padding-top: 5.25rem;
+	padding-bottom: 2.5rem;
+
+	@include media($bp-md) {
+		min-height: 400px;
+	}
+
+	.grid-row {
+		margin-bottom: 0;
+	}
 
 	&.sticky {
-		background-color: $oakland-green;
 		overflow: visible;
+		min-height: 42px;
+		padding: 0;
 
-		.grid-row {
-			margin-bottom: 0;
-		}
+	}
+
+	&.done {
+		background-image: none !important; // force the bg image to be hidden when subnav is sticky
+	}
+
+	.nav-visible & {
+		background-color: darken($oakland-green, 20%);
 	}
 }
 
-.subheader {
-	background-color: $oakland-green;
-	height: 425px;
-	top: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
-  max-width: inherit;
-  margin: 0 auto;
-  z-index: 900;
-  transition: all 0.2s ease-out;
+// This is the part of the subnav that contains info about the current site section (e.g. Public Works)
+.section-info {
+	max-width: 450px;
+	
+	h1,
+	p,
+	span {
+		color: $white;
+	}
+
+	.sticky & {
+		display: none;
+	}
 }
+
+// .subheader {
+// 	background-color: $oakland-green;
+// 	height: 425px;
+// 	top: 0;
+//   left: 0;
+//   right: 0;
+//   position: absolute;
+//   max-width: inherit;
+//   margin: 0 auto;
+//   z-index: 900;
+//   transition: all 0.2s ease-out;
+// }
 
 // Main content footer
 .content-footer {

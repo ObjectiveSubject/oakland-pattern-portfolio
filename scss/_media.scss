@@ -1,0 +1,18 @@
+img {
+	&.align-left {
+		float: left;
+		display: block;
+		margin: 0.5rem $gutter 1.25rem 0;
+	}
+
+	&.align-right {
+		float: right;
+		display: block;
+		margin: 0.5rem 0 1.25rem $gutter;
+	}
+
+	&.align-center {
+		display: block;
+		margin: 0.5rem auto 1.25rem;
+	}
+}
