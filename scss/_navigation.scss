@@ -13,7 +13,7 @@ $global-nav-width: 100%;
 	opacity: 0;
 	z-index: 10000;
 	overflow: hidden;
-	background-color: $gray-lighter;
+	background-color: $color-side-nav-bg;
 
 	@include media($bp-md) {
 		top: 123px;
@@ -30,7 +30,7 @@ $global-nav-width: 100%;
 		&:before {
 			content: "";
 			position: absolute;
-			background-color: $gray-lighter;
+			background-color: $color-side-nav-bg;
 			width: 20%;
 			height: 100vh;
 		}
@@ -47,7 +47,7 @@ $global-nav-width: 100%;
 
 .global-navigation {
 	@include fill-parent;
-	background-color: $gray-lighter;
+	background-color: $color-side-nav-bg;
 	position: absolute;
 	top: 0;
 	bottom: 0;
