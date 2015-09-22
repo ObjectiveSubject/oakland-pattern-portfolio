@@ -11,6 +11,11 @@
   z-index: 10000;
 }
 
+.sticky-placeholder {
+	width: 100%;
+	height: 123px;
+}
+
 // .subnav is the wrapper for the department page info and section menu
 // It grows and shrinks on scroll
 // See the .section-menu in _menus.scss
@@ -23,6 +28,7 @@
 	height: auto;
 	padding-top: 5.25rem;
 	padding-bottom: 2.5rem;
+	margin-bottom: 2.5rem;
 
 	@include media($bp-md) {
 		min-height: 400px;
