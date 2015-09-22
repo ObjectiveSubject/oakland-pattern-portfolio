@@ -1,39 +1,35 @@
 // Off-canvas global navigation
 
 $mobile-nav-width: 90%;
-$global-nav-width: 100%;
+$global-nav-width: 213px;
 
 .global-navigation-wrap {
-	position: absolute;
+	position: fixed;
 	width: $mobile-nav-width;
 	@include calc(height, '100vh - 181px');
-	left: -$mobile-nav-width;
-	top: 181px;
-	transition: all 0.3s ease-out;
-	opacity: 0;
+	top: -100vh;
+	transition: all 0.2s ease-out;
 	z-index: 10000;
-	overflow: hidden;
 	background-color: $color-side-nav-bg;
 
 	@include media($bp-md) {
-		top: 123px;
-		left: -$global-nav-width;
+		top: -100vh;
 		width: $global-nav-width;
 		background-color: transparent;
 		@include calc(height, '100vh - 123px');
 	}
 
-	.nav-visible & {
-		left: 0;
-		opacity: 1;
+	&:before {
+		content: "";
+		position: absolute;
+		background-color: $color-side-nav-bg;
+		width: 142px;
+		left: -142px;
+		@include calc(height, '100vh - 123px');
+	}
 
-		&:before {
-			content: "";
-			position: absolute;
-			background-color: $color-side-nav-bg;
-			width: 20%;
-			height: 100vh;
-		}
+	.nav-visible & {
+		top: 123px;
 	}
 
 	.container {
@@ -41,8 +37,13 @@ $global-nav-width: 100%;
 	}
 }
 
+
+// This crazy hack keeps the scrollbar visible in Chrome while still disabling scroll
 .nav-visible {
-	overflow: hidden;
+	position: fixed;
+	overflow-y: scroll;
+	left: 0;
+	right: 0;
 }
 
 .global-navigation {
@@ -50,6 +51,7 @@ $global-nav-width: 100%;
 	background-color: $color-side-nav-bg;
 	position: absolute;
 	top: 0;
+	left: 0;
 	bottom: 0;
 	font-size: 0.875rem;
 	height: 100%;
@@ -68,35 +70,41 @@ $global-nav-width: 100%;
 	strong {
 		display: block;
 		padding: 10px 0;
+		color: $white;
 	}
 
 	.menu-item {
 		font-size: 0.875rem;
 		margin-left: 0;
-		color: $color-text-body;
+		color: $white;
 		padding: 10px 5px 10px 1.25rem;
+		transition: all 0.2s;
 
 		&:before {
-			transition: all 0.2s ease;
+			transition: all 0.2s;
 		}
 
 		&:hover, &:focus {
+			background-color: transparent;
 
 			&:before {
+		transition: all 0.2s;
 	      background-color: $white;
 			}
 		}
 
 		&:active, &.active {
-			color: $color-text-body;
+			color: darken($white, 10%);
+			background-color: transparent;
 
 			&:before {
+		transition: all 0.2s;
 	      background-color: $oakland-green;
 			}
 		}
 	}
 
 	@include media($bp-md) {
-		@include span-columns(4);
+		// @include span-columns(4);
 	}
 }
