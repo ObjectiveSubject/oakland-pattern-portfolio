@@ -1,46 +1,54 @@
 (function( $, window, document ) {
 
-	var menu = document.querySelector('.sticky-menu');
+	var menu = document.querySelector('.section-menu');
 
 	if (menu) {
 		var menuPosition = menu.getBoundingClientRect();
+		var menuTop = menuPosition.top - 123;
 		var placeholder = document.createElement('div');
-		placeholder.style.width = menuPosition.width + 'px';
-		placeholder.style.height = menuPosition.height + 84 + 'px';
+		placeholder.style.width = menuPosition.width + 20 + 'px';
+		placeholder.style.height = menuPosition.height + 'px';
+		placeholder.style.styleFloat = "left";
+		placeholder.style.cssFloat = "left";
+		placeholder.style.position = "absolute";
 		var subnav = document.querySelector('.subnav');
-		var submenu = document.querySelector('.section-menu');
-		var subnavItem = document.querySelectorAll('.subnav .menu-item')
+		var subnavItem = document.querySelectorAll('.section-menu .menu-item')
 		var isOpen = true;
 		var isFocused = false;
 		var isHovered = false;
-		var alert = document.querySelector('.flash');
-		// var subheader = document.querySelector('.subheader');
-		// var subheaderHeight = $(subheader).height();
 
-		document.addEventListener("DOMContentLoaded", function() {
-	    menu.parentNode.insertBefore(placeholder, menu);
+		menu.parentNode.insertBefore(placeholder, menu);
+
+		// Function for opening and closing the subnav on scroll, used by waypoint js lib
+		function subnavToggle() {
+			if ( isOpen ) {
+				$(menu).addClass('sticky');
+				$(placeholder).css('position', 'relative');
+				$(subnavItem).not('.active').slideUp('fast');
+        isOpen = false;
+			} else if ( !isOpen ) {
+				$(menu).removeClass('sticky');
+				$(placeholder).css('position', 'absolute');
+				$(subnavItem).not('.active').slideDown('fast');
+				isOpen = true;
+			}
+			console.log(isOpen);
+		}
+
+		if (window.pageYOffset >= 150 && isOpen) {
+			subnavToggle();
+			isOpen = false;
+		}
+
+		// Waypoint for section-menu
+		$(menu).waypoint(function(direction) {
+			subnavToggle();
+		}, {
+			offset: 123
 		});
 
-		window.addEventListener('scroll', function() {
-	    if (window.pageYOffset >= 50 && isOpen) {
-	    		$(alert).slideUp('fast');
-	        $(subnav).addClass('sticky');
-	        $(subnavItem).not('.active').slideUp('fast', function() {
-	        	$(subnav).addClass('done');
-	        });
-	        // $(subheader).height(0);
-	        isOpen = false;
-	    } else if (window.pageYOffset < 50 && !isOpen) {
-	    		$(alert).slideDown('fast');
-	    		$(subnav).removeClass('done');
-	        $(subnavItem).not('.active').slideDown('fast');
-	        $(subnav).removeClass('sticky');
-	        // $(subheader).height(subheaderHeight);
-	        isOpen = true;
-	    }
-		});
-
-		$(submenu).hover( function() {
+		// Sticky nav hover behavior
+		$(menu).hover( function() {
 			if( !isOpen ) {
 				$(subnavItem).not('.active').stop().slideDown('fast');
 				isHovered = true;
@@ -52,45 +60,45 @@
 			}
 		});
 
-		$(subnav).focusin( function() {
-			if( !isOpen && !isFocused ) {
-				$(subnavItem).not('.active').slideDown('fast');
-				isOpen = true;
-				isFocused = true;
-			}
-		});
+		// $(menu).focusin( function() {
+		// 	if( !isOpen && !isFocused ) {
+		// 		$(subnavItem).not('.active').slideDown('fast');
+		// 		isOpen = true;
+		// 		isFocused = true;
+		// 	}
+		// });
 
-		$(subnavItem).last().focusout( function() {
-			if( isOpen && isFocused ) {
-				$(subnavItem).not('.active').slideUp('fast');
-				isOpen = false;
-				isFocused = false;
-			}
-		});
+		// $(subnavItem).last().focusout( function() {
+		// 	if( isOpen && isFocused ) {
+		// 		$(subnavItem).not('.active').slideUp('fast');
+		// 		isOpen = false;
+		// 		isFocused = false;
+		// 	}
+		// });
 
-		$(subnavItem).first().focusout( function() {
-			if( isOpen && isFocused ) {
-				$(subnavItem).not('.active').slideUp('fast');
-				isOpen = false;
-				isFocused = false;
-			}
-		});
+		// $(subnavItem).first().focusout( function() {
+		// 	if( isOpen && isFocused ) {
+		// 		$(subnavItem).not('.active').slideUp('fast');
+		// 		isOpen = false;
+		// 		isFocused = false;
+		// 	}
+		// });
 
 	}
 
 	// Change active state on scroll
 	var sections = $('.section')
-	  , nav = $('.sticky-menu')
-	  , navHeight = nav.outerHeight();
+	  , header = $('.header-wrap')
+	  , nav = $('.section-menu');
 
-	nav.find('a.menu-item').on('click', function () {
+	$(subnavItem).on('click', function () {
 	  var $el = $(this)
 	    , id = $el.attr('href');
 
     $el.addClass('active').siblings('.active').removeClass('active');
 	 
 	  $('html, body').animate({
-	    scrollTop: $(id).offset().top - 165
+	    scrollTop: $(id).offset().top - 185
 	  }, 500);
 	 
 	  return false;
@@ -123,7 +131,7 @@
 				swapNav(this.element.id);
 			}
 		}, {
-			offset: 165
+			offset: 185
 		});
 
 		$waypointSections.waypoint(function(direction) {
