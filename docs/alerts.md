@@ -26,7 +26,7 @@ Flash messages start off looking decently neutral—they're $oakland-green full-
 
 ## Variations
 
-Add `.flash-warn` or `.flash-error` to the flash message to make it orange or red, respectively.
+Add `.flash-warn` or `.flash-error` to the flash message to change the meaning and make it orange or red, respectively. Also be sure to change the `.flash-type` text to Warning or High Alert.
 
 {% example html %}
 <div class="flash flash-warn">

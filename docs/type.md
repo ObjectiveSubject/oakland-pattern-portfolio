@@ -115,9 +115,13 @@ Styling for common inline HTML5 elements.
 Wrap `<blockquote>` around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes, we recommend a `<p>`.
 
 {% example html %}
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam repudiandae dolore ex, laboriosam nemo voluptatibus esse rem vel harum aspernatur ullam, aliquam possimus vitae, molestiae blanditiis alias, consequatur quaerat voluptates.</p>
+
 <blockquote>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus reprehenderit, explicabo quas quibusdam illum beatae. Tempora totam maxime, quasi veniam soluta provident, labore repellendus, iste voluptatem reprehenderit similique, impedit iure."</p>
 </blockquote>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt praesentium, at dicta quo atque aspernatur reiciendis sunt quis. Excepturi fugiat aspernatur, blanditiis tenetur hic. Ad nisi voluptates error, sed obcaecati!</p>
 {% endexample %}
 
 ## Lists
@@ -170,12 +174,4 @@ This element should be added to any single post or post excerpt. It will display
 
 {% example html %}
 <p class="post-data"><a href="#">Category</a> - <time datetime="">September 9, 2015</time></p>
-{% endexample %}
-
-## Horizontal Rule
-
-Horizontal rules can be added to any layout to separate sections. It has a 3rem bottom margin.
-
-{% example html %}
-<hr>
 {% endexample %}

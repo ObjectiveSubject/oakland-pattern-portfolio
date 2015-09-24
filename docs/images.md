@@ -26,3 +26,13 @@ The basic image sizes and placements across the site
 {% example html %}
 <img src="http://placehold.it/1200x400" alt="">
 {% endexample %}
+
+## Services Icons
+
+These images are used on the Home page in the Services dropdown. They should be transparent .pngs with a white icon. The should be 50x50px total and the icon should be centered in that area.
+
+{% example html %}
+<div style="background-color: gray; float: left;">
+	<img src="{{ site.baseurl }}/img/parking-icon.png" alt="" width="50" height="50" style="float: left;">
+</div>
+{% endexample %}

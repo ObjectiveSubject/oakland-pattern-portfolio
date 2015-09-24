@@ -1,4 +1,7 @@
 // Various simple text elements
+// 1. Post data
+// 2. Breadcrumbs
+// 3. Tables
 
 // Post data
 // Small, muted text used to show post data like Category and Date
@@ -22,12 +25,29 @@
 
 // Breadcrumbs
 // ----------------------------------------------------
+
+// If you need the breadcrumbs to be absolute positioned
+// (i.e., inside the subheader), wrap it in this
+.breadcrumb-wrap {
+  @include outer-container();
+	position: absolute;
+	top: 0;
+	left: -2.5rem;
+	right: 0;
+}
+
 .breadcrumbs {
 	line-height: 1;
 	padding-top: 1.5rem;
 	padding-left: $gutter;
 	margin-bottom: 1.5rem;
 	border-left: 2px solid $muted;
+	margin-left: -1.25rem;
+
+	.breadcrumb-wrap & {
+		margin-left: 0;
+	}
+
 
 	a, span {
 		display: inline-block;
@@ -41,6 +61,12 @@
 		padding-right: 20px;
 		position: relative;
 
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+			color: $muted;
+		}
+
 		&:active {
 			color: darken($muted, 10%);
 		}
@@ -49,7 +75,35 @@
 			content: "\2192";
 			position: absolute;
 			right: 5px;
-			color: $color-text-body;
+			color: $black;
 		}
+	}
+
+	span {
+		color: $black;
+	}
+}
+
+// Tables
+table {
+	width: 100%;
+
+	th,
+	tr,
+	td {
+		border: none;
+		text-align: left;
+	}
+
+	th {
+		font-weight: bold;
+	}
+
+	tr {
+		border-bottom: 1px solid $gray-light;
+	}
+
+	tbody tr:last-child {
+		border-bottom: none;
 	}
 }

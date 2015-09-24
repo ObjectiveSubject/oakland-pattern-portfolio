@@ -11,7 +11,6 @@
 		placeholder.style.styleFloat = "left";
 		placeholder.style.cssFloat = "left";
 		placeholder.style.position = "absolute";
-		var subnav = document.querySelector('.subnav');
 		var subnavItem = document.querySelectorAll('.section-menu .menu-item')
 		var isOpen = true;
 		var isFocused = false;
@@ -20,6 +19,7 @@
 		menu.parentNode.insertBefore(placeholder, menu);
 
 		// Function for opening and closing the subnav on scroll, used by waypoint js lib
+		// -----------------------------------
 		function subnavToggle() {
 			if ( isOpen ) {
 				$(menu).addClass('sticky');
@@ -60,6 +60,8 @@
 			}
 		});
 
+		// Need to figure out a better solution for Focus support
+	// -----------------------------------
 		// $(menu).focusin( function() {
 		// 	if( !isOpen && !isFocused ) {
 		// 		$(subnavItem).not('.active').slideDown('fast');
@@ -87,6 +89,7 @@
 	}
 
 	// Change active state on scroll
+	// -----------------------------------
 	var sections = $('.section')
 	  , header = $('.header-wrap')
 	  , nav = $('.section-menu');
@@ -121,6 +124,7 @@
 	}
 
 	// Waypoints
+	// -----------------------------------
 	if( $('.section').length ) {
 
 		var $waypointSections = $('.section');
@@ -145,6 +149,7 @@
 	}
 
 	// Off-canvas nav
+	// -----------------------------------
 	var hamburger = document.querySelector('.header-nav-button');
 	var close = document.querySelector('.header-nav-close');
 	var logo = document.querySelector('.logo-wrap');
@@ -182,6 +187,6 @@
 			$(hamburger).removeClass('open');
 			navIsOpen = false;
 		}
-	})
+	});
 
 }( window.jQuery, window, document ));

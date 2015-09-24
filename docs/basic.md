@@ -1,4 +1,4 @@
 ---
 layout: basic
-title: Basic Layout
+title: Landing Page
 ---

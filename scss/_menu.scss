@@ -8,7 +8,8 @@
   padding: 6px 5px 4px $gutter;
   margin-left: -$gutter; // negative margin + extra padding trick to pull the background over the left gutter
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     text-decoration: none;
     background-color: $gray-lighter;
 
@@ -25,6 +26,7 @@
 
   &:active {
     color: darken($oakland-green, 10%);
+
     &:before {
       background-color: darken($oakland-green, 10%);
     }
@@ -32,7 +34,7 @@
 
   &.selected {
     cursor: default;
-    background-color: $gray-lighter;
+    background-color: transparent;
 
     &:before {
       position: absolute;
@@ -153,7 +155,54 @@
       color: $color-text-body;
       margin: 0;
     }
+
+    a,
+    a:hover,
+    a:focus,
+    a:active {
+      text-decoration: none;
+    }
+
+    &.selected {
+      padding-bottom: 0;
+    }
   }
 }
 
+.grid-row.big-menu-group {
+  margin-bottom: 0;
+  position: relative;
+  display: none;
 
+  a {
+    color: $color-text-body;
+    display: block;
+    height: 5.25rem;
+    background-color: $gray-light;
+    padding: 1rem 5rem 1rem 1rem;
+    margin-top: $gutter;
+    position: relative;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: $gray;
+    }
+
+    &:active {
+      text-decoration: none;
+      color: $white;
+      background-color: $oakland-green;
+    }
+  }
+}
+
+.big-menu-icon {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+// .selected + .big-menu-group {
+//   display: block;
+// }

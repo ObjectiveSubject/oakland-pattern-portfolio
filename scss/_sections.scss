@@ -16,10 +16,9 @@
 	height: 123px;
 }
 
-// .subnav is the wrapper for the department page info and section menu
-// It grows and shrinks on scroll
+// .subheader is the wrapper for the department page info and section menu
 // See the .section-menu in _menus.scss
-.subnav {
+.subheader {
 	background-color: $oakland-green;
 	background-size: cover;
 	background-position: center;
@@ -29,6 +28,7 @@
 	padding-top: 5.25rem;
 	padding-bottom: 2.5rem;
 	margin-bottom: 2.5rem;
+	position: relative;
 
 	@include media($bp-md) {
 		min-height: 400px;
@@ -68,19 +68,6 @@
 		display: none;
 	}
 }
-
-// .subheader {
-// 	background-color: $oakland-green;
-// 	height: 425px;
-// 	top: 0;
-//   left: 0;
-//   right: 0;
-//   position: absolute;
-//   max-width: inherit;
-//   margin: 0 auto;
-//   z-index: 900;
-//   transition: all 0.2s ease-out;
-// }
 
 // Main content footer
 .content-footer {

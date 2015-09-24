@@ -48,18 +48,21 @@ h1,
 .h1 {
   font-size: 2rem;
   margin-bottom: 2.625rem;
+  line-height: 1.5;
 }
 
 h2,
 .h2 {
   font-size: 2rem;
   margin-bottom: 2.625rem;
+  line-height: 1.25;
 }
 
 h3,
 .h3 {
   font-size: 1.5rem;
   margin-bottom: 1em;
+  line-height: 1.25;
 }
 
 h4,
@@ -88,7 +91,10 @@ small, .text-small {
 }
 
 blockquote {
-  margin: 0;
+  margin: 0 0 1.5rem 0;
+  padding: 0 $gutter;
+  border-left: 2px solid $oakland-green;
+  color: $color-text-body;
 }
 
 // Large leading paragraphs
@@ -120,6 +126,14 @@ a {
 
   &:active {
     color: darken($oakland-green, 20%);
+  }
+
+  &.muted-link {
+    color: $muted;
+
+    &:active {
+      color: darken($muted, 20%);
+    }
   }
 }
 

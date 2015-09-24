@@ -77,6 +77,10 @@
       }
     }
 
+    .subheader {
+      background-color: $primary;
+    }
+
     .btn {
       background: $darkened;
       border-left-color: $darkened;
@@ -160,16 +164,16 @@
 
     .prev-link, .next-link {
       color: $white;
-      background-color: rgba($darkened, 0.7);
+      background-color: rgba($darkened, 0.95);
 
       &:hover, &:focus {
         color: $white;
-        background-color: rgba($hover, 0.7);
+        background-color: rgba($hover, 0.95);
       }
 
       &:active {
         color: $white;
-        background-color: rgba($primary, 0.7);
+        background-color: rgba($primary, 0.95);
       }
     }
   }

@@ -28,14 +28,6 @@ You can reveal the entire string on hover with the addition of `.expandable`.
 </span>
 {% endexample %}
 
-## Counter
-
-Add a number or unread indicator to navs and more with a counter.
-
-{% example html %}
-<span class="counter">9</span>
-{% endexample %}
-
 ## Floats
 
 Quickly float something to the left or right, and clear them later.
@@ -52,8 +44,8 @@ Quickly float something to the left or right, and clear them later.
 Easily center **block level content** if it's not taking up the full width of the parent. Can be used [on grid columns](/layout/#centered) or any other elements.
 
 {% example html %}
-<nav class="menu centered">
-  <a class="menu-item selected" href="#">Account</a>
+<nav class="menu centered one-third">
+  <a class="menu-item" href="#">Account</a>
   <a class="menu-item" href="#">Profile</a>
   <a class="menu-item" href="#">Emails</a>
   <a class="menu-item" href="#">Notifications</a>
@@ -71,40 +63,10 @@ Change the `text-align` on elements with a class.
 <p class="text-center">Center aligned text.</p>
 {% endexample %}
 
-## Text color
-
-Change the `color` of elements with a class.
-
-{% example html %}
-<p class="text-open">Green/open text</p>
-<p class="text-closed">Red/closed text</p>
-<p class="text-merged">Merged text</p>
-<p class="text-pending">Pending text</p>
-{% endexample %}
-
-`.text-closed` and `.text-failure` are the same, as well as `.text-open` and `.text-success`.
-
 ## Muted link
 
-When you need a hyperlink to not be `$brand-blue`, use a `.muted-link`.
+When you need a hyperlink to not be `$oakland-green` or the current department color, use a `.muted-link`.
 
 {% example html %}
 Here is some example text. <a class="muted-link" href="#">And a muted link.</a>
-{% endexample %}
-
-## Flex table
-
-Flex table is a module for creating dynamically resizable elements that always sit on the same horizontal line (e.g., they never break to a new line). Using table styles in our CSS means it's cross browser friendly back to at least IE9.
-
-Additional `margin` or `padding` may be required to properly space content.
-
-{% example html %}
-<div class="flex-table">
-  <div class="flex-table-item flex-table-item-primary">
-    <input class="input-block" type="text" placeholder="Long flexible input form">
-  </div>
-  <div class="flex-table-item">
-    <button class="btn" type="button">Button</button>
-  </div>
-</div>
 {% endexample %}

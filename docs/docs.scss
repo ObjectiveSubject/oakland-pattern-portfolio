@@ -347,15 +347,15 @@ a {
   .flex-table-item > .btn {
     margin-left: 10px;
   }
+
+  // Prev/Next links add margin for demo
+  .content-footer {
+    margin-bottom: 2rem;
+  }
 }
 
 .page-title + .markdown-body > p:first-child {
   @extend .lead;
-}
-
-// Prev/Next links
-.content-footer {
-  margin-bottom: 2rem;
 }
 
 

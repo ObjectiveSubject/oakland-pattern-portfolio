@@ -1,6 +1,34 @@
 // Specific link types
 
 // Previous/Next links
+// ----------------------------
+
+// The .pager-footer class should applied to the same
+// <footer> element as .content-footer ( see _sections.scss_
+// when being used for the prev/next links.
+// This applies the bg pattern beneath the links
+.pager-footer {
+	
+  &:before {
+    content: "";
+    background-image: url(../img/bg-pattern-mobile.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.35;
+
+	  @include media($bp-md) {
+	    background-image: url(../img/bg-pattern-large.png);
+	    background-position: 0px random(975) - 975 + px;
+	  }
+  }
+}
+
+// These are the actual prev/next link styles and containers
 .previous-next-links {
 	background-size: cover;
 	width: 100%;
@@ -9,7 +37,8 @@
 	padding: 0;
 }
 
-.prev-link, .next-link {
+.prev-link,
+.next-link {
 	position: absolute;
 	color: $white;
 	display: inline-block;
@@ -19,17 +48,29 @@
 	padding-top: 1.25rem;
 	font-size: 1.5rem;
 	line-height: 1;
-  background-color: rgba(darken($oakland-green, 20%), 0.7);
+  background-color: rgba(darken($oakland-green, 20%), 0.95);
 
 	&:hover, &:focus {
-		background-color: rgba(darken($oakland-green, 30%), 0.7);
+		background-color: rgba(darken($oakland-green, 30%), 0.95);
 		text-decoration: none;
 	}
   
   &:active {
-		background-color: rgba($oakland-green, 0.7);
+		background-color: rgba($oakland-green, 0.95);
 		text-decoration: none;
 		color: $white;
+	}
+
+	span.lnr {
+		font-size: 20px;
+		vertical-align: top;
+		font-weight: bold;
+	}
+
+	span,
+	small {
+		display: inline-block;
+		vertical-align: middle;
 	}
 }
 
@@ -37,11 +78,17 @@
   padding-left: 50%;
   margin-left: -50%;
 
-  &:before {
-  	content: "\e879";
-  	font-family: Linearicons-Free;
-  	position: absolute;
-  	left: 46%;
+  small {
+  	margin-left: 25px;
+  }
+
+  .prev-next-text,
+  .prev-next-small {
+  	display: none;
+
+  	@include media($bp-md) {
+  		display: inline-block;
+  	}
   }
 }
 
@@ -51,10 +98,7 @@
   margin-right: -50%;
   text-align: right;
 
-  &:before {
-  	content: "\e87a";
-  	font-family: Linearicons-Free;
-  	position: absolute;
-  	right: 46%;
-  }
+	small {
+		margin-right: 25px;
+	}
 }
