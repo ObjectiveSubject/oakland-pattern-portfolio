@@ -56,19 +56,18 @@
 // Color theme mixins
 //
 // Create color rules for specific child elements of site sections
+// Add color themes to _variables.scss
 
 @mixin theme($name, $color) {
   $primary: $color;
-  $lightened: lighten($color, 10%);
   $darkened: darken($color, 10%);
-  $hover: darken($color, 20%);
-  $desaturated: desaturate($lightened, 20%);
 
   .#{$name} {
     a {
       color: $primary;
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: $primary;
       }
 
@@ -81,37 +80,11 @@
       background-color: $primary;
     }
 
-    .btn {
-      background: $darkened;
-      border-left-color: $darkened;
-
-      &:hover, &:focus {
-        background: $hover;
-        border-left-color: $primary;
-      }
-
-      &:active {
-        background: $primary;
-        border-left-color: $hover;
-      }
-
-      &[disabled],
-      &[disabled]:hover,
-      &[disabled]:focus,
-      &[disabled]:active,
-      &.disabled,
-      &.disabled:hover,
-      &.disabled:focus,
-      &.disabled:active {
-        background: $desaturated;
-        border-left-color: $desaturated;
-      }
-    }
-
     .menu-item {
       color: $primary;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         color: $primary;
 
         &:before {
@@ -125,55 +98,6 @@
         &:before {
           background-color: $darkened;
         }
-      }
-    }
-
-    .section-menu {
-      .menu-item {
-        color: $white;
-
-        &:before {
-          background-color: $primary;
-        }
-
-        &:hover, &:focus {
-          background-color: transparent;
-
-          &:before {
-            background-color: $white;
-          }
-        }
-
-        &:active {
-          background-color: $darkened;
-
-          &:before {
-            background-color: $oakland-green;
-          }
-        }
-
-        &.selected {
-          background-color: $darkened;
-
-          &:before {
-            background-color: $white;
-          }
-        }
-      }
-    }
-
-    .prev-link, .next-link {
-      color: $white;
-      background-color: rgba($darkened, 0.95);
-
-      &:hover, &:focus {
-        color: $white;
-        background-color: rgba($hover, 0.95);
-      }
-
-      &:active {
-        color: $white;
-        background-color: rgba($primary, 0.95);
       }
     }
   }

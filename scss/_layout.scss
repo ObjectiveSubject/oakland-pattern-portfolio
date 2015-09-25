@@ -38,6 +38,7 @@ body {
 // Column widths
 .one-third {
   @include fill-parent;
+  margin-bottom: 1.5rem;
 
   @include media($bp-md) {
     @include span-columns(4);
@@ -47,6 +48,7 @@ body {
 
 .two-thirds {
   @include fill-parent;
+  margin-bottom: 1.5rem;
 
   @include media($bp-md) {
     @include span-columns(8);
@@ -55,6 +57,7 @@ body {
 
 .one-fourth {
   @include fill-parent;
+  margin-bottom: 1.5rem;
 
   @include media($bp-md) {
     @include span-columns(3);
@@ -64,6 +67,7 @@ body {
 
 .one-half {
   @include fill-parent;
+  margin-bottom: 1.5rem;
 
   @include media($bp-md) {
     @include span-columns(6);
@@ -72,31 +76,15 @@ body {
 
 .three-fourths {
   @include fill-parent;
+  margin-bottom: 1.5rem;
 
   @include media($bp-md) {
     @include span-columns(9);
   }
 }
 
-.column-wide {
-  padding-left: $gutter;
-  padding-right: $gutter;
-  margin-left: -$gutter;
-  margin-right: -$gutter;
-  box-sizing: content-box;
-}
-
 .column-shift {
   @include media($bp-md) {
-    @include shift;
-  }
-}
-
-.column-shift + .column-shift {
-  margin-top: 1rem;
-
-  @include media($bp-md) {
-    margin-top: 0;
     @include shift;
   }
 }

@@ -40,7 +40,7 @@
 .prev-link,
 .next-link {
 	position: absolute;
-	color: $white;
+	color: $white !important;
 	display: inline-block;
 	vertical-align: middle;
 	width: 100%;
@@ -48,10 +48,11 @@
 	padding-top: 1.25rem;
 	font-size: 1.5rem;
 	line-height: 1;
-  background-color: rgba(darken($oakland-green, 20%), 0.95);
+  background-color: rgba($forestland, 0.95);
 
-	&:hover, &:focus {
-		background-color: rgba(darken($oakland-green, 30%), 0.95);
+	&:hover,
+	&:focus {
+		background-color: rgba($rockridge-gray, 0.95);
 		text-decoration: none;
 	}
   
@@ -75,8 +76,15 @@
 }
 
 .prev-link {
-  padding-left: 50%;
-  margin-left: -50%;
+	padding-left: 15%;
+	margin-left: -15%;
+	width: 30%;
+
+	@include media($bp-md) {
+	  padding-left: 50%;
+	  margin-left: -50%;
+	  width: 100%;
+	}
 
   small {
   	margin-left: 25px;
@@ -94,9 +102,16 @@
 
 .next-link {
   right: 0;
-  padding-right: 50%;
-  margin-right: -50%;
+  padding-right: 65%;
+  margin-right: -55%;
+  width: 140%;
   text-align: right;
+
+  @include media($bp-md) {
+	  padding-right: 50%;
+	  margin-right: -50%;
+	  width: 100%;
+  }
 
 	small {
 		margin-right: 25px;

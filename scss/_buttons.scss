@@ -11,7 +11,7 @@ a.btn {
   display: inline-block;
   vertical-align: middle;
   color: $white;
-  background-color: darken($oakland-green, 20%);
+  background-color: $forestland;
   border: none;
   font-size: 1.5rem;
   line-height: 1.5;
@@ -29,12 +29,12 @@ a.btn {
     top: 0;
     bottom: 0;
     left: 0;
-    background-color: darken($oakland-green, 20%)
+    background-color: $forestland;
   }
 
   &:hover,
   &:focus {
-    background-color: darken($oakland-green, 40%);
+    background-color: $rockridge-gray;
 
     &:before {
       background-color: $oakland-green;
@@ -45,7 +45,7 @@ a.btn {
     background-color: $oakland-green;
 
     &:before {
-      background-color: darken($oakland-green, 40%);      
+      background-color: $rockridge-gray;      
     }
   }
 
@@ -58,11 +58,11 @@ a.btn {
   &.disabled:focus,
   &.disabled:active {
     pointer-events: none;
-    background-color: rgba(lighten($oakland-green, 10%), 0.2);
+    background-color: rgba($clinton-stone, 0.2);
     cursor: default;
 
     &:before {
-      background-color: rgba(lighten($oakland-green, 10%), 0.2);
+      background-color: rgba($clinton-stone, 0.2);
     }
   }
 
@@ -78,8 +78,8 @@ a.btn {
 .btn-secondary,
 a.btn-secondary {
   background-color: $white;
-  color: darken($oakland-green, 20%);
-  border: 1px solid darken($oakland-green, 20%);
+  color: $forestland;
+  border: 1px solid $forestland;
 
   &:before {
     background-color: transparent;
@@ -101,7 +101,7 @@ a.btn-secondary {
 
   &:active {
     &:before {
-      background-color: darken($oakland-green, 40%);
+      background-color: $rockridge-gray;
     }
   }
 }

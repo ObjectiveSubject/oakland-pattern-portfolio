@@ -33,13 +33,12 @@ The grid is pretty standard—you create rows with `.grid-row` and individual co
 
 - Add a `.container` to encapsulate everything and provide ample horizontal gutter space.
 - Create your outer row to clear the floated columns with `<div class="grid-row">`.
-- Add your columns with individual `<div class="column">`s.
-- Add your fractional width classes to set the width of the columns (e.g., `.one-fourth`). These are defined using Neat's `span-columns` mixin.
+- Add your fractional width classes to set the width of the child div columns (e.g., `.one-fourth`). These are defined using Neat's `span-columns` mixin.
 - Neat automatically removes the trailing gutter from the last child elements that use the `span-columns` mixin
 
 ### Demo
 
-In practice, your columns will look like the example below.
+In practice, your columns will look like the example below. **The demos add the `.column` class for the sole purpose of adding the green background and border to visualize the columns. This class should not be used in production.**
 
 {% example html %}
 <div class="container">
@@ -88,24 +87,6 @@ Columns can be [centered](/utilities/#centering-content) by adding `.centered` t
 <div class="grid-row">
   <div class="one-fourth column centered">
     .one-fourth
-  </div>
-</div>
-{% endexample %}
-
-### Wide
-
-Columns can be widened to bleed over their gutters by adding the `.column-wide` class.
-This adds padding, negative margin and content-box sizing to allow the column to bleed over the gutters while maintaining the content within the grid layout.
-
-This should be used sparingly as it can throw off the grid if used incorrectly.
-
-{% example html %}
-<div class="grid-row">
-  <div class="one-half column column-wide">
-    .column-wide
-  </div>
-  <div class="one-half column">
-    .one-half (not wide)
   </div>
 </div>
 {% endexample %}

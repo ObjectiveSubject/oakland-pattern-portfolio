@@ -12,7 +12,7 @@ label {
   width: auto;
   display: block;
   margin-bottom: 1.5rem;
-  font: #{$body-font-size}/1.5 $body-font;
+  font: 1.1875rem/1.5 $body-font;
 }
 
 .form-control,
@@ -37,7 +37,7 @@ textarea {
   width: 100%;
   max-width: 370px;
   display: block;
-  font: #{$body-font-size}/1.5 $body-font;
+  font: 1.1875rem/1.5 $body-font;
 
   &.focus,
   &:focus {

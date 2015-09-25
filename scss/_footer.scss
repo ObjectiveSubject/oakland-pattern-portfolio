@@ -21,6 +21,20 @@
 		}
 	}
 
+	.logo-wrap {
+		padding-top: 0;
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: -$gutter;
+			top: 0;
+			bottom: 0;
+			width: 2px;
+			background-color: $oakland-green;
+		}
+	}
+
 	.site-logo {
 		width: 100%;
 		max-width: 173px;
@@ -48,15 +62,5 @@
 				color: $gray;
 			}
 		}
-	}
-
-	&:before {
-		content: "";
-		position: absolute;
-		left: -$gutter;
-		top: 0;
-		bottom: 0;
-		width: 2px;
-		background-color: $oakland-green;
 	}
 }

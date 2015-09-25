@@ -5,71 +5,82 @@
 }
 
 .page-header {
+	display: table;
+	width: 100%;
+	position: relative;
 
-	.logo-wrap {
-		display: inline-block;
+	@include media($bp-md) {
+		display: block;
 		margin-bottom: 2.5rem;
-		padding-top: 2.5rem;
-		position: relative;
+	}
 
-		&:after {
+	// This creates the green bar to the left of the logo
+	&:after {
+		content: "";
+		position: absolute;
+		left: -$gutter;
+		top: 0;
+		bottom: 0;
+		width: 2px;
+		background-color: $oakland-green;
+	}
+
+	// This creates the bg color behind the page header that bleeds to the far left on wide screens
+	&:before {
+
+		@include media($bp-md) {
 			content: "";
-			position: absolute;
-			left: -$gutter;
-			top: 0;
-			bottom: 0;
-			width: 2px;
-			background-color: $oakland-green;
-
-			.nav-visible & {
-				background-color: $white;
-			}
-		}
-
-		&:before {
-			content: "";
-			width: 200%;
 			display: block;
 			position: absolute;
-			left: -100%;
 			background-color: transparent;
-			height: 123px;
+			height: $header-height-sm;
 			top: 0;
+			width: 100%;
+			left: -2.5rem;
 			transition: all 0.2s ease-out;
+			width: 200%;
+			left: -200%;
+			height: $header-height-lg;
+		}
 
-			.nav-visible & {
-				background-color: $color-side-nav-bg;
-			}
-  	}
+		// Turns the bg color dark when the nav is open
+		.nav-visible & {
+			background-color: $color-side-nav-bg;
+		}
 	}
+}
 
-	.site-logo {
-		max-width: 173px;
+.logo-wrap {
+	display: table-cell;
+  width: 80%;
+  white-space: nowrap;
+  vertical-align: middle;
+	margin-bottom: 2.5rem;
+	padding-top: 2.5rem;
+	position: relative;
+
+	@include media($bp-md) {
 		display: inline-block;
-		vertical-align: middle;
-		position: relative;
-		margin-right: 2.5rem;
-
-		&.logo-white {
-			display: none;
-
-			.nav-visible & {
-				display: inline-block;
-			}
-		}
-
-		&.logo-black {
-			display: inline-block;
-
-			.nav-visible & {
-				display: none;
-			}
-		}
+		width: auto;
+		margin-bottom: 0;
 	}
+}
 
+.site-logo {
+	max-width: 173px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	margin-right: 2.5rem;
+}
+
+	// Search and Off Canvas menu button
+	// -----------------------------------
 	.header-actions {
-		display: block;
-		width: 115%;
+		display: table-cell;
+	  width: 20%;
+	  white-space: nowrap;
+	  vertical-align: bottom;
 		float: none;
 		margin-bottom: 1rem;
 		margin-left: -1.25rem;
@@ -87,10 +98,14 @@
 
 	.header-search {
 		position: relative;
-		display: inline-block;
 		background: transparent;
 		width: auto;
 		padding: 0;
+		display: none;
+
+		@include media($bp-md) {
+			display: inline-block;
+		}
 
 		label {
 			margin-bottom: 0;
@@ -115,13 +130,31 @@
 		}
 	}
 
-	.header-nav-button,
-	.header-search-button {
+	.mobile-search {
+		display: inline-block;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+
+		input {
+			width: auto;
+		}
+
+		@include media($bp-md) {
+			display: none;
+		}
+	}
+
+	.header-nav-button {
 		display: inline-block;
 		vertical-align: middle;
 		cursor: pointer;
 		font-size: 20px;
-		margin-left: 2rem;
+		float: right;
+
+		@include media($bp-md) {
+			margin-left: 2rem;
+			float: none;
+		}
 
 		&:hover, &:focus {
 			text-decoration: none;
@@ -131,7 +164,6 @@
 			text-decoration: none;
 		}
 	}
-}
 
 // Temporary Parking color for demo
 // @todo remove this when we have final colors

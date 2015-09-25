@@ -18,7 +18,7 @@ Flash messages start off looking decently neutral—they're $oakland-green full-
 <div class="flash">
   <div class="container">
     <span class="flash-type">News</span>
-    Flash message goes here
+    <span class="flash-text">Flash message goes here</span>
     <a href="#">Read more</a>
   </div>
 </div>
@@ -32,7 +32,7 @@ Add `.flash-warn` or `.flash-error` to the flash message to change the meaning a
 <div class="flash flash-warn">
   <div class="container">
     <span class="flash-type">Warning</span>
-    Flash message goes here
+    <span class="flash-text">Flash message goes here</span>
     <a href="#">Read more</a>
   </div>
 </div>
@@ -42,7 +42,7 @@ Add `.flash-warn` or `.flash-error` to the flash message to change the meaning a
 <div class="flash flash-alert">
   <div class="container">
     <span class="flash-type">High Alert</span>
-    Flash message goes here
+    <span class="flash-text">Flash message goes here</span>
     <a href="#">Read more</a>
   </div>
 </div>

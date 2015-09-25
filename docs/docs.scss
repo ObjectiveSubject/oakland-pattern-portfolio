@@ -28,10 +28,16 @@
 
 // Global type
 html {
-  font-size: 16px;
+  font-size: 14px;
+
+  @include media($bp-md) {
+    font-size: 16px;
+  }
 }
 
 body {
+
+  font-size: 1.1875rem;
 
   &.docs {
     max-width: none;
@@ -300,14 +306,6 @@ a {
     background-color: lighten($oakland-green, 50%);
   }
 
-  .column-wide {
-    padding-left: $gutter;
-    padding-right: $gutter;
-    margin-left: -$gutter;
-    margin-right: -$gutter;
-    box-sizing: content-box;
-  }
-
   h1,
   h2 {
     border: none;
@@ -376,9 +374,7 @@ form {
 }
 
 
-//
-// Branding colors
-//
+
 
 .swatch {
   display: inline-block;
@@ -388,26 +384,179 @@ form {
   padding: 2rem;
   text-align: center;
   vertical-align: bottom;
+  margin-right: $gutter;
+  margin-bottom: $gutter;
+  float: left;
 }
 
-.swatch-green { background-color: $oakland-green; }
-.swatch-mint { background-color: $fruitvale-mint; }
-.swatch-yellow { background-color: $telegraph-yellow; }
-.swatch-cloud { background-color: $high-cloud; }
+// Brand colors
+// ---------------------------------
+
+.swatch-green {
+  background-color: $oakland-green;
+  color: $white;
+}
+.swatch-mint {
+  background-color: $fruitvale-mint;
+}
+.swatch-yellow {
+  background-color: $telegraph-yellow;
+}
+.swatch-cloud {
+  background-color: $high-cloud;
+}
+.swatch-stone {
+  background-color: $clinton-stone;
+}
 .swatch-steel {
   background-color: $nimitz-steel;
   color: $white;
 }
+.swatch-rockridge {
+  background-color: $rockridge-gray;
+  color: $white;
+}
+.swatch-forestland {
+  background-color: $forestland;
+  color: $white;
+}
 
-.swatch-gray-light { background-color: $gray-light; }
-.swatch-gray { background-color: $gray; }
+// Tertiary colors
+// ---------------------------------
+
+.swatch-deep-red {
+  background-color: $longfellow-rosewood;
+  color:$white;
+}
+.swatch-bright-red {
+  background-color: $chinatown-red;
+  color: $white;
+}
+.swatch-light-red {
+  background-color: $melrose;
+}
+
+.swatch-deep-blue {
+  background-color: $water-blue;
+  color: $white;
+}
+.swatch-bright-blue {
+  background-color: $lakeshore;
+  color: $white;
+}
+.swatch-light-blue {
+  background-color: $brook;
+}
+
+.swatch-deep-purple {
+  background-color: $jack-london-purple;
+  color: $white;
+}
+.swatch-bright-purple {
+  background-color: $orchard-plum;
+  color: $white;
+}
+.swatch-light-purple {
+  background-color: $meadow-brook-thistle;
+}
+
+.swatch-deep-yellow {
+  background-color: $gold;
+}
+.swatch-bright-yellow {
+  background-color: $summer-yellow;
+}
+.swatch-light-yellow {
+  background-color: $allendale;
+}
+
+.swatch-deep-pink {
+  background-color: $allendale-wine;
+  color: $white;
+}
+.swatch-bright-pink {
+  background-color: $jingletown-pink;
+  color: $white;
+}
+.swatch-light-pink {
+  background-color: $magnolia;
+}
+
+.swatch-deep-green {
+  background-color: $grass-valley;
+  color: $white;
+}
+.swatch-bright-green {
+  background-color: $liberty-green;
+  color: $white;
+}
+.swatch-light-green {
+  background-color: $merritt-mint;
+}
+
+.swatch-deep-orange {
+  background-color: $woodminster;
+  color: $white;
+}
+.swatch-bright-orange {
+  background-color: $golden-gate;
+  color: $white;
+}
+.swatch-light-orange {
+  background-color: $maple-orange;
+}
+
+.swatch-deep-bluer {
+  background-color: $merritt-lake;
+  color: $white;
+}
+.swatch-bright-bluer {
+  background-color: $broadway-blue;
+  color: $white;
+}
+.swatch-light-bluer {
+  background-color: $sequoyah-heights;
+}
+
+// Grays
+// ---------------------------------
+
+.swatch-gray-lighter {
+  background-color: $gray-lighter;
+}
+.swatch-gray-light {
+  background-color: $gray-light;
+}
+.swatch-gray {
+  background-color: $gray;
+}
 .swatch-gray-dark {
   background-color: $gray-dark;
   color: $white;
 }
+.swatch-gray-darker {
+  background-color: $gray-darker;
+  color: $white;
+}
+.swatch-black {
+  background-color: $black;
+  color: $white;
+}
+.swatch-white {
+  background-color: $white;
+}
+.swatch-brown {
+  color: $white;
+  background-color: $brown;
+}
 
-.swatch-brown { background-color: $brown; }
+.swatch-text-body {
+  background-color: $color-text-body;
+  color: $white;
+}
 
+
+// Demo background area for docs that need a bg color field
 .docs-bg {
   padding-left: 40px;
   padding-top: 20px;

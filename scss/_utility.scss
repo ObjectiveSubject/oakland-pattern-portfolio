@@ -59,6 +59,15 @@
   border: 1px solid #dd3c10;
 }
 
+// JavaScript hook for media query
+.js-media-query-med {
+  display: none;
+
+  @include media($bp-md) {
+    display: inline;
+  }
+}
+
 // Extends
 %mid-aligned-pseudo {
   &:before {

@@ -3,7 +3,11 @@
 }
 
 html {
-  font-size: 19px;
+  font-size: 14px;
+
+  @include media($bp-md) {
+    font-size: 16px;
+  }
 }
 
 // html,
@@ -17,12 +21,12 @@ input,
 select,
 textarea,
 button {
-  font: #{$body-font-size}/1.5 $body-font;
+  font: 1.1875rem/1.5 $body-font;
 }
 
 body {
-  font: #{$body-font-size}/1.5 $body-font;
-  color: $gray-dark;
+  font: 1.1875rem/1.5 $body-font;
+  color: $color-text-body;
   background-color: #fff;
   position: relative;  
 }

@@ -1,22 +1,24 @@
 // Off-canvas global navigation
 
-$mobile-nav-width: 90%;
+$mobile-nav-width: 80%;
 $global-nav-width: 213px;
 
 .global-navigation-wrap {
 	position: fixed;
 	width: $mobile-nav-width;
-	@include calc(height, '100vh - 181px');
+	height: 100vh;
 	top: -100vh;
+	left: 0;
 	transition: all 0.2s ease-out;
-	z-index: 10000;
+	z-index: 100000;
 	background-color: $color-side-nav-bg;
 
 	@include media($bp-md) {
 		top: -100vh;
+		left: 182px;
 		width: $global-nav-width;
 		background-color: transparent;
-		@include calc(height, '100vh - 123px');
+		height: 100vh;
 	}
 
 	&:before {
@@ -25,15 +27,39 @@ $global-nav-width: 213px;
 		background-color: $color-side-nav-bg;
 		width: 142px;
 		left: -142px;
-		@include calc(height, '100vh - 123px');
+		height: 100vh;
 	}
 
 	.nav-visible & {
-		top: 123px;
+		top: 0;
+
+		@include media($bp-md) {
+			// top: $header-height-lg;
+		}
 	}
 
 	.container {
 		height: 100%;
+	}
+
+	.logo-wrap {
+		display: block;
+		margin-bottom: 2.5rem;
+		padding-top: 2.5rem;
+		width: 100%;
+
+		// &:after {
+		// 	content: "";
+		// 	position: absolute;
+		// 	left: 0;
+		// 	top: 0;
+		// 	bottom: 0;
+		// 	width: 2px;
+		// 	background-color: $white;
+		// }
+	}
+
+	.site-logo {
 	}
 }
 

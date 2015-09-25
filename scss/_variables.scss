@@ -3,22 +3,75 @@ $oakland-green: 		#4fbc26 !default;
 $fruitvale-mint: 		#d1e7d5 !default;
 $telegraph-yellow: 	#ffff57 !default;
 $high-cloud: 				#e9eae7 !default;
+$clinton-stone:			#cfd0ce !default;
 $nimitz-steel: 			#757773 !default;
+$rockridge-gray:		#293028 !default;
+$forestland:				#004c0d !default;
+
+// Tertiary colors
+// These are grouped by color and ordered Deep, Bright, Light
+// e.g.
+// // Reds
+// Deep Red: #HEX
+// Bright Red: #HEX
+// Light Red: #HEX
+
+// Reds
+$longfellow-rosewood: #800600 !default;
+$chinatown-red: 				#d9332b !default;
+$melrose:							#ffd4d4 !default;
+// Blues
+$water-blue:					#0e5478 !default;
+$lakeshore:						#008dd9 !default;
+$brook:								#cce1ff !default;
+// Purples
+$jack-london-purple:	#581666 !default;
+$orchard-plum:				#c246bc !default;
+$meadow-brook-thistle:#f7d2f6 !default;
+// Yellows
+$gold:								#f7b600 !default;
+$summer-yellow:				#ffd800 !default;
+$allendale:						#ffffeb !default;
+// Pinks
+$allendale-wine:			#521c2b !default;
+$jingletown-pink:			#b80062 !default;
+$magnolia:						#ffdbe9 !default;
+// Greens
+$grass-valley:				#104741 !default;
+$liberty-green:				#009783 !default;
+$merritt-mint:				#b9f0e1 !default;
+// Oranges
+$woodminster:					#47311e !default;
+$golden-gate:					#ee6334 !default;
+$maple-orange:				#ffe1bf !default;
+// Bluer Blues
+$merritt-lake:				#003366 !default;
+$broadway-blue:				#3870ff !default;
+$sequoyah-heights:		#e5ecff !default;
+
+// Theme Colors map
+// The key should be the class name you want to use (generally a department name)
+// The value should be one of the Deep Tertiary color variables listed above
+$themes: (
+	public-works: $water-blue,
+	transportation: $grass-valley,
+) !default;
 
 // Grays
 $gray-lighter:			#f4f5f4 !default;
-$gray-light:				#e9eae8 !default;
-$gray:							#9fa09e !default;
-$gray-dark:					#3f3f3f !default;
+$gray-light:				$high-cloud !default;
+$gray:							$clinton-stone !default;
+$gray-dark:					$nimitz-steel !default;
+$gray-darker:				$rockridge-gray !default;
 $black:							#000000 !default;
 $white:							#ffffff !default;
 $brown:							#8c7a63 !default;
 
 // Background Colors
-$color-side-nav-bg: #293028;
+$color-side-nav-bg: $rockridge-gray;
 
 // Text Colors
-$color-text-body:		$gray-dark;
+$color-text-body:		#404040;
 $color-text-meta:		$brown;
 
 // Utility Colors
@@ -29,28 +82,25 @@ $muted:							$gray !default;
 $success:						$oakland-green !default;
 $news:							$oakland-green !default;
 
-// Theme Colors map
-$themes: (
-	public-works: #253a66,
-	transportation: #0f4741
-) !default;
-
-// Font stack
-$body-font: Fakt, Helvetica, arial, sans-serif !default;
-
-// The base body size
-$body-font-size: 19px !default;
-
-// Monospace font stack
-$mono-font: Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
-
-// Repository type colors
-$repo-private-text: #a1882b;
-$repo-private-bg:   #fff9ea;
-$repo-private-icon: #e9dba5;
+// Header height global sizes
+$header-height-sm: 128px; // For mobile to medium size
+$header-height-lg: 128px; // For medium size and up
 
 // Responsive Breakpoints
 // using mobile-first, so building up with min-width
 $bp-sm: 480px;
 $bp-md: 768px;
 $bp-lg: 960px;
+
+// Font stack
+$body-font: Fakt, Helvetica, arial, sans-serif !default;
+
+// // The base body size
+// $body-font-size: 14px;
+
+// @include media($bp-md) {
+// 	$body-font-size: 19px;
+// }
+
+// Monospace font stack
+$mono-font: Consolas, "Liberation Mono", Menlo, Courier, monospace !default;

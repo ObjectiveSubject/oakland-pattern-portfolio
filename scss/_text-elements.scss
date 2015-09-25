@@ -32,8 +32,12 @@
   @include outer-container();
 	position: absolute;
 	top: 0;
-	left: -2.5rem;
+	left: 1.25rem;
 	right: 0;
+
+	@include media($bp-md) {
+		left: -2.5rem;
+	}
 }
 
 .breadcrumbs {
@@ -85,8 +89,16 @@
 }
 
 // Tables
-table {
+.table-wrap {
 	width: 100%;
+	overflow-y: auto;
+	_overflow: auto;
+	margin-bottom: 1.5rem;
+	box-shadow: inset -5px 0px 10px -9px black;
+}
+
+table {
+	min-width: 916px;
 
 	th,
 	tr,
@@ -101,6 +113,11 @@ table {
 
 	tr {
 		border-bottom: 1px solid $gray-light;
+	}
+
+	td,
+	th {
+		padding: 1rem;
 	}
 
 	tbody tr:last-child {

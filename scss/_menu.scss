@@ -50,91 +50,97 @@
 
 // Section menu
 .section-menu {
-  position: relative;
+  display: none;
 
-  .menu-item {
-    color: $white;
-    font-size: 1rem;
-    padding: 9px 5px 9px 1.25rem;
-    transition: background 0.2s ease;
+  @include media($bp-md) {
 
-    &:before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 2px;
-      content: "";
-      background-color: transparent;
-      transition: all 0.2s ease;
-    }
-
-    &:hover, &:focus {
-      background-color: transparent;
-
-      &:before {
-        background-color: $white;
-      }
-    }
-
-    &:active {
-      background-color: rgba($black, 0.5);
-
-      &:before {
-        background-color: darken($white, 10%);
-      }
-    }
-
-    &.active {
-
-      &:before {
-        background-color: $white;
-      }
-    }
-  }
-
-  // If the menu is in going into or out of sticky mode 
-  &.sticky {
-    position: fixed;
-    top: 123px;
-    background-color: $oakland-green;
-    width: 15%;
-    z-index: 1000;
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 1.25rem; // change the size of the :before content to not extend the full width of the parent
-      left: -1.25rem;
-      background-color: $oakland-green;
-      z-index: -1;
-    }
-
-    &:before {
-      content: "";
-      height: 42px;
-      background-color: $oakland-green;
-      display: block;
-      position: fixed;
-      left: 0;
-      right: 0;
-      top: 123px;
-      max-width: 1200px; // body max width
-      margin: 0 auto;
-    }
+    position: relative;
+    display: block;
 
     .menu-item {
+      color: $white;
+      font-size: 1rem;
+      padding: 9px 5px 9px 1.25rem;
+      transition: background 0.2s ease;
 
-      &:hover,
-      &:focus {
-        background-color: darken($oakland-green, 10%);
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 2px;
+        content: "";
+        background-color: transparent;
+        transition: all 0.2s ease;
+      }
+
+      &:hover, &:focus {
+        background-color: transparent;
+
+        &:before {
+          background-color: $white;
+        }
+      }
+
+      &:active {
+        background-color: rgba($black, 0.5);
+
+        &:before {
+          background-color: darken($white, 10%);
+        }
       }
 
       &.active {
-        background-color: darken($oakland-green, 10%);
-        display: block !important;
+
+        &:before {
+          background-color: $white;
+        }
+      }
+    }
+
+    // If the menu is in going into or out of sticky mode 
+    &.sticky {
+      position: fixed;
+      top: 123px;
+      background-color: $oakland-green;
+      width: 15%;
+      z-index: 1000;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 1.25rem; // change the size of the :before content to not extend the full width of the parent
+        left: -1.25rem;
+        background-color: $oakland-green;
+        z-index: -1;
+      }
+
+      &:before {
+        content: "";
+        height: 42px;
+        background-color: $oakland-green;
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 123px;
+        max-width: 1200px; // body max width
+        margin: 0 auto;
+      }
+
+      .menu-item {
+
+        &:hover,
+        &:focus {
+          background-color: darken($oakland-green, 10%);
+        }
+
+        &.active {
+          background-color: darken($oakland-green, 10%);
+          display: block !important;
+        }
       }
     }
   }

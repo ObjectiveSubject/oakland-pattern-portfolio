@@ -1,19 +1,31 @@
 // Section elements
 
-// .sticky-menu is the wrapper around all the fixed position header stuff
+// .sticky-menu is the wrapper around the fixed position header
+
 .sticky-menu {
+	position: absolute; // on mobile we don't want the header to be sticky to preserve vertical real estate
   top: 0;
   left: 0;
   right: 0;
-  position: fixed;
   max-width: inherit;
   margin: 0 auto;
-  z-index: 100000;
+  z-index: 100000; // always on top!
+
+
+	@include media($bp-md) {
+	  position: fixed; // on desktop we do want a sticky header
+	}
 }
 
+// This creates the space behind the sticky header when it's in fixed position
 .sticky-placeholder {
 	width: 100%;
-	height: 123px;
+	height: $header-height-sm; // Global var set in _variables.scss
+	background-color: $gray-lighter;
+
+	@include media($bp-md) {
+		height: $header-height-lg;
+	}
 }
 
 // .subheader is the wrapper for the department page info and section menu
@@ -81,7 +93,7 @@
 	transition: background 0.3s ease-out;
 
 	.nav-visible & {
-		top: 0;
+		top: $header-height-sm;
 		bottom: 0;
 		left: 0;
 		right: 0;
