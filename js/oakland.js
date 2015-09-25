@@ -1,8 +1,11 @@
 (function( $, window, document ) {
 
+	// Sticky subnav
+	// ------------------------------------
 	var menu = document.querySelector('.section-menu');
+	var mediaQueryMed = document.querySelector('.js-media-query-med');
 
-	if (menu) {
+	if (menu && mediaQueryMed.offsetParent != null ) {
 		var menuPosition = menu.getBoundingClientRect();
 		var menuTop = menuPosition.top - 123;
 		var placeholder = document.createElement('div');
@@ -165,7 +168,11 @@
 		e.preventDefault();
 		if ( !navIsOpen ) {
 			$(body).addClass('nav-visible');
-			$(navWrap).width(menuWidth).css('left', menuLeft + 'px');
+			if ( mediaQueryMed.offsetParent === null ) {
+				// $(navWrap).width('80%').css('left', '0px');
+			} else {
+				$(navWrap).width(menuWidth).css('left', menuLeft + 'px');
+			}
 			$(this).addClass('open');
 			navIsOpen = true;
 		} else {

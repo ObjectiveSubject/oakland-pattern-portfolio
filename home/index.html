@@ -29,14 +29,13 @@
   </head>
   <body>
 
-    <div class="sticky-menu has-hero">
+    <div class="sticky-menu">
 
       <div class="header-wrap">
         <div class="container">
           <header class="page-header" role="banner">
             <a href="#" class="logo-wrap">
               <img class="site-logo logo-black" src="/img/logo-v3.png" alt="City of Oakland" />
-              <img class="site-logo logo-white" src="/img/logo-v2-white.png" alt="City of Oakland" />              
             </a>
             <div class="header-actions">
               <form role="search" class="header-search" method="get" action="">
@@ -60,6 +59,15 @@
     <div class="global-navigation-wrap clearfix">
       <div class="container">
       <nav role="navigation" class="global-navigation">
+      <div class="logo-wrap">
+        <img class="site-logo logo-white" src="/img/logo-v2-white.png" alt="City of Oakland" />
+      </div>
+      <form role="search" class="header-search mobile-search" method="get" action="">
+        <label>
+          <input type="text" placeholder="How can we help?" title="Search for:">
+        </label>
+        <span class="lnr lnr-magnifier search-icon"></span>
+      </form>
         <strong>City of Oakland</strong>
         <a href="" class="menu-item">Get Involved</a>
         <a href="" class="menu-item">Departments</a>
@@ -79,7 +87,7 @@
     <div class="flash flash-alert">
       <div class="container">
         <span class="flash-type">High Alert</span>
-        Flash message goes here
+        <span class="flash-text">Flash message goes here</span>
         <a href="#">Read more</a>
       </div>
     </div>
@@ -298,17 +306,19 @@
         </div>
         <hr>
         <div class="footer-omega">
-          <a href="#" class="logo-wrap">
-            <img class="site-logo" src="/img/logo-v2.png" alt="City of Oakland" />
-          </a>
           <div class="one-third right">
             <small class="text-muted">&copy; 2015 City of Oakland</small><br>
             <a href="#"><small>Privacy Policy</small></a>
             <a href="#"><small>Terms of Use</small></a>
           </div>
+          <a href="#" class="logo-wrap">
+            <img class="site-logo" src="/img/logo-v2.png" alt="City of Oakland" />
+          </a>
         </div>
       </div>
     </footer>
+
+    <span class="js-media-query-med"></span>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="/js/jquery.waypoints.min.js"></script>
