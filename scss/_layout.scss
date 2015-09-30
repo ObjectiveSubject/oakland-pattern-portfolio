@@ -1,8 +1,3 @@
-body {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 // Fixed-width, centered column for site content.
 // Uses Neat's outer-container. The $max-width variable is set before including Neat in oakland.scss
 .container {
@@ -16,6 +11,10 @@ body {
 
   @include media($bp-md) {
     margin: 0 auto;
+  }
+
+  @include media($bp-xl) {
+    max-width: 1200px;
   }
 }
 

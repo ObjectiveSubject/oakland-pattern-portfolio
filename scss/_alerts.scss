@@ -14,6 +14,7 @@
     content: "";
     background-image: url(../img/bg-pattern-mobile.png);
     background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -51,7 +52,7 @@
   .flash-type {
     display: inline-block;
     vertical-align: middle;
-    background-color: rgba($gray-dark, 0.25);
+    background-color: rgba($black, 0.25);
     font-size: 0.875rem;
     padding: 7px 16px 5px;
     margin-right: $gutter;

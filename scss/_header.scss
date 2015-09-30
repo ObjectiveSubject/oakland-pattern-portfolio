@@ -1,7 +1,6 @@
 // Header styles
 .header-wrap {
 	background: $gray-lighter;
-	overflow: hidden;
 }
 
 .page-header {
@@ -23,30 +22,6 @@
 		bottom: 0;
 		width: 2px;
 		background-color: $oakland-green;
-	}
-
-	// This creates the bg color behind the page header that bleeds to the far left on wide screens
-	&:before {
-
-		@include media($bp-md) {
-			content: "";
-			display: block;
-			position: absolute;
-			background-color: transparent;
-			height: $header-height-sm;
-			top: 0;
-			width: 100%;
-			left: -2.5rem;
-			transition: all 0.2s ease-out;
-			width: 200%;
-			left: -200%;
-			height: $header-height-lg;
-		}
-
-		// Turns the bg color dark when the nav is open
-		.nav-visible & {
-			background-color: $color-side-nav-bg;
-		}
 	}
 }
 
@@ -152,7 +127,8 @@
 		float: right;
 
 		@include media($bp-md) {
-			margin-left: 2rem;
+			margin-left: 1.25rem;
+			margin-right: 1.25rem;
 			float: none;
 		}
 

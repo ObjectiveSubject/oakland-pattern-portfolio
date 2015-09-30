@@ -5,38 +5,12 @@ $global-nav-width: 213px;
 
 .global-navigation-wrap {
 	position: fixed;
-	width: $mobile-nav-width;
+	width: 100%;
 	height: 100vh;
-	top: -100vh;
-	left: 0;
-	transition: all 0.2s ease-out;
+	top: 0;
 	z-index: 100000;
 	background-color: $color-side-nav-bg;
-
-	@include media($bp-md) {
-		top: -100vh;
-		left: 182px;
-		width: $global-nav-width;
-		background-color: transparent;
-		height: 100vh;
-	}
-
-	&:before {
-		content: "";
-		position: absolute;
-		background-color: $color-side-nav-bg;
-		width: 142px;
-		left: -142px;
-		height: 100vh;
-	}
-
-	.nav-visible & {
-		top: 0;
-
-		@include media($bp-md) {
-			// top: $header-height-lg;
-		}
-	}
+	display: none;
 
 	.container {
 		height: 100%;
@@ -48,15 +22,15 @@ $global-nav-width: 213px;
 		padding-top: 2.5rem;
 		width: 100%;
 
-		// &:after {
-		// 	content: "";
-		// 	position: absolute;
-		// 	left: 0;
-		// 	top: 0;
-		// 	bottom: 0;
-		// 	width: 2px;
-		// 	background-color: $white;
-		// }
+		&:after {
+			content: "";
+			position: absolute;
+			left: -$gutter;
+			top: 0;
+			bottom: 0;
+			width: 2px;
+			background-color: $white;
+		}
 	}
 
 	.site-logo {
@@ -73,25 +47,17 @@ $global-nav-width: 213px;
 }
 
 .global-navigation {
-	@include fill-parent;
+	@include calc('width', '213px + 1.25rem');
 	background-color: $color-side-nav-bg;
 	position: absolute;
 	top: 0;
-	left: 0;
+	right: 0;
 	bottom: 0;
+	padding-left: $gutter;
 	font-size: 0.875rem;
 	height: 100%;
 	overflow-y: auto;
 	overflow-x: none;
-
-	// &:after {
-	// 	content: "";
-	// 	position: absolute;
-	// 	background-color: $gray-lighter;
-	// 	width: 100%;
-	// 	left: -100%;
-	// 	height: 100vh;
-	// }
 
 	strong {
 		display: block;
@@ -107,8 +73,15 @@ $global-nav-width: 213px;
 		transition: all 0.2s;
 
 		&:before {
-			transition: all 0.2s;
-		}
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 2px;
+      content: "";
+      background-color: transparent;
+      transition: all 0.2s ease;
+    }
 
 		&:hover, &:focus {
 			background-color: transparent;

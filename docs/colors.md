@@ -3,9 +3,13 @@ layout: page
 title: Colors
 ---
 
-The look and feel of our company and product relies on using a handful of specific colors that help convey meaning and purpose.
+The look and feel of this site relies on using a handful of specific colors that help convey meaning and purpose.
 
-### Brand Colors
+### Brand colors
+
+These brand colors are used globally across all parts of the site for things like links, buttons and background colors.
+
+You can find all the color styles in `_variables.scss`.
 
 <div class="container">
 <div class="swatch swatch-green">$oakland-green</div>
@@ -18,13 +22,13 @@ The look and feel of our company and product relies on using a handful of specif
 <div class="swatch swatch-forestland">$forestland</div>
 </div>
 
-### Tertiary Colors
+### Tertiary colors
 
-These tertiary colors have been carefully selected so that they go well with the Brand colors.
+These tertiary colors have been carefully selected so that they go well with the Brand colors in specific cases. Generally they will be used to identify a specific department within the Oakland govt. The tertiary colors below are grouped by base color in the order Deep, Bright, Light.
 
-#### Section Colors
+#### Department color themes
 
-When applying tertiary colors to department subsections it is suggested to use the first, darker color in each group. To create a new department color theme, find the `$themes` color map in `_variables.scss`. Simply add the class name you wish to use for the new theme as the map key and a color variable as the map value.
+When applying tertiary colors to department pages it is suggested to use the first, darker color in each group. To create a new department color theme, find the `$themes` color map in `_variables.scss`. Simply add the class name you wish to use for the new theme as the map key and a color variable as the map value.
 
 <pre>
 	<code>
@@ -86,7 +90,7 @@ Once you've added your new theme, you can add the class name you defined to the 
 	<div class="swatch swatch-light-orange">$maple-orange</div>
 </div>
 
-#### Bluer Blues
+#### Bluer blues
 <div class="container">
 	<div class="swatch swatch-deep-bluer">$merritt-lake</div>
 	<div class="swatch swatch-bright-bluer">$broadway-blue</div>
@@ -106,7 +110,9 @@ Once you've added your new theme, you can add the class name you defined to the 
 <div class="swatch swatch-brown">$brown</div>
 </div>
 
-### Text Colors
+### Text colors
+
+These variables are simply specialized uses of some of the gray colors. They are abstracted so that you can update the colors for text without affecting all other elements that use a specific gray color.
 
 <div class="container">
 <div class="swatch swatch-text-body">$color-text-body</div>
