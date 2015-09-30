@@ -123,9 +123,13 @@
       Colors
     </h1>
     <div class="markdown-body">
-      <p>The look and feel of our company and product relies on using a handful of specific colors that help convey meaning and purpose.</p>
+      <p>The look and feel of this site relies on using a handful of specific colors that help convey meaning and purpose.</p>
 
-<h3 id="brand-colors">Brand Colors</h3>
+<h3 id="brand-colors">Brand colors</h3>
+
+<p>These brand colors are used globally across all parts of the site for things like links, buttons and background colors.</p>
+
+<p>You can find all the color styles in <code>_variables.scss</code>.</p>
 
 <div class="container">
 <div class="swatch swatch-green">$oakland-green</div>
@@ -138,13 +142,13 @@
 <div class="swatch swatch-forestland">$forestland</div>
 </div>
 
-<h3 id="tertiary-colors">Tertiary Colors</h3>
+<h3 id="tertiary-colors">Tertiary colors</h3>
 
-<p>These tertiary colors have been carefully selected so that they go well with the Brand colors.</p>
+<p>These tertiary colors have been carefully selected so that they go well with the Brand colors in specific cases. Generally they will be used to identify a specific department within the Oakland govt. The tertiary colors below are grouped by base color in the order Deep, Bright, Light.</p>
 
-<h4 id="section-colors">Section Colors</h4>
+<h4 id="department-color-themes">Department color themes</h4>
 
-<p>When applying tertiary colors to department subsections it is suggested to use the first, darker color in each group. To create a new department color theme, find the <code>$themes</code> color map in <code>_variables.scss</code>. Simply add the class name you wish to use for the new theme as the map key and a color variable as the map value.</p>
+<p>When applying tertiary colors to department pages it is suggested to use the first, darker color in each group. To create a new department color theme, find the <code>$themes</code> color map in <code>_variables.scss</code>. Simply add the class name you wish to use for the new theme as the map key and a color variable as the map value.</p>
 
 <pre>
 	<code>
@@ -206,7 +210,7 @@
 	<div class="swatch swatch-light-orange">$maple-orange</div>
 </div>
 
-<h4 id="bluer-blues">Bluer Blues</h4>
+<h4 id="bluer-blues">Bluer blues</h4>
 <div class="container">
 	<div class="swatch swatch-deep-bluer">$merritt-lake</div>
 	<div class="swatch swatch-bright-bluer">$broadway-blue</div>
@@ -226,7 +230,9 @@
 <div class="swatch swatch-brown">$brown</div>
 </div>
 
-<h3 id="text-colors">Text Colors</h3>
+<h3 id="text-colors">Text colors</h3>
+
+<p>These variables are simply specialized uses of some of the gray colors. They are abstracted so that you can update the colors for text without affecting all other elements that use a specific gray color.</p>
 
 <div class="container">
 <div class="swatch swatch-text-body">$color-text-body</div>
