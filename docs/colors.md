@@ -107,7 +107,6 @@ Once you've added your new theme, you can add the class name you defined to the 
 <div class="swatch swatch-gray-darker">$gray-darker</div>
 <div class="swatch swatch-black">$black</div>
 <div class="swatch swatch-white">$white</div>
-<div class="swatch swatch-brown">$brown</div>
 </div>
 
 ### Text colors
@@ -116,6 +115,6 @@ These variables are simply specialized uses of some of the gray colors. They are
 
 <div class="container">
 <div class="swatch swatch-text-body">$color-text-body</div>
-<div class="swatch swatch-brown">$color-text-meta</div>
+<div class="swatch swatch-gray-dark">$color-text-meta</div>
 <div class="swatch swatch-gray">$muted</div>
 </div>

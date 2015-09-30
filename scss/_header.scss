@@ -88,20 +88,16 @@
 
 		input {
 			border-color: $gray-lighter !important;
-			width: 215px;
+			width: 275px;
 			padding-right: 35px;
-
-			&:focus {
-				border-color: $black !important;
-			}
 		}
 
 		.search-icon {
 			position: absolute;
 			right: 10px;
-			top: 10px;
+			top: 12px;
 			color: $oakland-green;
-			font-size: 18px;
+			font-size: 17px;
 		}
 	}
 
@@ -109,9 +105,10 @@
 		display: inline-block;
 		margin-top: 2rem;
 		margin-bottom: 2rem;
+		width: 85%;
 
 		input {
-			width: auto;
+			width: 100%;
 		}
 
 		@include media($bp-md) {

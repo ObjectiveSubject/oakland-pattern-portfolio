@@ -1,22 +1,46 @@
 .site-footer {
-	background: $gray-lighter;
+	background: $gray;
 	padding-top: 2rem;
 	font-size: 0.875rem;
+
+	@include media($bp-md) {
+		padding-top: 2.625rem;
+	}
+
+	// standardize spacing between footer sections
+	.grid-row {
+		margin-bottom: 2.625rem;
+
+		// target direct children of grid-row, i.e. columns
+		> * {
+			margin-bottom: 0;
+		}
+	}
+
+	h4 {
+		font-weight: normal;
+		margin-bottom: 2.625rem;
+	}
 
 	.footer-links {
 		padding: 0;
 
+		li {
+			margin-bottom: 0.25rem;
+		}
+
 		a {
 			font-size: 0.875rem;
 			line-height: 1.2;
-			color: $gray-dark;
+			color: $color-text-body;
 
 			&:hover, &:focus {
+				color: $color-text-body;
 				text-decoration: underline;
 			}
 
 			&:active {
-				color: $black;
+			color: $gray-darker;
 			}
 		}
 	}
@@ -43,7 +67,7 @@
 	}
 
 	hr {
-		border-color: $gray;
+		border-bottom: 2px solid darken($gray, 10%);
 	}
 }
 
@@ -52,14 +76,15 @@
 	margin-bottom: 0;
 	position: relative;
 	margin-top: 2.5rem;
+	color: darken($gray, 20%);
 
 	.right {
 		a {
 			font-size: 1rem;
-			color: $muted;
+			color: darken($gray, 20%);
 
 			&:active {
-				color: $gray;
+				color: $gray-dark;
 			}
 		}
 	}

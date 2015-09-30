@@ -126,7 +126,7 @@
 		}
 	}
 
-	// Waypoints
+	// Waypoints http://imakewebthings.com/waypoints/api/waypoint/
 	// -----------------------------------
 	if( $('.section').length ) {
 
