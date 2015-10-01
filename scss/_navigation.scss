@@ -19,7 +19,7 @@ $global-nav-width: 213px;
 
 	.logo-wrap {
 		display: block;
-		margin-bottom: 2.5rem;
+		margin-bottom: 4rem;
 		padding-top: 2.5rem;
 		width: 100%;
 
@@ -60,46 +60,60 @@ $global-nav-width: 213px;
 	overflow-y: auto;
 	overflow-x: none;
 
+	.nav-menu {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+
+		li {
+			margin: 0;
+		}
+	}
+	.top-level-menu {
+		margin-left: -1.25rem;
+	}
+
 	strong {
 		display: block;
-		padding: 10px 0;
+		padding: 10px 1.25rem;
 		color: $white;
 	}
 
 	.menu-item {
 		font-size: 1rem;
 		margin-left: 0;
-		color: $white;
-		padding: 10px 5px 10px 1.25rem;
+		color: darken($white, 15%);
+		padding: 10px 5px 10px 2.5rem;
 		transition: all 0.2s;
 
 		&:before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 2px;
-      content: "";
-      background-color: transparent;
-      transition: all 0.2s ease;
-    }
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			width: 2px;
+			content: "";
+			background-color: transparent;
+			transition: all 0.2s ease;
+		}
 
 		&:hover, &:focus {
 			background-color: transparent;
+			color: $white;
 
 			&:before {
-		transition: all 0.2s;
-	      background-color: $white;
+				transition: all 0.2s;
+				background-color: $white;
 			}
 		}
 
 		&:active, &.active {
-			color: darken($white, 10%);
+			color: darken($white, 25%);
 			background-color: transparent;
 
 			&:before {
-		transition: all 0.2s;
-	      background-color: $oakland-green;
+				transition: all 0.2s;
+				background-color: $oakland-green;
 			}
 		}
 	}
