@@ -90,3 +90,18 @@ Columns can be [centered](/utilities/#centering-content) by adding `.centered` t
   </div>
 </div>
 {% endexample %}
+
+### Last column
+
+If you want to remove a column's gutters for any reason, you can apply the `.column-last` class. This would typically be used when you want a column to float right when there aren't other columns to fill the row.
+
+{% example html %}
+<div class="grid-row">
+  <div class="one-third column">
+    .one-third
+  </div>
+  <div class="one-third column right column-last">
+    .column-last
+  </div>
+</div>
+{% endexample %}

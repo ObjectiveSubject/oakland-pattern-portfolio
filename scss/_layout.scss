@@ -87,3 +87,7 @@
     @include shift;
   }
 }
+
+.column-last {
+  @include omega();
+}
