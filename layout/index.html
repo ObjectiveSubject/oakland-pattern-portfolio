@@ -136,6 +136,7 @@
       <li><a href="#how-it-works" id="markdown-toc-how-it-works">How it works</a></li>
       <li><a href="#demo" id="markdown-toc-demo">Demo</a></li>
       <li><a href="#centered" id="markdown-toc-centered">Centered</a></li>
+      <li><a href="#last-column" id="markdown-toc-last-column">Last column</a></li>
     </ul>
   </li>
 </ul>
@@ -256,6 +257,26 @@ It also adds padding to either side of itself and <code>box-sizing: content-box<
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
+<h3 id="last-column">Last column</h3>
+
+<p>If you want to remove a column’s gutters for any reason, you can apply the <code>.column-last</code> class. This would typically be used when you want a column to float right when there aren’t other columns to fill the row.</p>
+
+<div class="docs-example clearfix"><div class="grid-row">
+  <div class="one-third column">
+    .one-third
+  </div>
+  <div class="one-third column right column-last">
+    .column-last
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third column"</span><span class="nt">&gt;</span>
+    .one-third
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third column right column-last"</span><span class="nt">&gt;</span>
+    .column-last
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
     </div>
   </div>
