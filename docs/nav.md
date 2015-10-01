@@ -41,6 +41,23 @@ The Oakland site uses several navigation components. Some were designed with sin
 </div>
 {% endexample %}
 
+### Menu item with span
+
+You can also include a secondary bit of text in a menu item by wrapping it in a `<span>`. This will give it the global body text color and place it on its own line.
+
+{% example html %}
+<div class="container">
+  <div class="grid-row">
+    <div class="one-third">
+      <a href="#" class="menu-item">
+        A menu item
+        <span>With some extra text</span>
+      </a>
+    </div>
+  </div>
+</div>
+{% endexample %}
+
 ### Section menu
 
 There is a variant of the menu that is used as the main section navigation that lives in the header of the various sections of the site.
@@ -82,14 +99,14 @@ There is a variant of the menu that is used as the main section navigation that 
 </div>
 {% endexample %}
 
-### Big menu
+### Big menu items
 
 {% example html %}
 <div class="container">
   <nav class="big-menu">
     <div class="menu-item">
       <a href="#">
-        <h3>Big Item</h3>
+        <h3>Big Menu Item</h3>
         <p>Info about the big item</p>
       </a>
       <div class="big-menu-group grid-row">
@@ -102,7 +119,7 @@ There is a variant of the menu that is used as the main section navigation that 
     </div>
     <div class="menu-item">
       <a href="#">
-        <h3>Big Item</h3>
+        <h3>Big Menu Item</h3>
         <p>Info about the big item</p>
       </a>
       <div class="big-menu-group grid-row">
@@ -115,7 +132,7 @@ There is a variant of the menu that is used as the main section navigation that 
     </div>
     <div class="menu-item">
       <a href="#">
-        <h3>Big Item</h3>
+        <h3>Big Menu Item</h3>
         <p>Info about the big item</p>
       </a>
       <div class="big-menu-group grid-row">
@@ -128,7 +145,7 @@ There is a variant of the menu that is used as the main section navigation that 
     </div>
     <div class="menu-item">
       <a href="#">
-        <h3>Big Item</h3>
+        <h3>Big Menu Item</h3>
         <p>Info about the big item</p>
       </a>
       <div class="big-menu-group grid-row">
@@ -141,7 +158,7 @@ There is a variant of the menu that is used as the main section navigation that 
     </div>
     <div class="menu-item">
       <a href="#">
-        <h3>Big Item</h3>
+        <h3>Big Menu Item</h3>
         <p>Info about the big item</p>
       </a>
       <div class="big-menu-group grid-row">

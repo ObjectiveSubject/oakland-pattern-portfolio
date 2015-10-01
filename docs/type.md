@@ -47,6 +47,15 @@ Sometimes you will want to have a text element that appears like a certain headi
 <h1 class="h6">Faux h1</h1>
 {% endexample %}
 
+### Aside heading
+
+There is also a common use case for using an `<h4>` element in an aside next to an `<h2>` element. To get these elements to align nicely, add the `.aside-title` class to the `<h4`.
+
+{% example html %}
+<h4>Without class</h4>
+<h4 class="aside-title">With Class</h4>
+{% endexample %}
+
 ## Body text
 
 {% example html %}
