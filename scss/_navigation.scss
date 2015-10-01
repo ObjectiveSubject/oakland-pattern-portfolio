@@ -48,6 +48,7 @@ $global-nav-width: 213px;
 }
 
 .global-navigation {
+	display: none;
 	@include calc('width', '13.3125rem + 1.25rem');
 	background-color: $color-side-nav-bg;
 	position: absolute;
@@ -59,6 +60,13 @@ $global-nav-width: 213px;
 	height: 100%;
 	overflow-y: auto;
 	overflow-x: none;
+	// opacity: 0;
+	// transition: opacity 300ms ease 0;
+
+	// .nav-visible & {
+	// 	opacity: 1;
+	// 	transition: opacity 300ms ease 300ms;
+	// }
 
 	.nav-menu {
 		padding: 0;
@@ -71,6 +79,9 @@ $global-nav-width: 213px;
 	}
 	.top-level-menu {
 		margin-left: -1.25rem;
+		li:last-child {
+			margin-bottom: 1em;
+		}
 	}
 
 	strong {

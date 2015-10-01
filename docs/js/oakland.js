@@ -154,13 +154,13 @@
 	// Off-canvas nav
 	// -----------------------------------
 	var $navWrap = $('.global-navigation-wrap'),
-			$nav = $('.global-navigation'),
-			$body = $('body'),
-			$window = $(window),
-			$hamburger = $('.header-nav-button'),
-			// $close = $('.header-nav-close'),
-			$overlay = $('.main-overlay'),
-			navIsOpen = false;
+		$nav = $('.global-navigation'),
+		$body = $('body'),
+		$window = $(window),
+		$hamburger = $('.header-nav-button'),
+		// $close = $('.header-nav-close'),
+		$overlay = $('.main-overlay'),
+		navIsOpen = false;
 
 	setNavPosition();
 
@@ -188,11 +188,11 @@
 
 	function setNavPosition() {
 		var $logo = $('.logo-wrap'),
-				offset = $logo.offset(),
-				logoLeft = offset.left,
-				logoWidth = $logo.outerWidth(),
-				logoRight = $window.width() - logoLeft - logoWidth,
-				offsetY = window.pageYOffset;
+			offset = $logo.offset(),
+			logoLeft = offset.left,
+			logoWidth = $logo.outerWidth(),
+			logoRight = $window.width() - logoLeft - logoWidth,
+			offsetY = window.pageYOffset;
 
 		$navWrap.css('right', logoRight + 'px');
 		$nav.width(logoWidth);
@@ -200,28 +200,39 @@
 
 	function openNav() {
 		offsetY = window.pageYOffset;
-			$body.addClass('nav-visible').css({
-				'position': 'fixed',
-				'top': -offsetY + 'px'
-			});
-			$navWrap.fadeIn(300);
-			if ( mediaQueryMed.offsetParent === null ) {
-				// $(navWrap).width('80%').css('left', '0px');
-			} else {
-				// desktop
+		$body.addClass('nav-visible').css({
+			'position': 'fixed',
+			'top': -offsetY + 'px'
+		});
+		$navWrap.fadeIn({
+			duration: 300,
+			complete: function(){
+				$nav.fadeIn(300);
 			}
-			$hamburger.addClass('open');
-			navIsOpen = true;
+		});
+
+		if ( mediaQueryMed.offsetParent === null ) {
+			// $(navWrap).width('80%').css('left', '0px');
+		} else {
+			// desktop
+		}
+		$hamburger.addClass('open');
+		navIsOpen = true;
 	}
 
 	function closeNav() {
-		$body.removeClass('nav-visible').css({
-			'position': 'static'
+		$nav.fadeOut({
+			duration: 300,
+			complete: function(){
+				$navWrap.fadeOut(300);
+				$body.removeClass('nav-visible').css({
+					'position': 'static'
+				});
+				$hamburger.removeClass('open');
+				$window.scrollTop(offsetY);
+				navIsOpen = false;
+			}
 		});
-		$navWrap.fadeOut(300);
-		$hamburger.removeClass('open');
-		$window.scrollTop(offsetY);
-		navIsOpen = false;
 	}
 
 	// Adapted from Underscore.js --> _.throttle()
