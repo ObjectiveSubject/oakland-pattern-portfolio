@@ -35,7 +35,7 @@
 				$(subnavItem).not('.active').show();
 				isOpen = true;
 			}
-			console.log(isOpen);
+			// console.log(isOpen);
 		}
 
 		if (window.pageYOffset >= 150 && isOpen) {
@@ -133,7 +133,7 @@
 		var $waypointSections = $('.section');
 
 		$waypointSections.waypoint(function(direction) {
-			console.log(this.element.id);
+			// console.log(this.element.id);
 			if ( direction === 'down' ) {
 				swapNav(this.element.id);
 			}
@@ -190,8 +190,8 @@
 		var $logo = $('.logo-wrap'),
 			offset = $logo.offset(),
 			logoLeft = offset.left,
-			logoWidth = $logo.outerWidth(),
-			logoRight = $window.width() - logoLeft - logoWidth,
+			logoWidth = window.innerWidth < 768 ? '100%' : $logo.outerWidth(),
+			logoRight = window.innerWidth < 768 ? 0 : ($window.width() - logoLeft - logoWidth),
 			offsetY = window.pageYOffset;
 
 		$navWrap.css('right', logoRight + 'px');

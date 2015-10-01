@@ -53,20 +53,18 @@ $global-nav-width: 213px;
 	background-color: $color-side-nav-bg;
 	position: absolute;
 	top: 0;
-	right: 0;
+	left: 1.25rem;
 	bottom: 0;
 	padding-left: $gutter;
 	font-size: 1rem;
 	height: 100%;
+	max-width: 100%;
 	overflow-y: auto;
 	overflow-x: none;
-	// opacity: 0;
-	// transition: opacity 300ms ease 0;
-
-	// .nav-visible & {
-	// 	opacity: 1;
-	// 	transition: opacity 300ms ease 300ms;
-	// }
+	@include media($bp-md) {
+		left: auto;
+		right: 0;
+	}
 
 	.nav-menu {
 		padding: 0;
