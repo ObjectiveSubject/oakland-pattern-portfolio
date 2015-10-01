@@ -13,7 +13,8 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'css/primer.css': 'scss/primer.scss'
+          'css/primer.css': 'scss/primer.scss',
+          'docs/css/primer.css': 'scss/primer.scss'
         }
       }
     },

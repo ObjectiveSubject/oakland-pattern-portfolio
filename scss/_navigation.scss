@@ -11,6 +11,7 @@ $global-nav-width: 213px;
 	z-index: 100000;
 	background-color: $color-side-nav-bg;
 	display: none;
+	transition: right 300ms ease;
 
 	.container {
 		height: 100%;

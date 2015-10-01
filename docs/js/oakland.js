@@ -153,30 +153,53 @@
 
 	// Off-canvas nav
 	// -----------------------------------
-	var $navWrap = $('.global-navigation-wrap');
-	var $nav = $('.global-navigation');
-	var overlay = '';
-	var $body = $('body');
-	var $window = $(window);
-	var navIsOpen = false;
-	var hamburger = document.querySelector('.header-nav-button');
-	var close = document.querySelector('.header-nav-close');
+	var $navWrap = $('.global-navigation-wrap'),
+			$nav = $('.global-navigation'),
+			$body = $('body'),
+			$window = $(window),
+			$hamburger = $('.header-nav-button'),
+			// $close = $('.header-nav-close'),
+			$overlay = $('.main-overlay'),
+			navIsOpen = false;
 
-	var $logo = $('.logo-wrap');
-  var offset = $logo.offset();
-  var logoLeft = offset.left;
-  var logoWidth = $logo.outerWidth();
-  var logoRight = $window.width() - logoLeft - logoWidth;
+	setNavPosition();
 
-	var offsetY = window.pageYOffset;
-
-	$navWrap.css('right', logoRight + 'px');
-	$nav.width(logoWidth);
-
-	$(hamburger).on('click', function(e) {
+	$hamburger.on('click', function(e) {
 		e.preventDefault();
 		if ( !navIsOpen ) {
-			offsetY = window.pageYOffset;
+			openNav();
+		} else {
+			closeNav();
+		}
+	});
+
+	$window.on('resize', throttle(function(){
+		setNavPosition();
+	}, 500, { leading: false }));
+
+	$overlay.on('click', function(e) {
+		if ( e.target != this ) {
+			return;
+		}
+		if ( navIsOpen ) {
+			closeNav();
+		}
+	});
+
+	function setNavPosition() {
+		var $logo = $('.logo-wrap'),
+				offset = $logo.offset(),
+				logoLeft = offset.left,
+				logoWidth = $logo.outerWidth(),
+				logoRight = $window.width() - logoLeft - logoWidth,
+				offsetY = window.pageYOffset;
+
+		$navWrap.css('right', logoRight + 'px');
+		$nav.width(logoWidth);
+	}
+
+	function openNav() {
+		offsetY = window.pageYOffset;
 			$body.addClass('nav-visible').css({
 				'position': 'fixed',
 				'top': -offsetY + 'px'
@@ -187,31 +210,51 @@
 			} else {
 				// desktop
 			}
-			$(this).addClass('open');
+			$hamburger.addClass('open');
 			navIsOpen = true;
-		} else {
-			$body.removeClass('nav-visible').css({
-				'position': 'static'
-			});
-			$navWrap.fadeOut(300);
-			$(this).removeClass('open');
-			$window.scrollTop(offsetY);
-			navIsOpen = false;
-		}
-	});
+	}
 
-	$(overlay).on('click', function(e) {
-		console.log(e.target);
+	function closeNav() {
+		$body.removeClass('nav-visible').css({
+			'position': 'static'
+		});
+		$navWrap.fadeOut(300);
+		$hamburger.removeClass('open');
+		$window.scrollTop(offsetY);
+		navIsOpen = false;
+	}
 
-		if ( e.target != this ) {
-			return;
-		}
-
-		if ( navIsOpen ) {
-			$(offCanvasNav).removeClass('nav-visible');
-			$(hamburger).removeClass('open');
-			navIsOpen = false;
-		}
-	});
+	// Adapted from Underscore.js --> _.throttle()
+	function throttle(func, wait, options) {
+    var context, args, result;
+    var timeout = null;
+    var previous = 0;
+    if (!options) options = {};
+    var later = function() {
+      previous = options.leading === false ? 0 : Date.now();
+      timeout = null;
+      result = func.apply(context, args);
+      if (!timeout) context = args = null;
+    };
+    return function() {
+      var now = Date.now();
+      if (!previous && options.leading === false) previous = now;
+      var remaining = wait - (now - previous);
+      context = this;
+      args = arguments;
+      if (remaining <= 0 || remaining > wait) {
+        if (timeout) {
+          clearTimeout(timeout);
+          timeout = null;
+        }
+        previous = now;
+        result = func.apply(context, args);
+        if (!timeout) context = args = null;
+      } else if (!timeout && options.trailing !== false) {
+        timeout = setTimeout(later, remaining);
+      }
+      return result;
+    };
+  };
 
 }( window.jQuery, window, document ));
