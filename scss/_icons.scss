@@ -58,8 +58,15 @@ $content-bg : $oakland-green;
   .navicon {
     background: transparent;
 
-    &:before { transform: rotate(-45deg); }
-    &:after { transform: rotate(45deg); }
+    &:before {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    &:after {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
   }
 }
 

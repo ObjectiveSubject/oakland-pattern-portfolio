@@ -8,6 +8,7 @@ h4,
 h5,
 h6 {
   border: none;
+  font-family: $header-font;
   font-weight: lighter;
   margin-bottom: 0.75em;
   margin-top: 0;
@@ -30,6 +31,7 @@ h6 {
 .h5,
 .h6 {
   display: block;
+  font-family: $header-font;
   font-weight: lighter;
   margin-top: 0;
   line-height: 1;

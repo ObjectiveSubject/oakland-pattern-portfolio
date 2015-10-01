@@ -43,7 +43,7 @@
 	position: relative;
 
 	@include media($bp-md) {
-		min-height: 400px;
+		min-height: 25rem;
 	}
 
 	.grid-row {
@@ -52,7 +52,7 @@
 
 	&.sticky {
 		overflow: visible;
-		min-height: 42px;
+		min-height: 2.625rem;
 		padding: 0;
 
 	}
@@ -68,7 +68,7 @@
 
 // This is the part of the subnav that contains info about the current site section (e.g. Public Works)
 .section-info {
-	max-width: 450px;
+	max-width: 28.125rem;
 	
 	h1,
 	p,

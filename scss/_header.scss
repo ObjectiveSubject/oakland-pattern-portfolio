@@ -42,7 +42,7 @@
 }
 
 .site-logo {
-	max-width: 173px;
+	max-width: 10.8125rem;
 	display: inline-block;
 	vertical-align: middle;
 	position: relative;
@@ -80,6 +80,7 @@
 
 		@include media($bp-md) {
 			display: inline-block;
+			vertical-align: middle;
 		}
 
 		label {
@@ -88,16 +89,16 @@
 
 		input {
 			border-color: $gray-lighter !important;
-			width: 275px;
-			padding-right: 35px;
+			width: 17.1875rem;
+			padding-right: 2.1875rem;
 		}
 
 		.search-icon {
 			position: absolute;
-			right: 10px;
-			top: 12px;
+			right: 0.625rem;
+			top: 0.75rem;
 			color: $oakland-green;
-			font-size: 17px;
+			font-size: 1.0625rem;
 		}
 	}
 
@@ -120,7 +121,7 @@
 		display: inline-block;
 		vertical-align: middle;
 		cursor: pointer;
-		font-size: 20px;
+		font-size: 1.25rem;
 		float: right;
 
 		@include media($bp-md) {

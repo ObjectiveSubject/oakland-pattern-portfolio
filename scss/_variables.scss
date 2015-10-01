@@ -83,7 +83,7 @@ $news:							$oakland-green !default;
 
 // Header height global sizes
 $header-height-sm: 128px; // For mobile to medium size
-$header-height-lg: 126px; // For medium size and up
+$header-height-lg: 7.875rem; // For medium size and up
 
 // Responsive Breakpoints
 // using mobile-first, so building up with min-width
@@ -94,6 +94,7 @@ $bp-xl: 1500px;
 
 // Font stack
 $body-font: Fakt, Helvetica, arial, sans-serif !default;
+$header-font: FaktLight, Helvetica, arial, sans-serif !default;
 
 // // The base body size
 // $body-font-size: 14px;

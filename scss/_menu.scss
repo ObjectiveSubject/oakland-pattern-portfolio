@@ -6,6 +6,7 @@
   display: block;
   color: $oakland-green;
   padding: 6px 5px 4px $gutter;
+  padding: 0.375rem 0.3125rem 0.25rem $gutter;
   margin-left: -$gutter; // negative margin + extra padding trick to pull the background over the left gutter
 
   &:hover,
@@ -60,7 +61,8 @@
     .menu-item {
       color: $white;
       font-size: 1rem;
-      padding: 9px 5px 9px 1.25rem;
+      padding: 9px 5px 9px $gutter;
+      padding: 0.5625rem 0.3125rem 0.5625rem $gutter;
       transition: background 0.2s ease;
 
       &:before {
@@ -121,6 +123,7 @@
       &:before {
         content: "";
         height: 42px;
+        height: 2.625rem;
         background-color: $rockridge-gray;
         display: block;
         position: fixed;
