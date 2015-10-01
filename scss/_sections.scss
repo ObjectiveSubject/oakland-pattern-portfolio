@@ -60,10 +60,6 @@
 	&.done {
 		background-image: none !important; // force the bg image to be hidden when subnav is sticky
 	}
-
-	.nav-visible & {
-		background-color: darken($oakland-green, 20%);
-	}
 }
 
 // This is the part of the subnav that contains info about the current site section (e.g. Public Works)
