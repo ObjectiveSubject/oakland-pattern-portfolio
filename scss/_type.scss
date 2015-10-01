@@ -72,6 +72,11 @@ h4,
   font-size: 1.1875rem;
   margin-bottom: 1em;
   font-weight: bold;
+
+  &.aside-title {
+    margin-top: 0.75rem;
+    margin-bottom: 2.625rem;
+  }
 }
 
 h5,
