@@ -55,67 +55,122 @@ a {
 // Make containers responsive
 .docs .container {
   width: auto;
-  max-width: 1400px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-left: 14%;
+  margin-right: 14%;
+  padding: 0;
 }
 
 .markdown-body {
   overflow: visible;
 }
 
-
 //
-// Custom button
+// Toolkit color system
 //
+$visual: #3870FF;
+$pattern: #B80062;
 
-.btn-reverse {
-  color: #fff;
-  background: none;
-  border: 1px solid #fff;
+.visual-identity {
+  .masthead,
+  .jumbotron {
+    background-color: $visual;
+  }
 
-  &:hover,
-  &:active {
-    color: $oakland-green;
-    background: #fff;
-    border-color: #fff;
-    box-shadow: none;
+  .jumbotron {
+    background-image: url(img/toolkit/visual-identity-bg.png);
+
+    h1 {
+      padding-top: 10rem;
+    }
+  }
+
+  a {
+    color: $visual;
+
+    &:active {
+      color: darken($visual, 10%);
+    }
+  }
+
+  .toolkit-section-link {
+    color: $white;
+    background-color: $visual;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: darken($visual, 10%);
+    }
+
+    &:active {
+      color: $white;
+      text-decoration: none;
+      background-color: darken($visual, 20%);
+    }
   }
 }
 
+.pattern-portfolio {
+  .masthead,
+  .jumbotron {
+    background-color: $pattern;
+  }
+
+  .jumbotron {
+    background-image: url(img/toolkit/visual-identity-bg.png);
+
+    h1 {
+      padding-top: 10rem;
+    }
+  }
+
+  a {
+    color: $pattern;
+
+    &:active {
+      color: darken($pattern, 10%);
+    }
+  }
+
+  .toolkit-section-link {
+    color: $white;
+    background-color: $pattern;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: darken($pattern, 10%);
+    }
+
+    &:active {
+      color: $white;
+      text-decoration: none;
+      background-color: darken($pattern, 20%);
+    }
+  }
+}
 
 //
 // Site header
 //
 
 .masthead {
-  padding-top:    1rem;
-  padding-bottom: 1rem;
-  margin-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   text-align: center;
-  background-color: $oakland-green;
-
-  a {
-    color: rgba(255,255,255,.5);
-
-    &:hover {
-      color: #fff;
-      text-decoration: none;
-    }
-  }
+  background-color: $rockridge-gray;
+  position: fixed;
+  width: 74.45415%;
+  z-index: 100;
 
   .masthead-logo {
     display: inline-block;
-    font-size: 1.5rem;
+    font-size: 1.375rem;
+    font-family: $header-font;
     color: #fff;
-
-    .mega-octicon {
-      float: left;
-      margin-right: .5rem;
-    }
   }
 
-  @media (min-width: 34em) {
+  @media (min-width: $bp-md) {
     text-align: left;
 
     .masthead-logo {
@@ -124,90 +179,70 @@ a {
   }
 }
 
-.masthead-nav {
-  margin-top: 1rem;
-  font-size: 1rem;
-
-  a {
-    display: inline-block;
-
-    &:not(:last-child) {
-      margin-right: 1.25rem;
-    }
-  }
-
-  .active {
-    color: #fff;
-    font-weight: 500;
-  }
-
-  @media (max-width: 34em) {
-    padding-top: 1rem;
-    border-top: .075rem solid rgba(255, 255, 255, 0.25);
-  }
-
-  @media (min-width: 34em) {
-    float: right;
-    margin-top: .5rem;
-  }
-}
-
-
 //
 // Homepage jumbotron
 //
 
 .jumbotron {
-  margin-top: -2rem;
   margin-bottom: 3rem;
   padding-top: 2rem;
-  padding-bottom: 4rem;
-  background-color: $oakland-green;
+  background-color: $rockridge-gray;
   font-size: 1.25rem;
   color: #fff;
   text-align: center;
+  min-height: 18rem;
+  background-position: 140% 60%;
+  background-repeat: no-repeat;
+
+  @include media($bp-md) {
+    background-position: 116% 60%;
+  }
 
   h1 {
     font-size: 2.5em;
     font-weight: normal;
   }
 
-  .btn {
-    padding: .75em 1.15em;
-    font-size: inherit;
-    font-weight: normal;
-    line-height: 1;
-  }
-
   @media (min-width: 34em) {
     padding-top: 6rem;
-    padding-bottom: 8rem;
     font-size: 1.5rem;
     text-align: left;
   }
 }
 
 .about-that {
+  margin-bottom: 3rem;
 
-  @media (max-width: 760px) {
-    .column {
-      float: none;
-      width: 100%;
-      margin-bottom: 30px;
-    }
-  }
-
-  p {
-    padding-right: .5rem;
-    color: #555;
-    line-height: 1.5;
-  }
-
-  h2 {
-    font-weight: normal;
+  @include media($bp-md) {
+    margin-bottom: 6rem;
   }
 }
 
+
+//
+// Homepage sections
+//
+.toolkit-intro {
+  margin-bottom: 4rem;
+
+  img {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+  }
+}
+
+//
+// Toolkit landing pages
+//
+.toolkit-section-link {
+  color: $white;
+  display: block;
+  height: 5.25rem;
+  background-color: #e9eae7;
+  padding: 1rem 5rem 1rem 1rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+}
 
 //
 // Layout
@@ -232,8 +267,8 @@ a {
   padding-bottom: 3rem;
   margin-top: 3rem;
   line-height: 1.75;
-  color: #7a7a7a;
-  border-top: 1px solid #eee;
+  color: #EAEBE8;
+  background-color: #646963;
 
   strong {
     color: #333;

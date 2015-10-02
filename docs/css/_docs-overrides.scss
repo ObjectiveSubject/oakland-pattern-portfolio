@@ -1,5 +1,59 @@
 // This file overrides the styles applied to the .markdown-body sections
 // for the content inside of .docs-example blocks
+.docs {
+	// Navigation
+	.global-navigation {
+	  width: 25.54586%;
+	  margin-right: 0;
+	  display: block;
+	  margin-bottom: 0;
+	  padding-left: 3rem;
+	  background-color: #212121;
+	  left: 0;
+	  top: 0;
+	  z-index: 1000;
+	  position: fixed;
+
+	  .logo-wrap {
+	  	margin-bottom: 3rem;
+
+	  	&:after {
+				content: "";
+				position: absolute;
+				left: -$gutter;
+				top: 0;
+				bottom: 0;
+				width: 2px;
+				background-color: $white;
+			}
+	  }
+
+	  strong {
+	    padding: 0;
+	  }
+
+	  .menu-item {
+	    padding-left: 1.25rem;
+	  }
+
+	  .nav-sub-menu {
+	    padding-left: 1.25rem;
+
+	    .menu-item:before {
+	      left: -$gutter;
+	    }
+	  }
+	}
+
+	main {
+	  background-color: #EAEBE8;
+	  margin-bottom: 0;
+	}
+
+	hr {
+	  border-color: #D1D2D0;
+	}
+}
 
 .docs-example {
 	@import "../../scss/mixins";

@@ -21,62 +21,78 @@
     <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/img/apple-touch-icon-precomposed.png">
     <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
   </head>
-  <body class="docs">
+  {% if page.title == "Visual Identity" %}
+  <body class="docs clearfix visual-identity">
+  {% else if page.title == "Pattern Portfolio" %}
+  <body class="docs clearfix pattern-portfolio">
+  {% else %}
+  <body class="docs clearfix">
+  {% endif %}
 
-    <header class="masthead">
-      <div class="container">
-        <a href="{{ site.baseurl }}/" class="masthead-logo">
-          <span class="mega-octicon octicon-package"></span>
-          City of Oakland Primer
-        </a>
+    {% include sidenav.html %}
 
-        <nav class="masthead-nav">
-          <a {% if page.layout == "page" %}class="active"{% endif %} href="{{ site.baseurl }}/type">For Authors</a>
-          <a {% if page.layout == "page" %}class="active"{% endif %} href="{{ site.baseurl }}/guidelines">For Developers</a>
-          <a {% if page.title == "About" %}class="active"{% endif %} href="{{ site.baseurl }}/about">About</a>
-          <!-- <a href="{{ site.github.repo }}" target="_blank">GitHub</a> -->
-        </nav>
-      </div>
-    </header>
+    <main class="three-fourths column-last right">
 
-    {% if page.title == "Home" %}
-      <div class="jumbotron">
+      <header class="masthead">
         <div class="container">
-          <h1>City of Oakland Primer</h1>
-          <p>The CSS toolkit and guidelines that power the City of Oakland's website.</p>
-
-          <a href="{{ site.baseurl }}/type/" class="btn btn-reverse">
-            Read the docs
+          <a href="{{ site.baseurl }}/" class="masthead-logo">
+            Design Toolkit
           </a>
         </div>
+      </header>
+
+    {% if page.title == "Introduction" %}
+      <div class="jumbotron">
+        <div class="container">
+          <h1>A Living Set of Guidelines</h1>
+        </div>
       </div>
 
-      <div class="container about-that">
-        <div class="grid-row">
-          <div class="one-third column">
-            <h2>Visual Language</h2>
-            <p>Some info for the how and why of the Visual Language guide.</p>
-          </div>
-          <div class="one-third column">
-            <h2>Pattern Portfolio</h2>
-            <p>Some info on how/why to use the portfolio.</p>
-          </div>
-          <div class="one-third column">
-            <h2>Build tools</h2>
-            <p>Includes a small Gruntfile for compiling our SCSS, Autoprefixer for vendor prefixes, and Parker for CSS stats.</p>
-          </div>
+      <div class="container">
+        <p class="about-that">The goal of the City of Oakland’s Design Toolkit is to support a consistent visual identity to provide clear communication to our community, and to help design and build great experiences for <a href="oaklandca.gov">Oaklandca.gov</a>.</p>
+
+        <hr>
+      </div>
+    {% else if page.title == "Visual Identity" %}
+      <div class="jumbotron">
+        <div class="container">
+          <h1>Visual Identity</h1>
         </div>
+      </div>
+
+      <div class="container">
+        <p class="about-that">The goal of the City of Oakland’s Design Toolkit is to support a consistent visual identity to provide clear communication to our community, and to help design and build great experiences for <a href="oaklandca.gov">Oaklandca.gov</a>.</p>
+
+        <hr>
+      </div>
+    {% else if page.title == "Pattern Portfolio" %}
+      <div class="jumbotron">
+        <div class="container">
+          <h1>Pattern Portfolio</h1>
+        </div>
+      </div>
+
+      <div class="container">
+        <p class="about-that">The goal of the City of Oakland’s Design Toolkit is to support a consistent visual identity to provide clear communication to our community, and to help design and build great experiences for <a href="oaklandca.gov">Oaklandca.gov</a>.</p>
+
+        <hr>
       </div>
     {% endif %}
 
-    <div class="container">
-      {{ content }}
+      <div class="container">
+        {{ content }}
+      </div>
 
       <footer class="footer">
-        Copyright City of Oakland {{ site.time | date: '%Y' }}.<br>
-        Forked from GitHub Primer by Objective Subject. <strong>Currently v{{ site.version }}.</strong>
+        <div class="container">
+          Copyright City of Oakland {{ site.time | date: '%Y' }}.<br>
+          Currently v{{ site.version }}.<br>
+          &nbsp;<br>
+          Forked from GitHub Primer by Objective Subject. 
+        </div>
       </footer>
-    </div>
+
+    </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="{{ site.baseurl }}/js/anchor.min.js"></script>
