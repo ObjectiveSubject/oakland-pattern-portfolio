@@ -37,14 +37,14 @@
 	overflow: hidden;
 	transition: all 0.3s ease-out;
 	height: auto;
-	padding-top: 2.25rem;
+	padding-top: 0;
 	padding-bottom: 2.5rem;
 	margin-bottom: 2.5rem;
 	position: relative;
 
 	@include media($bp-md) {
 		min-height: 25rem;
-		padding-top: 5.625rem;
+		// padding-top: 5.625rem;
 	}
 
 	.grid-row {
@@ -60,6 +60,16 @@
 
 	&.done {
 		background-image: none !important; // force the bg image to be hidden when subnav is sticky
+	}
+
+	.container {
+		margin-top: 2.25rem;
+		@include media($bp-md) {
+			margin-top: 5.25rem;
+		}
+	}
+	.breadcrumb-wrap ~ .container {
+		margin-top: 5.25rem;
 	}
 }
 
