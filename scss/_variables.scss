@@ -53,6 +53,7 @@ $sequoyah-heights:		#e5ecff !default;
 // The key should be the class name you want to use (generally a department name)
 // The value should be one of the Deep Tertiary color variables listed above
 $themes: (
+	default: $oakland-green,
 	public-works: $water-blue,
 	transportation: $grass-valley,
 ) !default;

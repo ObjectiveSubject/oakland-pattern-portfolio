@@ -28,7 +28,7 @@
 }
 
 .column {
-  .centered {
+  &.centered {
     // Override Neat's :last-child rule for centered columns
     margin-right: auto !important;
   }

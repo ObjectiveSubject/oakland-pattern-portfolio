@@ -55,9 +55,9 @@ a {
 // Make containers responsive
 .docs .container {
   width: auto;
-  margin-left: 14%;
-  margin-right: 14%;
   padding: 0;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .markdown-body {
@@ -68,6 +68,8 @@ a {
 // Toolkit color system
 //
 $visual: #3870FF;
+$visual-dark: darken($visual, 10%);
+$visual-darker: darken($visual, 20%);
 
 .visual-identity {
   .masthead,
@@ -79,7 +81,7 @@ $visual: #3870FF;
     color: $visual;
 
     &:active {
-      color: darken($visual, 10%);
+      color: $visual-dark;
     }
   }
 
@@ -90,18 +92,43 @@ $visual: #3870FF;
     &:hover,
     &:focus {
       text-decoration: none;
-      background-color: darken($visual, 10%);
+      background-color: $visual-dark;
     }
 
     &:active {
       color: $white;
       text-decoration: none;
-      background-color: darken($visual, 20%);
+      background-color: $visual-darker;
+    }
+  }
+
+  #markdown-toc li a {
+    color: $visual;
+
+    &:before {
+      background-color: $visual;
+    }
+
+    &:hover,
+    &:focus {
+      &:before {
+        background-color: $visual;
+      }
+    }
+
+    &:active {
+      color: $visual-dark;
+
+      &:before {
+        background-color: $visual-dark;
+      }
     }
   }
 }
 
 $pattern: #B80062;
+$pattern-dark: darken($pattern, 10%);
+$pattern-darker: darken($pattern, 20%);
 
 .pattern-portfolio {
   .masthead,
@@ -113,7 +140,7 @@ $pattern: #B80062;
     color: $pattern;
 
     &:active {
-      color: darken($pattern, 10%);
+      color: $pattern-dark;
     }
   }
 
@@ -124,13 +151,36 @@ $pattern: #B80062;
     &:hover,
     &:focus {
       text-decoration: none;
-      background-color: darken($pattern, 10%);
+      background-color: $pattern-dark;
     }
 
     &:active {
       color: $white;
       text-decoration: none;
-      background-color: darken($pattern, 20%);
+      background-color: $pattern-darker;
+    }
+  }
+
+  #markdown-toc li a {
+    color: $pattern;
+
+    &:before {
+      background-color: $pattern;
+    }
+
+    &:hover,
+    &:focus {
+      &:before {
+        background-color: $pattern;
+      }
+    }
+
+    &:active {
+      color: $pattern-dark;
+
+      &:before {
+        background-color: $pattern-dark;
+      }
     }
   }
 }
@@ -281,6 +331,24 @@ $pattern: #B80062;
 //
 // Examples
 //
+.highlight,
+.highlight-md {
+  background-color: $white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+
+  pre,
+  code {
+    font-size: 1rem;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+.highlight-md {
+  padding-top: 0;
+}
 
 .docs-example {
   position: relative;
@@ -294,39 +362,12 @@ $pattern: #B80062;
     font-size: 1rem;
   }
 
-  + .highlight {
-    background-color: $white;
-    padding: 1rem;
-    margin-bottom: 2rem;
-  }
-
   > .menu:last-child,
   > .tabnav:last-child,
   > blockquote:last-child {
     margin-bottom: 0;
   }
 
-  // .menu,
-  // .filter-list,
-  // .sunken-menu {
-  //   max-width: 200px;
-  // }
-
-  // Grid
-  // .container {
-  //   width: 100%;
-  //   padding-left: $grid-gutter;
-  //   padding-right: $grid-gutter;
-  // }
-  // .columns + .columns {
-  //   margin-top: 10px;
-  // }
-  // .column {
-  //   padding: $grid-gutter;
-  //   // font-family: $mono-font;
-  //   background-color: lighten($brand-green, 40%);
-  //   // border: 1px solid lighten($brand-green, 30%);
-  // }
   .grid-row {
     margin-bottom: 2rem;
   }
@@ -399,13 +440,36 @@ form {
 // Markdown generated ToC
 //
 
-// Hide the first child li because it's always going to be "Contents".
-#markdown-toc > li:first-child {
-  display: none;
+#markdown-toc {
+  @extend .clearfix;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+
+  // Hide the first child li because it's always going to be "Contents".
+  > li:first-child {
+    display: none;
+  }
+
+  ul {
+    display: none;
+  }
+
+  > li + li {
+    width: 48%;
+    margin-right: 2%;
+    float: left;
+
+    a {
+      @extend .menu-item;
+    }
+  }
 }
 
 
-
+//
+// Color swatches
+//
 
 .swatch {
   display: inline-block;

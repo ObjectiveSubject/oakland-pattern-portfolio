@@ -24,16 +24,16 @@ Headings, paragraphs, blockquotes, lists, and more have some global resets. It's
 
 **Markdown**
 
-<pre>
-  <code>
-  # Heading 1
-  ## Heading 2
-  ### Heading 3
-  #### Heading 4
-  ##### Heading 5
-  ###### Heading 6
-  </code>
-</pre>
+<div class="highlight-md">
+<pre><code>
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+</code></pre>
+</div>
 
 ### Faux headings
 
@@ -71,39 +71,43 @@ There is also a common use case for using an `<h4>` element in an aside next to 
 
 **Markdown**
 
-<pre>
-  <code>
-    Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+<div class="highlight-md">
+<pre><code>
+Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
 
-    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
 
-    Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-  </code>
-</pre>
+Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+</code></pre>
+</div>
 
 ## Links
 
 {% example html %}
-<a href="http://example.com/">Body Link</a>
-<h3><a href="http://example.com/">Heading Link</a></h3>
+<div class="default">
+  <a href="http://example.com/">Body Link</a>
+  <h3><a href="http://example.com/">Heading Link</a></h3>
+</div>
 {% endexample %}
 
 **Markdown**
 
+<div class="highlight-md">
 <pre><code>
   [Body Link](http://example.com/)
 
   ###[Heading link](http://example.com/)
 </code></pre>
+</div>
 
 Links will inherit the color of the site section they are in.
 
 {% example html %}
-<div class="container transportation">
+<div class="transportation">
   <a href="http://example.com/">Body Link</a>
   <h3><a href="http://example.com/">Heading Link</a></h3>
 </div>
-<div class="container public-works">
+<div class="public-works">
   <a href="http://example.com/">Body Link</a>
   <h3><a href="http://example.com/">Heading Link</a></h3>
 </div>

@@ -16,6 +16,7 @@
 
 	  .logo-wrap {
 	  	margin-bottom: 3rem;
+	  	float: right;
 
 	  	&:after {
 				content: "";
@@ -26,6 +27,13 @@
 				width: 2px;
 				background-color: $white;
 			}
+	  }
+
+	  .top-level-menu {
+	  	float: right;
+	  	width: 100%;
+	  	max-width: 13.3125rem;
+	  	margin-right: $gutter;
 	  }
 
 	  strong {
@@ -53,6 +61,13 @@
 	hr {
 	  border-color: #D1D2D0;
 	}
+
+  code {
+		font-size: 1.1875rem;
+    background-color: $gray;
+    padding: 5px;
+    border-radius: 5px;    
+  }
 }
 
 .docs-example {
