@@ -107,16 +107,16 @@
     <section class="subheader" style="background-image: url(../img/hero-1.jpg);">
       <div class="container">
         <div class="grid-row">
-          <nav class="section-menu one-third">
-            <a class="menu-item active" href="#section-1">Services</a>
-            <a class="menu-item" href="#section-2">City News</a>
-            <a class="menu-item" href="#section-3">Departments</a>
-            <a class="menu-item" href="#section-4">Mayor</a>
-          </nav>
           <div class="section-info two-thirds">
             <h1>Welcome to Oakland, California</h1>
             <p>The best place to find information and services from the City of Oakland.</p>
           </div>
+          <nav class="section-menu one-third">
+            <a class="menu-item" href="#section-1">Services</a>
+            <a class="menu-item" href="#section-2">City News</a>
+            <a class="menu-item" href="#section-3">Departments</a>
+            <a class="menu-item" href="#section-4">Mayor</a>
+          </nav>
         </div>
       </div>
     </section>
@@ -211,7 +211,7 @@
           </div>
 
           <aside class="one-third">
-            <h4>Other News</h4>
+            <h4 class="aside-title">Other News</h4>
             <ul class="list-no-style">
               <li><a href="">Some other News about Oakland</a></li>
               <li><a href="">Some other News about Oakland with a longer title</a></li>
@@ -332,7 +332,13 @@
 
     <span class="js-media-query-med"></span>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script src="/js/jquery.min.js"></script>
+    <script>
+      if ( ! window.jQuery ) {
+        document.write('script src="/js/jquery.min.js"><\/script>');
+      }
+    </script>
     <script src="/js/jquery.waypoints.min.js"></script>
     <script src="/js/oakland.js"></script>
     <script src="/js/bigmenu.js"></script>

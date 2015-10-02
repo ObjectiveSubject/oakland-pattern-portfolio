@@ -211,7 +211,13 @@
 
     <span class="js-media-query-med"></span>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script src="/js/jquery.min.js"></script>
+    <script>
+      if ( ! window.jQuery ) {
+        document.write('script src="/js/jquery.min.js"><\/script>');
+      }
+    </script>
     <script src="/js/jquery.waypoints.min.js"></script>
     <script src="/js/oakland.js"></script>
     <script src="/js/bigmenu.js"></script>

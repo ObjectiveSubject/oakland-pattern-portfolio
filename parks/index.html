@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>
-      Public Works Template &middot; City of Oakland Primer
+      Parks and Rec Template &middot; City of Oakland Primer
     </title>
 
     <link rel="stylesheet" href="/docs.css">
@@ -117,17 +117,17 @@
 
           <div class="grid-row">
 
-            <nav class="section-menu one-fourth">
-              <a class="menu-item active" href="#section-1">News and Press</a>
-              <a class="menu-item" href="#section-2">About</a>
-              <a class="menu-item" href="#section-3">Services</a>
-              <a class="menu-item" href="#section-4">Management</a>
-            </nav>
-
             <div class="section-info two-thirds column-shift">
               <h1>Parks &amp; Recreation</h1>
               <p>There is a purpose for our play, play is more than physical activity and bouncing balls. Play produces great outcomes.</p>
             </div>
+
+            <nav class="section-menu one-fourth">
+              <a class="menu-item" href="#section-1">News and Press</a>
+              <a class="menu-item" href="#section-2">About</a>
+              <a class="menu-item" href="#section-3">Services</a>
+              <a class="menu-item" href="#section-4">Management</a>
+            </nav>
 
           </div><!-- .grid-row -->
 
@@ -327,7 +327,13 @@
 
     <span class="js-media-query-med"></span>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script src="/js/jquery.min.js"></script>
+    <script>
+      if ( ! window.jQuery ) {
+        document.write('script src="/js/jquery.min.js"><\/script>');
+      }
+    </script>
     <script src="/js/jquery.waypoints.min.js"></script>
     <script src="/js/oakland.js"></script>
     <script src="/js/bigmenu.js"></script>
