@@ -1,158 +1,102 @@
-(function( $, window, document ) {
 
-	// Sticky subnav
-	// ------------------------------------
-	var menu = document.querySelector('.section-menu');
-	var mediaQueryMed = document.querySelector('.js-media-query-med');
+/* -----------------------------------------------
+ * Sticky subnav
+ * ----------------------------------------------- */
 
-	if (menu && mediaQueryMed.offsetParent != null ) {
-		var menuPosition = menu.getBoundingClientRect();
-		var menuTop = menuPosition.top - 126;
-		var placeholder = document.createElement('div');
-		placeholder.style.width = menuPosition.width + 20 + 'px';
-		placeholder.style.height = menuPosition.height + 'px';
-		placeholder.style.styleFloat = "left";
-		placeholder.style.cssFloat = "left";
-		placeholder.style.position = "absolute";
-		var subnavItem = document.querySelectorAll('.section-menu .menu-item')
-		var isOpen = true;
-		var isFocused = false;
-		var isHovered = false;
+( function( $, window, document ) {
 
-		menu.parentNode.insertBefore(placeholder, menu);
+	var $menu = $('.section-menu');
 
-		// Function for opening and closing the subnav on scroll, used by waypoint js lib
+	if ( $menu.length > 0 ) {
+
+		var $subnavItem = $('.section-menu .menu-item');
+
+		$('.header-wrap').append('<div class="sticky-nav closed invisible"><div class="container"><nav class="sticky-section-menu">'+$menu.html()+'</nav></div></div>');
+		
+		var $stickyNav = $('.sticky-nav'),
+			$stickyContainer = $('.sticky-nav .container'),
+			$stickySectionMenu = $('.sticky-section-menu'),
+			$stickyMenu = $('.sticky-menu'),
+			offset = $stickyMenu.height() + $stickyNav.height() + 50;
+
+		$('body')
+			.on('click', '.sticky-nav .menu-item', function(event){
+				var that = this,
+					target = $(that).attr('href');
+					targetOffset = $(target).offset().top - offset;
+
+				$(that).blur();
+
+				if ( $stickyNav.hasClass('closed') ) {
+					$stickyContainer.css('height', $stickySectionMenu.height());
+					$stickyNav.toggleClass('closed open');
+				} else {
+					$stickyContainer.css('height', '100%');
+					$stickyNav.toggleClass('closed open');
+					$('body, html').animate({scrollTop: targetOffset + 'px' });
+				}
+
+				$(document).click(function(ev){
+					$stickyContainer.css('height', '100%');
+					$stickyNav.toggleClass('closed open');
+				});
+
+				return false;
+			});
+
+		// Waypoints http://imakewebthings.com/waypoints/api/waypoint/
 		// -----------------------------------
-		function subnavToggle() {
-			if ( isOpen ) {
-				$(menu).addClass('sticky');
-				$(placeholder).css('position', 'relative');
-				$(subnavItem).not('.active').hide();
-        isOpen = false;
-			} else if ( !isOpen ) {
-				$(menu).removeClass('sticky');
-				$(placeholder).css('position', 'absolute');
-				$(subnavItem).not('.active').show();
-				isOpen = true;
-			}
-			// console.log(isOpen);
+		if( $('.section').length ) {
+
+			var $waypointSections = $('.section');
+
+			$waypointSections.waypoint(function(direction) {
+				// console.log(this.element.id);
+				if ( direction === 'down' ) {
+					activateItem(this.element.id);
+				}
+			}, {
+				offset: offset
+			});
+
+			$waypointSections.waypoint(function(direction) {
+				if ( direction === 'up' ) {
+					activateItem(this.element.id);
+				}
+			}, {
+				offset: 50
+			});
+
 		}
 
-		if (window.pageYOffset >= 150 && isOpen) {
-			subnavToggle();
-			isOpen = false;
-		}
-
-		// Waypoint for section-menu
-		$(menu).waypoint(function(direction) {
-			subnavToggle();
-		}, {
-			offset: -126
+		$('.section-menu').waypoint(function(direction){
+			$stickyNav.toggleClass('visible invisible');
 		});
 
-		// Sticky nav hover behavior
-		$(menu).hover( function() {
-			if( !isOpen ) {
-				$(subnavItem).not('.active').stop().slideDown('fast');
-				isHovered = true;
-			}
-		}, function() {
-			if( !isOpen ) {
-				$(subnavItem).not('.active').stop().slideUp('fast');
-				isHovered = false;
-			}
-		});
 
-		// Need to figure out a better solution for Focus support
-	// -----------------------------------
-		// $(menu).focusin( function() {
-		// 	if( !isOpen && !isFocused ) {
-		// 		$(subnavItem).not('.active').slideDown('fast');
-		// 		isOpen = true;
-		// 		isFocused = true;
-		// 	}
-		// });
-
-		// $(subnavItem).last().focusout( function() {
-		// 	if( isOpen && isFocused ) {
-		// 		$(subnavItem).not('.active').slideUp('fast');
-		// 		isOpen = false;
-		// 		isFocused = false;
-		// 	}
-		// });
-
-		// $(subnavItem).first().focusout( function() {
-		// 	if( isOpen && isFocused ) {
-		// 		$(subnavItem).not('.active').slideUp('fast');
-		// 		isOpen = false;
-		// 		isFocused = false;
-		// 	}
-		// });
-
-	}
-
-	// Change active state on scroll
-	// -----------------------------------
-	var sections = $('.section')
-	  , header = $('.header-wrap')
-	  , nav = $('.section-menu');
-
-	$(subnavItem).on('click', function () {
-	  var $el = $(this)
-	    , id = $el.attr('href');
-
-    $el.addClass('active').siblings('.active').removeClass('active');
-	 
-	  $('html, body').animate({
-	    scrollTop: $(id).offset().top - 185
-	  }, 500);
-	 
-	  return false;
-	});
-
-	function swapNav(id) {
-		if( !isOpen && !isHovered ) {
-			nav.find('a.menu-item[href="#' + id + '"]')
-				.addClass('active')
-				.show()
-				.siblings('a.active')
-				.removeClass('active')
-				.hide();
-		} else {
-			nav.find('a.menu-item[href="#' + id + '"]')
-				.addClass('active')
+		// Function to show active menu-item in sticky nav
+		// -----------------------------------
+		function activateItem(id) {
+			var $target = $stickyNav.find('a.menu-item[href="#' + id + '"]'),
+				top = ($target.index() * ( $target.outerHeight() * -1 ));
+			
+			$target.addClass('active')
 				.siblings('a.active')
 				.removeClass('active');
+
+			$stickySectionMenu.css({marginTop: top + 'px' });
 		}
-	}
-
-	// Waypoints http://imakewebthings.com/waypoints/api/waypoint/
-	// -----------------------------------
-	if( $('.section').length ) {
-
-		var $waypointSections = $('.section');
-
-		$waypointSections.waypoint(function(direction) {
-			// console.log(this.element.id);
-			if ( direction === 'down' ) {
-				swapNav(this.element.id);
-			}
-		}, {
-			offset: 185
-		});
-
-		$waypointSections.waypoint(function(direction) {
-			if ( direction === 'up' ) {
-				swapNav(this.element.id);
-			}
-		}, {
-			offset: 50
-		});
 
 	}
 
-	// Off-canvas nav
-	// -----------------------------------
+}( window.jQuery, window, document ));
+
+
+/* -----------------------------------------------
+ * Off-canvas nav
+ * ----------------------------------------------- */
+( function( $, window, document ) {
+
 	var $navWrap = $('.global-navigation-wrap'),
 		$nav = $('.global-navigation'),
 		$body = $('body'),
@@ -211,11 +155,6 @@
 			}
 		});
 
-		if ( mediaQueryMed.offsetParent === null ) {
-			// $(navWrap).width('80%').css('left', '0px');
-		} else {
-			// desktop
-		}
 		$hamburger.addClass('open');
 		navIsOpen = true;
 	}
@@ -237,35 +176,35 @@
 
 	// Adapted from Underscore.js --> _.throttle()
 	function throttle(func, wait, options) {
-    var context, args, result;
-    var timeout = null;
-    var previous = 0;
-    if (!options) options = {};
-    var later = function() {
-      previous = options.leading === false ? 0 : Date.now();
-      timeout = null;
-      result = func.apply(context, args);
-      if (!timeout) context = args = null;
-    };
-    return function() {
-      var now = Date.now();
-      if (!previous && options.leading === false) previous = now;
-      var remaining = wait - (now - previous);
-      context = this;
-      args = arguments;
-      if (remaining <= 0 || remaining > wait) {
-        if (timeout) {
-          clearTimeout(timeout);
-          timeout = null;
-        }
-        previous = now;
-        result = func.apply(context, args);
-        if (!timeout) context = args = null;
-      } else if (!timeout && options.trailing !== false) {
-        timeout = setTimeout(later, remaining);
-      }
-      return result;
-    };
-  };
+		var context, args, result;
+		var timeout = null;
+		var previous = 0;
+		if (!options) options = {};
+		var later = function() {
+		  previous = options.leading === false ? 0 : Date.now();
+		  timeout = null;
+		  result = func.apply(context, args);
+		  if (!timeout) context = args = null;
+		};
+		return function() {
+		  var now = Date.now();
+		  if (!previous && options.leading === false) previous = now;
+		  var remaining = wait - (now - previous);
+		  context = this;
+		  args = arguments;
+		  if (remaining <= 0 || remaining > wait) {
+			if (timeout) {
+			  clearTimeout(timeout);
+			  timeout = null;
+			}
+			previous = now;
+			result = func.apply(context, args);
+			if (!timeout) context = args = null;
+		  } else if (!timeout && options.trailing !== false) {
+			timeout = setTimeout(later, remaining);
+		  }
+		  return result;
+		};
+	  };
 
 }( window.jQuery, window, document ));

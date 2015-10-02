@@ -37,13 +37,14 @@
 	overflow: hidden;
 	transition: all 0.3s ease-out;
 	height: auto;
-	padding-top: 5.25rem;
+	padding-top: 2.25rem;
 	padding-bottom: 2.5rem;
 	margin-bottom: 2.5rem;
 	position: relative;
 
 	@include media($bp-md) {
 		min-height: 25rem;
+		padding-top: 5.625rem;
 	}
 
 	.grid-row {
@@ -64,11 +65,14 @@
 
 // This is the part of the subnav that contains info about the current site section (e.g. Public Works)
 .section-info {
-	max-width: 28.125rem;
-	
+	@include media($bp-md) {
+		float: right;
+	}
+
 	h1,
 	p,
 	span {
+		max-width: 28.125rem;
 		color: $white;
 	}
 
