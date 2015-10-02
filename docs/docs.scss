@@ -68,20 +68,11 @@ a {
 // Toolkit color system
 //
 $visual: #3870FF;
-$pattern: #B80062;
 
 .visual-identity {
   .masthead,
   .jumbotron {
     background-color: $visual;
-  }
-
-  .jumbotron {
-    background-image: url(img/toolkit/visual-identity-bg.png);
-
-    h1 {
-      padding-top: 10rem;
-    }
   }
 
   a {
@@ -110,18 +101,12 @@ $pattern: #B80062;
   }
 }
 
+$pattern: #B80062;
+
 .pattern-portfolio {
   .masthead,
   .jumbotron {
     background-color: $pattern;
-  }
-
-  .jumbotron {
-    background-image: url(img/toolkit/visual-identity-bg.png);
-
-    h1 {
-      padding-top: 10rem;
-    }
   }
 
   a {
@@ -163,11 +148,17 @@ $pattern: #B80062;
   width: 74.45415%;
   z-index: 100;
 
-  .masthead-logo {
+  .masthead-logo,
+  span {
     display: inline-block;
     font-size: 1.375rem;
     font-family: $header-font;
-    color: #fff;
+    color: $white;
+    margin-right: 1.25rem;
+  }
+
+  .muted {
+    color: rgba($white, 0.75);
   }
 
   @media (min-width: $bp-md) {
@@ -185,14 +176,11 @@ $pattern: #B80062;
 
 .jumbotron {
   margin-bottom: 3rem;
-  padding-top: 2rem;
   background-color: $rockridge-gray;
   font-size: 1.25rem;
   color: #fff;
   text-align: center;
   min-height: 18rem;
-  background-position: 140% 60%;
-  background-repeat: no-repeat;
 
   @include media($bp-md) {
     background-position: 116% 60%;
@@ -201,10 +189,10 @@ $pattern: #B80062;
   h1 {
     font-size: 2.5em;
     font-weight: normal;
+    margin-top: 30vh;
   }
 
   @media (min-width: 34em) {
-    padding-top: 6rem;
     font-size: 1.5rem;
     text-align: left;
   }
@@ -214,7 +202,7 @@ $pattern: #B80062;
   margin-bottom: 3rem;
 
   @include media($bp-md) {
-    margin-bottom: 6rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -226,7 +214,7 @@ $pattern: #B80062;
   margin-bottom: 4rem;
 
   img {
-    display: inline-block;
+    display: block;
     margin-bottom: 1.25rem;
   }
 }
@@ -296,16 +284,20 @@ $pattern: #B80062;
 
 .docs-example {
   position: relative;
-  padding: 15px;
-  // font-size: 13px;
-  // line-height: 1.4;
-  border: 1px solid #e5e5e5;
-  border-radius: .25rem .25rem 0 0;
+  margin-bottom: 2rem;
+
+  &:before {
+    content: "Example";
+    color: $gray-dark;
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
 
   + .highlight {
-    margin-top: -1px;
-    border: 1px solid #e5e5e5;
-    border-radius: 0 0 .25rem .25rem;
+    background-color: $white;
+    padding: 1rem;
+    margin-bottom: 2rem;
   }
 
   > .menu:last-child,

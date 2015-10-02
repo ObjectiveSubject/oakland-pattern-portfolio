@@ -160,12 +160,13 @@
 .sticky-nav {
 	display: none;
 	position: absolute;
-	background-color: #222;
+	background-color: $rockridge-gray;
 	height: 2.4rem;
 	bottom: 0;
 	width: 100%;
 	z-index: -1;
 	transition: bottom 300ms ease;
+
 	@include media($bp-md) {
 		display: block;
 	}
@@ -186,24 +187,36 @@
 	}
 
 	.container {
-		background-color: #222;
 		height: 100%;
 		overflow: hidden;
 		transition: height 300ms ease;
 	}
 
 	.menu-item {
-		color: #FFF;
+		color: $white;
 		margin-right: -1.25rem;
 		transition: all 300ms ease;
-		&:hover, &:active, &.active, &:focus {
-			background-color: #000;
+
+		&:hover,
+    &:active,
+    &.active,
+    &:focus {
+			background-color: $black;
+
+      &:before {
+        background-color: $white;
+      }
 		}
 	}
 }
 
 .sticky-section-menu {
 	transition: margin 300ms ease;
+  width: 300px;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  margin-left: -1.25rem;
+  background-color: $rockridge-gray;
 
 	.sticky-nav.open & {
 		margin-top: 0 !important;

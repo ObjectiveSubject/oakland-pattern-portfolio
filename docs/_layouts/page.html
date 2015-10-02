@@ -2,18 +2,4 @@
 layout: default
 ---
 
-<div class="grid-row docs-layout">
-  <div class="one-fourth column">
-    {% unless page.title == "About" %}
-      {% include sidenav.html %}
-    {% endunless %}
-  </div>
-  <div class="three-fourths column markdown-body">
-    <h1 class="page-title">
-      {{ page.title }}
-    </h1>
-    <div class="markdown-body">
-      {{ content }}
-    </div>
-  </div>
-</div>
+{{ content }}

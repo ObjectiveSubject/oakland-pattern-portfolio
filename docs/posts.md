@@ -1,5 +1,6 @@
 ---
 layout: page
+category: pattern
 title: Posts
 ---
 

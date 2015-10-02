@@ -1,5 +1,6 @@
 ---
 layout: page
+category: visual
 title: Layout
 ---
 

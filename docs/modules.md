@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Global Components
+category: pattern
+title: Modules
 ---
 
 These components are used on all or most pages of the site.

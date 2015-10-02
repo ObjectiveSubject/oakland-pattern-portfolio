@@ -6,7 +6,7 @@
 
   <ul class="top-level-menu nav-menu">
     <li>
-      <a class="menu-item" href="{{ site.baseurl }}"><strong>Introduction</strong></a>
+      <a class="menu-item" href="{{ site.baseurl }}/"><strong>Introduction</strong></a>
     </li>
   </ul>
 
@@ -14,75 +14,121 @@
     <li>
       <a class="menu-item" href="{{ site.baseurl }}/visual-identity"><strong>Visual Identity</strong></a>
       <ul class="nav-sub-menu nav-menu">
-        <li><a class="menu-item" href="">a</a></li>
-        <li><a class="menu-item" href="">b</a></li>
-        <li><a class="menu-item" href="">c</a></li>
+        <li>
+          <a class="menu-item {% if page.title == "Colors" %}selected{% endif %}" href="{{ site.baseurl }}/colors/">
+            Color
+          </a>
+        </li>
       </ul>
     </li>
   </ul>
   
   <ul class="top-level-menu nav-menu">
-    
-  <a class="menu-item {% if page.title == "Typography" %}selected{% endif %}" href="{{ site.baseurl }}/type/">
-    Typography
-  </a>
-  <a class="menu-item {% if page.title == "Structural Elements" %}selected{% endif %}" href="{{ site.baseurl }}/structures/">
-    Structural Elements
-  </a>
-  <a class="menu-item {% if page.title == "Buttons" %}selected{% endif %}" href="{{ site.baseurl }}/buttons/">
-    Buttons
-  </a>
-  <a class="menu-item {% if page.title == "Forms" %}selected{% endif %}" href="{{ site.baseurl }}/forms/">
-    Forms
-  </a>
-  <a class="menu-item {% if page.title == "Icons" %}selected{% endif %}" href="{{ site.baseurl }}/icons/">
-    Icons
-  </a>
-  <a class="menu-item {% if page.title == "Images" %}selected{% endif %}" href="{{ site.baseurl }}/images/">
-    Images
-  </a>
-  <a class="menu-item {% if page.title == "Tooltips" %}selected{% endif %}" href="{{ site.baseurl }}/tooltips/">
-    Tooltips
-  </a>
-  <a class="menu-item {% if page.title == "Guidelines" %}selected{% endif %}" href="{{ site.baseurl }}/guidelines/">
-    Code guidelines
-  </a>
-  <a class="menu-item {% if page.title == "Colors" %}selected{% endif %}" href="{{ site.baseurl }}/colors/">
-    Colors
-  </a>
-  <a class="menu-item {% if page.title == "Scaffolding" %}selected{% endif %}" href="{{ site.baseurl }}/scaffolding/">
-    Scaffolding
-  </a>
-  <a class="menu-item {% if page.title == "Layout" %}selected{% endif %}" href="{{ site.baseurl }}/layout/">
-    Layout
-  </a>
-  <a class="menu-item {% if page.title == "Utilities" %}selected{% endif %}" href="{{ site.baseurl }}/utilities/">
-    Utilities
-  </a>
-  <a class="menu-item {% if page.title == "Navigation" %}selected{% endif %}" href="{{ site.baseurl }}/nav/">
-    Navigation
-  </a>
-  <a class="menu-item {% if page.title == "Global Components" %}selected{% endif %}" href="{{ site.baseurl }}/globals/">
-    Global Components
-  </a>
-  <a class="menu-item {% if page.title == "Posts" %}selected{% endif %}" href="{{ site.baseurl }}/posts/">
-    Posts
-  </a>
-  <a class="menu-item {% if page.title == "Alerts" %}selected{% endif %}" href="{{ site.baseurl }}/alerts/">
-    Alerts
-  </a>
-    <a class="menu-item {% if page.title == "Home Layout" %}selected{% endif %}" href="{{ site.baseurl }}/home/">
-      Home Template
-    </a>
+    <li>
+      <a href="{{ site.baseurl }}/pattern-portfolio" class="menu-item"><strong>Pattern Portfolio</strong></a>
+      <ul class="nav-sub-menu nav-menu">
+        <li>
+          <a class="menu-item {% if page.title == "Structural Elements" %}selected{% endif %}" href="{{ site.baseurl }}/structures/">
+            Structural Elements
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Web Typography" %}selected{% endif %}" href="{{ site.baseurl }}/web-typography/">
+            Web Typography
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Buttons" %}selected{% endif %}" href="{{ site.baseurl }}/buttons/">
+            Buttons
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Forms" %}selected{% endif %}" href="{{ site.baseurl }}/forms/">
+            Forms
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Modules" %}selected{% endif %}" href="{{ site.baseurl }}/modules/">
+            Modules
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Icons" %}selected{% endif %}" href="{{ site.baseurl }}/icons/">
+            Icons
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Images" %}selected{% endif %}" href="{{ site.baseurl }}/images/">
+            Images
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Tooltips" %}selected{% endif %}" href="{{ site.baseurl }}/tooltips/">
+            Tooltips
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Guidelines" %}selected{% endif %}" href="{{ site.baseurl }}/guidelines/">
+            Code guidelines
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Scaffolding" %}selected{% endif %}" href="{{ site.baseurl }}/scaffolding/">
+            Scaffolding
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Layout" %}selected{% endif %}" href="{{ site.baseurl }}/layout/">
+            Layout
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Utilities" %}selected{% endif %}" href="{{ site.baseurl }}/utilities/">
+            Utilities
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Navigation" %}selected{% endif %}" href="{{ site.baseurl }}/nav/">
+            Navigation
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Posts" %}selected{% endif %}" href="{{ site.baseurl }}/posts/">
+            Posts
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Alerts" %}selected{% endif %}" href="{{ site.baseurl }}/alerts/">
+            Alerts
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul class="top-level-menu nav-menu">
+    <a class="menu-item"><strong>Page Templates</strong></a>
+    <ul class="nav-sub-menu nav-menu">
+      <li>
+      <a class="menu-item {% if page.title == "Home Layout" %}selected{% endif %}" href="{{ site.baseurl }}/home/">
+        Home Template
+      </a>
+    </li>
+    <li>
       <a class="menu-item {% if page.title == "Landing Page" %}selected{% endif %}" href="{{ site.baseurl }}/basic/">
-      Landing Page Template
-    </a>
+        Landing Page Template
+      </a>
+    </li>
+    <li>
       <a class="menu-item {% if page.title == "Terminal Template" %}selected{% endif %}" href="{{ site.baseurl }}/terminal/">
-      Terminal Template
-    </a>
-    <a class="menu-item {% if page.title == "Public Works Template" %}selected{% endif %}" href="{{ site.baseurl }}/public-works/">
-      Parks and Rec Template
-    </a>
+        Terminal Template
+      </a>
+    </li>
+    <li>
+      <a class="menu-item {% if page.title == "Parks and Rec Template" %}selected{% endif %}" href="{{ site.baseurl }}/parks/">
+        Parks and Rec Template
+      </a>
+    </li>
   </ul>
 
 </nav>

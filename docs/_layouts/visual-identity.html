@@ -21,15 +21,8 @@
     <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/img/apple-touch-icon-precomposed.png">
     <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
   </head>
-  {% if page.title == 'Introduction' %}
-  <body class="docs clearfix">
-  {% endif %}
-  {% if page.category == 'visual' %}
+
   <body class="docs clearfix visual-identity">
-  {% endif %}  
-  {% if page.category == 'pattern' %}
-  <body class="docs clearfix pattern-portfolio">
-  {% endif %}
 
     {% include sidenav.html %}
 
@@ -40,12 +33,7 @@
           <a href="{{ site.baseurl }}/" class="masthead-logo">
             Design Toolkit
           </a>
-          {% if page.category == 'visual' and page.title != 'Visual Identity' %}
           <span class="muted">Visual Identity</span>
-          {% endif %}
-          {% if page.category == 'pattern' and page.title != 'Pattern Portfolio' %}
-          <span class="muted">Pattern Portfolio</span>
-          {% endif %}
         </div>
       </header>
 
@@ -62,11 +50,30 @@
         <hr>
       </div>
     {% endif %}
-    {% if page.category == "visual" or page.category == 'pattern' %}
+    {% if page.title == "Visual Identity" %}
       <div class="jumbotron">
         <div class="container">
-          <h1 class="page-title">{{ page.title }}</h1>
+          <h1>Visual Identity</h1>
         </div>
+      </div>
+
+      <div class="container">
+        <p class="about-that">The goal of the City of Oakland’s Design Toolkit is to support a consistent visual identity to provide clear communication to our community, and to help design and build great experiences for <a href="oaklandca.gov">Oaklandca.gov</a>.</p>
+
+        <hr>
+      </div>
+    {% endif %}
+    {% if page.title == "Pattern Portfolio" %}
+      <div class="jumbotron">
+        <div class="container">
+          <h1>Pattern Portfolio</h1>
+        </div>
+      </div>
+
+      <div class="container">
+        <p class="about-that">The goal of the City of Oakland’s Design Toolkit is to support a consistent visual identity to provide clear communication to our community, and to help design and build great experiences for <a href="oaklandca.gov">Oaklandca.gov</a>.</p>
+
+        <hr>
       </div>
     {% endif %}
 
@@ -86,7 +93,15 @@
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/js/anchor.min.js"></script>
     <script src="{{ site.baseurl }}/js/bigmenu.js"></script>
-
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      anchors.options = {
+        placement: 'left',
+        class: 'anchor-link'
+      };
+      anchors.add(selector);
+    </script>
   </body>
 </html>

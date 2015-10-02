@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Typography
+category: pattern
+title: Web Typography
 ---
 
 Headings, paragraphs, blockquotes, lists, and more have some global resets. It's worth noting these aren't the same as our Markdown styles.
@@ -52,8 +53,12 @@ Sometimes you will want to have a text element that appears like a certain headi
 There is also a common use case for using an `<h4>` element in an aside next to an `<h2>` element. To get these elements to align nicely, add the `.aside-title` class to the `<h4`.
 
 {% example html %}
-<h4>Without class</h4>
-<h4 class="aside-title">With Class</h4>
+<div class="grid-row" style="background: pink">
+  <h4 style="border: 1px solid darkorchid">h4 by itself</h4>
+</div>
+<div class="grid-row" style="background: pink">
+  <h4 style="border: 1px solid darkorchid" class="aside-title">h4 with .aside-title class</h4>
+</div>
 {% endexample %}
 
 ## Body text
