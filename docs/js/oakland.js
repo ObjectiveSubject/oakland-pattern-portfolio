@@ -20,6 +20,14 @@
 			offset = $stickyMenu.height() + $stickyNav.height() + 50;
 
 		$('body')
+			.on('click', '.section-menu .menu-item', function(event){
+				event.preventDefault();
+
+				var target = $(this).attr('href');
+					targetOffset = $(target).offset().top - offset;
+
+				$('html, body').animate({scrollTop: targetOffset + 'px' });
+			})
 			.on('click', '.sticky-nav .menu-item', function(event){
 				var that = this,
 					target = $(that).attr('href');
@@ -33,7 +41,7 @@
 				} else {
 					$stickyContainer.css('height', '100%');
 					$stickyNav.toggleClass('closed open');
-					$('body, html').animate({scrollTop: targetOffset + 'px' });
+					$('html, body').animate({scrollTop: targetOffset + 'px' });
 				}
 
 				$(document).click(function(ev){
@@ -50,22 +58,19 @@
 
 			var $waypointSections = $('.section');
 
-			$waypointSections.waypoint(function(direction) {
-				// console.log(this.element.id);
-				if ( direction === 'down' ) {
-					activateItem(this.element.id);
-				}
+			$waypointSections.waypoint(function(dir) {
+				activateItem(this.element.id);
 			}, {
 				offset: offset
 			});
 
-			$waypointSections.waypoint(function(direction) {
-				if ( direction === 'up' ) {
-					activateItem(this.element.id);
-				}
-			}, {
-				offset: 50
-			});
+			// $waypointSections.waypoint(function(direction) {
+			// 	if ( direction === 'up' ) {
+			// 		activateItem(this.element.id);
+			// 	}
+			// }, {
+			// 	offset: 500
+			// });
 
 		}
 

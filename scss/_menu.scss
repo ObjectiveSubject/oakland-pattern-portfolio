@@ -161,7 +161,7 @@
 	display: none;
 	position: absolute;
 	background-color: #222;
-	height: 38px;
+	height: 2.4rem;
 	bottom: 0;
 	width: 100%;
 	z-index: -1;
@@ -170,7 +170,7 @@
 		display: block;
 	}
 	&.visible {
-		bottom: -38px;
+		bottom: -2.4rem;
 	}
 	&.invisible {
 		.container {
