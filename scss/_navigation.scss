@@ -91,7 +91,7 @@ $global-nav-width: 213px;
 	.menu-item {
 		font-size: 1rem;
 		margin-left: 0;
-		color: darken($white, 15%);
+		color: $white;
 		padding: 10px 5px 10px 2.5rem;
 		transition: all 0.2s;
 

@@ -10,7 +10,7 @@ title: Visual Identity
 
 <div class="grid-row">
 	<div class="toolkit-section one-half">
-		<a class="toolkit-section-link">
+		<a href="{{ site.baseurl }}/identity/" class="toolkit-section-link">
 			Identity
 		</a>
 		Core logo and wordmark, alternate versions, usage
@@ -22,7 +22,7 @@ title: Visual Identity
 		Styles, weights and usage
 	</div>
 	<div class="toolkit-section one-half">
-		<a class="toolkit-section-link">
+		<a href="{{ site.baseurl }}/color/" class="toolkit-section-link">
 			Color
 		</a>
 		Brand, utility, and tertiary color names and values

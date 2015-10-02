@@ -6,13 +6,13 @@
 
   <ul class="top-level-menu nav-menu">
     <li>
-      <a class="menu-item" href="{{ site.baseurl }}/"><strong>Introduction</strong></a>
+      <a class="menu-item {% if page.title == "Introduction" %}selected{% endif %}" href="{{ site.baseurl }}/"><strong>Introduction</strong></a>
     </li>
   </ul>
 
   <ul class="top-level-menu nav-menu">
     <li>
-      <a class="menu-item" href="{{ site.baseurl }}/visual-identity"><strong>Visual Identity</strong></a>
+      <a class="menu-item {% if page.title == "Visual Identity" %}selected{% endif %}" href="{{ site.baseurl }}/visual-identity"><strong>Visual Identity</strong></a>
       <ul class="nav-sub-menu nav-menu">
         <li>
           <a class="menu-item {% if page.title == "Identity" %}selected{% endif %}" href="{{ site.baseurl }}/identity/">
@@ -20,8 +20,23 @@
           </a>
         </li>
         <li>
-          <a class="menu-item {% if page.title == "Colors" %}selected{% endif %}" href="{{ site.baseurl }}/colors/">
+          <a class="menu-item {% if page.title == "Typography" %}selected{% endif %}" href="{{ site.baseurl }}/typography/">
+            Typography
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Color" %}selected{% endif %}" href="{{ site.baseurl }}/color/">
             Color
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Visual Elements" %}selected{% endif %}" href="{{ site.baseurl }}/visual-elements/">
+            Visual Elements
+          </a>
+        </li>
+        <li>
+          <a class="menu-item {% if page.title == "Examples" %}selected{% endif %}" href="{{ site.baseurl }}/examples/">
+            Examples
           </a>
         </li>
       </ul>
@@ -30,7 +45,7 @@
   
   <ul class="top-level-menu nav-menu">
     <li>
-      <a href="{{ site.baseurl }}/pattern-portfolio" class="menu-item"><strong>Pattern Portfolio</strong></a>
+      <a href="{{ site.baseurl }}/pattern-portfolio" class="menu-item {% if page.title == "Pattern Portfolio" %}selected{% endif %}"><strong>Pattern Portfolio</strong></a>
       <ul class="nav-sub-menu nav-menu">
         <li>
           <a class="menu-item {% if page.title == "Structural Elements" %}selected{% endif %}" href="{{ site.baseurl }}/structures/">
