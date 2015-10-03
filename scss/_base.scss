@@ -4,6 +4,8 @@
 
 html {
   font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 
   @include media($bp-md) {
     font-size: 16px;
