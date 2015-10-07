@@ -79,11 +79,17 @@
 			position: absolute;
 			right: 5px;
 			color: $black;
+			.breadcrumb-wrap & {
+				color: $white;
+			}
 		}
 	}
 
 	span {
 		color: $black;
+		.breadcrumb-wrap & {
+			color: $white;
+		}
 	}
 }
 
