@@ -13,7 +13,7 @@
 
 
 	@include media($bp-md) {
-	  position: fixed; // on desktop we do want a sticky header
+	  position: fixed; // on tablet and desktop we do want a sticky header
 	}
 }
 

@@ -4,45 +4,48 @@ category: pattern
 title: Pattern Portfolio
 ---
 
-<p class="about-that">The goal of the City of Oakland’s Design Toolkit is to support a consistent visual identity to provide clear communication to our community, and to help design and build great experiences for <a href="oaklandca.gov">Oaklandca.gov</a>.</p>
+<div class="about-that">
+	<p>The pattern portfolio is a collection of reusable elements and componenets that can be used to create page layouts.</p>
+	<p>There are code snippets and Markdown examples that can be used for reference or pasted in to the CMS. There are also several helper classes and tools that can be used to acheive complex layouts.</p>
+	<p>Additionally, there is documentation about code guidelines and scaffolding to help with developer onboarding</p>
 
 <hr>
 
 <div class="grid-row">
 	<div class="toolkit-section one-half">
-		<a class="toolkit-section-link">
-			Identity
+		<a href="{{ site.baseurl }}/web-typography/" class="toolkit-section-link">
+			Web Typography
 		</a>
-		Core logo and wordmark, alternate versions, usage
+		Styles for basic text elements and components
 	</div>
 	<div class="toolkit-section one-half">
-		<a class="toolkit-section-link">
-			Typography
+		<a href="{{ site.baseurl }}/buttons/" class="toolkit-section-link">
+			Buttons
 		</a>
-		Styles, weights and usage
+		All the flavors
 	</div>
 	<div class="toolkit-section one-half">
-		<a class="toolkit-section-link">
-			Color
+		<a href="{{ site.baseurl }}/forms/" class="toolkit-section-link">
+			Forms
 		</a>
-		Brand, utility, and tertiary color names and values
+		Input types and best practices
 	</div>
 	<div class="toolkit-section one-half">
-		<a class="toolkit-section-link">
-			Graphic Elements
+		<a href="{{ site.baseurl }}/images/" class="toolkit-section-link">
+			Images
 		</a>
-		Moire, pattern, iconography, photography
+		Sizes, placement, and use cases
 	</div>
 	<div class="toolkit-section one-half">
-		<a class="toolkit-section-link">
-			Layout Principles
+		<a href="{{ site.baseurl }}/modules/" class="toolkit-section-link">
+			Modules
 		</a>
-		Grid principles, layout examples, element combinations
+		Components large and small
 	</div>
 	<div class="toolkit-section one-half">
-		<a class="toolkit-section-link">
-			Artwork Suite
+		<a href="{{ site.baseurl }}/developers/" class="toolkit-section-link">
+			Developers
 		</a>
-		Download artwork ﬁles, font license and ﬁles, pattern library, color swatches
+		In-depth docs for onboarding and maintaining the design system
 	</div>
 </div>

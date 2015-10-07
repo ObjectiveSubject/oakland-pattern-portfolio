@@ -6,10 +6,14 @@ title: Web Typography
 
 Headings, paragraphs, blockquotes, lists, and more have some global resets. It's worth noting these aren't the same as our Markdown styles.
 
+---
+
 ## Contents
 
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
+
+---
 
 ## Headings
 
@@ -61,6 +65,8 @@ There is also a common use case for using an `<h4>` element in an aside next to 
 </div>
 {% endexample %}
 
+---
+
 ## Body text
 
 {% example html %}
@@ -80,6 +86,8 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
 Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
 </code></pre>
 </div>
+
+---
 
 ## Links
 
@@ -113,6 +121,8 @@ Links will inherit the color of the site section they are in.
 </div>
 {% endexample %}
 
+---
+
 ## Inline text elements
 
 Styling for common inline HTML5 elements.
@@ -128,6 +138,8 @@ Styling for common inline HTML5 elements.
 <p><em>This line rendered as italicized text.</em></p>
 {% endexample %}
 
+---
+
 ## Blockquotes
 
 Wrap `<blockquote>` around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes, we recommend a `<p>`.
@@ -141,6 +153,8 @@ Wrap `<blockquote>` around any <abbr title="HyperText Markup Language">HTML</abb
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt praesentium, at dicta quo atque aspernatur reiciendis sunt quis. Excepturi fugiat aspernatur, blanditiis tenetur hic. Ad nisi voluptates error, sed obcaecati!</p>
 {% endexample %}
+
+---
 
 ## Lists
 
@@ -185,6 +199,23 @@ A list of items in which the order *does* explicitly matter.
   <li>Eget porttitor lorem</li>
 </ol>
 {% endexample %}
+
+---
+
+## Icons
+
+Icons are from [Linearicons](https://linearicons.com/free) icon font. The full list of icons can be found in the `_icons.scss` file.
+
+{% example html %}
+<span class="lnr lnr-arrow-left"></span>
+<span class="lnr lnr-arrow-right"></span>
+<span class="lnr lnr-cross"></span>
+<span class="lnr lnr-menu"></span>
+<span class="lnr lnr-exit-up"></span>
+<span class="lnr lnr-magnifier"></span>
+{% endexample %}
+
+---
 
 ## Post data
 

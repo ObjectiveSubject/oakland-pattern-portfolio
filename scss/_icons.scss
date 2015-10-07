@@ -1,3 +1,4 @@
+// Hamburger icon
 // Navicon Transformicons via http://codepen.io/bennettfeely/pen/twbyA
 // Change to watch in slow motion
 $duration: .5s;
@@ -70,7 +71,7 @@ $content-bg : $oakland-green;
   }
 }
 
-// Icon demo
+// Linearicons icon font https://linearicons.com/free
 @font-face {
   font-family: Linearicons-Free;
   src: url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.eot);
@@ -80,7 +81,7 @@ $content-bg : $oakland-green;
 }
 
 .lrn {
-	font-family: Linearicons-Free;
+    font-family: Linearicons-Free;
   speak: none;
   font-style: normal;
   font-weight: 400;

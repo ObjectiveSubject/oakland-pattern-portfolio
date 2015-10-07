@@ -77,15 +77,15 @@
 	margin-bottom: 0;
 	position: relative;
 	margin-top: 2.5rem;
-	color: darken($gray, 20%);
+	color: $color-text-body;
 
 	.right {
 		a {
 			font-size: 1rem;
-			color: darken($gray, 20%);
+			color: $color-text-body;
 
 			&:active {
-				color: $gray-dark;
+				color: $color-text-body;
 			}
 		}
 	}

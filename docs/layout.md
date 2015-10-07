@@ -13,6 +13,8 @@ You can find all the below styles in `_layout.scss`.
 * Will be replaced with the ToC, excluding the "Contents" header
 {:toc}
 
+---
+
 ## Container
 
 Center your page's contents with a `.container`. A container can be placed inside an element like a `<header>` or any other element that should stretch to the max body width of 1200px.
@@ -25,6 +27,8 @@ Center your page's contents with a `.container`. A container can be placed insid
 
 The container uses Bourbon Neat's `outer-container` mixin to define max-width, margins, columns and gutters.
 It also adds padding to either side of itself and `box-sizing: content-box` to maintain the grid as designed.
+
+---
 
 ## Grid
 
@@ -105,4 +109,99 @@ If you want to remove a column's gutters for any reason, you can apply the `.col
     .column-last
   </div>
 </div>
+{% endexample %}
+
+***
+
+## Divider
+
+Dividers are made using the horizontal rule element. They can be added to any layout to separate sections. It has a 3rem bottom margin.
+
+{% example html %}
+<hr>
+{% endexample %}
+
+**Markdown**
+
+Any of the following will produce a horizontal rule.
+
+<div class="highlight-md">
+<pre><code>
+* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------
+</code></pre>
+</div>
+
+***
+
+## Tables
+
+Tables should be placed inside a `.table-wrap` element to give it a simple responsive treatment. This lets tables become longer than the viewport and have an independent horizontal scroll.
+
+Currently there is a min-width applied to tables as a proof of concept, but **this should be updated during implementation**.
+
+More info about table markup can be found in the [Code Guidelines]({{ site.baseurl }}/guidelines/).
+
+{% example html %}
+<div class="table-wrap" style="background: white;">
+  <table>
+    <thead>
+      <tr>
+        <th>Header content 1</th>
+        <th>Header content 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Body content 1 with very very very very long text</td>
+        <td>Body content 2</td>
+      </tr>
+      <tr>
+        <td>Body content 3</td>
+        <td>Body content 4</td>
+      </tr>
+      <tr>
+        <td>Body content 5</td>
+        <td>Body content 6</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="table-wrap" style="background: white;">
+  <table>
+    <thead>
+      <tr>
+        <th>Header content 1</th>
+        <th>Header content 2</th>
+        <th>Header content 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Body content 1 with very very very very long text</td>
+        <td>Body content 2</td>
+        <td>Some more content</td>
+      </tr>
+      <tr>
+        <td>Body content 3</td>
+        <td>Body content 4</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, ea.</td>
+      </tr>
+      <tr>
+        <td>Body content 5</td>
+        <td>Hi</td>
+        <td>Body content 6</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 {% endexample %}
