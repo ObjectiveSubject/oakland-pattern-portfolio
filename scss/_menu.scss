@@ -161,7 +161,7 @@
 	display: none;
 	position: absolute;
 	background-color: $rockridge-gray;
-	height: 2.4rem;
+	height: 2.15rem;
 	bottom: 0;
 	width: 100%;
 	z-index: -1;
@@ -171,7 +171,7 @@
 		display: block;
 	}
 	&.visible {
-		bottom: -2.4rem;
+		bottom: -2.15rem;
 	}
 	&.invisible {
 		.container {
@@ -195,6 +195,7 @@
 	.menu-item {
 		color: $white;
 		margin-right: -1.25rem;
+		font-size: 1rem;
 		transition: all 300ms ease;
 
 		&:hover,
