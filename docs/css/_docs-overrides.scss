@@ -31,10 +31,15 @@
 	  }
 
 	  .top-level-menu {
+	  	position: relative;
 	  	float: right;
 	  	width: 100%;
 	  	max-width: 13.3125rem;
 	  	margin-right: $gutter;
+	  }
+
+	  .nav-sub-menu {
+	  	display: none;
 	  }
 
 	  strong {

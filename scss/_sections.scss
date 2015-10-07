@@ -77,6 +77,11 @@
 .section-info {
 	@include media($bp-md) {
 		float: right;
+		margin-right: 0;
+		&:last-child {
+			float: none;
+			margin-left: 0;
+		}
 	}
 
 	h1,
@@ -107,7 +112,7 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background-color: rgba($black, 0.75);
+		background-color: rgba($black, 0.85);
 		z-index: 1000;
 	}
 }

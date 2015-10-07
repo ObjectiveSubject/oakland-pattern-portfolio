@@ -29,29 +29,28 @@
 // If you need the breadcrumbs to be absolute positioned
 // (i.e., inside the subheader), wrap it in this
 .breadcrumb-wrap {
-  @include outer-container();
 	position: absolute;
 	top: 0;
-	left: 1.25rem;
+	left: 0;
 	right: 0;
-
-	@include media($bp-md) {
-		left: -2.5rem;
-	}
 }
 
 .breadcrumbs {
 	line-height: 1;
-	padding-top: 1.5rem;
-	padding-left: $gutter;
+	padding: 1.5rem 0 0 $gutter;
 	margin-bottom: 1.5rem;
-	border-left: 2px solid $muted;
 	margin-left: -1.25rem;
+	border-left: 2px solid $muted;
 
 	.breadcrumb-wrap & {
-		margin-left: 0;
+		@include outer-container();
+		box-sizing: content-box;
+		margin: 0 1.25rem;
+		padding: 1.5rem $gutter 0;
+		@include media($bp-md) {
+			margin: 0 auto;
+		}
 	}
-
 
 	a, span {
 		display: inline-block;
@@ -80,15 +79,22 @@
 			position: absolute;
 			right: 5px;
 			color: $black;
+			.breadcrumb-wrap & {
+				color: $white;
+			}
 		}
 	}
 
 	span {
 		color: $black;
+		.breadcrumb-wrap & {
+			color: $white;
+		}
 	}
 }
 
 // Tables
+// ----------------------------------------------------
 .table-wrap {
 	width: 100%;
 	overflow-y: auto;
