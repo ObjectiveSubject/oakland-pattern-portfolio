@@ -39,8 +39,10 @@
     </li>
   </ul>
 
-  <ul class="top-level-menu nav-menu">
+  
+  <ul class="top-level-menu nav-menu ">
     <li>
+      <span class="lnr lnr-menu expand-sub-menu"></span>
       <a class="menu-item " href="/visual-identity"><strong>Visual Identity</strong></a>
       <ul class="nav-sub-menu nav-menu">
         <li>
@@ -72,15 +74,12 @@
     </li>
   </ul>
   
-  <ul class="top-level-menu nav-menu">
+  
+  <ul class="top-level-menu nav-menu open">
     <li>
+      <span class="lnr lnr-menu expand-sub-menu "></span>
       <a href="/pattern-portfolio" class="menu-item "><strong>Pattern Portfolio</strong></a>
       <ul class="nav-sub-menu nav-menu">
-        <li>
-          <a class="menu-item " href="/structures/">
-            Structural Elements
-          </a>
-        </li>
         <li>
           <a class="menu-item " href="/web-typography/">
             Web Typography
@@ -97,58 +96,18 @@
           </a>
         </li>
         <li>
-          <a class="menu-item " href="/modules/">
-            Modules
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/icons/">
-            Icons
-          </a>
-        </li>
-        <li>
           <a class="menu-item selected" href="/images/">
             Images
           </a>
         </li>
         <li>
-          <a class="menu-item " href="/tooltips/">
-            Tooltips
+          <a class="menu-item " href="/modules/">
+            Modules
           </a>
         </li>
         <li>
-          <a class="menu-item " href="/guidelines/">
-            Code guidelines
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/scaffolding/">
-            Scaffolding
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/layout/">
-            Layout
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/utilities/">
-            Utilities
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/nav/">
-            Navigation
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/posts/">
-            Posts
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/alerts/">
-            Alerts
+          <a class="menu-item " href="/developers/">
+            Developers
           </a>
         </li>
       </ul>
@@ -156,6 +115,7 @@
   </ul>
 
   <ul class="top-level-menu nav-menu">
+    <span class="lnr lnr-menu expand-sub-menu"></span>
     <a class="menu-item"><strong>Page Templates</strong></a>
     <ul class="nav-sub-menu nav-menu">
       <li>
@@ -240,6 +200,8 @@
 <h2 id="services-icons">Services Icons</h2>
 
 <p>These images are used on the Home page in the Services dropdown. They should be transparent .pngs with a white icon. The should be 50x50px total and the icon should be centered in that area.</p>
+
+<p>In the context of the big menu items, they use the class <code>.big-menu-icon</code>. This positions them absolutely to the right of the menu sub-item.</p>
 
 <div class="docs-example clearfix"><div style="background-color: gray; float: left;">
 	<img src="/img/parking-icon.png" alt="" width="50" height="50" style="float: left;" />

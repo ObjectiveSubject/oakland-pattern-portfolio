@@ -39,8 +39,10 @@
     </li>
   </ul>
 
-  <ul class="top-level-menu nav-menu">
+  
+  <ul class="top-level-menu nav-menu ">
     <li>
+      <span class="lnr lnr-menu expand-sub-menu"></span>
       <a class="menu-item " href="/visual-identity"><strong>Visual Identity</strong></a>
       <ul class="nav-sub-menu nav-menu">
         <li>
@@ -72,15 +74,12 @@
     </li>
   </ul>
   
-  <ul class="top-level-menu nav-menu">
+  
+  <ul class="top-level-menu nav-menu open">
     <li>
+      <span class="lnr lnr-menu expand-sub-menu "></span>
       <a href="/pattern-portfolio" class="menu-item "><strong>Pattern Portfolio</strong></a>
       <ul class="nav-sub-menu nav-menu">
-        <li>
-          <a class="menu-item " href="/structures/">
-            Structural Elements
-          </a>
-        </li>
         <li>
           <a class="menu-item " href="/web-typography/">
             Web Typography
@@ -97,58 +96,18 @@
           </a>
         </li>
         <li>
-          <a class="menu-item " href="/modules/">
-            Modules
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/icons/">
-            Icons
-          </a>
-        </li>
-        <li>
           <a class="menu-item " href="/images/">
             Images
           </a>
         </li>
         <li>
-          <a class="menu-item " href="/tooltips/">
-            Tooltips
+          <a class="menu-item " href="/modules/">
+            Modules
           </a>
         </li>
         <li>
-          <a class="menu-item " href="/guidelines/">
-            Code guidelines
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/scaffolding/">
-            Scaffolding
-          </a>
-        </li>
-        <li>
-          <a class="menu-item selected" href="/layout/">
-            Layout
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/utilities/">
-            Utilities
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/nav/">
-            Navigation
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/posts/">
-            Posts
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/alerts/">
-            Alerts
+          <a class="menu-item " href="/developers/">
+            Developers
           </a>
         </li>
       </ul>
@@ -156,6 +115,7 @@
   </ul>
 
   <ul class="top-level-menu nav-menu">
+    <span class="lnr lnr-menu expand-sub-menu"></span>
     <a class="menu-item"><strong>Page Templates</strong></a>
     <ul class="nav-sub-menu nav-menu">
       <li>
@@ -223,7 +183,11 @@
       <li><a href="#last-column" id="markdown-toc-last-column">Last column</a></li>
     </ul>
   </li>
+  <li><a href="#divider" id="markdown-toc-divider">Divider</a></li>
+  <li><a href="#tables" id="markdown-toc-tables">Tables</a></li>
 </ul>
+
+<hr />
 
 <h2 id="container">Container</h2>
 
@@ -235,6 +199,8 @@
 
 <p>The container uses Bourbon Neat’s <code>outer-container</code> mixin to define max-width, margins, columns and gutters.
 It also adds padding to either side of itself and <code>box-sizing: content-box</code> to maintain the grid as designed.</p>
+
+<hr />
 
 <h2 id="grid">Grid</h2>
 
@@ -360,6 +326,150 @@ It also adds padding to either side of itself and <code>box-sizing: content-box<
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third column right column-last"</span><span class="nt">&gt;</span>
     .column-last
   <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<hr />
+
+<h2 id="divider">Divider</h2>
+
+<p>Dividers are made using the horizontal rule element. They can be added to any layout to separate sections. It has a 3rem bottom margin.</p>
+
+<div class="docs-example clearfix"><hr /></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;hr&gt;</span></code></pre></div>
+
+<p><strong>Markdown</strong></p>
+
+<p>Any of the following will produce a horizontal rule.</p>
+
+<div class="highlight-md">
+<pre><code>
+* * *
+
+***
+
+*****
+
+- - -
+
+---------------------------------------
+</code></pre>
+</div>
+
+<hr />
+
+<h2 id="tables">Tables</h2>
+
+<p>Tables should be placed inside a <code>.table-wrap</code> element to give it a simple responsive treatment. This lets tables become longer than the viewport and have an independent horizontal scroll.</p>
+
+<p>Currently there is a min-width applied to tables as a proof of concept, but <strong>this should be updated during implementation</strong>.</p>
+
+<p>More info about table markup can be found in the <a href="/guidelines/">Code Guidelines</a>.</p>
+
+<div class="docs-example clearfix"><div class="table-wrap" style="background: white;">
+  <table>
+    <thead>
+      <tr>
+        <th>Header content 1</th>
+        <th>Header content 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Body content 1 with very very very very long text</td>
+        <td>Body content 2</td>
+      </tr>
+      <tr>
+        <td>Body content 3</td>
+        <td>Body content 4</td>
+      </tr>
+      <tr>
+        <td>Body content 5</td>
+        <td>Body content 6</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="table-wrap" style="background: white;">
+  <table>
+    <thead>
+      <tr>
+        <th>Header content 1</th>
+        <th>Header content 2</th>
+        <th>Header content 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Body content 1 with very very very very long text</td>
+        <td>Body content 2</td>
+        <td>Some more content</td>
+      </tr>
+      <tr>
+        <td>Body content 3</td>
+        <td>Body content 4</td>
+        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, ea.</td>
+      </tr>
+      <tr>
+        <td>Body content 5</td>
+        <td>Hi</td>
+        <td>Body content 6</td>
+      </tr>
+    </tbody>
+  </table>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-wrap"</span> <span class="na">style=</span><span class="s">"background: white;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;table&gt;</span>
+    <span class="nt">&lt;thead&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header content 1<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header content 2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/thead&gt;</span>
+    <span class="nt">&lt;tbody&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Body content 1 with very very very very long text<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Body content 2<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Body content 3<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Body content 4<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Body content 5<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Body content 6<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;/table&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-wrap"</span> <span class="na">style=</span><span class="s">"background: white;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;table&gt;</span>
+    <span class="nt">&lt;thead&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header content 1<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header content 2<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header content 3<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/thead&gt;</span>
+    <span class="nt">&lt;tbody&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Body content 1 with very very very very long text<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Body content 2<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Some more content<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Body content 3<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Body content 4<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, ea.<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+      <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Body content 5<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Hi<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Body content 6<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/tbody&gt;</span>
+  <span class="nt">&lt;/table&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 

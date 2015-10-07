@@ -39,8 +39,10 @@
     </li>
   </ul>
 
-  <ul class="top-level-menu nav-menu">
+  
+  <ul class="top-level-menu nav-menu ">
     <li>
+      <span class="lnr lnr-menu expand-sub-menu"></span>
       <a class="menu-item " href="/visual-identity"><strong>Visual Identity</strong></a>
       <ul class="nav-sub-menu nav-menu">
         <li>
@@ -72,15 +74,12 @@
     </li>
   </ul>
   
-  <ul class="top-level-menu nav-menu">
+  
+  <ul class="top-level-menu nav-menu open">
     <li>
+      <span class="lnr lnr-menu expand-sub-menu "></span>
       <a href="/pattern-portfolio" class="menu-item "><strong>Pattern Portfolio</strong></a>
       <ul class="nav-sub-menu nav-menu">
-        <li>
-          <a class="menu-item " href="/structures/">
-            Structural Elements
-          </a>
-        </li>
         <li>
           <a class="menu-item " href="/web-typography/">
             Web Typography
@@ -97,58 +96,18 @@
           </a>
         </li>
         <li>
-          <a class="menu-item selected" href="/modules/">
-            Modules
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/icons/">
-            Icons
-          </a>
-        </li>
-        <li>
           <a class="menu-item " href="/images/">
             Images
           </a>
         </li>
         <li>
-          <a class="menu-item " href="/tooltips/">
-            Tooltips
+          <a class="menu-item selected" href="/modules/">
+            Modules
           </a>
         </li>
         <li>
-          <a class="menu-item " href="/guidelines/">
-            Code guidelines
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/scaffolding/">
-            Scaffolding
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/layout/">
-            Layout
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/utilities/">
-            Utilities
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/nav/">
-            Navigation
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/posts/">
-            Posts
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/alerts/">
-            Alerts
+          <a class="menu-item " href="/developers/">
+            Developers
           </a>
         </li>
       </ul>
@@ -156,6 +115,7 @@
   </ul>
 
   <ul class="top-level-menu nav-menu">
+    <span class="lnr lnr-menu expand-sub-menu"></span>
     <a class="menu-item"><strong>Page Templates</strong></a>
     <ul class="nav-sub-menu nav-menu">
       <li>
@@ -207,7 +167,11 @@
     
 
       <div class="container">
-        <p>These components are used on all or most pages of the site.</p>
+        <p>Modules are specialized groupings of elements that can be in various layouts. Some of them are global and should only be used once per page. Others can be used multiple times and in mulitple ways.</p>
+
+<p><strong>Disclaimer: some modules don’t display correctly inside the example containers.</strong></p>
+
+<hr />
 
 <h2 id="contents">Contents</h2>
 
@@ -215,9 +179,25 @@
   <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
   <li><a href="#header" id="markdown-toc-header">Header</a></li>
   <li><a href="#footer" id="markdown-toc-footer">Footer</a></li>
+  <li><a href="#menus" id="markdown-toc-menus">Menus</a>    <ul>
+      <li><a href="#menu-item-with-span" id="markdown-toc-menu-item-with-span">Menu item with span</a></li>
+      <li><a href="#section-menu" id="markdown-toc-section-menu">Section menu</a></li>
+      <li><a href="#big-menu-items" id="markdown-toc-big-menu-items">Big menu items</a></li>
+    </ul>
+  </li>
+  <li><a href="#breadcrumbs" id="markdown-toc-breadcrumbs">Breadcrumbs</a></li>
+  <li><a href="#prevnext-links" id="markdown-toc-prevnext-links">Prev/Next Links</a></li>
+  <li><a href="#post-excerpts" id="markdown-toc-post-excerpts">Post excerpts</a>    <ul>
+      <li><a href="#excerpts-with-images--grid" id="markdown-toc-excerpts-with-images--grid">Excerpts with images + grid</a></li>
+    </ul>
+  </li>
 </ul>
 
+<hr />
+
 <h2 id="header">Header</h2>
+
+<p>The header is a global component that sits at the top of all pages of the Oakland site. It contains the city logo, search bar, and menu icon. It can also contain a department logo on a department page.</p>
 
 <div class="docs-example clearfix"><div class="header-wrap">
 	<div class="container">
@@ -260,118 +240,680 @@
 	<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
+<p>The header is ‘sticky’ on medium to large screens. This means it will stay affixed to the top of the page as the user scrolls.</p>
+
+<p>This behavior is accomplished by wrapping the header markup above in a div called <code>.sticky-menu</code>.</p>
+
+<p>Because this wrapper is a fixed position element, <strong>it should always be followed by an empty div called <code>.sticky-placeholder</code></strong>. This will preserve the height of the header and prevent the rest of the content from sliding up behind it.</p>
+
+<div class="docs-example clearfix"><div class="sticky-menu">
+	<!-- header markup -->
+</div>
+
+<div class="sticky-placeholder"></div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sticky-menu"</span><span class="nt">&gt;</span>
+	<span class="c">&lt;!-- header markup --&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"sticky-placeholder"</span><span class="nt">&gt;&lt;/div&gt;</span></code></pre></div>
+
+<hr />
+
 <h2 id="footer">Footer</h2>
 
 <p>The Footer is standard across all pages</p>
 
 <div class="docs-example clearfix"><footer class="site-footer" role="contentinfo">
-	<div class="container">
-		<h4>Get In Touch</h4>
-		<div class="grid-row">
-			<div class="one-fourth column-shift">
-				<strong>Call 3-1-1 from within the City</strong><br />
-				TTY service is also available by dialing (212) 504-4115.
-			</div>
-			<div class="one-fourth column-shift">
-				<strong>Contact Mayor Libby Schaaf</strong><br />
-				You may contact Mayor Libby Schaaf by postal mail, phone, or submitting an online message.
-			</div>
-			<div class="one-fourth column-shift">
-				<strong>Provide Feedback</strong><br />
-				OaklandCA.gov invites you to leave your comments about our Web site.
-			</div>
-		</div>
-		<hr />
-		<div class="grid-row">
-			<h4>Oakland Government</h4>
-			<ul class="footer-links list-no-style one-third">
-				<li><a href="">Animal Services</a></li>
-				<li><a href="">City Clerk</a></li>
-				<li><a href="">Community &amp; Economic Development</a></li>
-				<li><a href="">Finance</a></li>
-				<li><a href="">Fire Department</a></li>
-			</ul>
-			<ul class="footer-links list-no-style one-third">
-				<li><a href="">Housing &amp; Community Development</a></li>
-				<li><a href="">Human resources Management</a></li>
-				<li><a href="">Human Services</a></li>
-				<li><a href="">Information Technology</a></li>
-				<li><a href="">Parks &amp; Recreation</a></li>
-			</ul>
-			<ul class="footer-links list-no-style one-third">
-				<li><a href="">Planning &amp; Building</a></li>
-				<li><a href="">Police Department</a></li>
-				<li><a href="">Public Library</a></li>
-				<li><a href="">Public Works</a></li>
-			</ul>
-		</div>
-		<hr />
-		<div class="footer-omega">
-			<a href="#" class="logo-wrap">
-				<img class="site-logo" src="/img/logo-v2.png" alt="City of Oakland" />
-			</a>
-			<div class="one-third right">
-				<small class="text-muted">&copy; 2015 City of Oakland</small><br />
-				<a href="#"><small>Privacy Policy</small></a>
-				<a href="#"><small>Terms of Use</small></a>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <h4>Get In Touch</h4>
+    <div class="grid-row">
+      <div class="one-fourth">
+        <strong>Call 3-1-1 from within the City</strong><br />
+        TTY service is also available by dialing (212) 504-4115.
+      </div>
+      <div class="one-fourth column-shift">
+        <strong>Contact Mayor Libby Schaaf</strong><br />
+        You may contact Mayor Libby Schaaf by postal mail, phone, or submitting an online message.
+      </div>
+      <div class="one-fourth column-shift">
+        <strong>Provide Feedback</strong><br />
+        OaklandCA.gov invites you to leave your comments about our Web site.
+      </div>
+    </div>
+    <hr />
+    <h4>Oakland Government</h4>
+    <div class="grid-row">
+      <ul class="footer-links list-no-style one-third">
+        <li><a href="">Animal Services</a></li>
+        <li><a href="">City Clerk</a></li>
+        <li><a href="">Community &amp; Economic Development</a></li>
+        <li><a href="">Finance</a></li>
+        <li><a href="">Fire Department</a></li>
+      </ul>
+      <ul class="footer-links list-no-style one-third">
+        <li><a href="">Housing &amp; Community Development</a></li>
+        <li><a href="">Human resources Management</a></li>
+        <li><a href="">Human Services</a></li>
+        <li><a href="">Information Technology</a></li>
+        <li><a href="">Parks &amp; Recreation</a></li>
+      </ul>
+      <ul class="footer-links list-no-style one-third">
+        <li><a href="">Planning &amp; Building</a></li>
+        <li><a href="">Police Department</a></li>
+        <li><a href="">Public Library</a></li>
+        <li><a href="">Public Works</a></li>
+      </ul>
+    </div>
+    <hr />
+    <div class="footer-omega">
+      <div class="one-third right column-last">
+        <small>&copy; 2015 City of Oakland</small><br />
+        <a href="#"><small>Privacy Policy</small></a>
+        <a href="#"><small>Terms of Use</small></a>
+      </div>
+      <a href="#" class="logo-wrap">
+        <img class="site-logo" src="/img/logo-v2.png" alt="City of Oakland" />
+      </a>
+    </div>
+  </div>
 </footer></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"site-footer"</span> <span class="na">role=</span><span class="s">"contentinfo"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-		<span class="nt">&lt;h4&gt;</span>Get In Touch<span class="nt">&lt;/h4&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-fourth column-shift"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;strong&gt;</span>Call 3-1-1 from within the City<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
-				TTY service is also available by dialing (212) 504-4115.
-			<span class="nt">&lt;/div&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-fourth column-shift"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;strong&gt;</span>Contact Mayor Libby Schaaf<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
-				You may contact Mayor Libby Schaaf by postal mail, phone, or submitting an online message.
-			<span class="nt">&lt;/div&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-fourth column-shift"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;strong&gt;</span>Provide Feedback<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
-				OaklandCA.gov invites you to leave your comments about our Web site.
-			<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>Get In Touch<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-fourth"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;strong&gt;</span>Call 3-1-1 from within the City<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
+        TTY service is also available by dialing (212) 504-4115.
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-fourth column-shift"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;strong&gt;</span>Contact Mayor Libby Schaaf<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
+        You may contact Mayor Libby Schaaf by postal mail, phone, or submitting an online message.
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-fourth column-shift"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;strong&gt;</span>Provide Feedback<span class="nt">&lt;/strong&gt;&lt;br&gt;</span>
+        OaklandCA.gov invites you to leave your comments about our Web site.
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;hr&gt;</span>
+    <span class="nt">&lt;h4&gt;</span>Oakland Government<span class="nt">&lt;/h4&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"footer-links list-no-style one-third"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Animal Services<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>City Clerk<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Community <span class="ni">&amp;amp;</span> Economic Development<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Finance<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Fire Department<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"footer-links list-no-style one-third"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Housing <span class="ni">&amp;amp;</span> Community Development<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Human resources Management<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Human Services<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Information Technology<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Parks <span class="ni">&amp;amp;</span> Recreation<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"footer-links list-no-style one-third"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Planning <span class="ni">&amp;amp;</span> Building<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Police Department<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Public Library<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Public Works<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;hr&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"footer-omega"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third right column-last"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;small&gt;</span><span class="ni">&amp;copy;</span> 2015 City of Oakland<span class="nt">&lt;/small&gt;&lt;br&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;small&gt;</span>Privacy Policy<span class="nt">&lt;/small&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;small&gt;</span>Terms of Use<span class="nt">&lt;/small&gt;&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"logo-wrap"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"site-logo"</span> <span class="na">src=</span><span class="s">"/img/logo-v2.png"</span> <span class="na">alt=</span><span class="s">"City of Oakland"</span> <span class="nt">/&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/footer&gt;</span></code></pre></div>
+
+<hr />
+
+<h2 id="menus">Menus</h2>
+
+<!-- A menu is a vertical list of navigational links. **A menu's width and placement must be set by you.** If you like, just use our grid columns as a parent and manually place menus in their own columns. Otherwise, apply a custom `width`. -->
+
+<div class="docs-example clearfix"><div class="container">
+  <div class="grid-row">
+    <nav class="menu one-third">
+      <a class="menu-item" href="#">Account</a>
+      <a class="menu-item" href="#">Profile</a>
+      <a class="menu-item" href="#">Emails</a>
+      <a class="menu-item" href="#">Notifications</a>
+    </nav>
+    <nav class="menu one-third">
+      <a class="menu-item" href="#">Account</a>
+      <a class="menu-item" href="#">Profile</a>
+      <a class="menu-item" href="#">Notifications</a>
+    </nav>
+    <nav class="menu one-third">
+      <a class="menu-item" href="#">Account</a>
+      <a class="menu-item" href="#">Profile</a>
+      <a class="menu-item" href="#">Emails</a>
+      <a class="menu-item" href="#">Notifications</a>
+      <a class="menu-item" href="#">Account</a>
+      <a class="menu-item" href="#">Profile</a>
+      <a class="menu-item" href="#">Emails</a>
+    </nav>
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"menu one-third"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Emails<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Notifications<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"menu one-third"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Notifications<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"menu one-third"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Emails<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Notifications<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Emails<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="menu-item-with-span">Menu item with span</h3>
+
+<p>You can also include a secondary bit of text in a menu item by wrapping it in a <code>&lt;span&gt;</code>. This will give it the global body text color and place it on its own line.</p>
+
+<div class="docs-example clearfix"><div class="container">
+  <div class="grid-row">
+    <div class="one-third">
+      <a href="#" class="menu-item">
+        A menu item
+        <span>With some extra text</span>
+      </a>
+    </div>
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"menu-item"</span><span class="nt">&gt;</span>
+        A menu item
+        <span class="nt">&lt;span&gt;</span>With some extra text<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="section-menu">Section menu</h3>
+
+<p>There is a variant of the menu that is used as the main section navigation that lives in the header of the various sections of the site.</p>
+
+<div class="docs-example clearfix"><h3>Default Color Example</h3>
+<div class="docs-bg">
+  <div class="grid-row">
+    <nav class="section-menu one-fourth">
+      <a class="menu-item" href="#">Account</a>
+      <a class="menu-item" href="#">Profile</a>
+      <a class="menu-item" href="#">Emails</a>
+      <a class="menu-item" href="#">Notifications</a>
+    </nav>
+  </div>
+</div>
+<h3>Transportation Color Example</h3>
+<div class="docs-bg transportation">
+  <div class="grid-row">
+    <nav class="section-menu one-fourth">
+      <a class="menu-item" href="#">Account</a>
+      <a class="menu-item" href="#">Profile</a>
+      <a class="menu-item" href="#">Emails</a>
+      <a class="menu-item" href="#">Notifications</a>
+    </nav>
+  </div>
+</div>
+<h3>Public Works Color Example</h3>
+<div class="docs-bg public-works">
+  <div class="grid-row">
+    <nav class="section-menu one-fourth">
+      <a class="menu-item" href="#">Account</a>
+      <a class="menu-item" href="#">Profile</a>
+      <a class="menu-item" href="#">Emails</a>
+      <a class="menu-item" href="#">Notifications</a>
+    </nav>
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3&gt;</span>Default Color Example<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"docs-bg"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"section-menu one-fourth"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Emails<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Notifications<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;h3&gt;</span>Transportation Color Example<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"docs-bg transportation"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"section-menu one-fourth"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Emails<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Notifications<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;h3&gt;</span>Public Works Color Example<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"docs-bg public-works"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"section-menu one-fourth"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Emails<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Notifications<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="big-menu-items">Big menu items</h3>
+
+<div class="docs-example clearfix"><div class="container default">
+  <nav class="big-menu">
+    <div class="menu-item">
+      <a href="#">
+        <h3>Big Menu Item</h3>
+        <p>Info about the big item</p>
+      </a>
+      <div class="big-menu-group grid-row">
+        <a href="#" class="one-third">Finding Parking</a>
+        <a href="#" class="one-third">Pay a ticket</a>
+        <a href="#" class="one-third">Apply for a Parking Permit</a>
+        <a href="#" class="one-third">Disabled Parking</a>
+        <a href="#" class="one-third">News and Alerts</a>
+      </div>
+    </div>
+    <div class="menu-item">
+      <a href="#">
+        <h3>Big Menu Item</h3>
+        <p>Info about the big item</p>
+      </a>
+      <div class="big-menu-group grid-row">
+        <a href="#" class="one-third">Finding Parking</a>
+        <a href="#" class="one-third">Pay a ticket</a>
+        <a href="#" class="one-third">Apply for a Parking Permit</a>
+        <a href="#" class="one-third">Disabled Parking</a>
+        <a href="#" class="one-third">News and Alerts</a>
+      </div>
+    </div>
+    <div class="menu-item">
+      <a href="#">
+        <h3>Big Menu Item</h3>
+        <p>Info about the big item</p>
+      </a>
+      <div class="big-menu-group grid-row">
+        <a href="#" class="one-third">Finding Parking</a>
+        <a href="#" class="one-third">Pay a ticket</a>
+        <a href="#" class="one-third">Apply for a Parking Permit</a>
+        <a href="#" class="one-third">Disabled Parking</a>
+        <a href="#" class="one-third">News and Alerts</a>
+      </div>
+    </div>
+    <div class="menu-item">
+      <a href="#">
+        <h3>Big Menu Item</h3>
+        <p>Info about the big item</p>
+      </a>
+      <div class="big-menu-group grid-row">
+        <a href="#" class="one-third">Finding Parking</a>
+        <a href="#" class="one-third">Pay a ticket</a>
+        <a href="#" class="one-third">Apply for a Parking Permit</a>
+        <a href="#" class="one-third">Disabled Parking</a>
+        <a href="#" class="one-third">News and Alerts</a>
+      </div>
+    </div>
+    <div class="menu-item">
+      <a href="#">
+        <h3>Big Menu Item</h3>
+        <p>Info about the big item</p>
+      </a>
+      <div class="big-menu-group grid-row">
+        <a href="#" class="one-third">Finding Parking</a>
+        <a href="#" class="one-third">Pay a ticket</a>
+        <a href="#" class="one-third">Apply for a Parking Permit</a>
+        <a href="#" class="one-third">Disabled Parking</a>
+        <a href="#" class="one-third">News and Alerts</a>
+      </div>
+    </div>
+  </nav>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container default"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"big-menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>Big Menu Item<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Info about the big item<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"big-menu-group grid-row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Finding Parking<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Pay a ticket<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Apply for a Parking Permit<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Disabled Parking<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>News and Alerts<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>Big Menu Item<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Info about the big item<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"big-menu-group grid-row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Finding Parking<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Pay a ticket<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Apply for a Parking Permit<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Disabled Parking<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>News and Alerts<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>Big Menu Item<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Info about the big item<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"big-menu-group grid-row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Finding Parking<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Pay a ticket<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Apply for a Parking Permit<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Disabled Parking<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>News and Alerts<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>Big Menu Item<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Info about the big item<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"big-menu-group grid-row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Finding Parking<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Pay a ticket<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Apply for a Parking Permit<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Disabled Parking<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>News and Alerts<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"menu-item"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>Big Menu Item<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Info about the big item<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"big-menu-group grid-row"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Finding Parking<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Pay a ticket<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Apply for a Parking Permit<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>Disabled Parking<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>News and Alerts<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<hr />
+
+<h2 id="breadcrumbs">Breadcrumbs</h2>
+
+<p>Place these at the top of interior pages to help orient the user and give them easy access to previous pages.</p>
+
+<div class="docs-example clearfix"><div class="container">
+<nav class="breadcrumbs">
+  <a href="#">Home</a>
+  <a href="#">Breadcrumb</a>
+  <a href="#">Page level 1</a>
+  <span>Current Page Title</span>
+</nav>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"breadcrumbs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Breadcrumb<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Page level 1<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;span&gt;</span>Current Page Title<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<p>If placed in the regular page flow, the above example will just work. If on the other hand, you need to place the breadcrumbs inside the <code>.subheader</code>, you can wrap it in a div with class <code>.breadcrumb-wrap</code>. This acts as the container and will position it absolutely to the top of its parent.</p>
+
+<div class="docs-example clearfix"><div class="transportation">
+<div class="subheader" style="height: 100px;">
+<div class="breadcrumb-wrap">
+  <nav class="breadcrumbs">
+    <a href="#">Home</a>
+    <a href="#">Breadcrumb</a>
+    <a href="#">Page level 1</a>
+    <span>Current Page Title</span>
+  </nav>
+</div>
+</div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"transportation"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"subheader"</span> <span class="na">style=</span><span class="s">"height: 100px;"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breadcrumb-wrap"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"breadcrumbs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Breadcrumb<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Page level 1<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;span&gt;</span>Current Page Title<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<hr />
+
+<h2 id="prevnext-links">Prev/Next Links</h2>
+
+<div class="docs-example clearfix"><h3>Default Color Example</h3>
+<footer class="content-footer pager-footer">
+  <div class="previous-next-links container clearfix">
+    <a class="prev-link" href="#">
+      <span class="lnr lnr-arrow-left"></span>
+      <span class="prev-next-text">Back to previous page</span>
+      <br />
+      <small class="prev-next-small">Name of the Page</small>
+    </a>
+    <a class="next-link" href="#">
+      <span class="prev-next-text">Forward to next page</span>
+      <span class="lnr lnr-arrow-right"></span>
+      <br />
+      <small class="prev-next-small">Name of the Page</small>
+    </a>  </div>
+</footer>
+<h3>Transportation Color Example</h3>
+<footer class="content-footer pager-footer transportation">
+  <div class="previous-next-links container clearfix">
+    <a class="prev-link" href="#">
+      <span class="lnr lnr-arrow-left"></span>
+      <span class="prev-next-text">Back to previous page</span>
+      <br />
+      <small class="prev-next-small">Name of the Page</small>
+    </a>
+    <a class="next-link" href="#">
+      <span class="prev-next-text">Forward to next page</span>
+      <span class="lnr lnr-arrow-right"></span>
+      <br />
+      <small class="prev-next-small">Name of the Page</small>
+    </a>  </div>
+</footer>
+<h3>Public Works Color Example</h3>
+<footer class="content-footer pager-footer public-works">
+  <div class="previous-next-links container clearfix">
+    <a class="prev-link" href="#">
+      <span class="lnr lnr-arrow-left"></span>
+      <span class="prev-next-text">Back to previous page</span>
+      <br />
+      <small class="prev-next-small">Name of the Page</small>
+    </a>
+    <a class="next-link" href="#">
+      <span class="prev-next-text">Forward to next page</span>
+      <span class="lnr lnr-arrow-right"></span>
+      <br />
+      <small class="prev-next-small">Name of the Page</small>
+    </a>
+  </div>
+</footer></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3&gt;</span>Default Color Example<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"content-footer pager-footer"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"previous-next-links container clearfix"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"prev-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-arrow-left"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"prev-next-text"</span><span class="nt">&gt;</span>Back to previous page<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"prev-next-small"</span><span class="nt">&gt;</span>Name of the Page<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"next-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"prev-next-text"</span><span class="nt">&gt;</span>Forward to next page<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-arrow-right"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"prev-next-small"</span><span class="nt">&gt;</span>Name of the Page<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;h3&gt;</span>Transportation Color Example<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"content-footer pager-footer transportation"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"previous-next-links container clearfix"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"prev-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-arrow-left"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"prev-next-text"</span><span class="nt">&gt;</span>Back to previous page<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"prev-next-small"</span><span class="nt">&gt;</span>Name of the Page<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"next-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"prev-next-text"</span><span class="nt">&gt;</span>Forward to next page<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-arrow-right"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"prev-next-small"</span><span class="nt">&gt;</span>Name of the Page<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;h3&gt;</span>Public Works Color Example<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"content-footer pager-footer public-works"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"previous-next-links container clearfix"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"prev-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-arrow-left"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"prev-next-text"</span><span class="nt">&gt;</span>Back to previous page<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"prev-next-small"</span><span class="nt">&gt;</span>Name of the Page<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"next-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"prev-next-text"</span><span class="nt">&gt;</span>Forward to next page<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-arrow-right"</span><span class="nt">&gt;&lt;/span&gt;</span>
+      <span class="nt">&lt;br&gt;</span>
+      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"prev-next-small"</span><span class="nt">&gt;</span>Name of the Page<span class="nt">&lt;/small&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/footer&gt;</span></code></pre></div>
+
+<hr />
+
+<h2 id="post-excerpts">Post excerpts</h2>
+
+<p>These post excerpts can be placed in any kind of layout. You can simply add a layout class to <code>.post-excerpt</code> elements to control their size and position.</p>
+
+<div class="docs-example clearfix"><div class="container">
+	<div class="post-excerpt">
+		<p class="post-data"><a href="#">Category</a> - <time datetime="">September 9, 2015</time></p>
+		<h3><a href="#">City of Oakland Kicks off "Plan Downtown"</a></h3>
+		<p>The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015. “Plan Downtown” will help guide the future development of Oakland’s urban core. The Speciﬁc Plan will focus on making it easier and more attractive to walk, bike, shop, work and live in Downtown Oakland.</p>
+	</div>
+	<div class="post-excerpt">
+		<p class="post-data"><a href="#">Category</a> - <time datetime="">September 9, 2015</time></p>
+		<h3><a href="#">City of Oakland Kicks off "Plan Downtown"</a></h3>
+	</div>
+	<div class="post-excerpt">
+		<p class="post-data"><a href="#">Category</a> - <time datetime="">September 9, 2015</time></p>
+		<h3><a href="#">City of Oakland Kicks off "Plan Downtown"</a></h3>
+		<p>The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015. “Plan Downtown” will help guide the future development of Oakland’s urban core. The Speciﬁc Plan will focus on making it easier and more attractive to walk, bike, shop, work and live in Downtown Oakland.</p>
+	</div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post-excerpt"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"post-data"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span> - <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">""</span><span class="nt">&gt;</span>September 9, 2015<span class="nt">&lt;/time&gt;&lt;/p&gt;</span>
+		<span class="nt">&lt;h3&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>City of Oakland Kicks off "Plan Downtown"<span class="nt">&lt;/a&gt;&lt;/h3&gt;</span>
+		<span class="nt">&lt;p&gt;</span>The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015. “Plan Downtown” will help guide the future development of Oakland’s urban core. The Speciﬁc Plan will focus on making it easier and more attractive to walk, bike, shop, work and live in Downtown Oakland.<span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post-excerpt"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"post-data"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span> - <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">""</span><span class="nt">&gt;</span>September 9, 2015<span class="nt">&lt;/time&gt;&lt;/p&gt;</span>
+		<span class="nt">&lt;h3&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>City of Oakland Kicks off "Plan Downtown"<span class="nt">&lt;/a&gt;&lt;/h3&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post-excerpt"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"post-data"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span> - <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">""</span><span class="nt">&gt;</span>September 9, 2015<span class="nt">&lt;/time&gt;&lt;/p&gt;</span>
+		<span class="nt">&lt;h3&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>City of Oakland Kicks off "Plan Downtown"<span class="nt">&lt;/a&gt;&lt;/h3&gt;</span>
+		<span class="nt">&lt;p&gt;</span>The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015. “Plan Downtown” will help guide the future development of Oakland’s urban core. The Speciﬁc Plan will focus on making it easier and more attractive to walk, bike, shop, work and live in Downtown Oakland.<span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="excerpts-with-images--grid">Excerpts with images + grid</h3>
+
+<div class="docs-example clearfix"><div class="container">
+	<div class="post-excerpt">
+		<img src="http://placehold.it/604x453" alt="" />
+		<p class="post-data"><a href="#">Category</a> - <time datetime="">September 9, 2015</time></p>
+		<h3><a href="#">City of Oakland Kicks off "Plan Downtown"</a></h3>
+		<p>The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015. “Plan Downtown” will help guide the future development of Oakland’s urban core. The Speciﬁc Plan will focus on making it easier and more attractive to walk, bike, shop, work and live in Downtown Oakland.</p>
+	</div>
+	<div class="grid-row">
+		<div class="post-excerpt one-third">
+			<img src="http://placehold.it/604x453" alt="" />
+			<p class="post-data"><a href="#">Category</a> - <time datetime="">September 9, 2015</time></p>
+			<h3><a href="#">City of Oakland Kicks off "Plan Downtown"</a></h3>
+		</div>
+		<div class="post-excerpt one-third">
+			<img src="http://placehold.it/604x453" alt="" />
+			<p class="post-data"><a href="#">Category</a> - <time datetime="">September 9, 2015</time></p>
+			<h3><a href="#">City of Oakland Kicks off "Plan Downtown"</a></h3>
+			<p>The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015&hellip;</p>
+		</div>
+		<div class="post-excerpt one-third">
+			<img src="http://placehold.it/604x453" alt="" />
+			<p class="post-data"><a href="#">Category</a> - <time datetime="">September 9, 2015</time></p>
+			<h3><a href="#">City of Oakland Kicks off "Plan Downtown"</a></h3>
+			<p>The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday&hellip;</p>
+		</div>
+	</div>
+
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post-excerpt"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/604x453"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"post-data"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span> - <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">""</span><span class="nt">&gt;</span>September 9, 2015<span class="nt">&lt;/time&gt;&lt;/p&gt;</span>
+		<span class="nt">&lt;h3&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>City of Oakland Kicks off "Plan Downtown"<span class="nt">&lt;/a&gt;&lt;/h3&gt;</span>
+		<span class="nt">&lt;p&gt;</span>The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015. “Plan Downtown” will help guide the future development of Oakland’s urban core. The Speciﬁc Plan will focus on making it easier and more attractive to walk, bike, shop, work and live in Downtown Oakland.<span class="nt">&lt;/p&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post-excerpt one-third"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/604x453"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"post-data"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span> - <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">""</span><span class="nt">&gt;</span>September 9, 2015<span class="nt">&lt;/time&gt;&lt;/p&gt;</span>
+			<span class="nt">&lt;h3&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>City of Oakland Kicks off "Plan Downtown"<span class="nt">&lt;/a&gt;&lt;/h3&gt;</span>
 		<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;hr&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;h4&gt;</span>Oakland Government<span class="nt">&lt;/h4&gt;</span>
-			<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"footer-links list-no-style one-third"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Animal Services<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>City Clerk<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Community <span class="err">&amp;</span> Economic Development<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Finance<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Fire Department<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-			<span class="nt">&lt;/ul&gt;</span>
-			<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"footer-links list-no-style one-third"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Housing <span class="ni">&amp;amp;</span> Community Development<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Human resources Management<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Human Services<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Information Technology<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Parks <span class="ni">&amp;amp;</span> Recreation<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-			<span class="nt">&lt;/ul&gt;</span>
-			<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"footer-links list-no-style one-third"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Planning <span class="ni">&amp;amp;</span> Building<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Police Department<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Public Library<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-				<span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Public Works<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-			<span class="nt">&lt;/ul&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post-excerpt one-third"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/604x453"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"post-data"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span> - <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">""</span><span class="nt">&gt;</span>September 9, 2015<span class="nt">&lt;/time&gt;&lt;/p&gt;</span>
+			<span class="nt">&lt;h3&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>City of Oakland Kicks off "Plan Downtown"<span class="nt">&lt;/a&gt;&lt;/h3&gt;</span>
+			<span class="nt">&lt;p&gt;</span>The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday, September 3, 2015<span class="ni">&amp;hellip;</span><span class="nt">&lt;/p&gt;</span>
 		<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;hr&gt;</span>
-		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"footer-omega"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"logo-wrap"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"site-logo"</span> <span class="na">src=</span><span class="s">"/img/logo-v2.png"</span> <span class="na">alt=</span><span class="s">"City of Oakland"</span> <span class="nt">/&gt;</span>
-			<span class="nt">&lt;/a&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third right"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span><span class="ni">&amp;copy;</span> 2015 City of Oakland<span class="nt">&lt;/small&gt;&lt;br&gt;</span>
-				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;small&gt;</span>Privacy Policy<span class="nt">&lt;/small&gt;&lt;/a&gt;</span>
-				<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;small&gt;</span>Terms of Use<span class="nt">&lt;/small&gt;&lt;/a&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"post-excerpt one-third"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/604x453"</span> <span class="na">alt=</span><span class="s">""</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"post-data"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Category<span class="nt">&lt;/a&gt;</span> - <span class="nt">&lt;time</span> <span class="na">datetime=</span><span class="s">""</span><span class="nt">&gt;</span>September 9, 2015<span class="nt">&lt;/time&gt;&lt;/p&gt;</span>
+			<span class="nt">&lt;h3&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>City of Oakland Kicks off "Plan Downtown"<span class="nt">&lt;/a&gt;&lt;/h3&gt;</span>
+			<span class="nt">&lt;p&gt;</span>The City of Oakland will mark the start of a new planning process for Downtown Oakland with a community kick-oﬀ event on Thursday<span class="ni">&amp;hellip;</span><span class="nt">&lt;/p&gt;</span>
 		<span class="nt">&lt;/div&gt;</span>
 	<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/footer&gt;</span></code></pre></div>
+
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 
       </div>

@@ -39,8 +39,10 @@
     </li>
   </ul>
 
-  <ul class="top-level-menu nav-menu">
+  
+  <ul class="top-level-menu nav-menu ">
     <li>
+      <span class="lnr lnr-menu expand-sub-menu"></span>
       <a class="menu-item " href="/visual-identity"><strong>Visual Identity</strong></a>
       <ul class="nav-sub-menu nav-menu">
         <li>
@@ -72,15 +74,12 @@
     </li>
   </ul>
   
-  <ul class="top-level-menu nav-menu">
+  
+  <ul class="top-level-menu nav-menu open">
     <li>
+      <span class="lnr lnr-menu expand-sub-menu "></span>
       <a href="/pattern-portfolio" class="menu-item "><strong>Pattern Portfolio</strong></a>
       <ul class="nav-sub-menu nav-menu">
-        <li>
-          <a class="menu-item " href="/structures/">
-            Structural Elements
-          </a>
-        </li>
         <li>
           <a class="menu-item selected" href="/web-typography/">
             Web Typography
@@ -97,58 +96,18 @@
           </a>
         </li>
         <li>
-          <a class="menu-item " href="/modules/">
-            Modules
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/icons/">
-            Icons
-          </a>
-        </li>
-        <li>
           <a class="menu-item " href="/images/">
             Images
           </a>
         </li>
         <li>
-          <a class="menu-item " href="/tooltips/">
-            Tooltips
+          <a class="menu-item " href="/modules/">
+            Modules
           </a>
         </li>
         <li>
-          <a class="menu-item " href="/guidelines/">
-            Code guidelines
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/scaffolding/">
-            Scaffolding
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/layout/">
-            Layout
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/utilities/">
-            Utilities
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/nav/">
-            Navigation
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/posts/">
-            Posts
-          </a>
-        </li>
-        <li>
-          <a class="menu-item " href="/alerts/">
-            Alerts
+          <a class="menu-item " href="/developers/">
+            Developers
           </a>
         </li>
       </ul>
@@ -156,6 +115,7 @@
   </ul>
 
   <ul class="top-level-menu nav-menu">
+    <span class="lnr lnr-menu expand-sub-menu"></span>
     <a class="menu-item"><strong>Page Templates</strong></a>
     <ul class="nav-sub-menu nav-menu">
       <li>
@@ -209,6 +169,8 @@
       <div class="container">
         <p>Headings, paragraphs, blockquotes, lists, and more have some global resets. It’s worth noting these aren’t the same as our Markdown styles.</p>
 
+<hr />
+
 <h2 id="contents">Contents</h2>
 
 <ul id="markdown-toc">
@@ -227,8 +189,11 @@
       <li><a href="#ordered" id="markdown-toc-ordered">Ordered</a></li>
     </ul>
   </li>
+  <li><a href="#icons" id="markdown-toc-icons">Icons</a></li>
   <li><a href="#post-data" id="markdown-toc-post-data">Post data</a></li>
 </ul>
+
+<hr />
 
 <h2 id="headings">Headings</h2>
 
@@ -292,6 +257,8 @@
   <span class="nt">&lt;h4</span> <span class="na">style=</span><span class="s">"border: 1px solid darkorchid"</span> <span class="na">class=</span><span class="s">"aside-title"</span><span class="nt">&gt;</span>h4 with .aside-title class<span class="nt">&lt;/h4&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
+<hr />
+
 <h2 id="body-text">Body text</h2>
 
 <div class="docs-example clearfix"><p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
@@ -312,6 +279,8 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
 Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
 </code></pre>
 </div>
+
+<hr />
 
 <h2 id="links">Links</h2>
 
@@ -353,6 +322,8 @@ Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit no
   <span class="nt">&lt;h3&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://example.com/"</span><span class="nt">&gt;</span>Heading Link<span class="nt">&lt;/a&gt;&lt;/h3&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
+<hr />
+
 <h2 id="inline-text-elements">Inline text elements</h2>
 
 <p>Styling for common inline HTML5 elements.</p>
@@ -374,6 +345,8 @@ Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit no
 <span class="nt">&lt;p&gt;&lt;strong&gt;</span>This line rendered as bold text.<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
 <span class="nt">&lt;p&gt;&lt;em&gt;</span>This line rendered as italicized text.<span class="nt">&lt;/em&gt;&lt;/p&gt;</span></code></pre></div>
 
+<hr />
+
 <h2 id="blockquotes">Blockquotes</h2>
 
 <p>Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes, we recommend a <code>&lt;p&gt;</code>.</p>
@@ -392,6 +365,8 @@ Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit no
 <span class="nt">&lt;/blockquote&gt;</span>
 
 <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt praesentium, at dicta quo atque aspernatur reiciendis sunt quis. Excepturi fugiat aspernatur, blanditiis tenetur hic. Ad nisi voluptates error, sed obcaecati!<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<hr />
 
 <h2 id="lists">Lists</h2>
 
@@ -460,6 +435,27 @@ Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit no
   <span class="nt">&lt;li&gt;</span>Aenean sit amet erat nunc<span class="nt">&lt;/li&gt;</span>
   <span class="nt">&lt;li&gt;</span>Eget porttitor lorem<span class="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ol&gt;</span></code></pre></div>
+
+<hr />
+
+<h2 id="icons">Icons</h2>
+
+<p>Icons are from <a href="https://linearicons.com/free">Linearicons</a> icon font. The full list of icons can be found in the <code>_icons.scss</code> file.</p>
+
+<div class="docs-example clearfix"><span class="lnr lnr-arrow-left"></span>
+<span class="lnr lnr-arrow-right"></span>
+<span class="lnr lnr-cross"></span>
+<span class="lnr lnr-menu"></span>
+<span class="lnr lnr-exit-up"></span>
+<span class="lnr lnr-magnifier"></span></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-arrow-left"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-arrow-right"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-cross"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-menu"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-exit-up"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-magnifier"</span><span class="nt">&gt;&lt;/span&gt;</span></code></pre></div>
+
+<hr />
 
 <h2 id="post-data">Post data</h2>
 
