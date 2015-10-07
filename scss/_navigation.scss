@@ -80,6 +80,19 @@ $global-nav-width: 213px;
 		li:last-child {
 			margin-bottom: 1em;
 		}
+	
+		&:hover .expand-sub-menu {
+			opacity: 1;
+		}
+
+		&.open {
+			.nav-sub-menu {
+				display: block;
+			}
+			.expand-sub-menu:before {
+				content: "\e870";
+			}
+		}
 	}
 
 	strong {
@@ -130,4 +143,21 @@ $global-nav-width: 213px;
 	@include media($bp-md) {
 		// @include span-columns(4);
 	}
+
+	.expand-sub-menu {
+		position: absolute;
+		opacity: 0;
+		padding: 10px 1.25rem;
+		line-height: 1.3rem;
+		right: 100%;
+		color: #FFF;
+		cursor: pointer;
+		transition: opacity 300ms ease;
+		&:hover {
+			color: $oakland-green;
+		}
+	}
 }
+
+
+

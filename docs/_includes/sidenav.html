@@ -10,8 +10,10 @@
     </li>
   </ul>
 
-  <ul class="top-level-menu nav-menu">
+  {% assign vis_identity_titles = 'Visual Identity&Identity&Typography&Color&Visual Elements&Examples' | split: '&' %}
+  <ul class="top-level-menu nav-menu {% if vis_identity_titles contains page.title %}open{% endif %}">
     <li>
+      <span class="lnr lnr-menu expand-sub-menu"></span>
       <a class="menu-item {% if page.title == "Visual Identity" %}selected{% endif %}" href="{{ site.baseurl }}/visual-identity"><strong>Visual Identity</strong></a>
       <ul class="nav-sub-menu nav-menu">
         <li>
@@ -43,8 +45,10 @@
     </li>
   </ul>
   
-  <ul class="top-level-menu nav-menu">
+  {% assign pattern_portfolio_titles = 'Pattern Portfolio&Structural Elements&Web Typography&Buttons&Forms&Modules&Icons&Images&Tooltips&Guidelines&Scaffolding&Layout&Utilities&Navigation&Posts&Alerts' | split: '&' %}
+  <ul class="top-level-menu nav-menu {% if pattern_portfolio_titles contains page.title %}open{% endif %}">
     <li>
+      <span class="lnr lnr-menu expand-sub-menu {% if page.title == "Pattern Portfolio" %}open{% endif %}"></span>
       <a href="{{ site.baseurl }}/pattern-portfolio" class="menu-item {% if page.title == "Pattern Portfolio" %}selected{% endif %}"><strong>Pattern Portfolio</strong></a>
       <ul class="nav-sub-menu nav-menu">
         <li>
@@ -127,6 +131,7 @@
   </ul>
 
   <ul class="top-level-menu nav-menu">
+    <span class="lnr lnr-menu expand-sub-menu"></span>
     <a class="menu-item"><strong>Page Templates</strong></a>
     <ul class="nav-sub-menu nav-menu">
       <li>
