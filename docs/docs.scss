@@ -190,13 +190,21 @@ $pattern-darker: darken($pattern, 20%);
 //
 
 .masthead {
-  padding-top: 2.5rem;
-  padding-bottom: 1.5rem;
+  padding-top: 2.75rem;
+  padding-bottom: 0;
+  line-height: 1.55rem;
   text-align: center;
   background-color: $rockridge-gray;
   position: fixed;
   width: 74.45415%;
+  max-height: 6.4rem;
+  overflow: hidden;
   z-index: 100;
+  &.show-title {
+    .page-title {
+      margin-top: 0;
+    }
+  }
 
   .masthead-logo,
   span {
@@ -206,6 +214,12 @@ $pattern-darker: darken($pattern, 20%);
     color: $white;
     margin-right: 1.25rem;
   }
+  .page-title {
+    display: block;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+    transition: margin 0.3s ease;
+  }
 
   .muted {
     color: rgba($white, 0.75);
@@ -214,9 +228,9 @@ $pattern-darker: darken($pattern, 20%);
   @media (min-width: $bp-md) {
     text-align: left;
 
-    .masthead-logo {
-      float: left;
-    }
+    // .masthead-logo {
+      // float: left;
+    // }
   }
 }
 

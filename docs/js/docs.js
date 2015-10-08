@@ -28,3 +28,24 @@
 	});
 
 }( window.jQuery, window, document ));
+
+(function( $, window, document ) {
+
+	// Masthead
+	// -----------------------------------
+	var $window = $(window),
+		winTop = $window.scrollTop(),
+		$masthead = $('.masthead'),
+		threshold = $('.jumbotron').outerHeight() - $masthead.outerHeight();
+
+	$window.scroll(function(){
+		winTop = $window.scrollTop();
+		
+		if ( winTop >= threshold ) {
+			$masthead.addClass('show-title');
+		} else {
+			$masthead.removeClass('show-title');
+		}
+	});
+
+}( window.jQuery, window, document ));

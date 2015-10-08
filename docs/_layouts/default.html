@@ -40,11 +40,17 @@
           <a href="{{ site.baseurl }}/" class="masthead-logo">
             Design Toolkit
           </a>
-          {% if page.category == 'visual' and page.title != 'Visual Identity' %}
+          {% if page.category == 'visual' %}
           <span class="muted">Visual Identity</span>
           {% endif %}
-          {% if page.category == 'pattern' and page.title != 'Pattern Portfolio' %}
+          {% if page.category == 'pattern' %}
           <span class="muted">Pattern Portfolio</span>
+          {% endif %}
+          {% if page.slug == 'index' %}
+          <span class="page-title">A Living Set of Guidelines</span>
+          {% endif %}
+          {% if page.category == "visual" or page.category == 'pattern' %}
+          <span class="page-title">{{ page.title }}</span>
           {% endif %}
         </div>
       </header>
@@ -86,7 +92,7 @@
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="{{ site.baseurl }}/js/bigmenu.js"></script>
+    <script src="{{ site.baseurl }}/js/docs.js"></script>
 
   </body>
 </html>
