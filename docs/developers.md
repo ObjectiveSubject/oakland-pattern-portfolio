@@ -2,6 +2,7 @@
 layout: page
 category: pattern
 title: Developers
+slug: developers
 ---
 
 <div class="about-that">

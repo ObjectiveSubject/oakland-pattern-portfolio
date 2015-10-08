@@ -2,6 +2,7 @@
 layout: page
 category: visual
 title: Identity
+slug: identity
 ---
 
 ## Contents

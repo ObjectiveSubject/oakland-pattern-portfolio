@@ -1,6 +1,7 @@
 ---
 layout: simple
 title: About
+slug: about
 ---
 
 Learn more about this styleguide, particularly how it's built and who maintains it.

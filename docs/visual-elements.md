@@ -2,6 +2,7 @@
 layout: page
 category: visual
 title: Visual Elements
+slug: visual-elements
 ---
 
 ## Graphic Patterns

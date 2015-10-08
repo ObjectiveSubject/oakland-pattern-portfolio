@@ -2,6 +2,7 @@
 layout: page
 category: pattern
 title: Modules
+slug: modules
 ---
 
 Modules are specialized groupings of elements that can be in various layouts. Some of them are global and should only be used once per page. Others can be used multiple times and in mulitple ways.

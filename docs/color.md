@@ -2,6 +2,7 @@
 layout: page
 category: visual
 title: Color
+slug: color
 ---
 
 <p class="about-that">The look and feel of this site relies on using a handful of specific colors that help convey meaning and purpose.</p>

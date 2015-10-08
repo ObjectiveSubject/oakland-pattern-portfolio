@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Introduction
+slug: index
 ---
 
 <div class="visual-identity toolkit-intro">

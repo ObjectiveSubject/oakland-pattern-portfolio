@@ -2,6 +2,7 @@
 layout: default
 category: visual
 title: Visual Identity
+slug: visual-identity
 ---
 
 <p class="about-that">The goal of the City of Oakland’s Design Toolkit is to support a consistent visual identity to provide clear communication to our community, and to help design and build great experiences for <a href="oaklandca.gov">Oaklandca.gov</a>.</p>

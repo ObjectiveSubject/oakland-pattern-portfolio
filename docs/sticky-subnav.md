@@ -2,6 +2,7 @@
 layout: page
 category: pattern
 title: Sticky Subnav
+slug: sticky-subnav
 ---
 
 Here's an example of a sticky subnav. For a better example take a look at the [home template](/home/)

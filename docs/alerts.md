@@ -2,6 +2,7 @@
 layout: page
 category: pattern
 title: Alerts
+slug: alerts
 ---
 
 Flash messages, or alerts, inform users of successful or pending actions. Use them sparingly. Don't show more than one at a time.

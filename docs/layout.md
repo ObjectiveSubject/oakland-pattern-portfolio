@@ -2,6 +2,7 @@
 layout: page
 category: visual
 title: Layout
+slug: layout
 ---
 
 Oakland's layout includes basic page containers and a single-tiered, fraction-based grid system. That sounds more complicated than it really is though—it's just containers, rows, and columns.

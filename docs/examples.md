@@ -2,6 +2,7 @@
 layout: page
 category: visual
 title: Examples
+slug: examples
 ---
 
 ## Letterhead and Business Cards

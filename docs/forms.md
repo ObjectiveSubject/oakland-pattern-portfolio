@@ -2,6 +2,7 @@
 layout: page
 category: pattern
 title: Forms
+slug: forms
 ---
 
 Style individual form controls and utilize common layouts.

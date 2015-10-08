@@ -2,6 +2,7 @@
 layout: default
 category: pattern
 title: Pattern Portfolio
+slug: pattern-portfolio
 ---
 
 <div class="about-that">

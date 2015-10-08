@@ -2,6 +2,7 @@
 layout: page
 category: pattern
 title: Images
+slug: images
 ---
 
 The basic image sizes and placements across the site
