@@ -1,8 +1,8 @@
 ---
 layout: default
 category: pattern
-title: Pattern Portfolio
-slug: pattern-portfolio
+title: Introduction
+slug: pattern-portfolio-intro
 ---
 
 <div class="about-that">

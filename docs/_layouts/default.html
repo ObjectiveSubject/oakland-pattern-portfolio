@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/img/apple-touch-icon-precomposed.png">
     <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
   </head>
-  {% if page.title == 'Introduction' %}
+  {% if page.slug == 'index' %}
   <body class="docs clearfix">
   {% endif %}
   {% if page.category == 'visual' %}
@@ -49,7 +49,7 @@
         </div>
       </header>
 
-    {% if page.title == "Introduction" %}
+    {% if page.slug == "index" %}
       <div class="jumbotron">
         <div class="container">
           <h1>A Living Set of Guidelines</h1>

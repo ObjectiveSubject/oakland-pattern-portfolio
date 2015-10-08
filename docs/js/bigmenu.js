@@ -15,13 +15,16 @@
 
 	// Side Nav accordian
 	// -----------------------------------
-	$('.expand-sub-menu').click(function(e){
+	$('.sub-menu-toggle').click(function(e){
+		e.preventDefault();
+
 		var $this = $(this),
 			$parent = $this.parents('.top-level-menu'),
 			$subNav = $this.siblings('.nav-sub-menu');
 
 		$subNav.slideToggle(300);
 		$parent.toggleClass('open');
+
 	});
 
 }( window.jQuery, window, document ));

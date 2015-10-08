@@ -6,16 +6,20 @@
 
   <ul class="top-level-menu nav-menu">
     <li>
-      <a class="menu-item {% if page.title == "Introduction" %}selected{% endif %}" href="{{ site.baseurl }}/"><strong>Introduction</strong></a>
+      <a class="menu-item {% if page.slug == "index" %}selected{% endif %}" href="{{ site.baseurl }}/"><strong>Introduction</strong></a>
     </li>
   </ul>
 
-  {% assign vis_identity_slugs = 'visual-identity&identity&typography&color&visual-elements&examples' | split: '&' %}
+  {% assign vis_identity_slugs = 'visual-identity-intro&identity&typography&color&visual-elements&examples' | split: '&' %}
   <ul class="top-level-menu nav-menu {% if vis_identity_slugs contains page.slug %}open{% endif %}">
     <li>
-      <span class="lnr lnr-menu expand-sub-menu"></span>
-      <a class="menu-item {% if page.slug == "visual-identity" %}selected{% endif %}" href="{{ site.baseurl }}/visual-identity"><strong>Visual Identity</strong></a>
+      <a href="#" class="menu-item sub-menu-toggle {% if page.slug == "visual-identity" %}selected{% endif %}"><strong>Visual Identity</strong></a>
       <ul class="nav-sub-menu nav-menu">
+        <li>
+          <a class="menu-item {% if page.slug == "visual-identity-intro" %}selected{% endif %}" href="{{ site.baseurl }}/visual-identity-intro/">
+            Introduction
+          </a>
+        </li>
         <li>
           <a class="menu-item {% if page.slug == "identity" %}selected{% endif %}" href="{{ site.baseurl }}/identity/">
             Identity
@@ -45,12 +49,16 @@
     </li>
   </ul>
   
-  {% assign pattern_portfolio_slugs = 'pattern-portfolio&structural-elements&web-typography&buttons&forms&modules&developers&icons&images&tooltips&guidelines&scaffolding&layout&utilities&navigation&posts&alerts' | split: '&' %}
+  {% assign pattern_portfolio_slugs = 'pattern-portfolio-intro&structural-elements&web-typography&buttons&forms&modules&developers&icons&images&tooltips&guidelines&scaffolding&layout&utilities&navigation&posts&alerts' | split: '&' %}
   <ul class="top-level-menu nav-menu {% if pattern_portfolio_slugs contains page.slug %}open{% endif %}">
     <li>
-      <span class="lnr lnr-menu expand-sub-menu"></span>
-      <a href="{{ site.baseurl }}/pattern-portfolio" class="menu-item {% if page.slug == "pattern-portfolio" %}selected{% endif %}"><strong>Pattern Portfolio</strong></a>
+      <a href="#" class="menu-item sub-menu-toggle {% if page.slug == "pattern-portfolio" %}selected{% endif %}"><strong>Pattern Portfolio</strong></a>
       <ul class="nav-sub-menu nav-menu">
+        <li>
+          <a class="menu-item {% if page.slug == "pattern-portfolio-intro" %}selected{% endif %}" href="{{ site.baseurl }}/pattern-portfolio-intro/">
+            Introduction
+          </a>
+        </li>
         <li>
           <a class="menu-item {% if page.slug == "web-typography" %}selected{% endif %}" href="{{ site.baseurl }}/web-typography/">
             Web Typography
@@ -86,8 +94,7 @@
   </ul>
 
   <ul class="top-level-menu nav-menu">
-    <span class="lnr lnr-menu expand-sub-menu"></span>
-    <a class="menu-item"><strong>Page Templates</strong></a>
+    <a href="#" class="menu-item sub-menu-toggle"><strong>Page Templates</strong></a>
     <ul class="nav-sub-menu nav-menu">
       <li>
       <a class="menu-item" href="{{ site.baseurl }}/home/" target="_blank">

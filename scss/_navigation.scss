@@ -92,9 +92,13 @@ $global-nav-width: 213px;
 			.nav-sub-menu {
 				display: block;
 			}
-			.expand-sub-menu:before {
-				content: "\e870";
-			}
+			ul .menu-item {
+				opacity: 1;
+				transition: all 0.3s ease 0.3s;
+			}	
+		}
+		ul .menu-item {
+			opacity: 0;
 		}
 	}
 
@@ -109,7 +113,7 @@ $global-nav-width: 213px;
 		margin-left: 0;
 		color: $white;
 		padding: 10px 5px 10px 2.5rem;
-		transition: all 0.2s;
+		transition: all 0.3s;
 
 		&:before {
 			position: absolute;
@@ -140,24 +144,6 @@ $global-nav-width: 213px;
 				transition: all 0.2s;
 				background-color: $oakland-green;
 			}
-		}
-	}
-
-	@include media($bp-md) {
-		// @include span-columns(4);
-	}
-
-	.expand-sub-menu {
-		position: absolute;
-		opacity: 0;
-		padding: 10px 1.25rem;
-		line-height: 1.3rem;
-		right: 100%;
-		color: #FFF;
-		cursor: pointer;
-		transition: opacity 300ms ease;
-		&:hover {
-			color: $oakland-green;
 		}
 	}
 }
