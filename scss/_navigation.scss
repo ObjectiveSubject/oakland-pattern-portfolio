@@ -56,6 +56,7 @@ $global-nav-width: 213px;
 	left: 1.25rem;
 	bottom: 0;
 	padding-left: $gutter;
+	padding-right: 3.75rem;
 	padding-bottom: 7rem;
 	font-size: 1rem;
 	height: 100%;
@@ -65,6 +66,7 @@ $global-nav-width: 213px;
 	@include media($bp-md) {
 		left: auto;
 		right: 0;
+		padding-right: 0;
 	}
 
 	.nav-menu {

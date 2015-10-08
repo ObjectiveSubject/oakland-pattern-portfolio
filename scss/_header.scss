@@ -106,7 +106,7 @@
 		display: inline-block;
 		margin-top: 2rem;
 		margin-bottom: 2rem;
-		width: 85%;
+		width: 100%;
 
 		input {
 			width: 100%;
@@ -137,6 +137,15 @@
 
 		&:active {
 			text-decoration: none;
+		}
+
+		.global-navigation & {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			@include media($bp-md) {
+				display: none;
+			}
 		}
 	}
 
