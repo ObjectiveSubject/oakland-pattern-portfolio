@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
     <title>
-      Pattern Portfolio &middot; City of Oakland Primer
+      Introduction &middot; City of Oakland Primer
     </title>
 
     <link rel="stylesheet" href="/docs.css">
@@ -22,9 +22,9 @@
     <link rel="icon" href="/favicon.ico">
   </head>
   
-    
   
-  <body class="docs clearfix pattern-portfolio">
+  <body class="docs clearfix visual-identity">
+    
   
 
     <nav role="navigation" class="global-navigation one-fourth">
@@ -40,11 +40,15 @@
   </ul>
 
   
-  <ul class="top-level-menu nav-menu ">
+  <ul class="top-level-menu nav-menu open">
     <li>
-      <span class="lnr lnr-menu expand-sub-menu"></span>
-      <a class="menu-item " href="/visual-identity"><strong>Visual Identity</strong></a>
+      <a href="#" class="menu-item sub-menu-toggle "><strong>Visual Identity</strong></a>
       <ul class="nav-sub-menu nav-menu">
+        <li>
+          <a class="menu-item selected" href="/visual-identity-intro/">
+            Introduction
+          </a>
+        </li>
         <li>
           <a class="menu-item " href="/identity/">
             Identity
@@ -75,11 +79,15 @@
   </ul>
   
   
-  <ul class="top-level-menu nav-menu open">
+  <ul class="top-level-menu nav-menu ">
     <li>
-      <span class="lnr lnr-menu expand-sub-menu open"></span>
-      <a href="/pattern-portfolio" class="menu-item selected"><strong>Pattern Portfolio</strong></a>
+      <a href="#" class="menu-item sub-menu-toggle "><strong>Pattern Portfolio</strong></a>
       <ul class="nav-sub-menu nav-menu">
+        <li>
+          <a class="menu-item " href="/pattern-portfolio-intro/">
+            Introduction
+          </a>
+        </li>
         <li>
           <a class="menu-item " href="/web-typography/">
             Web Typography
@@ -115,26 +123,25 @@
   </ul>
 
   <ul class="top-level-menu nav-menu">
-    <span class="lnr lnr-menu expand-sub-menu"></span>
-    <a class="menu-item"><strong>Page Templates</strong></a>
+    <a href="#" class="menu-item sub-menu-toggle"><strong>Page Templates</strong></a>
     <ul class="nav-sub-menu nav-menu">
       <li>
-      <a class="menu-item " href="/home/">
+      <a class="menu-item" href="/home/" target="_blank">
         Home Template
       </a>
     </li>
     <li>
-      <a class="menu-item " href="/basic/">
+      <a class="menu-item" href="/basic/" target="_blank">
         Landing Page Template
       </a>
     </li>
     <li>
-      <a class="menu-item " href="/terminal/">
+      <a class="menu-item" href="/terminal/" target="_blank">
         Terminal Template
       </a>
     </li>
     <li>
-      <a class="menu-item " href="/parks/">
+      <a class="menu-item" href="/parks/" target="_blank">
         Parks and Rec Template
       </a>
     </li>
@@ -151,6 +158,12 @@
             Design Toolkit
           </a>
           
+          <span class="muted">Visual Identity</span>
+          
+          
+          
+          
+          <span class="page-title">Introduction</span>
           
         </div>
       </header>
@@ -159,57 +172,47 @@
     
       <div class="jumbotron">
         <div class="container">
-          <h1 class="page-title">Pattern Portfolio</h1>
+          <h1 class="page-title">Introduction</h1>
         </div>
       </div>
     
 
       <div class="container">
-        <div class="about-that">
-	<p>The pattern portfolio is a collection of reusable elements and componenets that can be used to create page layouts.</p>
-	<p>There are code snippets and Markdown examples that can be used for reference or pasted in to the CMS. There are also several helper classes and tools that can be used to acheive complex layouts.</p>
-	<p>Additionally, there is documentation about code guidelines and scaffolding to help with developer onboarding</p>
+        <p class="about-that">The goal of the City of Oakland’s Design Toolkit is to support a consistent visual identity to provide clear communication to our community, and to help design and build great experiences for <a href="oaklandca.gov">Oaklandca.gov</a>.</p>
 
 <hr />
 
 <div class="grid-row">
 	<div class="toolkit-section one-half">
-		<a href="/web-typography/" class="toolkit-section-link">
-			Web Typography
+		<a href="/identity/" class="toolkit-section-link">
+			Identity
 		</a>
-		Styles for basic text elements and components
+		Core logo and wordmark, alternate versions, usage
 	</div>
 	<div class="toolkit-section one-half">
-		<a href="/buttons/" class="toolkit-section-link">
-			Buttons
+		<a href="/typography/" class="toolkit-section-link">
+			Typography
 		</a>
-		All the flavors
+		Styles, weights and usage
 	</div>
 	<div class="toolkit-section one-half">
-		<a href="/forms/" class="toolkit-section-link">
-			Forms
+		<a href="/color/" class="toolkit-section-link">
+			Color
 		</a>
-		Input types and best practices
+		Brand, utility, and tertiary color names and values
 	</div>
 	<div class="toolkit-section one-half">
-		<a href="/images/" class="toolkit-section-link">
-			Images
+		<a href="/visual-elements/" class="toolkit-section-link">
+			Visual Elements
 		</a>
-		Sizes, placement, and use cases
+		Moire, pattern, iconography, photography
 	</div>
 	<div class="toolkit-section one-half">
-		<a href="/modules/" class="toolkit-section-link">
-			Modules
+		<a href="/examples/" class="toolkit-section-link">
+			Examples
 		</a>
-		Components large and small
+		Examples of the brand identity in use
 	</div>
-	<div class="toolkit-section one-half">
-		<a href="/developers/" class="toolkit-section-link">
-			Developers
-		</a>
-		In-depth docs for onboarding and maintaining the design system
-	</div>
-</div>
 </div>
 
       </div>
@@ -226,7 +229,7 @@
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="/js/bigmenu.js"></script>
+    <script src="/js/docs.js"></script>
 
   </body>
 </html>
