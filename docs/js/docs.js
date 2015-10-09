@@ -37,7 +37,7 @@
 		winTop = $window.scrollTop(),
 		$masthead = $('.masthead'),
 		$mastheadTitle = $masthead.find('.page-title'),
-		$pageTitle = $('h1.page-title'),
+		$pageTitle = $('.jumbotron h1'),
 		threshold = $pageTitle.offset().top - $masthead.outerHeight(),
 		fadeIn, fadeOut;
 
