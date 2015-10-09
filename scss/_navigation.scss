@@ -126,13 +126,26 @@ $global-nav-width: 213px;
 			transition: all 0.2s ease;
 		}
 
-		&:hover, &:focus {
+		&:hover {
 			background-color: transparent;
 			color: $white;
 
 			&:before {
 				transition: all 0.2s;
 				background-color: $white;
+			}
+		}
+		&:focus {
+			background-color: transparent;
+			color: $white;
+
+			&:before {
+				background-color: transparent;
+			}
+			&:hover {
+				&:before {
+					background-color: $white;
+				}
 			}
 		}
 
