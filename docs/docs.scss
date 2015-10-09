@@ -190,14 +190,12 @@ $pattern-darker: darken($pattern, 20%);
 //
 
 .masthead {
-  padding-top: 2.75rem;
-  padding-bottom: 0;
+  padding: 2.75rem 0;
   line-height: 1.55rem;
   text-align: center;
   background-color: $rockridge-gray;
   position: fixed;
   width: 74.45415%;
-  max-height: 6.4rem;
   overflow: hidden;
   z-index: 100;
   &.show-title {
@@ -216,9 +214,7 @@ $pattern-darker: darken($pattern, 20%);
   }
   .page-title {
     display: block;
-    margin-bottom: 0.5rem;
-    margin-top: 2rem;
-    transition: margin 0.3s ease;
+    opacity: 0;
   }
 
   .muted {
