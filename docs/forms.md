@@ -21,7 +21,7 @@ Style individual form controls and utilize common layouts.
 
 ## Example form
 
-Form controls in Primer currently have no basic layout specified (this is by design). You'll need to use `<fieldset>`s, `<div>`s, or other elements and styles to rearrange them.
+Form controls have no basic layout specified (this is by design). You'll need to use `<fieldset>`s, `<div>`s, or other elements and styles to rearrange them.
 
 {% example html %}
 <form>

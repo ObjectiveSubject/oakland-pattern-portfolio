@@ -5,7 +5,7 @@ title: Web Typography
 slug: web-typography
 ---
 
-Headings, paragraphs, blockquotes, lists, and more have some global resets. It's worth noting these aren't the same as our Markdown styles.
+Headings, paragraphs, blockquotes, lists, and more have some global resets. Also includes icons and some other basic text types.
 
 ---
 
