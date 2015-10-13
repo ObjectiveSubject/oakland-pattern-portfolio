@@ -6,7 +6,7 @@ slug: developers
 ---
 
 <div class="about-that">
-	<p>This page contains docs about code guidelines, page layout, and high level info about the Oakland design system as it pertains to web development.</p>
+	<p>This page contains docs about code guidelines, page layout, and high level info about the Oakland design system as it pertains to web development. At the end of this page are some utility classes.</p>
 </div>
 
 ---

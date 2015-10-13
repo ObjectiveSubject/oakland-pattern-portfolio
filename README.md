@@ -1,58 +1,22 @@
-# Primer
+# City of Oakland Design Toolkit
 
-Primer is the CSS toolkit that powers GitHub's front-end design. It's purposefully limited to common components to provide our developers with the most flexibility, and to keep GitHub uniquely *GitHubby*. It's built with SCSS and available via Bower, so it's easy to include all or part of it within your own project.
+This toolkit contains documentation, visual identity, a pattern portfolio, and example page templates for the City of Oakland website.
 
-[**Read the Primer documentation**](http://primercss.io) to learn more.
-
-_**Heads up!** We love open source, but Primer is unlikely to add new features that are not used in GitHub.com. It's first and foremost our CSS toolkit. We really love to share though, so hopefully that means we're still friends <3._
+[**Read the documentation**](http://oakland-primer.com) to learn more.
 
 ## Contents
 
-- [Install](#install)
-- [Usage](#usage)
 - [Documentation](#documentation)
   - [Dependencies](#dependencies)
   - [Running locally](#running-locally)
   - [Publishing](#publishing)
-  - [Primer stats](#primer-stats)
+  - [Stats](#stats)
 - [Updating](#updating)
-- [Contributing](#contributing)
-- [Versioning](#versioning)
 - [License](#license)
-
-## Install
-
-### Manually
-
-Download the [latest release](https://github.com/primer/primer/releases/latest) and copy the SCSS files over to your own project. Once your files are in place, jump to the [usage guidelines](#usage) for including Primer into your own CSS.
-
-### Bower
-
-```
-$ bower install primer-css --save
-```
-
-### Things to know
-
-**Hey, GitHubbers!** For GitHub.com, you'll need to  `cd` into `vendor/assets` and run `bower install` there. Be sure to commit and push all the changes, including the `bower.json` and everything under `bower_components`.
-
-## Usage
-
-Once included, simply `@import` either the master SCSS file, or the individual files as you need them.
-
-```scss
-// Example: All of Primer
-@import "primer-css/scss/primer";
-
-// Example: Individual files
-@import "primer-css/scss/variables";
-@import "primer-css/scss/mixins";
-@import "primer-css/scss/base";
-```
 
 ## Documentation
 
-Primer's documentation is built with Jekyll and published to `http://primercss.io` via the `gh-pages` branch.
+This toolkit's documentation is built with Jekyll and published to `http://oakland-primer.com` via the `gh-pages` branch.
 
 ### Dependencies
 
@@ -64,7 +28,7 @@ You'll need the following installed:
 - Latest Grunt CLI: `$ npm install -g grunt-cli`
 - [Node.js and npm](http://nodejs.org/download/)
 
-Chances are you have all this already if you work on `github/github` or similar projects. If you have all those set up, now you can install the dependencies:
+If you have all those set up, now you can install the dependencies:
 
 ```bash
 $ npm install
@@ -97,7 +61,7 @@ $ grunt publish
 
 This takes the `_site` directory, generates it's own Git repository there, and publishes the contents to the `gh-pages` branch here on GitHub. Changes are reflected in the hosted docs within a minute or so.
 
-### Primer stats
+### Stats
 
 When compiling or watching the Sass files, Primer will automatically generate a `.primer-stats.md` file. This is tracked in the Git repository to provide us historical and contextual information on the changes we introduce. For example, we'll know when the number of selectors or declarations rises sharply within a single change.
 
@@ -125,27 +89,8 @@ Check in `bower.json` and all changes under `vendor/assets/bower_components`.
 
 ## Development
 
-Development of Primer happens in our primary branch, `master`. For stable versions, see the [releases page](https://github.com/primer/primer/releases). `master` will always be up to date with the latest changes, including those which have yet to be released.
-
-## Contributing
-
-By contributing to Primer, you agree to the terms presented in [this license agreement](https://cla.github.com/). *More information will be provided here soon.*
-
-When contributing changes to Primer, be sure to do the following steps when opening a pull request:
-
-1. Bump the version number in `bower.json` (it's purely placebo right now, but it's good habit) and `package.json`.
-2. Run `grunt` and commit the changes. This compiles the SCSS to CSS so we can do basic analysis on the number of selectors, file size, etc.
-
-In addition, please read through our [contributing guidelines](https://github.com/primer/primer/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
-
-All HTML and CSS should conform to the [style guidelines](http://primercss.io/guidelines).
-
-Editor preferences are available in the [editor config](https://github.com/primer/primer/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
-
-## Versioning
-
-For transparency into our release cycle and in striving to maintain backward compatibility, Primer is maintained under [the Semantic Versioning guidelines](http://semver.org/). Sometimes we screw up, but we'll adhere to those rules whenever possible.
+Development happens in our primary branch, `master`. `master` will always be up to date with the latest changes, including those which have yet to be released.
 
 ## License
 
-Created by and copyright GitHub, Inc. Released under the [MIT license](LICENSE.md).
+Created by Objective Subject, forked from GitHub's Primer copyright GitHub, Inc. Released under the [MIT license](LICENSE.md).

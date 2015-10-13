@@ -37,18 +37,32 @@
 
 .breadcrumbs {
 	line-height: 1;
-	padding: 1.5rem 0 0 $gutter;
+	padding: 1.5rem 0 0;
 	margin-bottom: 1.5rem;
-	margin-left: -1.25rem;
-	border-left: 2px solid $muted;
+	position: relative;
+
+	&:after {
+		content: "";
+		width: 2px;
+		position: absolute;
+		left: -1.25rem;
+		top: 0;
+		bottom: 0;
+		background-color: $white;
+	}
 
 	.breadcrumb-wrap & {
-		@include outer-container();
+		max-width: 57.25rem;
 		box-sizing: content-box;
 		margin: 0 1.25rem;
-		padding: 1.5rem $gutter 0;
+		padding: 1.5rem 0 0;
 		@include media($bp-md) {
 			margin: 0 auto;
+			max-width: 916px;
+		}
+
+		@include media($bp-xl) {
+			max-width: 1200px;
 		}
 	}
 
