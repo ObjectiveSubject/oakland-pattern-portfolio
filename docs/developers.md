@@ -18,6 +18,19 @@ slug: developers
 
 ---
 
+## Big Ideas
+
+A few of the big ideas behind this design system include:
+
+* **The gutter.** The space between grid columns is equal to the space between the the wordmark and the left bar of the logo. At the default size this equals 20px (or 1.25rem).
+* **Bottom margins.** In almost all cases, we try to create vertical space using bottom margins. This makes it easier to maintain vertical rhythm and avoids issues with collapsing margins.
+* **Rems.** In almost all cases, rems are used for font sizes and spacing so that we can shrink and magnifying everything uniformly for small or x-large breakpoints respectively. The base font-size is set in px in `_base.scss`.
+* **BEM-like.** While not adhering strictly to BEM for CSS classes, we use hyphen-separated, descriptive class names like `.header-actions` and `.header-nav-button`.
+
+There are more specific details on rems and class naming below.
+
+---
+
 ## Container
 
 Center your page's contents with a `.container`. A container can be placed inside an element like a `<header>` or any other element that should stretch to the max body width of 1200px.
@@ -351,7 +364,7 @@ Here are some good examples that apply the above guidelines:
 
 ## Pixels vs. ems vs. rems
 
-We use pixels to establish the base font-size for small, large and x-large breakpoints. We then use rems for everything else so that things scale up or down proportionately.
+We use pixels to establish the base font-size for small, medium and x-large breakpoints. We then use rems for everything else so that things scale up or down proportionately.
 
 We use the grunt task [pixrem](https://github.com/robwierzbowski/grunt-pixrem) to generate pixel fallbacks for rem units to support IE8.
 

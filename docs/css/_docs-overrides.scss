@@ -3,7 +3,7 @@
 .docs {
 	// Navigation
 	.global-navigation {
-	  width: 25.54586%;
+	  width: 25.54586% !important; // override width from js
 	  margin-right: 0;
 	  display: block;
 	  margin-bottom: 0;
