@@ -98,7 +98,7 @@
 
 
 /* -----------------------------------------------
- * Off-canvas nav
+ * Side nav
  * ----------------------------------------------- */
 ( function( $, window, document ) {
 
@@ -107,7 +107,6 @@
 		$body = $('body'),
 		$window = $(window),
 		$hamburger = $('.header-nav-button'),
-		// $close = $('.header-nav-close'),
 		$overlay = $('.main-overlay'),
 		navIsOpen = false;
 
@@ -211,5 +210,23 @@
 		  return result;
 		};
 	  };
+
+}( window.jQuery, window, document ));
+
+(function( $, window, document ) {
+
+	// Side Nav accordian
+	// -----------------------------------
+	$('.sub-menu-toggle').click(function(e){
+		e.preventDefault();
+
+		var $this = $(this),
+			$parent = $this.parents('.top-level-menu'),
+			$subNav = $this.siblings('.nav-sub-menu');
+
+		$subNav.slideToggle(300);
+		$parent.toggleClass('open');
+
+	});
 
 }( window.jQuery, window, document ));
