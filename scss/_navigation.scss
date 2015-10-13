@@ -79,13 +79,22 @@ $global-nav-width: 213px;
 		}
 	}
 	.top-level-menu {
-		margin-left: -1.25rem;
+		margin-left: -$gutter;
 		li:last-child {
-			margin-bottom: 1em;
+			margin-bottom: 1rem;
 		}
 	
 		&:hover .expand-sub-menu {
 			opacity: 1;
+		}
+
+		.nav-sub-menu {
+			display: none;
+			padding-left: $gutter;
+
+			.menu-item:before {
+				left: -$gutter;
+			}
 		}
 
 		&.open {
@@ -104,7 +113,6 @@ $global-nav-width: 213px;
 
 	strong {
 		display: block;
-		padding: 10px 1.25rem;
 		color: $white;
 	}
 
@@ -112,7 +120,7 @@ $global-nav-width: 213px;
 		font-size: 1rem;
 		margin-left: 0;
 		color: $white;
-		padding: 10px 5px 10px 2.5rem;
+		padding: 10px 5px 10px 1.2rem;
 		transition: all 0.3s;
 
 		&:before {
