@@ -188,6 +188,7 @@
 
 <ul id="markdown-toc">
   <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#big-ideas" id="markdown-toc-big-ideas">Big Ideas</a></li>
   <li><a href="#container" id="markdown-toc-container">Container</a></li>
   <li><a href="#grid" id="markdown-toc-grid">Grid</a>    <ul>
       <li><a href="#how-it-works" id="markdown-toc-how-it-works">How it works</a></li>
@@ -227,6 +228,21 @@
   <li><a href="#text-alignment" id="markdown-toc-text-alignment">Text alignment</a></li>
   <li><a href="#muted-link" id="markdown-toc-muted-link">Muted link</a></li>
 </ul>
+
+<hr />
+
+<h2 id="big-ideas">Big Ideas</h2>
+
+<p>A few of the big ideas behind this design system include:</p>
+
+<ul>
+  <li><strong>The gutter.</strong> The space between grid columns is equal to the space between the the wordmark and the left bar of the logo. At the default size this equals 20px (or 1.25rem).</li>
+  <li><strong>Bottom margins.</strong> In almost all cases, we try to create vertical space using bottom margins. This makes it easier to maintain vertical rhythm and avoids issues with collapsing margins.</li>
+  <li><strong>Rems.</strong> In almost all cases, rems are used for font sizes and spacing so that we can shrink and magnifying everything uniformly for small or x-large breakpoints respectively. The base font-size is set in px in <code>_base.scss</code>.</li>
+  <li><strong>BEM-like.</strong> While not adhering strictly to BEM for CSS classes, we use hyphen-separated, descriptive class names like <code>.header-actions</code> and <code>.header-nav-button</code>.</li>
+</ul>
+
+<p>There are more specific details on rems and class naming below.</p>
 
 <hr />
 
@@ -653,7 +669,7 @@ It also adds padding to either side of itself and <code>box-sizing: content-box<
 
 <h2 id="pixels-vs-ems-vs-rems">Pixels vs. ems vs. rems</h2>
 
-<p>We use pixels to establish the base font-size for small, large and x-large breakpoints. We then use rems for everything else so that things scale up or down proportionately.</p>
+<p>We use pixels to establish the base font-size for small, medium and x-large breakpoints. We then use rems for everything else so that things scale up or down proportionately.</p>
 
 <p>We use the grunt task <a href="https://github.com/robwierzbowski/grunt-pixrem">pixrem</a> to generate pixel fallbacks for rem units to support IE8.</p>
 
@@ -814,6 +830,7 @@ It also adds padding to either side of itself and <code>box-sizing: content-box<
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/js/oakland.js"></script>    
     <script src="/js/docs.js"></script>
 
   </body>
