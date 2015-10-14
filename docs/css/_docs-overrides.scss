@@ -2,10 +2,18 @@
 // for the content inside of .docs-example blocks
 .docs {
 	// Navigation
+	.global-navigation-wrap {
+		display: none;
+
+		@include media($bp-md) {
+			display: block;
+		}
+	}
+
 	.global-navigation {
-	  width: 25.54586% !important; // override width from js
+		width: 100% !important; // override width from js
 	  margin-right: 0;
-	  display: block;
+	  display: none;
 	  margin-bottom: 0;
 	  padding-left: 3rem;
 	  background-color: #212121;
@@ -14,6 +22,11 @@
 	  z-index: 1000;
 	  position: fixed;
 	  padding-bottom: 4rem;
+
+	  @include media($bp-md) {
+		  width: 25.54586% !important; // override width from js
+	  	display: block;
+	  }
 
 	  .logo-wrap {
 	  	margin-bottom: 3rem;
@@ -32,10 +45,13 @@
 
 	  .top-level-menu {
 	  	position: relative;
-	  	float: right;
+	  	float: left;
 	  	width: 100%;
-	  	max-width: 13.3125rem;
 	  	margin-right: $gutter;
+
+	  	@include media($bp-md) {
+	  		float: right;
+	  	}
 	  }
 
 	  .nav-sub-menu {
@@ -58,6 +74,15 @@
 	    }
 	  }
 	}
+
+  .navicon {
+    background-color: $white;
+
+    &:before,
+    &:after {
+      background-color: $white;
+    }
+  }
 
 	main {
 	  background-color: #EAEBE8;

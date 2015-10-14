@@ -1,121 +1,126 @@
-<nav role="navigation" class="global-navigation one-fourth">
+<div class="global-navigation-wrap">
+  <nav role="navigation" class="global-navigation one-fourth">
 
-  <div class="logo-wrap">
-    <img class="site-logo logo-white" src="{{ site.url }}/img/logo-v2-white.png" alt="City of Oakland" />
-  </div>
+    <div class="logo-wrap">
+      <img class="site-logo logo-white" src="{{ site.url }}/img/logo-v2-white.png" alt="City of Oakland" />
+      <a class="header-nav-button navicon-button x open" href="#">
+        <div class="navicon"></div>
+      </a>
+    </div>
 
-  <ul class="top-level-menu nav-menu">
-    <li>
-      <a class="menu-item {% if page.slug == "index" %}selected{% endif %}" href="{{ site.baseurl }}/"><strong>Introduction</strong></a>
-    </li>
-  </ul>
-
-  {% assign vis_identity_slugs = 'visual-identity-intro&identity&typography&color&visual-elements&examples' | split: '&' %}
-  <ul class="top-level-menu nav-menu {% if vis_identity_slugs contains page.slug %}open{% endif %}">
-    <li>
-      <a href="#" class="menu-item sub-menu-toggle {% if page.slug == "visual-identity" %}selected{% endif %}"><strong>Visual Identity</strong></a>
-      <ul class="nav-sub-menu nav-menu">
-        <li>
-          <a class="menu-item {% if page.slug == "visual-identity-intro" %}selected{% endif %}" href="{{ site.baseurl }}/visual-identity-intro/">
-            Introduction
-          </a>
-        </li>
-        <li>
-          <a class="menu-item {% if page.slug == "identity" %}selected{% endif %}" href="{{ site.baseurl }}/identity/">
-            Identity
-          </a>
-        </li>
-        <li>
-          <a class="menu-item {% if page.slug == "typography" %}selected{% endif %}" href="{{ site.baseurl }}/typography/">
-            Typography
-          </a>
-        </li>
-        <li>
-          <a class="menu-item {% if page.slug == "color" %}selected{% endif %}" href="{{ site.baseurl }}/color/">
-            Color
-          </a>
-        </li>
-        <li>
-          <a class="menu-item {% if page.slug == "visual-elements" %}selected{% endif %}" href="{{ site.baseurl }}/visual-elements/">
-            Visual Elements
-          </a>
-        </li>
-        <li>
-          <a class="menu-item {% if page.slug == "examples" %}selected{% endif %}" href="{{ site.baseurl }}/examples/">
-            Examples
-          </a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-  
-  {% assign pattern_portfolio_slugs = 'pattern-portfolio-intro&structural-elements&web-typography&buttons&forms&modules&developers&icons&images&tooltips&guidelines&scaffolding&layout&utilities&navigation&posts&alerts' | split: '&' %}
-  <ul class="top-level-menu nav-menu {% if pattern_portfolio_slugs contains page.slug %}open{% endif %}">
-    <li>
-      <a href="#" class="menu-item sub-menu-toggle {% if page.slug == "pattern-portfolio" %}selected{% endif %}"><strong>Pattern Portfolio</strong></a>
-      <ul class="nav-sub-menu nav-menu">
-        <li>
-          <a class="menu-item {% if page.slug == "pattern-portfolio-intro" %}selected{% endif %}" href="{{ site.baseurl }}/pattern-portfolio-intro/">
-            Introduction
-          </a>
-        </li>
-        <li>
-          <a class="menu-item {% if page.slug == "web-typography" %}selected{% endif %}" href="{{ site.baseurl }}/web-typography/">
-            Web Typography
-          </a>
-        </li>
-        <li>
-          <a class="menu-item {% if page.slug == "buttons" %}selected{% endif %}" href="{{ site.baseurl }}/buttons/">
-            Buttons
-          </a>
-        </li>
-        <li>
-          <a class="menu-item {% if page.slug == "forms" %}selected{% endif %}" href="{{ site.baseurl }}/forms/">
-            Forms
-          </a>
-        </li>
-        <li>
-          <a class="menu-item {% if page.slug == "images" %}selected{% endif %}" href="{{ site.baseurl }}/images/">
-            Images
-          </a>
-        </li>
-        <li>
-          <a class="menu-item {% if page.slug == "modules" %}selected{% endif %}" href="{{ site.baseurl }}/modules/">
-            Modules
-          </a>
-        </li>
-        <li>
-          <a class="menu-item {% if page.slug == "developers" %}selected{% endif %}" href="{{ site.baseurl }}/developers/">
-            Developers
-          </a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-  <ul class="top-level-menu nav-menu">
-    <a href="#" class="menu-item sub-menu-toggle"><strong>Page Templates</strong></a>
-    <ul class="nav-sub-menu nav-menu">
+    <ul class="top-level-menu nav-menu">
       <li>
-      <a class="menu-item" href="{{ site.baseurl }}/home/" target="_blank">
-        Home Template
-      </a>
-    </li>
-    <li>
-      <a class="menu-item" href="{{ site.baseurl }}/basic/" target="_blank">
-        Landing Page Template
-      </a>
-    </li>
-    <li>
-      <a class="menu-item" href="{{ site.baseurl }}/terminal/" target="_blank">
-        Terminal Template
-      </a>
-    </li>
-    <li>
-      <a class="menu-item" href="{{ site.baseurl }}/parks/" target="_blank">
-        Parks and Rec Template
-      </a>
-    </li>
-  </ul>
+        <a class="menu-item {% if page.slug == "index" %}selected{% endif %}" href="{{ site.baseurl }}/"><strong>Introduction</strong></a>
+      </li>
+    </ul>
 
-</nav>
+    {% assign vis_identity_slugs = 'visual-identity-intro&identity&typography&color&visual-elements&examples' | split: '&' %}
+    <ul class="top-level-menu nav-menu {% if vis_identity_slugs contains page.slug %}open{% endif %}">
+      <li>
+        <a href="#" class="menu-item sub-menu-toggle {% if page.slug == "visual-identity" %}selected{% endif %}"><strong>Visual Identity</strong></a>
+        <ul class="nav-sub-menu nav-menu">
+          <li>
+            <a class="menu-item {% if page.slug == "visual-identity-intro" %}selected{% endif %}" href="{{ site.baseurl }}/visual-identity-intro/">
+              Introduction
+            </a>
+          </li>
+          <li>
+            <a class="menu-item {% if page.slug == "identity" %}selected{% endif %}" href="{{ site.baseurl }}/identity/">
+              Identity
+            </a>
+          </li>
+          <li>
+            <a class="menu-item {% if page.slug == "typography" %}selected{% endif %}" href="{{ site.baseurl }}/typography/">
+              Typography
+            </a>
+          </li>
+          <li>
+            <a class="menu-item {% if page.slug == "color" %}selected{% endif %}" href="{{ site.baseurl }}/color/">
+              Color
+            </a>
+          </li>
+          <li>
+            <a class="menu-item {% if page.slug == "visual-elements" %}selected{% endif %}" href="{{ site.baseurl }}/visual-elements/">
+              Visual Elements
+            </a>
+          </li>
+          <li>
+            <a class="menu-item {% if page.slug == "examples" %}selected{% endif %}" href="{{ site.baseurl }}/examples/">
+              Examples
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    
+    {% assign pattern_portfolio_slugs = 'pattern-portfolio-intro&structural-elements&web-typography&buttons&forms&modules&developers&icons&images&tooltips&guidelines&scaffolding&layout&utilities&navigation&posts&alerts' | split: '&' %}
+    <ul class="top-level-menu nav-menu {% if pattern_portfolio_slugs contains page.slug %}open{% endif %}">
+      <li>
+        <a href="#" class="menu-item sub-menu-toggle {% if page.slug == "pattern-portfolio" %}selected{% endif %}"><strong>Pattern Portfolio</strong></a>
+        <ul class="nav-sub-menu nav-menu">
+          <li>
+            <a class="menu-item {% if page.slug == "pattern-portfolio-intro" %}selected{% endif %}" href="{{ site.baseurl }}/pattern-portfolio-intro/">
+              Introduction
+            </a>
+          </li>
+          <li>
+            <a class="menu-item {% if page.slug == "web-typography" %}selected{% endif %}" href="{{ site.baseurl }}/web-typography/">
+              Web Typography
+            </a>
+          </li>
+          <li>
+            <a class="menu-item {% if page.slug == "buttons" %}selected{% endif %}" href="{{ site.baseurl }}/buttons/">
+              Buttons
+            </a>
+          </li>
+          <li>
+            <a class="menu-item {% if page.slug == "forms" %}selected{% endif %}" href="{{ site.baseurl }}/forms/">
+              Forms
+            </a>
+          </li>
+          <li>
+            <a class="menu-item {% if page.slug == "images" %}selected{% endif %}" href="{{ site.baseurl }}/images/">
+              Images
+            </a>
+          </li>
+          <li>
+            <a class="menu-item {% if page.slug == "modules" %}selected{% endif %}" href="{{ site.baseurl }}/modules/">
+              Modules
+            </a>
+          </li>
+          <li>
+            <a class="menu-item {% if page.slug == "developers" %}selected{% endif %}" href="{{ site.baseurl }}/developers/">
+              Developers
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="top-level-menu nav-menu">
+      <a href="#" class="menu-item sub-menu-toggle"><strong>Page Templates</strong></a>
+      <ul class="nav-sub-menu nav-menu">
+        <li>
+        <a class="menu-item" href="{{ site.baseurl }}/home/" target="_blank">
+          Home Template
+        </a>
+      </li>
+      <li>
+        <a class="menu-item" href="{{ site.baseurl }}/basic/" target="_blank">
+          Landing Page Template
+        </a>
+      </li>
+      <li>
+        <a class="menu-item" href="{{ site.baseurl }}/terminal/" target="_blank">
+          Terminal Template
+        </a>
+      </li>
+      <li>
+        <a class="menu-item" href="{{ site.baseurl }}/parks/" target="_blank">
+          Parks and Rec Template
+        </a>
+      </li>
+    </ul>
+
+  </nav>
+</div>

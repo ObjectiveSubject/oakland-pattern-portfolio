@@ -57,7 +57,6 @@ a {
   width: auto;
   padding: 0;
   max-width: 700px;
-  margin: 0 auto;
 }
 
 .markdown-body {
@@ -192,16 +191,20 @@ $pattern-darker: darken($pattern, 20%);
 .masthead {
   padding: 2.75rem 0;
   line-height: 1.55rem;
-  text-align: center;
+  text-align: left;
   background-color: $rockridge-gray;
-  position: fixed;
-  width: 74.45415%;
   overflow: hidden;
+  width: 100%;
   z-index: 100;
   &.show-title {
     .page-title {
       margin-top: 0;
     }
+  }
+
+  @include media($bp-md) {
+    position: fixed;
+    width: inherit;
   }
 
   .masthead-logo,
@@ -224,10 +227,14 @@ $pattern-darker: darken($pattern, 20%);
 
   @media (min-width: $bp-md) {
     text-align: left;
+  }
 
-    // .masthead-logo {
-      // float: left;
-    // }
+  .header-nav-button {
+    display: inline-block;
+
+    @include media($bp-md) {
+      display: none;
+    }
   }
 }
 
@@ -240,22 +247,19 @@ $pattern-darker: darken($pattern, 20%);
   background-color: $rockridge-gray;
   font-size: 1.25rem;
   color: #fff;
-  text-align: center;
-  min-height: 18rem;
 
   @include media($bp-md) {
-    background-position: 116% 60%;
+    min-height: 18rem;
+    font-size: 1.5rem;
   }
 
   h1 {
     font-size: 2.5em;
     font-weight: normal;
-    margin-top: 30vh;
-  }
 
-  @media (min-width: 34em) {
-    font-size: 1.5rem;
-    text-align: left;
+    @include media($bp-md) {
+      margin-top: 30vh;
+    }
   }
 }
 

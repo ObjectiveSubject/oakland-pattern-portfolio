@@ -6,8 +6,6 @@ $duration: .5s;
 $size : 100%;
 $toggled-size : .75;
 
-$bg : #449A88;
-$nav-bg  : #2A2A2A;
 $content-bg : $oakland-green;
 
 .navicon-button {
@@ -29,7 +27,8 @@ $content-bg : $oakland-green;
   background: $content-bg;
   transition: $duration;
 
-  &:before, &:after {
+  &:before,
+  &:after {
     display: block;
     content: "";
     height: 1px;
