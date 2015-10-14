@@ -68,6 +68,19 @@
 		&:after {
 			background-color: $white;
 		}
+
+		a {
+			color: $muted;
+
+			&:hover,
+			&:focus {
+				color: $muted;
+			}
+
+			&:active {
+				color: darken($muted, 10%);
+			}
+		}
 	}
 
 	a, span {
@@ -78,18 +91,12 @@
 	}
 
 	a {
-		color: $muted;
 		padding-right: 20px;
 		position: relative;
 
 		&:hover,
 		&:focus {
 			text-decoration: underline;
-			color: $muted;
-		}
-
-		&:active {
-			color: darken($muted, 10%);
 		}
 
 		&:after {
