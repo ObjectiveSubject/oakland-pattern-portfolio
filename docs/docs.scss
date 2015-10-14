@@ -211,6 +211,7 @@ $pattern-darker: darken($pattern, 20%);
     font-family: $header-font;
     color: $white;
     margin-right: 1.25rem;
+    text-decoration: none;
   }
   .page-title {
     display: block;

@@ -9,7 +9,7 @@
   margin-left: 1.25rem;
   margin-right: 1.25rem;
 
-  @include media($bp-md) {
+  @include media(1100px) {
     margin: 0 auto;
   }
 
