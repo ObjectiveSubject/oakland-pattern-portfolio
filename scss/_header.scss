@@ -28,6 +28,11 @@
 .multi-logo-wrap {
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: column;
+
+	@include media($bp-md) {
+		flex-direction: row;
+	}
 }
 
 .site-logo-wrap {
@@ -53,6 +58,8 @@
 	height: 3.0625rem;
 }
 
+// Text wordmark for CoO departments
+
 .dept-title {
 	display: inline-block;
 	font-size: 1.35rem;
@@ -60,13 +67,15 @@
 	font-family: $dept-font;
 	flex-shrink: 0;
 	margin-bottom: 0;
-	margin-top: $gutter;
+	margin-top: 0.5rem;
+	padding-left: 5.55rem;
 
 	@include media($bp-md) {
 		padding-top: 2.5rem;
 		height: 5.5rem;
 		position: relative;
 		margin-top: 0;
+		padding-left: 0;
 
 		&:before {
 			content: '';
@@ -84,6 +93,8 @@
 	// -----------------------------------
 	.header-actions {
 		align-self: center;
+		flex-shrink: 0;
+		margin-left: auto; // pushes it to the right inside flex container
 
 		@include media($bp-md) {
 			display: inline-block;
@@ -92,7 +103,6 @@
 			width: auto;
 			padding-top: 2.5rem;
 			margin-bottom: 0;
-			margin-left: auto; // pushes it to the right inside flex container
 		}
 	}
 

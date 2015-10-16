@@ -33,6 +33,11 @@
 	top: 0;
 	left: 0;
 	right: 0;
+	margin: 0 $gutter;
+
+	@include media($bp-md) {
+		margin: 0;
+	}
 }
 
 .breadcrumbs {
