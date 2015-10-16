@@ -36,6 +36,16 @@ The trunk width is used as one half of the horizontal spacing between elements.
 
 <img src="{{ site.baseurl }}/img/toolkit/identity/coo-artwork-logoconstruction.png" alt="close up example of the City of Oakland logo">
 
+---
+
+## Logo Minimum Size
+
+To ensure legibility, never size the logo smaller than these widths.
+
+<img src="{{ site.baseurl }}/img/toolkit/identity/coo-artwork-minimumspace.png" alt="close up example of the City of Oakland logo">
+
+---
+
 ## Logo Colors
 
 The preferred treatment is the two-color version in either white or black (depending on the context).
@@ -53,6 +63,16 @@ Given the diversity of Oakland’s population, our logos have been crafted to wo
 <img src="{{ site.baseurl }}/img/toolkit/identity/coo-artwork-logolanguage.png" alt="close up example of the City of Oakland logo">
 
 ***
+
+## Identity System
+
+Signatures have been created for all key city departments. They come in two layout versions, for bottom or top anchoring. The Bottom-anchoring marks should be used as the default.
+
+<img src="{{ site.baseurl }}/img/toolkit/identity/coo-artwork-logodepartments-top.png" alt="close up example of the City of Oakland logo">
+
+<img src="{{ site.baseurl }}/img/toolkit/identity/coo-artwork-logodepartments-bottom.png" alt="close up example of the City of Oakland logo">
+
+---
 
 ## Vertical Responsiveness
 

@@ -34,9 +34,14 @@
       <div class="header-wrap">
         <div class="container">
           <header class="page-header" role="banner">
-            <a href="#" class="logo-wrap">
-              <img class="site-logo logo-black" src="{{ site.url }}/img/logo-v3.png" alt="City of Oakland" />
-            </a>
+            <div class="multi-logo-wrap">
+              <a href="#" class="site-logo-wrap">
+                <img class="site-logo logo-black" src="{{ site.url }}/img/coo-logo-black.svg" onerror="this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;" alt="City of Oakland" />
+              </a>
+              {% if page.layout == "basic" %}
+              <h1 class="dept-title">Community &amp;<br>Economic Development</h1>
+              {% endif %}
+            </div>
             <div class="header-actions">
               <form role="search" class="header-search" method="get" action="">
                 <label>
@@ -58,8 +63,8 @@
 
     <div class="global-navigation-wrap clearfix">
       <nav role="navigation" class="global-navigation">
-        <div class="logo-wrap">
-          <img class="site-logo logo-white" src="{{ site.url }}/img/logo-v2-white.png" alt="City of Oakland" />
+        <div class="site-logo-wrap">
+          <img class="site-logo logo-white" src="{{ site.url }}/img/coo-logo-white.svg" alt="City of Oakland" />
           <a class="header-nav-button navicon-button x open" href="#">
             <div class="navicon"></div>
           </a>

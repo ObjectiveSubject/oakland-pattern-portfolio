@@ -3,17 +3,16 @@
 // .sticky-menu is the wrapper around the fixed position header
 
 .sticky-menu {
-	position: absolute; // on mobile we don't want the header to be sticky to preserve vertical real estate
-  top: 0;
-  left: 0;
-  right: 0;
-  max-width: inherit;
-  margin: 0 auto;
-  z-index: 100000; // always on top!
-
+	position: static; // on mobile we don't want the header to be sticky to preserve vertical real estate
 
 	@include media($bp-md) {
 	  position: fixed; // on tablet and desktop we do want a sticky header
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  max-width: inherit;
+	  margin: 0 auto;
+	  z-index: 100000; // always on top!
 	}
 }
 
@@ -22,9 +21,11 @@
 	width: 100%;
 	height: $header-height-sm; // Global var set in _variables.scss
 	background-color: $gray-lighter;
+	display: none;
 
 	@include media($bp-md) {
 		height: $header-height-lg;
+		display: block;
 	}
 }
 

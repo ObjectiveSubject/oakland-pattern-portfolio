@@ -1,17 +1,17 @@
 // Header styles
 .header-wrap {
 	background: $gray-lighter;
+
+	.dept-title {
+		color: $color-text-body;
+	}
 }
 
 .page-header {
-	display: table;
+	display: flex;
 	width: 100%;
 	position: relative;
-
-	@include media($bp-md) {
-		display: block;
-		margin-bottom: 2.5rem;
-	}
+	margin-bottom: 2.5rem;
 
 	// This creates the green bar to the left of the logo
 	&:after {
@@ -25,17 +25,19 @@
 	}
 }
 
-.logo-wrap {
-	display: table-cell;
-  width: 80%;
+.multi-logo-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.site-logo-wrap {
+	display: inline-block;
   white-space: nowrap;
-  vertical-align: middle;
-	margin-bottom: 2.5rem;
 	padding-top: 2.5rem;
 	position: relative;
+	flex-shrink: 0;
 
 	@include media($bp-md) {
-		display: inline-block;
 		width: auto;
 		margin-bottom: 0;
 	}
@@ -47,27 +49,50 @@
 	vertical-align: middle;
 	position: relative;
 	margin-right: 2.5rem;
+	width: 12.25rem;
+	height: 3.0625rem;
+}
+
+.dept-title {
+	display: inline-block;
+	font-size: 1.35rem;
+	line-height: 1.15;
+	font-family: $dept-font;
+	flex-shrink: 0;
+	margin-bottom: 0;
+	margin-top: $gutter;
+
+	@include media($bp-md) {
+		padding-top: 2.5rem;
+		height: 5.5rem;
+		position: relative;
+		margin-top: 0;
+
+		&:before {
+			content: '';
+			width: 2px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: -$gutter;
+			background-color: $oakland-green;
+		}
+	}
 }
 
 	// Search and Off Canvas menu button
 	// -----------------------------------
 	.header-actions {
-		display: table-cell;
-	  width: 20%;
-	  white-space: nowrap;
-	  vertical-align: bottom;
-		float: none;
-		margin-bottom: 1rem;
-		margin-left: -1.25rem;
-		margin-right: -1.25rem;
+		align-self: center;
 
 		@include media($bp-md) {
 			display: inline-block;
 			vertical-align: middle;
 			float: right;
 			width: auto;
-			margin-bottom: 0;
 			padding-top: 2.5rem;
+			margin-bottom: 0;
+			margin-left: auto; // pushes it to the right inside flex container
 		}
 	}
 
@@ -127,7 +152,6 @@
 
 		@include media($bp-md) {
 			margin-left: 1.25rem;
-			margin-right: 1.25rem;
 			float: none;
 		}
 

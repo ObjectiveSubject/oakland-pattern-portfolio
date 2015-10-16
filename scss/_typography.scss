@@ -4,3 +4,4 @@
 @include font-face("FaktLight", "/fonts/FaktPro/FaktPro-BlondItalic/FaktPro-BlondItalic", normal, italic, $file-formats: eot ttf otf woff);
 @include font-face("Fakt", "/fonts/FaktPro/FaktPro-Medium/FaktPro-Medium", bold, $file-formats: eot ttf otf woff);
 @include font-face("Fakt", "/fonts/FaktPro/FaktPro-MediumItalic/FaktPro-MediumItalic", bold, italic, $file-formats: eot ttf otf woff);
+@include font-face("FaktSlab", "/fonts/FaktPro/FaktSlabPro-Light/FaktSlabPro-Light", $file-formats: eot otf fft woff);

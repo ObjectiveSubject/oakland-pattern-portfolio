@@ -135,7 +135,7 @@
 	});
 
 	function setNavPosition() {
-		var $logo = $('.logo-wrap'),
+		var $logo = $('.site-logo-wrap'),
 			offset = $logo.offset(),
 			logoLeft = offset.left,
 			logoWidth = window.innerWidth < 768 ? '100%' : $logo.outerWidth(),
