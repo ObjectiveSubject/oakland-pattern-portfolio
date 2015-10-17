@@ -24,24 +24,26 @@ The header is a global component that sits at the top of all pages of the Oaklan
 
 {% example html %}
 <div class="header-wrap">
-	<div class="container">
-		<header class="page-header" role="banner">
-			<a href="#" class="logo-wrap">
-				<img class="site-logo" src="{{ site.url }}/img/logo-v2.png" alt="City of Oakland" />
-			</a>
-			<div class="header-actions">
-				<form role="search" class="header-search" method="get" action="">
-					<label>
-						<input type="text" placeholder="How can we help?" title="Search for:">
-					</label>
-					<span class="lnr lnr-magnifier search-icon"></span>
-				</form>
+  <div class="container">
+    <header class="page-header" role="banner">
+      <div class="multi-logo-wrap">
+        <a href="#" class="site-logo-wrap">
+          <img class="site-logo logo-black" src="{{ site.url }}/img/coo-logo-black.svg" onerror="this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;" alt="City of Oakland" />
+        </a>
+      </div>
+      <div class="header-actions">
+        <form role="search" class="header-search" method="get" action="">
+          <label>
+            <input type="text" placeholder="How can we help?" title="Search for:">
+          </label>
+          <span class="lnr lnr-magnifier search-icon"></span>
+        </form>
         <a class="header-nav-button navicon-button x" href="#">
           <div class="navicon"></div>
         </a>
-			</div>
-		</header>
-	</div>
+      </div>
+    </header>
+  </div>
 </div>
 {% endexample %}
 

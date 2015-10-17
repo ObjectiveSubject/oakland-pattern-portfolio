@@ -94,7 +94,14 @@
 
     </main>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+    <script>
+      if ( ! window.jQuery ) {
+        document.write('script src="{{ site.baseurl }}/js/jquery.min.js"><\/script>');
+      }
+    </script>
+    <script src="{{ site.baseurl }}/js/jquery.waypoints.min.js"></script>
     <script src="{{ site.baseurl }}/js/oakland.js"></script>    
     <script src="{{ site.baseurl }}/js/docs.js"></script>
 
