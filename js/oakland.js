@@ -6,8 +6,9 @@
 ( function( $, window, document ) {
 
 	var $menu = $('.section-menu');
+	var $body = $('body');
 
-	if ( $menu.length > 0 ) {
+	if ( $menu.length > 0 && !$body.hasClass('docs') ) {
 
 		var $subnavItem = $('.section-menu .menu-item');
 
@@ -114,6 +115,11 @@
 
 	$hamburger.on('click', function(e) {
 		e.preventDefault();
+		// do nothing for toolkit demos
+		if( $(this).hasClass('demo-button') ) {
+			$(this).toggleClass('open');
+			return;
+		}
 		if ( !navIsOpen ) {
 			openNav();
 		} else {

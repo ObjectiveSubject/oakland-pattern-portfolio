@@ -31,7 +31,7 @@
   <nav role="navigation" class="global-navigation one-fourth">
 
     <div class="site-logo-wrap">
-      <img class="site-logo logo-white" src="/img/logo-v2-white.png" alt="City of Oakland" />
+      <img class="site-logo logo-white" src="/img/coo-logo-white.svg" alt="City of Oakland" />
       <a class="header-nav-button navicon-button x open" href="#">
         <div class="navicon"></div>
       </a>
@@ -196,15 +196,30 @@
 
 <ul id="markdown-toc">
   <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
-  <li><a href="#header" id="markdown-toc-header">Header</a></li>
+  <li><a href="#header" id="markdown-toc-header">Header</a>    <ul>
+      <li><a href="#logo" id="markdown-toc-logo">Logo</a></li>
+      <li><a href="#department-title--multi-logo-wrap" id="markdown-toc-department-title--multi-logo-wrap">Department title &amp; .multi-logo-wrap</a></li>
+      <li><a href="#header-actions" id="markdown-toc-header-actions">Header actions</a></li>
+      <li><a href="#sticky-header" id="markdown-toc-sticky-header">Sticky header</a></li>
+    </ul>
+  </li>
   <li><a href="#footer" id="markdown-toc-footer">Footer</a></li>
   <li><a href="#menus" id="markdown-toc-menus">Menus</a>    <ul>
-      <li><a href="#menu-item-with-span" id="markdown-toc-menu-item-with-span">Menu item with span</a></li>
+      <li><a href="#menu-list" id="markdown-toc-menu-list">Menu list</a></li>
+      <li><a href="#menu-items-with-added-text" id="markdown-toc-menu-items-with-added-text">Menu items with added text</a></li>
       <li><a href="#section-menu" id="markdown-toc-section-menu">Section menu</a></li>
       <li><a href="#big-menu-items" id="markdown-toc-big-menu-items">Big menu items</a></li>
     </ul>
   </li>
-  <li><a href="#breadcrumbs" id="markdown-toc-breadcrumbs">Breadcrumbs</a></li>
+  <li><a href="#global-sidebar-nav" id="markdown-toc-global-sidebar-nav">Global sidebar nav</a></li>
+  <li><a href="#subheaders" id="markdown-toc-subheaders">Subheaders</a>    <ul>
+      <li><a href="#subheader-with-hero-image" id="markdown-toc-subheader-with-hero-image">Subheader with hero image</a></li>
+    </ul>
+  </li>
+  <li><a href="#breadcrumbs" id="markdown-toc-breadcrumbs">Breadcrumbs</a>    <ul>
+      <li><a href="#breadcrumb-wrap" id="markdown-toc-breadcrumb-wrap">Breadcrumb wrap</a></li>
+    </ul>
+  </li>
   <li><a href="#prevnext-links" id="markdown-toc-prevnext-links">Prev/Next Links</a></li>
   <li><a href="#post-excerpts" id="markdown-toc-post-excerpts">Post excerpts</a>    <ul>
       <li><a href="#excerpts-with-images--grid" id="markdown-toc-excerpts-with-images--grid">Excerpts with images + grid</a></li>
@@ -219,45 +234,116 @@
 <p>The header is a global component that sits at the top of all pages of the Oakland site. It contains the city logo, search bar, and menu icon. It can also contain a department logo on a department page.</p>
 
 <div class="docs-example clearfix"><div class="header-wrap">
-	<div class="container">
-		<header class="page-header" role="banner">
-			<a href="#" class="logo-wrap">
-				<img class="site-logo" src="/img/logo-v2.png" alt="City of Oakland" />
-			</a>
-			<div class="header-actions">
-				<form role="search" class="header-search" method="get" action="">
-					<label>
-						<input type="text" placeholder="How can we help?" title="Search for:" />
-					</label>
-					<span class="lnr lnr-magnifier search-icon"></span>
-				</form>
-        <a class="header-nav-button navicon-button x" href="#">
+  <div class="container">
+    <header class="page-header" role="banner">
+      <div class="multi-logo-wrap">
+        <a href="#" class="site-logo-wrap">
+          <img class="site-logo logo-black" src="/img/coo-logo-black.svg" onerror="this.src='/img/coo-logo-black.png'; this.onerror=null;" alt="City of Oakland" />
+        </a>
+      </div>
+      <div class="header-actions">
+        <form role="search" class="header-search" method="get" action="">
+          <label>
+            <input type="text" placeholder="How can we help?" title="Search for:" />
+          </label>
+          <span class="lnr lnr-magnifier search-icon"></span>
+        </form>
+        <a class="header-nav-button navicon-button x demo-button" href="#">
           <div class="navicon"></div>
         </a>
-			</div>
-		</header>
-	</div>
+      </div>
+    </header>
+  </div>
 </div></div>
 <div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"header-wrap"</span><span class="nt">&gt;</span>
-	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-		<span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"page-header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
-			<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"logo-wrap"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"site-logo"</span> <span class="na">src=</span><span class="s">"/img/logo-v2.png"</span> <span class="na">alt=</span><span class="s">"City of Oakland"</span> <span class="nt">/&gt;</span>
-			<span class="nt">&lt;/a&gt;</span>
-			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"header-actions"</span><span class="nt">&gt;</span>
-				<span class="nt">&lt;form</span> <span class="na">role=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"header-search"</span> <span class="na">method=</span><span class="s">"get"</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
-					<span class="nt">&lt;label&gt;</span>
-						<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"How can we help?"</span> <span class="na">title=</span><span class="s">"Search for:"</span><span class="nt">&gt;</span>
-					<span class="nt">&lt;/label&gt;</span>
-					<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-magnifier search-icon"</span><span class="nt">&gt;&lt;/span&gt;</span>
-				<span class="nt">&lt;/form&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"header-nav-button navicon-button x"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"page-header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"multi-logo-wrap"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"site-logo-wrap"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"site-logo logo-black"</span> <span class="na">src=</span><span class="s">"/img/coo-logo-black.svg"</span> <span class="na">onerror=</span><span class="s">"this.src='/img/coo-logo-black.png'; this.onerror=null;"</span> <span class="na">alt=</span><span class="s">"City of Oakland"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"header-actions"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;form</span> <span class="na">role=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"header-search"</span> <span class="na">method=</span><span class="s">"get"</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;label&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"How can we help?"</span> <span class="na">title=</span><span class="s">"Search for:"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;/label&gt;</span>
+          <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-magnifier search-icon"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;/form&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"header-nav-button navicon-button x demo-button"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
           <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navicon"</span><span class="nt">&gt;&lt;/div&gt;</span>
         <span class="nt">&lt;/a&gt;</span>
-			<span class="nt">&lt;/div&gt;</span>
-		<span class="nt">&lt;/header&gt;</span>
-	<span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="logo">Logo</h3>
+
+<p>The site logo is comprised of an SVG wordmark with a PNG fallback for older browsers. The green bar is created with a :before pseudo element on the parent <code>.page-header</code>.</p>
+
+<div class="docs-example clearfix"><header class="page-header" role="banner">
+	<div class="multi-logo-wrap">
+		<a href="#" class="site-logo-wrap">
+			<img src="/img/coo-logo-black.svg" alt="City of Oakland" class="site-logo logo-black" onerror="this.src='/img/coo-logo-black.png'; this.onerror=null;" />
+		</a>
+	</div>
+</header></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"page-header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"multi-logo-wrap"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"site-logo-wrap"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/img/coo-logo-black.svg"</span> <span class="na">alt=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"site-logo logo-black"</span> <span class="na">onerror=</span><span class="s">"this.src='/img/coo-logo-black.png'; this.onerror=null;"</span> <span class="na">alt=</span><span class="s">"City of Oakland"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;/a&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span></code></pre></div>
+
+<h3 id="department-title--multi-logo-wrap">Department title &amp; .multi-logo-wrap</h3>
+
+<p>The site logo is nested inside a div named <code>.multi-logo-wrap</code>. This gives us better control over responsive positioning in cases where we have the site logo in addition to a department title.</p>
+
+<div class="docs-example clearfix"><header class="page-header" role="banner">
+	<div class="multi-logo-wrap">
+		<a href="#" class="site-logo-wrap">
+			<img src="/img/coo-logo-black.svg" alt="City of Oakland" class="site-logo logo-black" onerror="this.src='/img/coo-logo-black.png'; this.onerror=null;" />
+		</a>
+		<h1 class="dept-title">Public<br />Works</h1>
+	</div>
+</header></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"page-header"</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"multi-logo-wrap"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"site-logo-wrap"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"/img/coo-logo-black.svg"</span> <span class="na">alt=</span><span class="s">""</span> <span class="na">class=</span><span class="s">"site-logo logo-black"</span> <span class="na">onerror=</span><span class="s">"this.src='/img/coo-logo-black.png'; this.onerror=null;"</span> <span class="na">alt=</span><span class="s">"City of Oakland"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;/a&gt;</span>
+		<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"dept-title"</span><span class="nt">&gt;</span>Public<span class="nt">&lt;br&gt;</span>Works<span class="nt">&lt;/h1&gt;</span>
+	<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/header&gt;</span></code></pre></div>
+
+<p><strong>Note that there is a hard line break in the <code>.dept-title</code>. This allows us to curate the look of the title without relying on the natural width.</strong></p>
+
+<h3 id="header-actions">Header actions</h3>
+
+<p>This component sits to the right of the header and contains the search bar and side nav menu icon. The search bar will be hidden on small screens and moved to the side nav menu. The menu icon is created using CSS transforms so it will animate from a hamburger to an X on click.</p>
+
+<div class="docs-example clearfix"><div class="header-actions">
+  <form role="search" class="header-search" method="get" action="">
+    <input type="text" placeholder="How can we help?" title="Search for:" />
+    <span class="lnr lnr-magnifier search-icon"></span>
+  </form>
+  <a class="header-nav-button navicon-button x demo-button" href="#">
+    <div class="navicon"></div>
+  </a>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"header-actions"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;form</span> <span class="na">role=</span><span class="s">"search"</span> <span class="na">class=</span><span class="s">"header-search"</span> <span class="na">method=</span><span class="s">"get"</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"How can we help?"</span> <span class="na">title=</span><span class="s">"Search for:"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-magnifier search-icon"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/form&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"header-nav-button navicon-button x demo-button"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"navicon"</span><span class="nt">&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="sticky-header">Sticky header</h3>
 
 <p>The header is ‘sticky’ on medium to large screens. This means it will stay affixed to the top of the page as the user scrolls.</p>
 
@@ -331,7 +417,7 @@
         <a href="#"><small>Terms of Use</small></a>
       </div>
       <a href="#" class="logo-wrap">
-        <img class="site-logo" src="/img/logo-v2.png" alt="City of Oakland" />
+        <img class="site-logo" src="/img/coo-logo-black.svg" onerror="this.src='/img/coo-logo-black.png'; this.onerror=null;" alt="City of Oakland" />
       </a>
     </div>
   </div>
@@ -385,7 +471,7 @@
         <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;small&gt;</span>Terms of Use<span class="nt">&lt;/small&gt;&lt;/a&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
       <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"logo-wrap"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"site-logo"</span> <span class="na">src=</span><span class="s">"/img/logo-v2.png"</span> <span class="na">alt=</span><span class="s">"City of Oakland"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"site-logo"</span> <span class="na">src=</span><span class="s">"/img/coo-logo-black.svg"</span> <span class="na">onerror=</span><span class="s">"this.src='/img/coo-logo-black.png'; this.onerror=null;"</span> <span class="na">alt=</span><span class="s">"City of Oakland"</span> <span class="nt">/&gt;</span>
       <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
@@ -395,7 +481,11 @@
 
 <h2 id="menus">Menus</h2>
 
-<!-- A menu is a vertical list of navigational links. **A menu's width and placement must be set by you.** If you like, just use our grid columns as a parent and manually place menus in their own columns. Otherwise, apply a custom `width`. -->
+<p>The design system has several different styles for in-page menus. These lists of links are more prominent than regular <code>&lt;ul&gt;</code>s with custom hover styles that mirror the left green bar of the logo.</p>
+
+<p>The menus come in several different sizes and flavors.</p>
+
+<h3 id="menu-list">Menu list</h3>
 
 <div class="docs-example clearfix"><div class="container">
   <div class="grid-row">
@@ -446,12 +536,24 @@
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<h3 id="menu-item-with-span">Menu item with span</h3>
+<h3 id="menu-items-with-added-text">Menu items with added text</h3>
 
 <p>You can also include a secondary bit of text in a menu item by wrapping it in a <code>&lt;span&gt;</code>. This will give it the global body text color and place it on its own line.</p>
 
 <div class="docs-example clearfix"><div class="container">
   <div class="grid-row">
+    <div class="one-third">
+      <a href="#" class="menu-item">
+        A menu item
+        <span>With some extra text</span>
+      </a>
+    </div>
+    <div class="one-third">
+      <a href="#" class="menu-item">
+        A menu item
+        <span>With some extra text</span>
+      </a>
+    </div>
     <div class="one-third">
       <a href="#" class="menu-item">
         A menu item
@@ -468,37 +570,28 @@
         <span class="nt">&lt;span&gt;</span>With some extra text<span class="nt">&lt;/span&gt;</span>
       <span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"menu-item"</span><span class="nt">&gt;</span>
+        A menu item
+        <span class="nt">&lt;span&gt;</span>With some extra text<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"menu-item"</span><span class="nt">&gt;</span>
+        A menu item
+        <span class="nt">&lt;span&gt;</span>With some extra text<span class="nt">&lt;/span&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <h3 id="section-menu">Section menu</h3>
 
-<p>There is a variant of the menu that is used as the main section navigation that lives in the header of the various sections of the site.</p>
+<p>There is a variant of the menu that is used as the main section navigation that lives in the subheader of a page.</p>
 
-<div class="docs-example clearfix"><h3>Default Color Example</h3>
-<div class="docs-bg">
-  <div class="grid-row">
-    <nav class="section-menu one-fourth">
-      <a class="menu-item" href="#">Account</a>
-      <a class="menu-item" href="#">Profile</a>
-      <a class="menu-item" href="#">Emails</a>
-      <a class="menu-item" href="#">Notifications</a>
-    </nav>
-  </div>
-</div>
-<h3>Transportation Color Example</h3>
-<div class="docs-bg transportation">
-  <div class="grid-row">
-    <nav class="section-menu one-fourth">
-      <a class="menu-item" href="#">Account</a>
-      <a class="menu-item" href="#">Profile</a>
-      <a class="menu-item" href="#">Emails</a>
-      <a class="menu-item" href="#">Notifications</a>
-    </nav>
-  </div>
-</div>
-<h3>Public Works Color Example</h3>
-<div class="docs-bg public-works">
+<p>The JavaScript (if enabled) associated with these links looks for corresponding sections on the page with an id of <code>#section-(integer)</code> and a class <code>.section</code>.</p>
+
+<div class="docs-example clearfix"><div class="docs-bg">
   <div class="grid-row">
     <nav class="section-menu one-fourth">
       <a class="menu-item" href="#">Account</a>
@@ -508,30 +601,7 @@
     </nav>
   </div>
 </div></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3&gt;</span>Default Color Example<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"docs-bg"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"section-menu one-fourth"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Emails<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Notifications<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/nav&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;h3&gt;</span>Transportation Color Example<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"docs-bg transportation"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"section-menu one-fourth"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Emails<span class="nt">&lt;/a&gt;</span>
-      <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Notifications<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/nav&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;h3&gt;</span>Public Works Color Example<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"docs-bg public-works"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"docs-bg"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"section-menu one-fourth"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/a&gt;</span>
@@ -541,6 +611,8 @@
     <span class="nt">&lt;/nav&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<p><strong>See the docs for <a href="#subheaders">subheaders</a> for more info.</strong></p>
 
 <h3 id="big-menu-items">Big menu items</h3>
 
@@ -685,6 +757,102 @@
 
 <hr />
 
+<h2 id="global-sidebar-nav">Global sidebar nav</h2>
+
+<p>The global sidebar nav is intended for secondary navigation links rather than the full extent of the sitemap. It is displayed/hidden using the <code>.header-nav-button</code> icon an its width and position are determined by JavaScript.</p>
+
+<p>If JS is disabled, the menu icon will simply become a link. For this reason, the href value should be an anchor point that corresponds to a section of the footer that replicates these secondary links.</p>
+
+<p>It’s hard to replicate the sidebar nav in this docs page, so take a look at it on <a href="/home/">one of the templates</a>.</p>
+
+<hr />
+
+<h2 id="subheaders">Subheaders</h2>
+
+<p>Pages can have sections called <code>.subheaders</code> that provide some extra information if needed. Typically, they will describe a page with lots of info and include a subnav of the various sections of the page.</p>
+
+<p>See the <a href="/parks/">Parks and Rec Template</a> for a live example.</p>
+
+<p>The bg-color will default to <code>$oakland-green</code> unless the page has been given a body class that corresponds with a department color scheme.</p>
+
+<div class="docs-example clearfix"><div class="public-works">
+	<section class="subheader">
+		<div class="container">
+			<div class="grid-row">
+			  <div class="section-info two-thirds column-shift">
+			  	<h1>Subheader example with .public-works color</h1>
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae maxime, accusantium praesentium illo quos rem culpa sunt repellendus commodi vero</p>
+			  </div>
+			  <nav class="section-menu one-fourth">
+			    <a class="menu-item" href="#">Account</a>
+			    <a class="menu-item" href="#">Profile</a>
+			    <a class="menu-item" href="#">Emails</a>
+			    <a class="menu-item" href="#">Notifications</a>
+			  </nav>
+			</div>
+		</div>
+	</section>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"public-works"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"subheader"</span><span class="nt">&gt;</span>
+		<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+			<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+			  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section-info two-thirds column-shift"</span><span class="nt">&gt;</span>
+			  	<span class="nt">&lt;h1&gt;</span>Subheader example with .public-works color<span class="nt">&lt;/h1&gt;</span>
+			  	<span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae maxime, accusantium praesentium illo quos rem culpa sunt repellendus commodi vero<span class="nt">&lt;/p&gt;</span>
+			  <span class="nt">&lt;/div&gt;</span>
+			  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"section-menu one-fourth"</span><span class="nt">&gt;</span>
+			    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Account<span class="nt">&lt;/a&gt;</span>
+			    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;</span>
+			    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Emails<span class="nt">&lt;/a&gt;</span>
+			    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Notifications<span class="nt">&lt;/a&gt;</span>
+			  <span class="nt">&lt;/nav&gt;</span>
+			<span class="nt">&lt;/div&gt;</span>
+		<span class="nt">&lt;/div&gt;</span>
+	<span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h3 id="subheader-with-hero-image">Subheader with hero image</h3>
+
+<p>The subheader on the home page can have a background-image. This is currrently added with inline CSS.</p>
+
+<p>See the <a href="/home/">Home Template</a> for a live example.</p>
+
+<div class="docs-example clearfix"><section class="subheader" style="background-image: url(/img/hero-1.jpg);">
+  <div class="container">
+    <div class="grid-row">
+      <div class="section-info two-thirds">
+        <h1>Welcome to Oakland, California</h1>
+        <p>The best place to find information and services from the City of Oakland.</p>
+      </div>
+      <nav class="section-menu one-third">
+        <a class="menu-item" href="#section-1">Services</a>
+        <a class="menu-item" href="#section-2">City News</a>
+        <a class="menu-item" href="#section-3">Departments</a>
+        <a class="menu-item" href="#section-4">Mayor</a>
+      </nav>
+    </div>
+  </div>
+</section></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"subheader"</span> <span class="na">style=</span><span class="s">"background-image: url(/img/hero-1.jpg);"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid-row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section-info two-thirds"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h1&gt;</span>Welcome to Oakland, California<span class="nt">&lt;/h1&gt;</span>
+        <span class="nt">&lt;p&gt;</span>The best place to find information and services from the City of Oakland.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"section-menu one-third"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#section-1"</span><span class="nt">&gt;</span>Services<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#section-2"</span><span class="nt">&gt;</span>City News<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#section-3"</span><span class="nt">&gt;</span>Departments<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"menu-item"</span> <span class="na">href=</span><span class="s">"#section-4"</span><span class="nt">&gt;</span>Mayor<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;/nav&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/section&gt;</span></code></pre></div>
+
+<hr />
+
 <h2 id="breadcrumbs">Breadcrumbs</h2>
 
 <p>Place these at the top of interior pages to help orient the user and give them easy access to previous pages.</p>
@@ -706,7 +874,9 @@
 <span class="nt">&lt;/nav&gt;</span>
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
-<p>If placed in the regular page flow, the above example will just work. If on the other hand, you need to place the breadcrumbs inside the <code>.subheader</code>, you can wrap it in a div with class <code>.breadcrumb-wrap</code>. This acts as the container and will position it absolutely to the top of its parent.</p>
+<h3 id="breadcrumb-wrap">Breadcrumb wrap</h3>
+
+<p>If placed in the regular page flow, the above example will just work. If on the other hand, you need to place the breadcrumbs inside the <a href="#subheader"><code>.subheader</code></a>, you can wrap it in a div with class <code>.breadcrumb-wrap</code>. This acts as the container and will position it absolutely to the top of its parent.</p>
 
 <div class="docs-example clearfix"><div class="transportation">
 <div class="subheader" style="height: 100px;">
@@ -737,40 +907,7 @@
 
 <h2 id="prevnext-links">Prev/Next Links</h2>
 
-<div class="docs-example clearfix"><h3>Default Color Example</h3>
-<footer class="content-footer pager-footer">
-  <div class="previous-next-links container clearfix">
-    <a class="prev-link" href="#">
-      <span class="lnr lnr-arrow-left"></span>
-      <span class="prev-next-text">Back to previous page</span>
-      <br />
-      <small class="prev-next-small">Name of the Page</small>
-    </a>
-    <a class="next-link" href="#">
-      <span class="prev-next-text">Forward to next page</span>
-      <span class="lnr lnr-arrow-right"></span>
-      <br />
-      <small class="prev-next-small">Name of the Page</small>
-    </a>  </div>
-</footer>
-<h3>Transportation Color Example</h3>
-<footer class="content-footer pager-footer transportation">
-  <div class="previous-next-links container clearfix">
-    <a class="prev-link" href="#">
-      <span class="lnr lnr-arrow-left"></span>
-      <span class="prev-next-text">Back to previous page</span>
-      <br />
-      <small class="prev-next-small">Name of the Page</small>
-    </a>
-    <a class="next-link" href="#">
-      <span class="prev-next-text">Forward to next page</span>
-      <span class="lnr lnr-arrow-right"></span>
-      <br />
-      <small class="prev-next-small">Name of the Page</small>
-    </a>  </div>
-</footer>
-<h3>Public Works Color Example</h3>
-<footer class="content-footer pager-footer public-works">
+<div class="docs-example clearfix"><footer class="content-footer pager-footer">
   <div class="previous-next-links container clearfix">
     <a class="prev-link" href="#">
       <span class="lnr lnr-arrow-left"></span>
@@ -786,40 +923,7 @@
     </a>
   </div>
 </footer></div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3&gt;</span>Default Color Example<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"content-footer pager-footer"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"previous-next-links container clearfix"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"prev-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-arrow-left"</span><span class="nt">&gt;&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"prev-next-text"</span><span class="nt">&gt;</span>Back to previous page<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;br&gt;</span>
-      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"prev-next-small"</span><span class="nt">&gt;</span>Name of the Page<span class="nt">&lt;/small&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"next-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"prev-next-text"</span><span class="nt">&gt;</span>Forward to next page<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-arrow-right"</span><span class="nt">&gt;&lt;/span&gt;</span>
-      <span class="nt">&lt;br&gt;</span>
-      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"prev-next-small"</span><span class="nt">&gt;</span>Name of the Page<span class="nt">&lt;/small&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/footer&gt;</span>
-<span class="nt">&lt;h3&gt;</span>Transportation Color Example<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"content-footer pager-footer transportation"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"previous-next-links container clearfix"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"prev-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-arrow-left"</span><span class="nt">&gt;&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"prev-next-text"</span><span class="nt">&gt;</span>Back to previous page<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;br&gt;</span>
-      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"prev-next-small"</span><span class="nt">&gt;</span>Name of the Page<span class="nt">&lt;/small&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"next-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"prev-next-text"</span><span class="nt">&gt;</span>Forward to next page<span class="nt">&lt;/span&gt;</span>
-      <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-arrow-right"</span><span class="nt">&gt;&lt;/span&gt;</span>
-      <span class="nt">&lt;br&gt;</span>
-      <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"prev-next-small"</span><span class="nt">&gt;</span>Name of the Page<span class="nt">&lt;/small&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>  <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/footer&gt;</span>
-<span class="nt">&lt;h3&gt;</span>Public Works Color Example<span class="nt">&lt;/h3&gt;</span>
-<span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"content-footer pager-footer public-works"</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"content-footer pager-footer"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"previous-next-links container clearfix"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"prev-link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
       <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lnr lnr-arrow-left"</span><span class="nt">&gt;&lt;/span&gt;</span>
@@ -948,7 +1052,14 @@
 
     </main>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script src="/js/jquery.min.js"></script>
+    <script>
+      if ( ! window.jQuery ) {
+        document.write('script src="/js/jquery.min.js"><\/script>');
+      }
+    </script>
+    <script src="/js/jquery.waypoints.min.js"></script>
     <script src="/js/oakland.js"></script>    
     <script src="/js/docs.js"></script>
 
