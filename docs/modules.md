@@ -28,7 +28,7 @@ The header is a global component that sits at the top of all pages of the Oaklan
     <header class="page-header" role="banner">
       <div class="multi-logo-wrap">
         <a href="#" class="site-logo-wrap">
-          <img class="site-logo logo-black" src="{{ site.url }}/img/coo-logo-black.svg" onerror="this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;" alt="City of Oakland" />
+          <img class="site-logo logo-black" src="{{ site.url }}/img/coo-logo-black.svg" onerror="this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;" alt="City of Oakland">
         </a>
       </div>
       <div class="header-actions">
@@ -38,7 +38,7 @@ The header is a global component that sits at the top of all pages of the Oaklan
           </label>
           <span class="lnr lnr-magnifier search-icon"></span>
         </form>
-        <a class="header-nav-button navicon-button x" href="#">
+        <a class="header-nav-button navicon-button x demo-button" href="#">
           <div class="navicon"></div>
         </a>
       </div>
@@ -46,6 +46,54 @@ The header is a global component that sits at the top of all pages of the Oaklan
   </div>
 </div>
 {% endexample %}
+
+### Logo
+
+The site logo is comprised of an SVG wordmark with a PNG fallback for older browsers. The green bar is created with a :before pseudo element on the parent `.page-header`.
+
+{% example html %}
+<header class="page-header" role="banner">
+	<div class="multi-logo-wrap">
+		<a href="#" class="site-logo-wrap">
+			<img src="{{ site.url }}/img/coo-logo-black.svg" alt="" class="site-logo logo-black" onerror="this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;" alt="City of Oakland">
+		</a>
+	</div>
+</header>
+{% endexample %}
+
+### Department title & .multi-logo-wrap
+
+The site logo is nested inside a div named `.multi-logo-wrap`. This gives us better control over responsive positioning in cases where we have the site logo in addition to a department title.
+
+{% example html %}
+<header class="page-header" role="banner">
+	<div class="multi-logo-wrap">
+		<a href="#" class="site-logo-wrap">
+			<img src="{{ site.url }}/img/coo-logo-black.svg" alt="" class="site-logo logo-black" onerror="this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;" alt="City of Oakland">
+		</a>
+		<h1 class="dept-title">Public<br>Works</h1>
+	</div>
+</header>{% endexample %}
+
+**Note that there is a hard line break in the `.dept-title`. This allows us to curate the look of the title without relying on the natural width.**
+
+### Header actions
+
+This component sits to the right of the header and contains the search bar and side nav menu icon. The search bar will be hidden on small screens and moved to the side nav menu. The menu icon is created using CSS transforms so it will animate from a hamburger to an X on click.
+
+{% example html %}
+<div class="header-actions">
+  <form role="search" class="header-search" method="get" action="">
+    <input type="text" placeholder="How can we help?" title="Search for:">
+    <span class="lnr lnr-magnifier search-icon"></span>
+  </form>
+  <a class="header-nav-button navicon-button x demo-button" href="#">
+    <div class="navicon"></div>
+  </a>
+</div>
+{% endexample %}
+
+### Sticky header
 
 The header is 'sticky' on medium to large screens. This means it will stay affixed to the top of the page as the user scrolls.
 
@@ -117,7 +165,7 @@ The Footer is standard across all pages
         <a href="#"><small>Terms of Use</small></a>
       </div>
       <a href="#" class="logo-wrap">
-        <img class="site-logo" src="{{ site.url }}/img/logo-v2.png" alt="City of Oakland" />
+        <img class="site-logo" src="{{ site.url }}/img/coo-logo-black.svg" onerror="this.src='{{ site.url }}/img/coo-logo-black.png'; this.onerror=null;" alt="City of Oakland" />
       </a>
     </div>
   </div>
@@ -128,7 +176,11 @@ The Footer is standard across all pages
 
 ## Menus
 
-<!-- A menu is a vertical list of navigational links. **A menu's width and placement must be set by you.** If you like, just use our grid columns as a parent and manually place menus in their own columns. Otherwise, apply a custom `width`. -->
+The design system has several different styles for in-page menus. These lists of links are more prominent than regular `<ul>`s with custom hover styles that mirror the left green bar of the logo.
+
+The menus come in several different sizes and flavors.
+
+### Menu list
 
 {% example html %}
 <div class="container">
@@ -157,7 +209,7 @@ The Footer is standard across all pages
 </div>
 {% endexample %}
 
-### Menu item with span
+### Menu items with added text
 
 You can also include a secondary bit of text in a menu item by wrapping it in a `<span>`. This will give it the global body text color and place it on its own line.
 
@@ -170,17 +222,29 @@ You can also include a secondary bit of text in a menu item by wrapping it in a 
         <span>With some extra text</span>
       </a>
     </div>
+    <div class="one-third">
+      <a href="#" class="menu-item">
+        A menu item
+        <span>With some extra text</span>
+      </a>
+    </div>
+    <div class="one-third">
+      <a href="#" class="menu-item">
+        A menu item
+        <span>With some extra text</span>
+      </a>
+    </div>
   </div>
 </div>
 {% endexample %}
 
 ### Section menu
 
-There is a variant of the menu that is used as the main section navigation that lives in the header of the various sections of the site.
+There is a variant of the menu that is used as the main section navigation that lives in the subheader of a page.
 
+The JavaScript (if enabled) associated with these links looks for corresponding sections on the page with an id of `#section-(integer)` and a class `.section`.
 
 {% example html %}
-<h3>Default Color Example</h3>
 <div class="docs-bg">
   <div class="grid-row">
     <nav class="section-menu one-fourth">
@@ -191,29 +255,9 @@ There is a variant of the menu that is used as the main section navigation that 
     </nav>
   </div>
 </div>
-<h3>Transportation Color Example</h3>
-<div class="docs-bg transportation">
-  <div class="grid-row">
-    <nav class="section-menu one-fourth">
-      <a class="menu-item" href="#">Account</a>
-      <a class="menu-item" href="#">Profile</a>
-      <a class="menu-item" href="#">Emails</a>
-      <a class="menu-item" href="#">Notifications</a>
-    </nav>
-  </div>
-</div>
-<h3>Public Works Color Example</h3>
-<div class="docs-bg public-works">
-  <div class="grid-row">
-    <nav class="section-menu one-fourth">
-      <a class="menu-item" href="#">Account</a>
-      <a class="menu-item" href="#">Profile</a>
-      <a class="menu-item" href="#">Emails</a>
-      <a class="menu-item" href="#">Notifications</a>
-    </nav>
-  </div>
-</div>
 {% endexample %}
+
+**See the docs for [subheaders](#subheaders) for more info.**
 
 ### Big menu items
 
@@ -291,6 +335,72 @@ There is a variant of the menu that is used as the main section navigation that 
 
 ---
 
+## Global sidebar nav
+
+The global sidebar nav is intended for secondary navigation links rather than the full extent of the sitemap. It is displayed/hidden using the `.header-nav-button` icon an its width and position are determined by JavaScript.
+
+If JS is disabled, the menu icon will simply become a link. For this reason, the href value should be an anchor point that corresponds to a section of the footer that replicates these secondary links.
+
+It's hard to replicate the sidebar nav in this docs page, so take a look at it on [one of the templates](/home/).
+
+---
+
+## Subheaders
+
+Pages can have sections called `.subheaders` that provide some extra information if needed. Typically, they will describe a page with lots of info and include a subnav of the various sections of the page.
+
+See the [Parks and Rec Template](/parks/) for a live example.
+
+The bg-color will default to `$oakland-green` unless the page has been given a body class that corresponds with a department color scheme.
+
+{% example html %}
+<div class="public-works">
+	<section class="subheader">
+		<div class="container">
+			<div class="grid-row">
+			  <div class="section-info two-thirds column-shift">
+			  	<h1>Subheader example with .public-works color</h1>
+			  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae maxime, accusantium praesentium illo quos rem culpa sunt repellendus commodi vero</p>
+			  </div>
+			  <nav class="section-menu one-fourth">
+			    <a class="menu-item" href="#">Account</a>
+			    <a class="menu-item" href="#">Profile</a>
+			    <a class="menu-item" href="#">Emails</a>
+			    <a class="menu-item" href="#">Notifications</a>
+			  </nav>
+			</div>
+		</div>
+	</section>
+</div>
+{% endexample %}
+
+### Subheader with hero image
+
+The subheader on the home page can have a background-image. This is currrently added with inline CSS.
+
+See the [Home Template](/home/) for a live example.
+
+{% example html %}
+<section class="subheader" style="background-image: url({{ site.url }}/img/hero-1.jpg);">
+  <div class="container">
+    <div class="grid-row">
+      <div class="section-info two-thirds">
+        <h1>Welcome to Oakland, California</h1>
+        <p>The best place to find information and services from the City of Oakland.</p>
+      </div>
+      <nav class="section-menu one-third">
+        <a class="menu-item" href="#section-1">Services</a>
+        <a class="menu-item" href="#section-2">City News</a>
+        <a class="menu-item" href="#section-3">Departments</a>
+        <a class="menu-item" href="#section-4">Mayor</a>
+      </nav>
+    </div>
+  </div>
+</section>
+{% endexample %}
+
+---
+
 ## Breadcrumbs
 
 Place these at the top of interior pages to help orient the user and give them easy access to previous pages.
@@ -306,7 +416,9 @@ Place these at the top of interior pages to help orient the user and give them e
 </div>
 {% endexample %}
 
-If placed in the regular page flow, the above example will just work. If on the other hand, you need to place the breadcrumbs inside the `.subheader`, you can wrap it in a div with class `.breadcrumb-wrap`. This acts as the container and will position it absolutely to the top of its parent.
+### Breadcrumb wrap
+
+If placed in the regular page flow, the above example will just work. If on the other hand, you need to place the breadcrumbs inside the [`.subheader`](#subheader), you can wrap it in a div with class `.breadcrumb-wrap`. This acts as the container and will position it absolutely to the top of its parent.
 
 {% example html %}
 <div class="transportation">
@@ -328,40 +440,7 @@ If placed in the regular page flow, the above example will just work. If on the 
 ## Prev/Next Links
 
 {% example html %}
-<h3>Default Color Example</h3>
 <footer class="content-footer pager-footer">
-  <div class="previous-next-links container clearfix">
-    <a class="prev-link" href="#">
-      <span class="lnr lnr-arrow-left"></span>
-      <span class="prev-next-text">Back to previous page</span>
-      <br>
-      <small class="prev-next-small">Name of the Page</small>
-    </a>
-    <a class="next-link" href="#">
-      <span class="prev-next-text">Forward to next page</span>
-      <span class="lnr lnr-arrow-right"></span>
-      <br>
-      <small class="prev-next-small">Name of the Page</small>
-    </a>  </div>
-</footer>
-<h3>Transportation Color Example</h3>
-<footer class="content-footer pager-footer transportation">
-  <div class="previous-next-links container clearfix">
-    <a class="prev-link" href="#">
-      <span class="lnr lnr-arrow-left"></span>
-      <span class="prev-next-text">Back to previous page</span>
-      <br>
-      <small class="prev-next-small">Name of the Page</small>
-    </a>
-    <a class="next-link" href="#">
-      <span class="prev-next-text">Forward to next page</span>
-      <span class="lnr lnr-arrow-right"></span>
-      <br>
-      <small class="prev-next-small">Name of the Page</small>
-    </a>  </div>
-</footer>
-<h3>Public Works Color Example</h3>
-<footer class="content-footer pager-footer public-works">
   <div class="previous-next-links container clearfix">
     <a class="prev-link" href="#">
       <span class="lnr lnr-arrow-left"></span>

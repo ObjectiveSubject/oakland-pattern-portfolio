@@ -675,4 +675,11 @@ form {
       background: $color;
     }
   }
+
+  .section-menu .menu-item:hover {
+    &:before {
+      display: block !important;
+      background-color: $white;
+    }
+  }
 }

@@ -159,4 +159,28 @@
 	table tr:nth-child(2n) {
 		background: none;
 	}
+
+	// Example navicon
+  .navicon {
+    background-color: $oakland-green;
+
+    &:before,
+    &:after {
+      background-color: $oakland-green;
+    }
+  }
+
+  .breadcrumb-wrap .breadcrumbs {
+  	a {
+  		color: $muted;
+
+  		&:after {
+  			color: $white;
+  		}
+  	}
+
+  	span {
+  		color: $white;
+  	}
+  }
 }
