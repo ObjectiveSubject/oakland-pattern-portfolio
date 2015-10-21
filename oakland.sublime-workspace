@@ -523,7 +523,7 @@
 			"file": "docs/alerts.md",
 			"settings":
 			{
-				"buffer_size": 1309,
+				"buffer_size": 1322,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,7 +531,23 @@
 			"file": "docs/buttons.md",
 			"settings":
 			{
-				"buffer_size": 2951,
+				"buffer_size": 3035,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docs/developers.md",
+			"settings":
+			{
+				"buffer_size": 15208,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 2776,
 				"line_ending": "Unix"
 			}
 		},
@@ -539,7 +555,7 @@
 			"file": "docs/color.md",
 			"settings":
 			{
-				"buffer_size": 4434,
+				"buffer_size": 4446,
 				"line_ending": "Unix"
 			}
 		},
@@ -547,7 +563,7 @@
 			"file": "docs/forms.md",
 			"settings":
 			{
-				"buffer_size": 6383,
+				"buffer_size": 6375,
 				"line_ending": "Unix"
 			}
 		},
@@ -555,7 +571,7 @@
 			"file": "docs/modules.md",
 			"settings":
 			{
-				"buffer_size": 15995,
+				"buffer_size": 19495,
 				"line_ending": "Unix"
 			}
 		},
@@ -563,7 +579,15 @@
 			"file": "docs/_includes/header.html",
 			"settings":
 			{
-				"buffer_size": 3580,
+				"buffer_size": 4352,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docs/_layouts/basic.html",
+			"settings":
+			{
+				"buffer_size": 2095,
 				"line_ending": "Unix"
 			}
 		},
@@ -571,7 +595,15 @@
 			"file": "docs/_includes/footer.html",
 			"settings":
 			{
-				"buffer_size": 2933,
+				"buffer_size": 2958,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docs/basic.md",
+			"settings":
+			{
+				"buffer_size": 41,
 				"line_ending": "Unix"
 			}
 		},
@@ -579,7 +611,7 @@
 			"file": "docs/sticky-subnav.md",
 			"settings":
 			{
-				"buffer_size": 1598,
+				"buffer_size": 1618,
 				"line_ending": "Unix"
 			}
 		},
@@ -595,7 +627,23 @@
 			"file": "docs/_includes/sidenav.html",
 			"settings":
 			{
-				"buffer_size": 4612,
+				"buffer_size": 5018,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scss/_header.scss",
+			"settings":
+			{
+				"buffer_size": 3018,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docs/img/toolkit/identity/coo-artwork-text.txt",
+			"settings":
+			{
+				"buffer_size": 3989,
 				"line_ending": "Unix"
 			}
 		},
@@ -608,10 +656,10 @@
 			}
 		},
 		{
-			"file": "docs/visual-identity.md",
+			"file": "docs/_layouts/parks.html",
 			"settings":
 			{
-				"buffer_size": 1281,
+				"buffer_size": 7074,
 				"line_ending": "Unix"
 			}
 		},
@@ -627,7 +675,23 @@
 			"file": "docs/_layouts/default.html",
 			"settings":
 			{
-				"buffer_size": 2946,
+				"buffer_size": 3620,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scss/_icons.scss",
+			"settings":
+			{
+				"buffer_size": 10234,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scss/_variables.scss",
+			"settings":
+			{
+				"buffer_size": 3027,
 				"line_ending": "Unix"
 			}
 		},
@@ -643,7 +707,7 @@
 			"file": "docs/web-typography.md",
 			"settings":
 			{
-				"buffer_size": 7300,
+				"buffer_size": 7310,
 				"line_ending": "Unix"
 			}
 		},
@@ -651,7 +715,7 @@
 			"file": "docs/identity.md",
 			"settings":
 			{
-				"buffer_size": 3184,
+				"buffer_size": 3923,
 				"line_ending": "Unix"
 			}
 		},
@@ -659,7 +723,7 @@
 			"file": "docs/typography.md",
 			"settings":
 			{
-				"buffer_size": 528,
+				"buffer_size": 545,
 				"line_ending": "Unix"
 			}
 		},
@@ -667,7 +731,7 @@
 			"file": "docs/visual-elements.md",
 			"settings":
 			{
-				"buffer_size": 503,
+				"buffer_size": 525,
 				"line_ending": "Unix"
 			}
 		},
@@ -675,7 +739,7 @@
 			"file": "docs/examples.md",
 			"settings":
 			{
-				"buffer_size": 466,
+				"buffer_size": 481,
 				"line_ending": "Unix"
 			}
 		},
@@ -683,7 +747,7 @@
 			"file": "docs/index.md",
 			"settings":
 			{
-				"buffer_size": 956,
+				"buffer_size": 980,
 				"line_ending": "Unix"
 			}
 		},
@@ -691,7 +755,7 @@
 			"file": "docs/js/oakland.js",
 			"settings":
 			{
-				"buffer_size": 5389,
+				"buffer_size": 6253,
 				"line_ending": "Unix"
 			}
 		},
@@ -707,7 +771,7 @@
 			"file": "docs/images.md",
 			"settings":
 			{
-				"buffer_size": 1224,
+				"buffer_size": 2851,
 				"line_ending": "Unix"
 			}
 		},
@@ -715,7 +779,7 @@
 			"file": "docs/docs.scss",
 			"settings":
 			{
-				"buffer_size": 9892,
+				"buffer_size": 10205,
 				"line_ending": "Unix"
 			}
 		},
@@ -723,7 +787,15 @@
 			"file": "docs/css/_docs-overrides.scss",
 			"settings":
 			{
-				"buffer_size": 2005,
+				"buffer_size": 2686,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scss/_text-elements.scss",
+			"settings":
+			{
+				"buffer_size": 2361,
 				"line_ending": "Unix"
 			}
 		},
@@ -736,26 +808,18 @@
 			}
 		},
 		{
-			"file": "scss/_text-elements.scss",
+			"file": "scss/_typography.scss",
 			"settings":
 			{
-				"buffer_size": 1977,
+				"buffer_size": 874,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "docs/pattern-portfolio.md",
+			"file": "scss/_type.scss",
 			"settings":
 			{
-				"buffer_size": 1630,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "scss/_utility.scss",
-			"settings":
-			{
-				"buffer_size": 1142,
+				"buffer_size": 2543,
 				"line_ending": "Unix"
 			}
 		},
@@ -763,15 +827,15 @@
 			"file": "scss/_navigation.scss",
 			"settings":
 			{
-				"buffer_size": 2437,
+				"buffer_size": 2550,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "scss/_icons.scss",
+			"file": "docs/js/docs.js",
 			"settings":
 			{
-				"buffer_size": 10267,
+				"buffer_size": 858,
 				"line_ending": "Unix"
 			}
 		},
@@ -795,31 +859,7 @@
 			"file": "docs/layout.md",
 			"settings":
 			{
-				"buffer_size": 5274,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "docs/developers.md",
-			"settings":
-			{
-				"buffer_size": 14236,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".editorconfig",
-			"settings":
-			{
-				"buffer_size": 167,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "scss/_header.scss",
-			"settings":
-			{
-				"buffer_size": 2368,
+				"buffer_size": 5287,
 				"line_ending": "Unix"
 			}
 		},
@@ -827,15 +867,15 @@
 			"file": "scss/_sections.scss",
 			"settings":
 			{
-				"buffer_size": 2213,
+				"buffer_size": 2250,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "scss/_variables.scss",
+			"file": "scss/_links.scss",
 			"settings":
 			{
-				"buffer_size": 2964,
+				"buffer_size": 2112,
 				"line_ending": "Unix"
 			}
 		},
@@ -987,10 +1027,18 @@
 	"expanded_folders":
 	[
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio",
-		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs"
+		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/scss",
+		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/scss/bourbon",
+		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/scss/neat",
+		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/scss/neat/functions"
 	],
 	"file_history":
 	[
+		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/css/_docs-overrides.scss",
+		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/scss/_utility.scss",
+		"/Users/administrator/Downloads/index.html",
+		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/pattern-portfolio.md",
+		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/visual-identity.md",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/icons.md",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/utilities.md",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/scaffolding.md",
@@ -999,16 +1047,13 @@
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/nav.md",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/posts.md",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/_plugins/example.rb",
-		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/pattern-portfolio.md",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/_layouts/default.html",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/home.md",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/index.md",
-		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/visual-identity.md",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/_includes/sidenav.html",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/buttons.md",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/scss/_header.scss",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/scss/_variables.scss",
-		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/css/_docs-overrides.scss",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/_layouts/public-works.html",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/_layouts/home.html",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/_includes/header.html",
@@ -1044,7 +1089,6 @@
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/_layouts/visual-identity.html",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/scss/_normalize.scss",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/css/primer.css",
-		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/scss/_utility.scss",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/docs/sticky-subnav.md",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/_site/js/oakland.js",
 		"/Users/administrator/MOWE/Objective Subject/OAKLAND/oakland-pattern-portfolio/README.md",
@@ -1117,8 +1161,7 @@
 		"/Users/administrator/vvv-5.5/www/worldstrides/htdocs/wp-content/themes/worldstrides/templates/explore.php",
 		"/Users/administrator/vvv-5.5/www/worldstrides/htdocs/wp-content/themes/worldstrides/single-filter-endpoint.php",
 		"/Users/administrator/vvv-5.5/www/worldstrides/htdocs/wp-content/themes/worldstrides/templates/about-leadership.php",
-		"/Users/administrator/vvv-5.5/www/worldstrides/htdocs/wp-content/themes/worldstrides/partials/resources-single-header.php",
-		"/Users/administrator/vvv-5.5/www/worldstrides/htdocs/wp-content/themes/worldstrides/partials/content-blog-travelogue.php"
+		"/Users/administrator/vvv-5.5/www/worldstrides/htdocs/wp-content/themes/worldstrides/partials/resources-single-header.php"
 	],
 	"find":
 	{
@@ -1171,6 +1214,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"global",
+			"subnav",
+			"subheader",
+			"navicon",
+			"px",
+			"logo-wra",
+			"masthead",
 			"centered",
 			"\"container\"",
 			"markdown",
@@ -1291,14 +1341,7 @@
 			"leadership",
 			"$color_background_header",
 			"leader",
-			"transparent-header",
-			"has-featured-image",
-			"font-family",
-			"0.22",
-			"section-content",
-			"\"breadcrumbs\"",
-			".ws-container",
-			"'full'"
+			"transparent-header"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1381,7 +1424,7 @@
 	"groups":
 	[
 		{
-			"selected": 23,
+			"selected": 8,
 			"sheets":
 			[
 				{
@@ -1390,15 +1433,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1309,
+						"buffer_size": 1322,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								584,
-								584
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1412,7 +1455,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 43,
+					"stack_index": 61,
 					"type": "text"
 				},
 				{
@@ -1421,15 +1464,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2951,
+						"buffer_size": 3035,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								34,
-								34
+								2149,
+								2149
 							]
 						],
 						"settings":
@@ -1438,27 +1481,87 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 524.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 48,
+					"stack_index": 41,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "docs/color.md",
+					"file": "docs/developers.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4434,
+						"buffer_size": 15208,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3958,
-								3958
+								11429,
+								11429
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 36,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2776,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1018,
+								1018
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 58.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 39,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "docs/color.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1471,24 +1574,24 @@
 						"translation.y": 1126.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 35,
+					"stack_index": 57,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "docs/forms.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6383,
+						"buffer_size": 6375,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								619,
-								619
+								1001,
+								1001
 							]
 						],
 						"settings":
@@ -1499,27 +1602,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 19,
+					"stack_index": 43,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "docs/modules.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15995,
+						"buffer_size": 19495,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								717,
-								717
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1527,30 +1630,31 @@
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
 							"history_list_is_closing": true,
 							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 20,
+					"stack_index": 51,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "docs/_includes/header.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3580,
+						"buffer_size": 4352,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1915,
-								1915
+								2220,
+								2226
 							]
 						],
 						"settings":
@@ -1561,27 +1665,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 302.0,
+						"translation.y": 370.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 22,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "docs/_includes/footer.html",
+					"buffer": 8,
+					"file": "docs/_layouts/basic.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2933,
+						"buffer_size": 2095,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2162,
-								2162
+								2020,
+								2020
 							]
 						],
 						"settings":
@@ -1591,28 +1695,88 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 2.0,
-						"translation.y": 286.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 18,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "docs/sticky-subnav.md",
+					"buffer": 9,
+					"file": "docs/_includes/footer.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1598,
+						"buffer_size": 2958,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1082,
-								1082
+								1230,
+								1230
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 148.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "docs/basic.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 41,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								41,
+								41
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 32,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "docs/sticky-subnav.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1618,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1626,11 +1790,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 13,
+					"stack_index": 47,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 12,
 					"file": "Gruntfile.js",
 					"semi_transient": false,
 					"settings":
@@ -1658,24 +1822,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 17,
+					"stack_index": 50,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 13,
 					"file": "docs/_includes/sidenav.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4612,
+						"buffer_size": 5018,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3040,
-								3040
+								122,
+								122
 							]
 						],
 						"settings":
@@ -1686,14 +1850,73 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 694.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 22,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 14,
+					"file": "scss/_header.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3018,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2557,
+								2557
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "docs/img/toolkit/identity/coo-artwork-text.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3989,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2392,
+								2392
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 246.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 28,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
 					"file": "docs/_layouts/home.html",
 					"semi_transient": false,
 					"settings":
@@ -1705,8 +1928,8 @@
 						"selection":
 						[
 							[
-								1097,
-								1097
+								827,
+								827
 							]
 						],
 						"settings":
@@ -1716,45 +1939,46 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 169.0,
-						"translation.y": 18.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "docs/visual-identity.md",
+					"buffer": 17,
+					"file": "docs/_layouts/parks.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1281,
+						"buffer_size": 7074,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								854,
-								854
+								343,
+								343
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 27,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 18,
 					"file": "scss/_menu.scss",
 					"semi_transient": false,
 					"settings":
@@ -1781,24 +2005,24 @@
 						"translation.y": 2117.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 47,
+					"stack_index": 63,
 					"type": "text"
 				},
 				{
-					"buffer": 13,
+					"buffer": 19,
 					"file": "docs/_layouts/default.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2946,
+						"buffer_size": 3620,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2130,
-								2130
+								2985,
+								2985
 							]
 						],
 						"settings":
@@ -1810,14 +2034,74 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 397.0,
+						"translation.y": 881.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 28,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 14,
+					"buffer": 20,
+					"file": "scss/_icons.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10234,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								878,
+								878
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 258.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 21,
+					"file": "scss/_variables.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3027,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2129,
+								2129
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 867.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 35,
+					"type": "text"
+				},
+				{
+					"buffer": 22,
 					"file": "docs/parks.md",
 					"semi_transient": false,
 					"settings":
@@ -1842,24 +2126,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 37,
+					"stack_index": 58,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 23,
 					"file": "docs/web-typography.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7300,
+						"buffer_size": 7310,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3448,
-								3448
+								3680,
+								3680
 							]
 						],
 						"settings":
@@ -1869,78 +2153,20 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 988.0,
+						"translation.x": 1.0,
+						"translation.y": 1132.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 38,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 16,
+					"buffer": 24,
 					"file": "docs/identity.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3184,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								288,
-								420
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 33,
-					"type": "text"
-				},
-				{
-					"buffer": 17,
-					"file": "docs/typography.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 528,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								398,
-								528
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 32,
-					"type": "text"
-				},
-				{
-					"buffer": 18,
-					"file": "docs/visual-elements.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 503,
+						"buffer_size": 3923,
 						"regions":
 						{
 						},
@@ -1948,7 +2174,7 @@
 						[
 							[
 								0,
-								503
+								0
 							]
 						],
 						"settings":
@@ -1960,24 +2186,84 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 31,
+					"stack_index": 56,
 					"type": "text"
 				},
 				{
-					"buffer": 19,
+					"buffer": 25,
+					"file": "docs/typography.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 545,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"history_list_is_closing": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 55,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "docs/visual-elements.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 525,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"history_list_is_closing": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 54,
+					"type": "text"
+				},
+				{
+					"buffer": 27,
 					"file": "docs/examples.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 466,
+						"buffer_size": 481,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								408,
-								408
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1989,29 +2275,30 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 30,
+					"stack_index": 53,
 					"type": "text"
 				},
 				{
-					"buffer": 20,
+					"buffer": 28,
 					"file": "docs/index.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 956,
+						"buffer_size": 980,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								247,
-								247
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"history_list_is_closing": true,
 							"syntax": "Packages/Markdown/Markdown.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
@@ -2019,24 +2306,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 29,
+					"stack_index": 52,
 					"type": "text"
 				},
 				{
-					"buffer": 21,
+					"buffer": 29,
 					"file": "docs/js/oakland.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5389,
+						"buffer_size": 6253,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4910,
-								4910
+								1000,
+								1000
 							]
 						],
 						"settings":
@@ -2046,14 +2333,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2316.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 42,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 22,
+					"buffer": 30,
 					"file": "docs/_layouts/page.html",
 					"semi_transient": false,
 					"settings":
@@ -2079,24 +2366,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 14,
+					"stack_index": 48,
 					"type": "text"
 				},
 				{
-					"buffer": 23,
+					"buffer": 31,
 					"file": "docs/images.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1224,
+						"buffer_size": 2851,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								691,
-								691
+								1336,
+								1336
 							]
 						],
 						"settings":
@@ -2105,27 +2392,27 @@
 							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 258.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 42,
 					"type": "text"
 				},
 				{
-					"buffer": 24,
+					"buffer": 32,
 					"file": "docs/docs.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9892,
+						"buffer_size": 10205,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4857,
-								4857
+								9413,
+								9413
 							]
 						],
 						"settings":
@@ -2135,28 +2422,28 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 1.0,
-						"translation.y": 0.0,
+						"translation.x": 0.0,
+						"translation.y": 8626.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 46,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 25,
+					"buffer": 33,
 					"file": "docs/css/_docs-overrides.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2005,
+						"buffer_size": 2686,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1080,
-								1080
+								2317,
+								2317
 							]
 						],
 						"settings":
@@ -2167,14 +2454,44 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 459.0,
+						"translation.y": 1598.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 45,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 34,
+					"file": "scss/_text-elements.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2361,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1609,
+								1609
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 854.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 35,
 					"file": "scss/_layout.scss",
 					"semi_transient": false,
 					"settings":
@@ -2201,30 +2518,30 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 44,
+					"stack_index": 62,
 					"type": "text"
 				}
 			]
 		},
 		{
-			"selected": 13,
+			"selected": 16,
 			"sheets":
 			[
 				{
-					"buffer": 24,
+					"buffer": 32,
 					"file": "docs/docs.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9892,
+						"buffer_size": 10205,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3767,
-								3767
+								3050,
+								3050
 							]
 						],
 						"settings":
@@ -2234,28 +2551,179 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 3.0,
-						"translation.y": 175.0,
+						"translation.x": 0.0,
+						"translation.y": 2571.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 33,
 					"type": "text"
 				},
 				{
-					"buffer": 27,
-					"file": "scss/_text-elements.scss",
+					"buffer": 7,
+					"file": "docs/_includes/header.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1977,
+						"buffer_size": 4352,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1438,
-								1438
+								1598,
+								1598
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 127.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 31,
+					"type": "text"
+				},
+				{
+					"buffer": 24,
+					"file": "docs/identity.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3923,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2768,
+								2768
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 706.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 30,
+					"type": "text"
+				},
+				{
+					"buffer": 26,
+					"file": "docs/visual-elements.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 525,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								525,
+								525
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"history_list_is_closing": true,
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 29,
+					"type": "text"
+				},
+				{
+					"buffer": 36,
+					"file": "scss/_typography.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 874,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								874,
+								874
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"history_list_is_closing": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 329.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 26,
+					"type": "text"
+				},
+				{
+					"buffer": 37,
+					"file": "scss/_type.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2543,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								349,
+								349
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 623.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 27,
+					"type": "text"
+				},
+				{
+					"buffer": 34,
+					"file": "scss/_text-elements.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2361,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1235,
+								1235
 							]
 						],
 						"settings":
@@ -2265,27 +2733,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1056.0,
+						"translation.y": 749.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 34,
+					"stack_index": 17,
 					"type": "text"
 				},
 				{
-					"buffer": 25,
-					"file": "docs/css/_docs-overrides.scss",
+					"buffer": 38,
+					"file": "scss/_navigation.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2005,
+						"buffer_size": 2550,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								535,
-								535
+								565,
+								565
 							]
 						],
 						"settings":
@@ -2299,115 +2767,84 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 28,
-					"file": "docs/pattern-portfolio.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1630,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1379,
-								1379
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 55.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
+					"stack_index": 23,
 					"type": "text"
 				},
 				{
 					"buffer": 29,
-					"file": "scss/_utility.scss",
+					"file": "docs/js/oakland.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1142,
+						"buffer_size": 6253,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								619,
-								619
+								3603,
+								3603
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 183.0,
+						"translation.x": -0.0,
+						"translation.y": 1595.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 24,
 					"type": "text"
 				},
 				{
-					"buffer": 30,
-					"file": "scss/_navigation.scss",
+					"buffer": 39,
+					"file": "docs/js/docs.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2437,
+						"buffer_size": 858,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1495,
-								1495
+								48,
+								48
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 36,
+					"stack_index": 38,
 					"type": "text"
 				},
 				{
-					"buffer": 15,
+					"buffer": 23,
 					"file": "docs/web-typography.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7300,
+						"buffer_size": 7310,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6602,
-								6602
+								0,
+								0
 							]
 						],
 						"settings":
@@ -2421,24 +2858,24 @@
 						"translation.y": 2462.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 15,
+					"stack_index": 49,
 					"type": "text"
 				},
 				{
-					"buffer": 31,
+					"buffer": 20,
 					"file": "scss/_icons.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10267,
+						"buffer_size": 10234,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2025,
-								2025
+								435,
+								435
 							]
 						],
 						"settings":
@@ -2449,14 +2886,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 918.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 25,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 18,
 					"file": "scss/_menu.scss",
 					"semi_transient": false,
 					"settings":
@@ -2483,11 +2920,11 @@
 						"translation.y": 3340.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 46,
 					"type": "text"
 				},
 				{
-					"buffer": 32,
+					"buffer": 40,
 					"file": "scss/_footer.scss",
 					"semi_transient": false,
 					"settings":
@@ -2510,27 +2947,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 629.0,
+						"translation.y": 594.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 20,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 13,
 					"file": "docs/_includes/sidenav.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4612,
+						"buffer_size": 5018,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3281,
-								3281
+								1814,
+								1814
 							]
 						],
 						"settings":
@@ -2540,15 +2977,15 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 452.0,
-						"translation.y": 881.0,
+						"translation.x": 0.0,
+						"translation.y": 14.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 16,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 33,
+					"buffer": 41,
 					"file": "scss/_base.scss",
 					"semi_transient": false,
 					"settings":
@@ -2560,8 +2997,8 @@
 						"selection":
 						[
 							[
-								332,
-								332
+								680,
+								680
 							]
 						],
 						"settings":
@@ -2572,27 +3009,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 294.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 26,
+					"stack_index": 37,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "docs/modules.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15995,
+						"buffer_size": 19495,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3242,
-								3242
+								16060,
+								16060
 							]
 						],
 						"settings":
@@ -2603,14 +3040,45 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1005.0,
+						"translation.y": 5928.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 21,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 26,
+					"buffer": 33,
+					"file": "docs/css/_docs-overrides.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2686,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2317,
+								2317
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"history_list_is_closing": true,
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1748.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 35,
 					"file": "scss/_layout.scss",
 					"semi_transient": false,
 					"settings":
@@ -2622,8 +3090,8 @@
 						"selection":
 						[
 							[
-								746,
-								746
+								636,
+								636
 							]
 						],
 						"settings":
@@ -2637,76 +3105,47 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 34,
 					"type": "text"
 				},
 				{
-					"buffer": 34,
-					"file": "docs/layout.md",
+					"buffer": 16,
+					"file": "docs/_layouts/home.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5274,
+						"buffer_size": 9425,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								386,
-								5274
+								1088,
+								1089
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2239.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 40,
 					"type": "text"
 				},
 				{
-					"buffer": 35,
-					"file": "docs/developers.md",
+					"buffer": 42,
+					"file": "docs/layout.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 14236,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								13579,
-								13579
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 301.0,
-						"translation.y": 6072.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 36,
-					"file": ".editorconfig",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 167,
+						"buffer_size": 5287,
 						"regions":
 						{
 						},
@@ -2720,30 +3159,63 @@
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2239.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 23,
+					"stack_index": 45,
 					"type": "text"
 				},
 				{
-					"buffer": 37,
+					"buffer": 2,
+					"file": "docs/developers.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15208,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/Markdown/Markdown.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 301.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 44,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
 					"file": "scss/_header.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2368,
+						"buffer_size": 3018,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								324,
-								324
+								973,
+								973
 							]
 						],
 						"settings":
@@ -2751,46 +3223,75 @@
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 580.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 21,
+					"type": "text"
+				},
+				{
+					"buffer": 43,
+					"file": "scss/_sections.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2250,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1983,
+								1983
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 1007.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 19,
+					"type": "text"
+				},
+				{
+					"buffer": 44,
+					"file": "scss/_links.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2112,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								720,
+								720
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 24,
+					"stack_index": 15,
 					"type": "text"
 				},
 				{
-					"buffer": 38,
-					"file": "scss/_sections.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2213,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								467,
-								467
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai Bright.tmTheme",
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 6.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 25,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
+					"buffer": 12,
 					"file": "Gruntfile.js",
 					"semi_transient": false,
 					"settings":
@@ -2818,24 +3319,24 @@
 						"translation.y": 799.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 39,
+					"stack_index": 59,
 					"type": "text"
 				},
 				{
-					"buffer": 39,
+					"buffer": 21,
 					"file": "scss/_variables.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2964,
+						"buffer_size": 3027,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1974,
-								1974
+								2613,
+								2613
 							]
 						],
 						"settings":
@@ -2844,14 +3345,14 @@
 							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 433.0,
+						"translation.y": 881.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 41,
+					"stack_index": 18,
 					"type": "text"
 				},
 				{
-					"buffer": 40,
+					"buffer": 45,
 					"file": "scss/_buttons.scss",
 					"semi_transient": false,
 					"settings":
@@ -2875,10 +3376,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 755.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 40,
+					"stack_index": 60,
 					"type": "text"
 				}
 			]
@@ -2886,7 +3387,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -2948,6 +3449,226 @@
 		"selected_items":
 		[
 			[
+				"basic",
+				"docs/_layouts/basic.html"
+			],
+			[
+				"header",
+				"docs/_includes/header.html"
+			],
+			[
+				"home.",
+				"docs/_layouts/home.html"
+			],
+			[
+				"",
+				"scss/_text-elements.scss"
+			],
+			[
+				"_text",
+				"scss/_text-elements.scss"
+			],
+			[
+				"_docs-o",
+				"docs/css/_docs-overrides.scss"
+			],
+			[
+				"web",
+				"docs/web-typography.md"
+			],
+			[
+				"docs.scss",
+				"docs/docs.scss"
+			],
+			[
+				"docs-o",
+				"docs/css/_docs-overrides.scss"
+			],
+			[
+				"oak",
+				"docs/js/oakland.js"
+			],
+			[
+				"parks",
+				"docs/_layouts/parks.html"
+			],
+			[
+				"home",
+				"docs/_layouts/home.html"
+			],
+			[
+				"footer",
+				"docs/_includes/footer.html"
+			],
+			[
+				"mod",
+				"docs/modules.md"
+			],
+			[
+				"_docs",
+				"docs/css/_docs-overrides.scss"
+			],
+			[
+				"_icons",
+				"scss/_icons.scss"
+			],
+			[
+				"_icon",
+				"scss/_icons.scss"
+			],
+			[
+				"_header",
+				"scss/_header.scss"
+			],
+			[
+				"modules",
+				"docs/modules.md"
+			],
+			[
+				"defa",
+				"docs/_layouts/default.html"
+			],
+			[
+				"footer.h",
+				"docs/_includes/footer.html"
+			],
+			[
+				"_link",
+				"scss/_links.scss"
+			],
+			[
+				"_ut",
+				"scss/_utility.scss"
+			],
+			[
+				"_var",
+				"scss/_variables.scss"
+			],
+			[
+				"_links",
+				"scss/_links.scss"
+			],
+			[
+				"_section",
+				"scss/_sections.scss"
+			],
+			[
+				"_footer",
+				"scss/_footer.scss"
+			],
+			[
+				"side",
+				"docs/_includes/sidenav.html"
+			],
+			[
+				"_head",
+				"scss/_header.scss"
+			],
+			[
+				"_nav",
+				"scss/_navigation.scss"
+			],
+			[
+				"_sect",
+				"scss/_sections.scss"
+			],
+			[
+				"_type",
+				"scss/_type.scss"
+			],
+			[
+				"typo",
+				"scss/_typography.scss"
+			],
+			[
+				"_typ",
+				"scss/_typography.scss"
+			],
+			[
+				"visu",
+				"docs/visual-elements.md"
+			],
+			[
+				"ide",
+				"docs/identity.md"
+			],
+			[
+				"_ehader",
+				"scss/_header.scss"
+			],
+			[
+				"docs.s",
+				"docs/docs.scss"
+			],
+			[
+				"docs",
+				"docs/css/_docs-overrides.scss"
+			],
+			[
+				"oak.",
+				"docs/js/oakland.js"
+			],
+			[
+				"_lay",
+				"scss/_layout.scss"
+			],
+			[
+				"defau",
+				"docs/_layouts/default.html"
+			],
+			[
+				"_base",
+				"scss/_base.scss"
+			],
+			[
+				"dev",
+				"docs/developers.md"
+			],
+			[
+				"docs.js",
+				"docs/js/docs.js"
+			],
+			[
+				"default",
+				"docs/_layouts/default.html"
+			],
+			[
+				"sidenav",
+				"docs/_includes/sidenav.html"
+			],
+			[
+				"docs-over",
+				"docs/css/_docs-overrides.scss"
+			],
+			[
+				"header.html",
+				"docs/_includes/header.html"
+			],
+			[
+				"home.html",
+				"docs/_layouts/home.html"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"devel",
+				"docs/developers.md"
+			],
+			[
+				"images",
+				"docs/images.md"
+			],
+			[
+				"button",
+				"docs/buttons.md"
+			],
+			[
+				"web-typ",
+				"docs/web-typography.md"
+			],
+			[
 				"_layout",
 				"scss/_layout.scss"
 			],
@@ -2960,56 +3681,16 @@
 				"docs/layout.md"
 			],
 			[
-				"_ut",
-				"scss/_utility.scss"
-			],
-			[
 				"pat",
 				"docs/pattern-portfolio.md"
-			],
-			[
-				"docs-o",
-				"docs/css/_docs-overrides.scss"
-			],
-			[
-				"docs",
-				"docs/docs.scss"
-			],
-			[
-				"_footer",
-				"scss/_footer.scss"
-			],
-			[
-				"images",
-				"docs/images.md"
-			],
-			[
-				"home",
-				"docs/_layouts/home.html"
 			],
 			[
 				"_menu",
 				"scss/_menu.scss"
 			],
 			[
-				"side",
-				"docs/_includes/sidenav.html"
-			],
-			[
-				"",
-				"docs/sticky-subnav.md"
-			],
-			[
-				"_icons",
-				"scss/_icons.scss"
-			],
-			[
 				"icons",
 				"docs/icons.md"
-			],
-			[
-				"web",
-				"docs/web-typography.md"
 			],
 			[
 				"grunt",
@@ -3032,10 +3713,6 @@
 				"docs/layout.md"
 			],
 			[
-				"_lay",
-				"scss/_layout.scss"
-			],
-			[
 				"stru",
 				"docs/structures.md"
 			],
@@ -3048,48 +3725,16 @@
 				"docs/posts.md"
 			],
 			[
-				"footer",
-				"docs/_includes/footer.html"
-			],
-			[
 				"_sec",
 				"scss/_sections.scss"
-			],
-			[
-				"_header",
-				"scss/_header.scss"
-			],
-			[
-				"header",
-				"docs/_includes/header.html"
 			],
 			[
 				"patter",
 				"docs/pattern-portfolio.md"
 			],
 			[
-				"modules",
-				"docs/modules.md"
-			],
-			[
-				"_base",
-				"scss/_base.scss"
-			],
-			[
-				"visu",
-				"docs/visual-identity.md"
-			],
-			[
-				"default",
-				"docs/_layouts/default.html"
-			],
-			[
 				"inde",
 				"docs/index.md"
-			],
-			[
-				"_text",
-				"scss/_text-elements.scss"
 			],
 			[
 				"color",
@@ -3104,40 +3749,12 @@
 				"docs/visual-identity.md"
 			],
 			[
-				"_nav",
-				"scss/_navigation.scss"
-			],
-			[
 				"web-",
 				"docs/web-typography.md"
 			],
 			[
-				"_docs",
-				"docs/css/_docs-overrides.scss"
-			],
-			[
 				"_buttons",
 				"scss/_buttons.scss"
-			],
-			[
-				"_var",
-				"scss/_variables.scss"
-			],
-			[
-				"oak",
-				"docs/js/oakland.js"
-			],
-			[
-				"_docs-o",
-				"docs/css/_docs-overrides.scss"
-			],
-			[
-				"defa",
-				"docs/_layouts/default.html"
-			],
-			[
-				"parks",
-				"docs/parks.md"
 			],
 			[
 				"page",
@@ -3172,10 +3789,6 @@
 				"docs/nav.md"
 			],
 			[
-				"docs.scss",
-				"docs/docs.scss"
-			],
-			[
 				"_nva",
 				"scss/_navigation.scss"
 			],
@@ -3190,10 +3803,6 @@
 			[
 				"terminal",
 				"docs/_layouts/terminal.html"
-			],
-			[
-				"basic",
-				"docs/_layouts/basic.html"
 			],
 			[
 				"page.",
@@ -3228,32 +3837,16 @@
 				"docs/type.md"
 			],
 			[
-				"_type",
-				"scss/_type.scss"
-			],
-			[
 				"_post",
 				"scss/_posts.scss"
-			],
-			[
-				"_icon",
-				"scss/_icons.scss"
 			],
 			[
 				"_hero",
 				"scss/_hero.scss"
 			],
 			[
-				"_links",
-				"scss/_links.scss"
-			],
-			[
 				"_alert",
 				"scss/_alerts.scss"
-			],
-			[
-				"_typ",
-				"scss/_typography.scss"
 			],
 			[
 				"_typo",
@@ -3294,10 +3887,6 @@
 			[
 				"_al",
 				"scss/_alerts.scss"
-			],
-			[
-				"_head",
-				"scss/_header.scss"
 			],
 			[
 				"col",
@@ -3348,10 +3937,6 @@
 				"scss/_forms.scss"
 			],
 			[
-				"_sect",
-				"scss/_sections.scss"
-			],
-			[
 				"_mix",
 				"scss/_mixins.scss"
 			],
@@ -3374,90 +3959,6 @@
 			[
 				"_aler",
 				"scss/_alerts.scss"
-			],
-			[
-				"_section",
-				"scss/_sections.scss"
-			],
-			[
-				"termi",
-				"docs/terminal.md"
-			],
-			[
-				"_but",
-				"scss/_buttons.scss"
-			],
-			[
-				"_button",
-				"scss/_buttons.scss"
-			],
-			[
-				"_se",
-				"scss/_sections.scss"
-			],
-			[
-				"_link",
-				"scss/_links.scss"
-			],
-			[
-				"docsov",
-				"docs/css/_docs-overrides.scss"
-			],
-			[
-				"post.md",
-				"docs/posts.md"
-			],
-			[
-				"_main",
-				"node_modules/grunt-sass/node_modules/node-sass/node_modules/pangyp/gyp/gyp_main.py"
-			],
-			[
-				"oaklan",
-				"_site/js/oakland.js"
-			],
-			[
-				"oakl",
-				"docs/js/oakland.js"
-			],
-			[
-				"_med",
-				"scss/_media.scss"
-			],
-			[
-				"_bas",
-				"scss/_base.scss"
-			],
-			[
-				"mend",
-				"node_modules/grunt-build-control/node_modules/shelljs/src/toEnd.js"
-			],
-			[
-				"alerts",
-				"docs/alerts.md"
-			],
-			[
-				"imag",
-				"docs/images.md"
-			],
-			[
-				"home.ht",
-				"docs/_layouts/home.html"
-			],
-			[
-				"rimer.scss",
-				"scss/primer.scss"
-			],
-			[
-				"forms",
-				"docs/forms.md"
-			],
-			[
-				"_butt",
-				"scss/_buttons.scss"
-			],
-			[
-				"button",
-				"docs/buttons.md"
 			]
 		],
 		"width": 0.0
