@@ -16,7 +16,7 @@ This toolkit contains documentation, visual identity, a pattern portfolio, and e
 
 ## Documentation
 
-This toolkit's documentation is built with Jekyll and published to `http://oakland-primer.com` via the `gh-pages` branch.
+This toolkit's documentation is built with Jekyll and published with GitHub pages via the `gh-pages` branch. A custom domain can be used by editing the [CNAME file](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/).
 
 ### Dependencies
 
