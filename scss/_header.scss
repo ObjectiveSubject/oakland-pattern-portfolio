@@ -8,6 +8,7 @@
 }
 
 .page-header {
+	display: block;
 	display: flex;
 	width: 100%;
 	position: relative;
@@ -26,6 +27,7 @@
 }
 
 .multi-logo-wrap {
+	display: inline-block;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
