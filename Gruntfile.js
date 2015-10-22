@@ -25,8 +25,8 @@ module.exports = function(grunt) {
         rootvalue: '16px'
       },
       dist: {
-        src: 'css/primer.css',
-        dest: 'css/primer.css'
+        src: 'docs/css/primer.css',
+        dest: 'docs/css/primer.css'
       }
     },
 

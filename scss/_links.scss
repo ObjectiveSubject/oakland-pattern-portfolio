@@ -50,15 +50,18 @@
 	font-family: $header-font;
 	font-size: 1.5rem;
 	line-height: 1;
+	background-color: $forestland;
   background-color: rgba($forestland, 0.95);
 
 	&:hover,
 	&:focus {
+		background-color: $rockridge-gray;
 		background-color: rgba($rockridge-gray, 0.95);
 		text-decoration: none;
 	}
   
   &:active {
+  	background-color: $oakland-green;
 		background-color: rgba($oakland-green, 0.95);
 		text-decoration: none;
 		color: $white;
