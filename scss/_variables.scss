@@ -88,10 +88,10 @@ $header-height-lg: 7.875rem; // For medium size and up
 
 // Responsive Breakpoints
 // using mobile-first, so building up with min-width
-$bp-sm: 30rem;
-$bp-md: 48rem;
-$bp-lg: 60rem;
-$bp-xl: 93.75rem;
+$bp-sm: 30em;
+$bp-md: 48em;
+$bp-lg: 60em;
+$bp-xl: 93.75em;
 
 // Font stack
 $body-font: Fakt, Helvetica, arial, sans-serif !default;
