@@ -23,6 +23,10 @@
     left: 0;
     right: 0;
     z-index: -1;
+    /* IE 5-7 */
+    filter: alpha(opacity=35);
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=35)";
     opacity: 0.35;
 
     @include media($bp-md) {
