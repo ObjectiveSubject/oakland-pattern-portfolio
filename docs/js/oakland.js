@@ -245,6 +245,7 @@
 
 	$bigMenuItem.on('click', function(e) {
 		e.preventDefault();
+		$(".big-menu .menu-item .big-menu-group a").click(function(e) { e.stopImmediatePropagation(); });
 		$(this).toggleClass('selected').children('.big-menu-group').slideToggle('fast');
 	});
 
